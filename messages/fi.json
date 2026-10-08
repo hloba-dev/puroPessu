@@ -1,0 +1,710 @@
+{
+  "meta": {
+    "defaultTitle": "Puro — sohvan pesu kotonasi, joka päivä {from}–{to}",
+    "defaultDescription": "Sohvien, nojatuolien ja patjojen höyrypesu paikan päällä Helsingissä ja koko pääkaupunkiseudulla. Kuivatus sisältyy aina hintaan. Varaa aika verkossa — ei ennakkomaksua."
+  },
+  "nav": {
+    "main": "Päävalikko",
+    "services": "Palvelut",
+    "prices": "Hinnasto",
+    "business": "Yrityksille",
+    "about": "Tietoa meistä",
+    "tips": "Vinkit",
+    "contact": "Yhteystiedot",
+    "book": "Varaa aika",
+    "openMenu": "Avaa valikko",
+    "closeMenu": "Sulje valikko",
+    "language": "Kieli",
+    "lang": {
+      "fi": "Suomeksi",
+      "ru": "По-русски",
+      "en": "In English"
+    }
+  },
+  "common": {
+    "skip": "Siirry sisältöön",
+    "from": "alk.",
+    "book": "Varaa aika",
+    "seePrices": "Katso hinnasto",
+    "readMore": "Lue lisää",
+    "breadcrumbs": "Murupolku",
+    "home": "Etusivu",
+    "error": {
+      "title": "Jokin meni vikaan",
+      "text": "Sivun lataaminen ei onnistunut. Yritä hetken kuluttua uudelleen tai soita meille.",
+      "retry": "Yritä uudelleen",
+      "home": "Etusivulle"
+    },
+    "askWhatsApp": "Kysy WhatsAppissa",
+    "contactUs": "Ota yhteyttä"
+  },
+  "footer": {
+    "tagline": "Sohvien, nojatuolien ja patjojen höyrypesu kotonasi. Helsinki, Espoo, Vantaa ja koko pääkaupunkiseutu.",
+    "servicesTitle": "Palvelut",
+    "infoTitle": "Tietoa",
+    "contactTitle": "Yhteystiedot",
+    "hours": "Joka päivä {from}–{to}",
+    "businessId": "Y-tunnus",
+    "googleReviews": "Google-arvostelut",
+    "cookieSettings": "Evästeasetukset",
+    "links": {
+      "sofa": "Sohvan pesu",
+      "leather": "Nahkasohvan puhdistus",
+      "mattress": "Patjan pesu",
+      "odor": "Hajunpoisto",
+      "car": "Auton verhoilupesu",
+      "boat": "Veneen tekstiilit",
+      "giftCard": "Lahjakortti",
+      "compare": "Vuokrapesuri vai ammattilainen?",
+      "careProducts": "Hoitotuotteet",
+      "privacy": "Tietosuojaseloste",
+      "dataDeletion": "Tietojen poisto"
+    }
+  },
+  "sticky": {
+    "label": "Pikayhteys",
+    "call": "Soita",
+    "book": "Varaa aika",
+    "online": "Verkossa 24/7",
+    "waLabel": "Lähetä viesti WhatsAppissa",
+    "waText": "Hei! Haluaisin kysyä sohvan pesusta."
+  },
+  "cookie": {
+    "title": "Evästeet",
+    "text": "Käytämme välttämättömiä evästeitä sivuston toimintaan. Luvallasi käytämme myös analytiikkaa ja mainonnan mittausta.",
+    "more": "Tietosuojaseloste",
+    "acceptAll": "Hyväksy kaikki",
+    "onlyNecessary": "Vain välttämättömät",
+    "settings": "Muokkaa valintoja",
+    "save": "Tallenna valinnat",
+    "necessary": "Välttämättömät",
+    "necessaryText": "Tarvitaan sivuston ja varauksen toimintaan. Aina käytössä.",
+    "analytics": "Analytiikka",
+    "analyticsText": "Auttaa meitä ymmärtämään, miten sivustoa käytetään.",
+    "marketing": "Markkinointi",
+    "marketingText": "Mainosten tehon mittaaminen (Google Ads)."
+  },
+  "notFound": {
+    "title": "Sivua ei löytynyt",
+    "text": "Etsimääsi sivua ei ole tai se on siirretty. Etusivulta löydät kaikki palvelut ja hinnat.",
+    "home": "Etusivulle",
+    "book": "Varaa aika"
+  },
+  "beforeAfter": {
+    "before": "Ennen",
+    "after": "Jälkeen",
+    "label": "Ennen–jälkeen-vertailu: {item}",
+    "hint": "Vedä palkkia — sama sohva ennen ja jälkeen",
+    "valueText": "Jälkeen-kuvasta näkyvissä {percent} %"
+  },
+  "home": {
+    "metaTitle": "Sohvan pesu kotonasi Helsingissä — alk. {price}, joka päivä {from}–{to} | Puro",
+    "metaDescription": "Sohvien, nojatuolien ja patjojen höyrypesu kotonasi Helsingissä, Espoossa ja Vantaalla. Joka päivä {from}–{to}, alk. {price}. Kuivatus aina veloituksetta.",
+    "hero": {
+      "badge": "Paikan päällä · joka päivä {from}–{to}",
+      "h1Line1": "Sohvan pesu",
+      "h1Line2": "kotonasi",
+      "sub": "Sohvien, nojatuolien ja patjojen höyrypesu Helsingissä ja koko pääkaupunkiseudulla. Alk. {price} — kuivatus puhaltimilla aina veloituksetta, ei ennakkomaksua.",
+      "cta": "Varaa aika",
+      "ctaSecondary": "Katso hinnasto",
+      "mockTitle": "Mitä pestään?",
+      "mockUrl": "puropesu.fi/varaa-aika",
+      "mockTotal": "Yhteensä",
+      "mockLabel": "Avaa varaus: valitse pestävät kalusteet ja vapaa aika"
+    },
+    "benefits": {
+      "title": "Miksi varata meiltä",
+      "items": [
+        {
+          "title": "Joka päivä {from}–{to}",
+          "text": "Myös illat, viikonloput ja pyhät. Valitse sinulle sopiva aika suoraan kalenterista."
+        },
+        {
+          "title": "Pesu paikan päällä",
+          "text": "Tuomme laitteet mukanamme. Sohvaa ei tarvitse kantaa minnekään."
+        },
+        {
+          "title": "Kuivatus aina veloituksetta",
+          "text": "Kuivaamme kalusteet pesun päätteeksi puhaltimilla. Se kuuluu jokaiseen pesuun ilman lisähintaa."
+        },
+        {
+          "title": "Tyytyväisyystakuu",
+          "text": "Jos lopputulos ei vastaa odotuksia, pesemme kohdan uudelleen veloituksetta."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Palvelut",
+      "title": "Mitä pesemme",
+      "lead": "Kaikki pehmustetut kalusteet kotona ja toimistolla. Hinnat ovat lopullisia ja sisältävät tahrojen esikäsittelyn, hajunpoiston ja kuivatuksen puhaltimilla.",
+      "all": "Kaikki palvelut",
+      "cards": {
+        "sofas": {
+          "title": "Sohvat",
+          "text": "2–6-istuttavat sohvat, kulmasohvat ja divaanit."
+        },
+        "armchairs": {
+          "title": "Nojatuolit ja rahit",
+          "text": "Nojatuolit, korvanojatuolit ja rahit kaikilta pinnoilta."
+        },
+        "leather": {
+          "title": "Nahkakalusteet",
+          "text": "Nahkasohvat ja -nojatuolit käsin, nahalle sopivilla aineilla."
+        },
+        "beds": {
+          "title": "Patjat ja sängyt",
+          "text": "Patjat, runkopatjat ja sijauspatjat — pöly, punkit ja tahrat pois."
+        },
+        "chairs": {
+          "title": "Tuolit",
+          "text": "Ruokapöydän tuolit ja työtuolit, hinta kappaleelta."
+        },
+        "odor": {
+          "title": "Hajunpoisto",
+          "text": "Lemmikin, tupakan tai kosteuden haju lähtee pesun yhteydessä."
+        },
+        "vehicles": {
+          "title": "Auton verhoilu",
+          "text": "Istuimet höyrypesulla pihassasi tai parkkihallissa."
+        }
+      }
+    },
+    "steps": {
+      "eyebrow": "Näin se toimii",
+      "title": "Varauksesta puhtaaseen sohvaan neljässä vaiheessa",
+      "items": [
+        {
+          "title": "Varaa aika verkossa",
+          "text": "Valitse kalusteet, liitä kuvat ja näet hinnan heti. Kalenteri näyttää oikeasti vapaat ajat."
+        },
+        {
+          "title": "Tulemme luoksesi",
+          "text": "Saavumme sovittuna aikana laitteiden kanssa. Tarvitsemme vain pistorasian ja vesipisteen."
+        },
+        {
+          "title": "Höyrypesu ja tahranpoisto",
+          "text": "Esikäsittelemme tahrat, pesemme höyryllä ja imemme lian ja pesuaineen pois kankaasta."
+        },
+        {
+          "title": "Kuivatus — veloituksetta",
+          "text": "Lopuksi kuivaamme kankaan puhaltimilla. Itsekseen kangas kuivuisi 4–8 tuntia; me nopeutamme sitä ilman lisähintaa."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Miksi Puro",
+      "title": "Puhdas kangas ilman jäämiä",
+      "lead": "Pesun tulos ratkeaa siinä, mitä kankaaseen jää pesun jälkeen. Siksi huuhtelemme ja imemme jokaisen pinnan huolella.",
+      "items": [
+        {
+          "title": "Kuivatus kuuluu aina hintaan",
+          "text": "Emme jätä sohvaa kuivumaan itsekseen: kuivaamme sen puhaltimilla jokaisen pesun päätteeksi, veloituksetta."
+        },
+        {
+          "title": "Höyry jokaisessa pesussa",
+          "text": "Kuuma höyry irrottaa lian syvältä ja vähentää pölypunkkeja ilman voimakkaita kemikaaleja."
+        },
+        {
+          "title": "Allergiaystävälliset aineet",
+          "text": "Käytämme biohajoavia, hajusteettomia pesuaineita, jotka sopivat lapsi- ja lemmikkiperheille."
+        },
+        {
+          "title": "Ei pesuainejäämiä",
+          "text": "Huuhtelemme ja imemme kankaan puhtaaksi. Jäämätön pinta ei kerää likaa uudelleen."
+        },
+        {
+          "title": "Rehellinen arvio kuvista",
+          "text": "Liitä kuvat varaukseen. Jos lika on poikkeuksellista, otamme yhteyttä ja sovimme hinnasta ennen käyntiä."
+        },
+        {
+          "title": "Uusintapesu veloituksetta",
+          "text": "Jos et ole tyytyväinen lopputulokseen, tulemme uudelleen. Se on tyytyväisyystakuumme."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "Ennen ja jälkeen",
+      "title": "Katso ero itse",
+      "lead": "Vedä palkkia ja katso, mitä höyrypesu tekee kankaalle."
+    },
+    "pricing": {
+      "eyebrow": "Hinnasto",
+      "title": "Hinnat lyhyesti",
+      "lead": "Sama hinta hinnastossa, varauksessa ja laskulla.",
+      "minOrder": "Vähimmäistilaus {min} ennen alennuksia. Hinta on lopullinen — jos kuvista näkyy voimakasta likaa, sovimme hinnasta kanssasi ennen käyntiä.",
+      "travelTitle": "Matkakulut",
+      "full": "Koko hinnasto"
+    },
+    "b2b": {
+      "eyebrow": "Yrityksille",
+      "title": "Toimistot, hotellit ja ravintolat",
+      "text": "Pesemme työtuolit, aulasohvat ja ravintolan penkit silloin, kun tilat ovat tyhjät — aikaisin aamulla, illalla tai viikonloppuna.",
+      "points": [
+        "Laskulla yritykselle",
+        "Aamut, illat ja viikonloput",
+        "Sopimuspesut säännöllisesti"
+      ],
+      "cta": "Pyydä tarjous"
+    },
+    "area": {
+      "eyebrow": "Toimialue",
+      "title": "Helsinki, Espoo, Vantaa ja ympäristö",
+      "lead": "Ajamme asiakkaan luo koko pääkaupunkiseudulla ja kauempanakin. Tarkka matkakulu lasketaan postinumerosi mukaan varauksen yhteydessä."
+    },
+    "faq": {
+      "eyebrow": "Usein kysyttyä",
+      "title": "Kaksi yleisintä kysymystä",
+      "items": [
+        {
+          "q": "Kuinka kauan sohva kuivuu pesun jälkeen?",
+          "a": "Itsekseen kangas kuivuu yleensä 4–8 tunnissa. Me kuivaamme kalusteet pesun päätteeksi puhaltimilla, mikä nopeuttaa kuivumista selvästi — ja kuivatus sisältyy aina hintaan."
+        },
+        {
+          "q": "Lähtevätkö kaikki tahrat?",
+          "a": "Useimmat lähtevät, mutta eivät kaikki. Vanhat, kankaaseen pinttyneet tai väriä muuttaneet tahrat voivat jäädä vaaleampina näkyviin. Liitä kuvat varaukseen, niin kerromme rehellisesti etukäteen, mitä on odotettavissa."
+        }
+      ],
+      "all": "Kaikki kysymykset ja vastaukset"
+    },
+    "cta": {
+      "title": "Varaa sohvan pesu — vapaat ajat näkyvät heti",
+      "text": "Varaus vie pari minuuttia. Kuivatus sisältyy hintaan, ja maksat vasta pesun jälkeen."
+    }
+  },
+  "prices": {
+    "from": "alk.",
+    "included": "Sisältyy pesuun",
+    "perPiece": "/ kpl",
+    "perM2": "/ m²",
+    "duration": "kesto noin {duration}",
+    "book": "Varaa",
+    "bookItem": "Varaa aika: {item}, {price}",
+    "zoneUnder": "alle {km} km",
+    "zoneBetween": "{from}–{to} km",
+    "zoneOver": "yli {km} km",
+    "zoneAsk": "kysy tarjous",
+    "zoneFree": "Ei matkakuluja",
+    "zoneFee": "Matkakulu {fee}"
+  },
+  "reviews": {
+    "eyebrow": "Arvostelut",
+    "title": "Asiakkaiden kokemuksia",
+    "google": "Lue arvostelut Googlessa",
+    "rating": "{rating} / 5 tähteä"
+  },
+  "forms": {
+    "errors": {
+      "required": "Täytä tämä kenttä.",
+      "postalCode": "Anna viisinumeroinen postinumero.",
+      "phone": "Anna puhelinnumero muodossa +358 40 123 4567.",
+      "email": "Tarkista sähköpostiosoite.",
+      "yTunnus": "Y-tunnus muodossa 1234567-8.",
+      "privacy": "Hyväksy tietosuojaseloste jatkaaksesi.",
+      "tooLong": "Teksti on liian pitkä."
+    },
+    "privacy": "Olen lukenut <link>tietosuojaselosteen</link> ja hyväksyn tietojeni käsittelyn.",
+    "website": "Verkkosivu (jätä tyhjäksi)",
+    "optional": "valinnainen",
+    "send": "Lähetä",
+    "sending": "Lähetetään…",
+    "failed": "Lähetys ei onnistunut. Yritä uudelleen tai soita meille.",
+    "rateLimited": "Liian monta yritystä. Odota hetki ja yritä uudelleen.",
+    "contact": {
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "message": "Viesti",
+      "submit": "Lähetä viesti",
+      "success": "Kiitos viestistä! Vastaamme mahdollisimman pian."
+    },
+    "quote": {
+      "contactName": "Yhteyshenkilö",
+      "company": "Yrityksen nimi",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "yTunnus": "Y-tunnus",
+      "sector": "Toimiala",
+      "sectors": {
+        "office": "Toimisto",
+        "hotel_restaurant": "Hotelli tai ravintola",
+        "healthcare": "Terveydenhuolto",
+        "other": "Muu"
+      },
+      "items": "Kohde ja kappalemäärät",
+      "itemsPlaceholder": "esim. 20 työtuolia, 2 aulasohvaa, neuvotteluhuoneen tuolit",
+      "preferredTime": "Toivottu ajankohta",
+      "times": {
+        "workhours": "Työaika",
+        "evening": "Ilta",
+        "weekend": "Viikonloppu",
+        "flexible": "Joustava"
+      },
+      "billingAddress": "Laskutusosoite",
+      "notes": "Lisätiedot",
+      "photos": "Kuvat kohteesta",
+      "photosHint": "Enintään {max} kuvaa, 10 Mt / kuva (JPG, PNG, WebP tai HEIC).",
+      "photosTooMany": "Voit liittää enintään {max} kuvaa.",
+      "photosTooBig": "Yksi kuvista on yli 10 Mt.",
+      "photosType": "Liitä vain kuvatiedostoja (JPG, PNG, WebP tai HEIC).",
+      "removePhoto": "Poista kuva {name}",
+      "uploading": "Ladataan kuvia {done}/{total}…",
+      "submit": "Lähetä tarjouspyyntö",
+      "success": "Kiitos! Tarjouspyyntö on vastaanotettu. Palaamme asiaan mahdollisimman pian.",
+      "photosFailed": "Tarjouspyyntö on vastaanotettu, mutta osa kuvista ({count}) ei latautunut. Voit lähettää ne WhatsAppissa."
+    },
+    "giftCard": {
+      "option": "Lahjakortin sisältö",
+      "amount": "Summa (€)",
+      "amountHint": "Anna summa väliltä {min}–{max} €.",
+      "buyerName": "Nimesi",
+      "buyerEmail": "Sähköpostisi",
+      "buyerPhone": "Puhelin",
+      "recipientName": "Saajan nimi",
+      "message": "Tervehdys korttiin",
+      "submit": "Lähetä tilaus",
+      "success": "Kiitos! Lähetämme sinulle laskun sähköpostilla. Lahjakortti toimitetaan PDF-tiedostona, kun maksu on kirjautunut."
+    },
+    "deletion": {
+      "email": "Sähköposti",
+      "emailHint": "Sama osoite, jota käytit varauksessa tai yhteydenotossa.",
+      "phone": "Puhelin",
+      "details": "Mitä tietoja pyyntö koskee?",
+      "submit": "Lähetä pyyntö",
+      "success": "Pyyntö on vastaanotettu. Vahvistamme käsittelyn sähköpostitse kuukauden kuluessa."
+    }
+  },
+  "booking": {
+    "metaTitle": "Varaa aika verkossa — vapaat ajat heti näkyvissä",
+    "metaDescription": "Varaa sohvan, nojatuolin tai patjan pesu kotiisi parissa minuutissa. Näet hinnan ja vapaat ajat heti, joka päivä {from}–{to}. Ei ennakkomaksua.",
+    "title": "Varaa aika",
+    "lead": "Valitse pestävät kalusteet, niin näet hinnan ja vapaat ajat heti. Kuivatus sisältyy aina hintaan. Varaus vie noin kaksi minuuttia.",
+    "demo": "Demotila: tietokantaa ei ole yhdistetty, joten varaukset tallentuvat vain palvelimen muistiin.",
+    "steps": {
+      "items": "Tuotteet",
+      "address": "Osoite",
+      "time": "Aika",
+      "contact": "Yhteystiedot",
+      "confirm": "Vahvistus"
+    },
+    "stepsLabel": "Varauksen vaiheet",
+    "stepOf": "Vaihe {current}/{total}: {name}",
+    "next": "Jatka",
+    "back": "Takaisin",
+    "items": {
+      "title": "Mitä pestään?",
+      "duration": "noin {duration}",
+      "decrease": "Vähennä: {item}",
+      "increase": "Lisää: {item}",
+      "qty": "{item}, määrä",
+      "veryDirty": "Erittäin likainen",
+      "veryDirtyNote": "Jos kuvista näkyy voimakasta likaa, otamme yhteyttä ja sovimme hinnasta ennen käyntiä.",
+      "fromNote": "Lopullisesta hinnasta sovimme kanssasi ennen käyntiä.",
+      "empty": "Valitse vähintään yksi kaluste.",
+      "photoHint": "Etkö ole varma koosta tai materiaalista? Lähetä kuva WhatsAppissa.",
+      "included": "sisältyy hintaan",
+      "selected": "{count} valittu"
+    },
+    "address": {
+      "title": "Missä pesu tehdään?",
+      "street": "Katuosoite",
+      "streetPlaceholder": "Esimerkkikatu 1 A 2",
+      "postalCode": "Postinumero",
+      "city": "Postitoimipaikka",
+      "floor": "Kerros ja hissi",
+      "floorPlaceholder": "esim. 3. krs, hissi on",
+      "parking": "Pysäköinti",
+      "parkingOptions": {
+        "street": "Kadunvarsi",
+        "yard": "Piha tai vieraspaikka",
+        "garage": "Parkkihalli",
+        "unknown": "En tiedä"
+      },
+      "notes": "Lisätiedot",
+      "notesPlaceholder": "Ovikoodi, lemmikit, tahrojen kuvaus…",
+      "travelOk": "Matkakulu {fee} ({municipality}, noin {km} km)",
+      "travelFree": "Ei matkakuluja ({municipality})",
+      "travelChecking": "Lasketaan matkakulua…",
+      "travelUnknown": "Emme löytäneet tätä postinumeroa toimialueeltamme. Tarkista numero tai kysy WhatsAppissa.",
+      "travelOut": "{municipality} on toimialueemme ulkopuolella (noin {km} km). Kysy tarjous WhatsAppissa.",
+      "travelError": "Matkakulun laskeminen ei onnistunut. Yritä uudelleen."
+    },
+    "time": {
+      "title": "Valitse aika",
+      "lead": "Näytämme vain oikeasti vapaat ajat. Arvioitu kesto {duration}.",
+      "loading": "Haetaan vapaita aikoja…",
+      "error": "Vapaiden aikojen haku ei onnistunut.",
+      "retry": "Yritä uudelleen",
+      "noSlots": "Tälle päivälle ei ole vapaita aikoja. Valitse toinen päivä.",
+      "noneAtAll": "Vapaita aikoja ei löytynyt. Ota yhteyttä, niin etsitään sopiva aika.",
+      "pickDay": "Valitse päivä kalenterista.",
+      "prevMonth": "Edellinen kuukausi",
+      "nextMonth": "Seuraava kuukausi",
+      "dayFree": "{date}, vapaita aikoja {count}",
+      "dayFull": "{date}, ei vapaita aikoja",
+      "slotsFor": "Vapaat ajat: {date}",
+      "selected": "Valittu aika: {when}"
+    },
+    "contact": {
+      "title": "Yhteystiedot",
+      "name": "Nimi",
+      "phone": "Puhelin",
+      "phonePlaceholder": "+358 40 123 4567",
+      "email": "Sähköposti",
+      "customerType": "Asiakastyyppi",
+      "private": "Yksityinen",
+      "business": "Yritys",
+      "company": "Yrityksen nimi",
+      "yTunnus": "Y-tunnus",
+      "yTunnusPlaceholder": "1234567-8",
+      "giftCard": "Lahjakortin koodi",
+      "giftCheck": "Tarkista",
+      "giftValid": "Lahjakortti hyväksytty: −{amount}",
+      "giftInvalid": "Koodia ei löytynyt tai se on jo käytetty.",
+      "giftRateLimited": "Liian monta yritystä. Yritä hetken kuluttua uudelleen.",
+      "privacy": "Olen lukenut <link>tietosuojaselosteen</link> ja hyväksyn tietojeni käsittelyn varausta varten.",
+      "marketing": "Haluan saada tarjouksia ja muistutuksia sähköpostilla.",
+      "giftService": "Lahjakortti koskee palvelua {service} — lisää se varaukseen, niin kortti huomioidaan."
+    },
+    "confirm": {
+      "title": "Tarkista ja vahvista",
+      "edit": "Muokkaa",
+      "payment": "Maksu vasta pesun jälkeen.",
+      "estimateNote": "Erittäin likaisten ja alk.-hintaisten kohteiden lopullisesta hinnasta sovimme kanssasi ennen käyntiä.",
+      "submit": "Vahvista varaus",
+      "submitting": "Lähetetään…",
+      "photos": "Kuvia liitetty: {count}"
+    },
+    "summary": {
+      "title": "Tilauksesi",
+      "empty": "Et ole vielä valinnut kalusteita.",
+      "subtotal": "Pesut",
+      "minFill": "Lisä vähimmäistilaukseen ({min})",
+      "travel": "Matkakulut",
+      "travelPending": "lasketaan osoitteesta",
+      "giftCard": "Lahjakortti",
+      "total": "Yhteensä",
+      "duration": "Arvioitu kesto",
+      "from": "alk.",
+      "noPrepay": "Maksu vasta pesun jälkeen",
+      "finalPrice": "Hinta on lopullinen",
+      "promoBundle": "Pakettitarjous",
+      "promoPercent": "Alennus {percent} %",
+      "promoBoth": "Paketti ja alennus {percent} %",
+      "promoHint": "Ensimmäisestä tilauksesta −{first} %, kanta-asiakkaalle −{repeat} %. Alennus lasketaan, kun olet antanut yhteystietosi.",
+      "reasonFirst": "ensimmäinen tilaus",
+      "reasonRepeat": "kanta-asiakas",
+      "reasonMulti": "vähintään {min} kohdetta",
+      "bundles": {
+        "chairs": "Sohva + {count} tuolia",
+        "mattress-single": "Sohva + yhden hengen patja",
+        "mattress-double": "Sohva + parisängyn patja"
+      }
+    },
+    "trust": [
+      "Varaus noin kahdessa minuutissa",
+      "Kuivatus sisältyy hintaan",
+      "Tyytyväisyystakuu",
+      "Maksu vasta pesun jälkeen"
+    ],
+    "errors": {
+      "invalid": "Tarkista lomakkeen tiedot ja yritä uudelleen.",
+      "rate_limited": "Liian monta yritystä. Odota hetki ja yritä uudelleen.",
+      "invalid_cart": "Jokin valitsemasi tuote ei ole enää saatavilla. Tarkista valinnat.",
+      "out_of_area": "Osoite on toimialueemme ulkopuolella.",
+      "gift_card_invalid": "Lahjakortin koodi ei kelpaa.",
+      "slot_unavailable": "Valittu aika ei ole enää varattavissa. Valitse uusi aika.",
+      "slot_taken": "Joku ehti varata tämän ajan juuri ennen sinua. Valitse toinen aika.",
+      "failed": "Varauksen tallennus ei onnistunut. Yritä uudelleen tai soita meille.",
+      "not_found": "Varausta ei löytynyt.",
+      "gift_card_not_applicable": "Lahjakortti koskee palvelua, jota ei ole varauksessa. Lisää palvelu tai poista koodi.",
+      "price_changed": "Hinta tarkentui: lopullinen hinta on {total}. Tarkista yhteenveto ja vahvista varaus uudelleen."
+    },
+    "faq": {
+      "title": "Usein kysyttyä varaamisesta",
+      "items": [
+        {
+          "q": "Mitä varauksen jälkeen tapahtuu?",
+          "a": "Saat heti vahvistuksen sähköpostiin. Aika on varattu sinulle saman tien, eli se poistuu kalenterista muilta. Katsomme liittämäsi kuvat, vahvistamme varauksen viestillä tai puhelulla ja ilmoitamme, kun olemme matkalla."
+        },
+        {
+          "q": "Tarvitaanko ennakkomaksua?",
+          "a": "Ei. Maksat vasta, kun pesu on tehty ja olet nähnyt lopputuloksen. Hinta on sama kuin varauksessa, ellei kuvien perusteella ole sovittu muusta ennen käyntiä."
+        },
+        {
+          "q": "Voinko siirtää tai perua varauksen?",
+          "a": "Kyllä. Vahvistusviestissä on linkki, josta voit siirtää tai perua varauksen itse. Ilmoitathan muutoksesta mahdollisimman ajoissa, niin vapautunut aika ehtii jollekulle toiselle."
+        },
+        {
+          "q": "Entä jos en asu Helsingissä?",
+          "a": "Lähialueella emme veloita matkakuluja. Kauempana matkakulu lasketaan postinumeron mukaan ja näkyy varauksessa ennen vahvistusta. Jos postinumerosi on toimialueen ulkopuolella, kysy tarjous WhatsAppissa."
+        },
+        {
+          "q": "Kuinka kauan kalusteet kuivuvat?",
+          "a": "Kuivaamme kalusteet pesun päätteeksi puhaltimilla, ja se sisältyy aina hintaan. Itsekseen kangas kuivuisi tyypillisesti 4–8 tuntia ja patja pidempään — puhaltimilla kuivuminen nopeutuu selvästi."
+        },
+        {
+          "q": "Pitääkö minun valmistella jotain?",
+          "a": "Tyhjennä kalusteet tavaroista ja varmista, että pääsemme niiden ympärille. Tarvitsemme pistorasian ja vesipisteen. Imurointia etukäteen ei tarvita."
+        }
+      ]
+    },
+    "success": {
+      "metaTitle": "Varaus vastaanotettu",
+      "title": "Kiitos — varauksesi on vastaanotettu",
+      "lead": "Varausnumero {ref}. Lähetimme vahvistuksen osoitteeseen {email}.",
+      "addToCalendar": "Lisää kalenteriin",
+      "manage": "Siirrä tai peru varaus",
+      "nextTitle": "Mitä seuraavaksi?",
+      "next": [
+        "Vahvistamme varauksen viestillä tai puhelulla.",
+        "Ilmoitamme, kun olemme matkalla luoksesi.",
+        "Tyhjennä kalusteet tavaroista ennen pesua — muuta ei tarvita.",
+        "Maksat vasta pesun jälkeen."
+      ]
+    },
+    "manage": {
+      "metaTitle": "Varauksen hallinta",
+      "title": "Varauksesi {ref}",
+      "status": {
+        "pending": "Odottaa vahvistusta",
+        "confirmed": "Vahvistettu",
+        "done": "Tehty",
+        "cancelled": "Peruttu"
+      },
+      "statusLabel": "Tila",
+      "reschedule": "Siirrä varaus",
+      "newTime": "Valitse uusi aika",
+      "saveTime": "Vahvista uusi aika",
+      "saving": "Tallennetaan…",
+      "rescheduled": "Varaus on siirretty. Lähetimme uuden vahvistuksen sähköpostiin.",
+      "cancel": "Peru varaus",
+      "cancelConfirm": "Haluatko varmasti perua varauksen?",
+      "cancelYes": "Kyllä, peru varaus",
+      "cancelNo": "Älä peru",
+      "cancelled": "Varaus on peruttu.",
+      "locked": "Tätä varausta ei voi enää muuttaa verkossa. Ota tarvittaessa yhteyttä.",
+      "notFound": "Varausta ei löytynyt. Tarkista linkki vahvistusviestistä."
+    },
+    "photos": {
+      "title": "Kuvat kalusteista",
+      "hint": "Liitä enintään {max} kuvaa (10 Mt / kuva). Kuvista näemme materiaalin ja lian määrän — jos hinta poikkeaa, otamme yhteyttä ennen käyntiä.",
+      "tooMany": "Voit liittää enintään {max} kuvaa.",
+      "tooBig": "Yksi kuvista on yli 10 Mt.",
+      "type": "Liitä vain kuvatiedostoja (JPG, PNG, WebP tai HEIC).",
+      "remove": "Poista kuva {name}"
+    }
+  },
+  "email": {
+    "ref": "Varausnumero",
+    "when": "Aika",
+    "duration": "Arvioitu kesto",
+    "address": "Osoite",
+    "subtotal": "Pesut",
+    "minFill": "Lisä vähimmäistilaukseen",
+    "travel": "Matkakulut",
+    "giftCard": "Lahjakortti",
+    "total": "Yhteensä",
+    "payment": "Maksu vasta pesun jälkeen. Kuivatus puhaltimilla sisältyy hintaan. Jos kuvista näkyy poikkeuksellista likaa, sovimme hinnasta kanssasi ennen käyntiä.",
+    "manage": "Siirrä tai peru varaus",
+    "questions": "Kysyttävää? Vastaa tähän viestiin tai soita {phone}.",
+    "created": {
+      "subject": "Varauksesi {ref} on vastaanotettu — Puro",
+      "title": "Kiitos varauksesta!",
+      "intro": "Hei {name}, olemme vastaanottaneet varauksesi ja aika on varattu sinulle.",
+      "next": "Vahvistamme varauksen vielä viestillä tai puhelulla ja ilmoitamme, kun olemme matkalla."
+    },
+    "rescheduled": {
+      "subject": "Varauksesi {ref} on siirretty — Puro",
+      "title": "Varauksesi on siirretty",
+      "intro": "Hei {name}, varauksesi uusi aika näkyy alla.",
+      "next": "Jos uusi aika ei sovikaan, voit siirtää varausta uudelleen alla olevasta linkistä."
+    },
+    "cancelled": {
+      "subject": "Varauksesi {ref} on peruttu — Puro",
+      "title": "Varauksesi on peruttu",
+      "intro": "Hei {name}, varauksesi on peruttu. Voit varata uuden ajan milloin tahansa verkossa.",
+      "next": "Varaa uusi aika: puropesu.fi"
+    },
+    "confirmed": {
+      "subject": "Varauksesi {ref} on vahvistettu — Puro",
+      "title": "Varauksesi on vahvistettu",
+      "intro": "Hei {name}, varauksesi on vahvistettu. Nähdään sovittuna aikana!",
+      "next": "Ilmoitamme, kun olemme matkalla. Tyhjennä kalusteet tavaroista ennen pesua — muuta ei tarvita."
+    },
+    "promo": "Alennus"
+  },
+  "pages": {
+    "showMap": "Näytä kartta",
+    "openMap": "Avaa OpenStreetMapissa",
+    "mapTitle": "Kartta: toimialueemme keskipiste",
+    "phone": "Puhelin",
+    "email": "Sähköposti",
+    "whatsapp": "WhatsApp",
+    "address": "Osoite",
+    "businessId": "Y-tunnus",
+    "seePage": "Lue lisää",
+    "bookThis": "Varaa aika",
+    "requestQuote": "Pyydä tarjous",
+    "priceList": "Hinnasto",
+    "inactiveNote": "Tämä palvelu ei ole juuri nyt varattavissa verkossa. Kysy WhatsAppissa.",
+    "toc": "Sisällys"
+  },
+  "blog": {
+    "metaTitle": "Vinkit — tahrat, hajut ja sohvan hoito",
+    "metaDescription": "Käytännön ohjeita sohvan, nahkakalusteiden ja patjan hoitoon: tahranpoisto, hajut, materiaalit ja se, milloin kannattaa kutsua ammattilainen.",
+    "title": "Vinkit sohvan ja patjan hoitoon",
+    "lead": "Käytännön ohjeita tahroihin, hajuihin ja materiaaleihin — ja rehellinen arvio siitä, milloin kotikonstit riittävät.",
+    "all": "Kaikki",
+    "categories": {
+      "tahrat": "Tahrat",
+      "hajut": "Hajut",
+      "materiaalit": "Materiaalit ja hoito",
+      "patjat": "Patjat",
+      "yrityksille": "Vuokraus ja ammattilaiset"
+    },
+    "readingTime": "{minutes} min lukuaika",
+    "published": "Julkaistu {date}",
+    "toc": "Sisällys",
+    "related": "Lue myös",
+    "read": "Lue artikkeli",
+    "ctaTitle": "Jäikö tahra tai haju? Me hoidamme sen",
+    "ctaText": "Höyrypesu kotonasi, joka päivä. Näet hinnan ja vapaat ajat heti.",
+    "tip": "Vinkki",
+    "warning": "Huomio"
+  },
+  "promo": {
+    "eyebrow": "Pakettitarjoukset",
+    "title": "Sohva, tuolit ja patja samalla käynnillä — edullisemmin",
+    "lead": "Kun pesemme samalla käynnillä useamman kalusteen, säästät selvästi. Paketti lasketaan varauksessa automaattisesti.",
+    "chairs": {
+      "title": "Sohva + {count} ruokapöydän tuolia",
+      "text": "Tuolien selkänojat ja istuimet sohvan pesun yhteydessä."
+    },
+    "mattressSingle": {
+      "title": "Sohva + yhden hengen patja",
+      "text": "Patja tai sänky puhtaaksi samalla käynnillä."
+    },
+    "mattressDouble": {
+      "title": "Sohva + parisängyn patja",
+      "text": "Suurin säästö: parisänky sohvan pesun yhteydessä."
+    },
+    "formula": "Sohvan hinta + {extra}",
+    "example": "Esimerkki: {sofa}",
+    "separately": "Erikseen {price}",
+    "save": "Säästät {amount}",
+    "book": "Varaa paketti",
+    "discountsTitle": "Alennukset",
+    "first": "−{pct} % ensimmäisestä tilauksesta",
+    "repeat": "−{pct} % kanta-asiakkaalle",
+    "multi": "−{pct} %, kun kohteita on vähintään {min}",
+    "noteBest": "Paketti ja prosenttialennus eivät yhdisty: saat automaattisesti niistä edullisemman. Alennukset eivät koske matkakuluja, ja vähimmäistilaus lasketaan ennen alennuksia.",
+    "noteStack": "Prosenttialennus lasketaan paketin hinnasta. Alennukset eivät koske matkakuluja, ja vähimmäistilaus lasketaan ennen alennuksia.",
+    "drying": "Kuivatus puhaltimilla sisältyy jokaiseen pesuun — aina veloituksetta.",
+    "tableSofa": "Sohva",
+    "tableSeparately": "Erikseen",
+    "tableBundle": "Pakettina",
+    "tableSaving": "Säästö",
+    "tableSingle": "+ yhden hengen patja",
+    "tableDouble": "+ parisängyn patja"
+  }
+}

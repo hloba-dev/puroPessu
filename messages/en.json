@@ -1,0 +1,710 @@
+{
+  "meta": {
+    "defaultTitle": "Puro — sofa cleaning at your home, every day {from}–{to}",
+    "defaultDescription": "On-site steam cleaning for sofas, armchairs and mattresses in Helsinki and the whole capital region. Drying is always included. Book online — no prepayment."
+  },
+  "nav": {
+    "main": "Main menu",
+    "services": "Services",
+    "prices": "Prices",
+    "business": "For business",
+    "about": "About us",
+    "tips": "Tips",
+    "contact": "Contact",
+    "book": "Book now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "lang": {
+      "fi": "Suomeksi",
+      "ru": "По-русски",
+      "en": "In English"
+    }
+  },
+  "common": {
+    "skip": "Skip to content",
+    "from": "from",
+    "book": "Book now",
+    "seePrices": "See prices",
+    "readMore": "Read more",
+    "breadcrumbs": "Breadcrumbs",
+    "home": "Home",
+    "error": {
+      "title": "Something went wrong",
+      "text": "We could not load this page. Please try again in a moment or give us a call.",
+      "retry": "Try again",
+      "home": "Back to home"
+    },
+    "askWhatsApp": "Ask on WhatsApp",
+    "contactUs": "Contact us"
+  },
+  "footer": {
+    "tagline": "Steam cleaning for sofas, armchairs and mattresses at your home. Helsinki, Espoo, Vantaa and the whole capital region.",
+    "servicesTitle": "Services",
+    "infoTitle": "Info",
+    "contactTitle": "Contact",
+    "hours": "Every day {from}–{to}",
+    "businessId": "Business ID",
+    "googleReviews": "Google reviews",
+    "cookieSettings": "Cookie settings",
+    "links": {
+      "sofa": "Sofa cleaning",
+      "leather": "Leather sofa cleaning",
+      "mattress": "Mattress cleaning",
+      "odor": "Odor removal",
+      "car": "Car upholstery cleaning",
+      "boat": "Boat textiles",
+      "giftCard": "Gift card",
+      "compare": "Rental machine or a professional?",
+      "careProducts": "Care products",
+      "privacy": "Privacy policy",
+      "dataDeletion": "Data deletion"
+    }
+  },
+  "sticky": {
+    "label": "Quick contact",
+    "call": "Call",
+    "book": "Book now",
+    "online": "Online 24/7",
+    "waLabel": "Message us on WhatsApp",
+    "waText": "Hi! I would like to ask about sofa cleaning."
+  },
+  "cookie": {
+    "title": "Cookies",
+    "text": "We use necessary cookies to run the site. With your permission we also use analytics and ad measurement.",
+    "more": "Privacy policy",
+    "acceptAll": "Accept all",
+    "onlyNecessary": "Only necessary",
+    "settings": "Customize",
+    "save": "Save choices",
+    "necessary": "Necessary",
+    "necessaryText": "Required for the site and booking to work. Always on.",
+    "analytics": "Analytics",
+    "analyticsText": "Helps us understand how the site is used.",
+    "marketing": "Marketing",
+    "marketingText": "Measuring ad performance (Google Ads)."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has moved. All services and prices are on the home page.",
+    "home": "Back to home",
+    "book": "Book now"
+  },
+  "beforeAfter": {
+    "before": "Before",
+    "after": "After",
+    "label": "Before and after comparison: {item}",
+    "hint": "Drag the slider — the same sofa before and after",
+    "valueText": "{percent}% of the after photo visible"
+  },
+  "home": {
+    "metaTitle": "Sofa cleaning at home in Helsinki — from {price}, every day {from}–{to} | Puro",
+    "metaDescription": "Sofa, armchair and mattress cleaning at your home in Helsinki, Espoo and Vantaa. Every day {from}–{to}, from {price}. Drying is always free.",
+    "hero": {
+      "badge": "On site · every day {from}–{to}",
+      "h1Line1": "Sofa cleaning",
+      "h1Line2": "at your home",
+      "sub": "Steam cleaning for sofas, armchairs and mattresses in Helsinki and the whole capital region. From {price} — blower drying always free, no prepayment.",
+      "cta": "Book now",
+      "ctaSecondary": "See prices",
+      "mockTitle": "What needs cleaning?",
+      "mockUrl": "puropesu.fi/varaa-aika",
+      "mockTotal": "Total",
+      "mockLabel": "Open booking: choose the furniture to clean and a free time slot"
+    },
+    "benefits": {
+      "title": "Why book with us",
+      "items": [
+        {
+          "title": "Every day {from}–{to}",
+          "text": "Evenings, weekends and holidays included. Pick a time that suits you straight from the calendar."
+        },
+        {
+          "title": "Cleaned at your home",
+          "text": "We bring the equipment. The sofa stays where it is."
+        },
+        {
+          "title": "Drying is always free",
+          "text": "After cleaning we dry the furniture with blower fans. It is part of every job at no extra cost."
+        },
+        {
+          "title": "Satisfaction guarantee",
+          "text": "If the result does not meet your expectations, we re-clean it free of charge."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "What we clean",
+      "lead": "All upholstered furniture at home and at the office. Prices are final and include stain pre-treatment, odor removal and blower drying.",
+      "all": "All services",
+      "cards": {
+        "sofas": {
+          "title": "Sofas",
+          "text": "2–6-seater sofas, corner sofas and chaise longues."
+        },
+        "armchairs": {
+          "title": "Armchairs and footstools",
+          "text": "Armchairs, wingback chairs and footstools in any fabric."
+        },
+        "leather": {
+          "title": "Leather furniture",
+          "text": "Leather sofas and armchairs cleaned by hand with leather-safe products."
+        },
+        "beds": {
+          "title": "Mattresses and beds",
+          "text": "Mattresses, box spring beds and toppers — dust, mites and stains gone."
+        },
+        "chairs": {
+          "title": "Chairs",
+          "text": "Dining chairs and office chairs, priced per chair."
+        },
+        "odor": {
+          "title": "Odor removal",
+          "text": "Pet, smoke or damp odors are removed during the cleaning."
+        },
+        "vehicles": {
+          "title": "Car upholstery",
+          "text": "Seats steam cleaned in your driveway or parking garage."
+        }
+      }
+    },
+    "steps": {
+      "eyebrow": "How it works",
+      "title": "From booking to a clean sofa in four steps",
+      "items": [
+        {
+          "title": "Book online",
+          "text": "Choose the furniture, attach photos and see the price right away. The calendar shows times that are really free."
+        },
+        {
+          "title": "We come to you",
+          "text": "We arrive at the agreed time with our equipment. All we need is a power outlet and water."
+        },
+        {
+          "title": "Steam cleaning and stain removal",
+          "text": "We pre-treat stains, clean with steam and extract the dirt and detergent from the fabric."
+        },
+        {
+          "title": "Drying — free of charge",
+          "text": "We finish by drying the fabric with blower fans. Left alone it would take 4–8 hours; we speed that up at no extra cost."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why Puro",
+      "title": "Clean fabric with no residue",
+      "lead": "A good result depends on what is left in the fabric after cleaning. That is why we rinse and extract every surface thoroughly.",
+      "items": [
+        {
+          "title": "Drying is always included",
+          "text": "We do not leave the sofa to dry on its own: after every cleaning we dry it with blower fans, free of charge."
+        },
+        {
+          "title": "Steam in every cleaning",
+          "text": "Hot steam lifts dirt from deep in the fabric and reduces dust mites without harsh chemicals."
+        },
+        {
+          "title": "Allergy-friendly products",
+          "text": "We use biodegradable, fragrance-free detergents that suit families with children and pets."
+        },
+        {
+          "title": "No detergent residue",
+          "text": "We rinse and extract the fabric clean. A residue-free surface does not attract new dirt."
+        },
+        {
+          "title": "An honest estimate from photos",
+          "text": "Attach photos to your booking. If the soiling is unusually heavy, we contact you and agree on the price before the visit."
+        },
+        {
+          "title": "Free re-clean",
+          "text": "If you are not happy with the result, we come back. That is our satisfaction guarantee."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "Before and after",
+      "title": "See the difference for yourself",
+      "lead": "Drag the slider to see what steam cleaning does to the fabric."
+    },
+    "pricing": {
+      "eyebrow": "Prices",
+      "title": "Prices at a glance",
+      "lead": "The same price in the price list, in your booking and on your invoice.",
+      "minOrder": "Minimum order {min} before discounts. The price is final — if your photos show heavy soiling, we agree on the price with you before the visit.",
+      "travelTitle": "Travel fee",
+      "full": "Full price list"
+    },
+    "b2b": {
+      "eyebrow": "For business",
+      "title": "Offices, hotels and restaurants",
+      "text": "We clean office chairs, lobby sofas and restaurant benches when your premises are empty — early in the morning, in the evening or at the weekend.",
+      "points": [
+        "Invoicing for companies",
+        "Mornings, evenings and weekends",
+        "Regular contract cleaning"
+      ],
+      "cta": "Request a quote"
+    },
+    "area": {
+      "eyebrow": "Service area",
+      "title": "Helsinki, Espoo, Vantaa and surroundings",
+      "lead": "We come to you anywhere in the Helsinki capital region and beyond. The exact travel fee is calculated from your postal code when you book."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "The two most common questions",
+      "items": [
+        {
+          "q": "How long does a sofa take to dry after cleaning?",
+          "a": "Left alone, fabric usually takes 4–8 hours to dry. We dry the furniture with blower fans after cleaning, which speeds this up considerably — and drying is always included in the price."
+        },
+        {
+          "q": "Do all stains come out?",
+          "a": "Most do, but not all. Old, set-in or colour-changed stains may remain lighter but visible. Attach photos to your booking and we will tell you honestly in advance what to expect."
+        }
+      ],
+      "all": "All questions and answers"
+    },
+    "cta": {
+      "title": "Book sofa cleaning — see free slots instantly",
+      "text": "Booking takes a couple of minutes. Drying is included, and you pay only after the cleaning."
+    }
+  },
+  "prices": {
+    "from": "from",
+    "included": "Included in the cleaning",
+    "perPiece": "/ pc",
+    "perM2": "/ m²",
+    "duration": "takes about {duration}",
+    "book": "Book",
+    "bookItem": "Book: {item}, {price}",
+    "zoneUnder": "under {km} km",
+    "zoneBetween": "{from}–{to} km",
+    "zoneOver": "over {km} km",
+    "zoneAsk": "ask for a quote",
+    "zoneFree": "No travel fee",
+    "zoneFee": "Travel fee {fee}"
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "What our customers say",
+    "google": "Read reviews on Google",
+    "rating": "{rating} / 5 stars"
+  },
+  "forms": {
+    "errors": {
+      "required": "Please fill in this field.",
+      "postalCode": "Enter a five-digit postal code.",
+      "phone": "Enter a phone number in the format +358 40 123 4567.",
+      "email": "Please check the email address.",
+      "yTunnus": "Business ID in the format 1234567-8.",
+      "privacy": "Please accept the privacy policy to continue.",
+      "tooLong": "The text is too long."
+    },
+    "privacy": "I have read the <link>privacy policy</link> and agree to the processing of my data.",
+    "website": "Website (leave blank)",
+    "optional": "optional",
+    "send": "Send",
+    "sending": "Sending…",
+    "failed": "Sending failed. Please try again or give us a call.",
+    "rateLimited": "Too many attempts. Please wait a moment and try again.",
+    "contact": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Thank you for your message! We will reply as soon as possible."
+    },
+    "quote": {
+      "contactName": "Contact person",
+      "company": "Company name",
+      "email": "Email",
+      "phone": "Phone",
+      "yTunnus": "Business ID",
+      "sector": "Industry",
+      "sectors": {
+        "office": "Office",
+        "hotel_restaurant": "Hotel or restaurant",
+        "healthcare": "Healthcare",
+        "other": "Other"
+      },
+      "items": "Items and quantities",
+      "itemsPlaceholder": "e.g. 20 office chairs, 2 lobby sofas, meeting room chairs",
+      "preferredTime": "Preferred time",
+      "times": {
+        "workhours": "Business hours",
+        "evening": "Evening",
+        "weekend": "Weekend",
+        "flexible": "Flexible"
+      },
+      "billingAddress": "Billing address",
+      "notes": "Additional information",
+      "photos": "Photos of the items",
+      "photosHint": "Up to {max} photos, 10 MB per photo (JPG, PNG, WebP or HEIC).",
+      "photosTooMany": "You can attach up to {max} photos.",
+      "photosTooBig": "One of the photos is larger than 10 MB.",
+      "photosType": "Please attach image files only (JPG, PNG, WebP or HEIC).",
+      "removePhoto": "Remove photo {name}",
+      "uploading": "Uploading photos {done}/{total}…",
+      "submit": "Send quote request",
+      "success": "Thank you! We have received your quote request and will get back to you as soon as possible.",
+      "photosFailed": "Your request was received, but some photos ({count}) failed to upload. You can send them on WhatsApp."
+    },
+    "giftCard": {
+      "option": "Gift card content",
+      "amount": "Amount (€)",
+      "amountHint": "Enter an amount between {min} and {max} €.",
+      "buyerName": "Your name",
+      "buyerEmail": "Your email",
+      "buyerPhone": "Phone",
+      "recipientName": "Recipient's name",
+      "message": "Greeting on the card",
+      "submit": "Send order",
+      "success": "Thank you! We will email you an invoice. The gift card will be sent as a PDF once the payment has been received."
+    },
+    "deletion": {
+      "email": "Email",
+      "emailHint": "The same address you used for your booking or when contacting us.",
+      "phone": "Phone",
+      "details": "Which data does the request concern?",
+      "submit": "Send request",
+      "success": "Your request has been received. We will confirm by email within one month that it has been processed."
+    }
+  },
+  "booking": {
+    "metaTitle": "Book online — see free slots instantly",
+    "metaDescription": "Book sofa, armchair or mattress cleaning at your home in a couple of minutes. See the price and free slots instantly, every day {from}–{to}. No prepayment.",
+    "title": "Book a time",
+    "lead": "Choose the furniture and see the price and free times right away. Drying is always included. Booking takes about two minutes.",
+    "demo": "Demo mode: no database is connected, so bookings are stored only in server memory.",
+    "steps": {
+      "items": "Items",
+      "address": "Address",
+      "time": "Time",
+      "contact": "Contact details",
+      "confirm": "Confirmation"
+    },
+    "stepsLabel": "Booking steps",
+    "stepOf": "Step {current}/{total}: {name}",
+    "next": "Continue",
+    "back": "Back",
+    "items": {
+      "title": "What needs cleaning?",
+      "duration": "about {duration}",
+      "decrease": "Decrease: {item}",
+      "increase": "Increase: {item}",
+      "qty": "{item}, quantity",
+      "veryDirty": "Heavily soiled",
+      "veryDirtyNote": "If your photos show heavy soiling, we contact you and agree on the price before the visit.",
+      "fromNote": "We agree on the final price with you before the visit.",
+      "empty": "Choose at least one item.",
+      "photoHint": "Not sure about the size or material? Send us a photo on WhatsApp.",
+      "included": "included in the price",
+      "selected": "{count} selected"
+    },
+    "address": {
+      "title": "Where should we clean?",
+      "street": "Street address",
+      "streetPlaceholder": "Esimerkkikatu 1 A 2",
+      "postalCode": "Postal code",
+      "city": "City",
+      "floor": "Floor and elevator",
+      "floorPlaceholder": "e.g. 3rd floor, has elevator",
+      "parking": "Parking",
+      "parkingOptions": {
+        "street": "Street parking",
+        "yard": "Courtyard or guest parking",
+        "garage": "Parking garage",
+        "unknown": "Not sure"
+      },
+      "notes": "Additional information",
+      "notesPlaceholder": "Door code, pets, description of stains…",
+      "travelOk": "Travel fee {fee} ({municipality}, about {km} km)",
+      "travelFree": "No travel fee ({municipality})",
+      "travelChecking": "Calculating travel fee…",
+      "travelUnknown": "We could not find this postal code in our service area. Please check the number or ask us on WhatsApp.",
+      "travelOut": "{municipality} is outside our service area (about {km} km). Ask for a quote on WhatsApp.",
+      "travelError": "We could not calculate the travel fee. Please try again."
+    },
+    "time": {
+      "title": "Choose a time",
+      "lead": "We only show genuinely free slots. Estimated duration {duration}.",
+      "loading": "Loading free slots…",
+      "error": "We could not load free slots.",
+      "retry": "Try again",
+      "noSlots": "No free slots on this day. Please choose another day.",
+      "noneAtAll": "No free slots found. Contact us and we will find a time that suits you.",
+      "pickDay": "Choose a day in the calendar.",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "dayFree": "{date}, {count} free slots",
+      "dayFull": "{date}, no free slots",
+      "slotsFor": "Free slots: {date}",
+      "selected": "Selected time: {when}"
+    },
+    "contact": {
+      "title": "Contact details",
+      "name": "Name",
+      "phone": "Phone",
+      "phonePlaceholder": "+358 40 123 4567",
+      "email": "Email",
+      "customerType": "Customer type",
+      "private": "Private",
+      "business": "Business",
+      "company": "Company name",
+      "yTunnus": "Business ID",
+      "yTunnusPlaceholder": "1234567-8",
+      "giftCard": "Gift card code",
+      "giftCheck": "Check",
+      "giftValid": "Gift card accepted: −{amount}",
+      "giftInvalid": "Code not found or already used.",
+      "giftRateLimited": "Too many attempts. Please try again in a moment.",
+      "privacy": "I have read the <link>privacy policy</link> and agree to the processing of my data for this booking.",
+      "marketing": "I would like to receive offers and reminders by email.",
+      "giftService": "This gift card is for {service} — add it to your booking and the card will be applied."
+    },
+    "confirm": {
+      "title": "Review and confirm",
+      "edit": "Edit",
+      "payment": "Pay only after the cleaning.",
+      "estimateNote": "For heavily soiled items and \"from\" prices we agree on the final price with you before the visit.",
+      "submit": "Confirm booking",
+      "submitting": "Sending…",
+      "photos": "Photos attached: {count}"
+    },
+    "summary": {
+      "title": "Your order",
+      "empty": "You have not chosen any items yet.",
+      "subtotal": "Cleaning",
+      "minFill": "Top-up to minimum order ({min})",
+      "travel": "Travel fee",
+      "travelPending": "calculated from your address",
+      "giftCard": "Gift card",
+      "total": "Total",
+      "duration": "Estimated duration",
+      "from": "from",
+      "noPrepay": "Pay only after the cleaning",
+      "finalPrice": "The price is final",
+      "promoBundle": "Bundle offer",
+      "promoPercent": "Discount {percent}%",
+      "promoBoth": "Bundle and {percent}% discount",
+      "promoHint": "−{first}% on your first order, −{repeat}% for returning customers. The discount is calculated once you have entered your contact details.",
+      "reasonFirst": "first order",
+      "reasonRepeat": "returning customer",
+      "reasonMulti": "{min} or more items",
+      "bundles": {
+        "chairs": "Sofa + {count} chairs",
+        "mattress-single": "Sofa + single mattress",
+        "mattress-double": "Sofa + double mattress"
+      }
+    },
+    "trust": [
+      "Booked in about two minutes",
+      "Drying included",
+      "Satisfaction guarantee",
+      "Pay after the cleaning"
+    ],
+    "errors": {
+      "invalid": "Please check the form details and try again.",
+      "rate_limited": "Too many attempts. Please wait a moment and try again.",
+      "invalid_cart": "One of the items you selected is no longer available. Please check your selection.",
+      "out_of_area": "The address is outside our service area.",
+      "gift_card_invalid": "The gift card code is not valid.",
+      "slot_unavailable": "The selected time is no longer available. Please choose a new time.",
+      "slot_taken": "Someone booked this time just before you. Please choose another time.",
+      "failed": "We could not save your booking. Please try again or give us a call.",
+      "not_found": "Booking not found.",
+      "gift_card_not_applicable": "This gift card is for a service that is not in your booking. Add the service or remove the code.",
+      "price_changed": "The price has been updated: the final total is {total}. Please check the summary and confirm again."
+    },
+    "faq": {
+      "title": "Booking FAQ",
+      "items": [
+        {
+          "q": "What happens after I book?",
+          "a": "You get a confirmation by e-mail right away. The time is reserved for you immediately, so it disappears from the calendar for everyone else. We look at the photos you attached, confirm the booking by message or phone and let you know when we are on our way."
+        },
+        {
+          "q": "Do I need to pay in advance?",
+          "a": "No. You pay only after the cleaning, once you have seen the result. The price is the same as in the booking, unless we agreed otherwise with you before the visit based on the photos."
+        },
+        {
+          "q": "Can I reschedule or cancel?",
+          "a": "Yes. The confirmation e-mail contains a link where you can reschedule or cancel the booking yourself. Please let us know as early as possible so someone else can take the freed slot."
+        },
+        {
+          "q": "What if I do not live in Helsinki?",
+          "a": "There is no travel fee in the nearby area. Further away the fee is calculated from your postal code and shown in the booking before you confirm. If your postal code is outside our service area, ask for a quote on WhatsApp."
+        },
+        {
+          "q": "How long does the furniture take to dry?",
+          "a": "We dry the furniture with blower fans after cleaning, and that is always included in the price. Left alone, fabric would typically take 4–8 hours and a mattress longer — with the blowers it is considerably faster."
+        },
+        {
+          "q": "Do I need to prepare anything?",
+          "a": "Clear the furniture of loose items and make sure we can get around it. We need a power outlet and water. There is no need to vacuum beforehand."
+        }
+      ]
+    },
+    "success": {
+      "metaTitle": "Booking received",
+      "title": "Thank you — your booking has been received",
+      "lead": "Booking number {ref}. We have sent a confirmation to {email}.",
+      "addToCalendar": "Add to calendar",
+      "manage": "Reschedule or cancel booking",
+      "nextTitle": "What happens next?",
+      "next": [
+        "We will confirm your booking by message or phone.",
+        "We will let you know when we are on our way.",
+        "Clear any items off the furniture before the cleaning — nothing else is needed.",
+        "You pay only after the cleaning."
+      ]
+    },
+    "manage": {
+      "metaTitle": "Manage booking",
+      "title": "Your booking {ref}",
+      "status": {
+        "pending": "Awaiting confirmation",
+        "confirmed": "Confirmed",
+        "done": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "statusLabel": "Status",
+      "reschedule": "Reschedule booking",
+      "newTime": "Choose a new time",
+      "saveTime": "Confirm new time",
+      "saving": "Saving…",
+      "rescheduled": "Your booking has been rescheduled. We have sent a new confirmation by email.",
+      "cancel": "Cancel booking",
+      "cancelConfirm": "Are you sure you want to cancel your booking?",
+      "cancelYes": "Yes, cancel booking",
+      "cancelNo": "Keep booking",
+      "cancelled": "Your booking has been cancelled.",
+      "locked": "This booking can no longer be changed online. Please contact us if needed.",
+      "notFound": "Booking not found. Please check the link in your confirmation email."
+    },
+    "photos": {
+      "title": "Photos of the furniture",
+      "hint": "Attach up to {max} photos (10 MB each). They show us the material and how soiled it is — if the price differs, we contact you before the visit.",
+      "tooMany": "You can attach up to {max} photos.",
+      "tooBig": "One of the photos is larger than 10 MB.",
+      "type": "Please attach image files only (JPG, PNG, WebP or HEIC).",
+      "remove": "Remove photo {name}"
+    }
+  },
+  "email": {
+    "ref": "Booking number",
+    "when": "Time",
+    "duration": "Estimated duration",
+    "address": "Address",
+    "subtotal": "Cleaning",
+    "minFill": "Top-up to minimum order",
+    "travel": "Travel fee",
+    "giftCard": "Gift card",
+    "total": "Total",
+    "payment": "Payment after the cleaning. Blower drying is included in the price. If your photos show unusually heavy soiling, we agree on the price with you before the visit.",
+    "manage": "Reschedule or cancel booking",
+    "questions": "Questions? Reply to this email or call {phone}.",
+    "created": {
+      "subject": "Your booking {ref} has been received — Puro",
+      "title": "Thank you for your booking!",
+      "intro": "Hi {name}, we have received your booking and the time is reserved for you.",
+      "next": "We will also confirm the booking by message or phone and let you know when we are on our way."
+    },
+    "rescheduled": {
+      "subject": "Your booking {ref} has been rescheduled — Puro",
+      "title": "Your booking has been rescheduled",
+      "intro": "Hi {name}, the new time for your booking is shown below.",
+      "next": "If the new time does not suit you after all, you can reschedule again using the link below."
+    },
+    "cancelled": {
+      "subject": "Your booking {ref} has been cancelled — Puro",
+      "title": "Your booking has been cancelled",
+      "intro": "Hi {name}, your booking has been cancelled. You can book a new time online whenever you like.",
+      "next": "Book a new time: puropesu.fi"
+    },
+    "confirmed": {
+      "subject": "Your booking {ref} is confirmed — Puro",
+      "title": "Your booking is confirmed",
+      "intro": "Hi {name}, your booking is confirmed. See you at the agreed time!",
+      "next": "We will let you know when we are on our way. Clear any items off the furniture before the cleaning — nothing else is needed."
+    },
+    "promo": "Discount"
+  },
+  "pages": {
+    "showMap": "Show map",
+    "openMap": "Open in OpenStreetMap",
+    "mapTitle": "Map: center of our service area",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Address",
+    "businessId": "Business ID",
+    "seePage": "Read more",
+    "bookThis": "Book now",
+    "requestQuote": "Request a quote",
+    "priceList": "Price list",
+    "inactiveNote": "This service cannot be booked online right now. Ask us on WhatsApp.",
+    "toc": "Contents"
+  },
+  "blog": {
+    "metaTitle": "Tips — stains, odors and sofa care",
+    "metaDescription": "Practical advice on caring for sofas, leather furniture and mattresses: stain removal, odors, materials, and when it is worth calling a professional.",
+    "title": "Sofa and mattress care tips",
+    "lead": "Practical advice on stains, odors and materials — and an honest take on when home remedies are enough.",
+    "all": "All",
+    "categories": {
+      "tahrat": "Stains",
+      "hajut": "Odors",
+      "materiaalit": "Materials and care",
+      "patjat": "Mattresses",
+      "yrityksille": "Rental machines and professionals"
+    },
+    "readingTime": "{minutes} min read",
+    "published": "Published {date}",
+    "toc": "Contents",
+    "related": "Read also",
+    "read": "Read article",
+    "ctaTitle": "Stain or odor still there? We'll take care of it",
+    "ctaText": "Steam cleaning at your home, every day. See the price and free slots instantly.",
+    "tip": "Tip",
+    "warning": "Note"
+  },
+  "promo": {
+    "eyebrow": "Bundle offers",
+    "title": "Sofa, chairs and mattress in one visit — for less",
+    "lead": "When we clean several items in one visit, you save noticeably. The bundle is applied automatically in the booking.",
+    "chairs": {
+      "title": "Sofa + {count} dining chairs",
+      "text": "Chair backs and seats cleaned along with the sofa."
+    },
+    "mattressSingle": {
+      "title": "Sofa + single mattress",
+      "text": "A mattress or bed cleaned in the same visit."
+    },
+    "mattressDouble": {
+      "title": "Sofa + double mattress",
+      "text": "The biggest saving: a double bed together with the sofa."
+    },
+    "formula": "Sofa price + {extra}",
+    "example": "Example: {sofa}",
+    "separately": "Separately {price}",
+    "save": "You save {amount}",
+    "book": "Book this bundle",
+    "discountsTitle": "Discounts",
+    "first": "−{pct}% on your first order",
+    "repeat": "−{pct}% for returning customers",
+    "multi": "−{pct}% for {min} or more items",
+    "noteBest": "A bundle and a percentage discount are not combined: you automatically get whichever is cheaper for you. Discounts do not apply to the travel fee, and the minimum order is counted before discounts.",
+    "noteStack": "The percentage discount is taken from the bundle price. Discounts do not apply to the travel fee, and the minimum order is counted before discounts.",
+    "drying": "Blower drying is part of every cleaning — always free.",
+    "tableSofa": "Sofa",
+    "tableSeparately": "Separately",
+    "tableBundle": "As a bundle",
+    "tableSaving": "Saving",
+    "tableSingle": "+ single mattress",
+    "tableDouble": "+ double mattress"
+  }
+}

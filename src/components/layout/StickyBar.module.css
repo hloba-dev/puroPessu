@@ -1,0 +1,96 @@
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: none;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 1px;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid var(--hairline);
+  background: rgba(6, 9, 15, 0.94);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 64px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e6e9ed;
+}
+
+.primary {
+  flex-direction: row;
+  gap: 10px;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #05788f, var(--cyan-4));
+}
+.primary small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* floating WhatsApp button with a pulse ring */
+.fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #fff;
+  background: #128c4b;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid #25d366;
+  animation: pulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  from {
+    scale: 1;
+    opacity: 0.75;
+  }
+  to {
+    scale: 1.55;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .bar {
+    display: grid;
+  }
+  .fab {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab::before {
+    animation: none;
+    opacity: 0;
+  }
+}

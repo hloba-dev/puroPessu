@@ -1,0 +1,137 @@
+/* Near-black button with a bank of cyan light along its bottom edge.
+   The glow is a multi-stop gradient clipped by overflow:hidden — no outer halo. */
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  background:
+    radial-gradient(
+      120% 86% at 50% 122%,
+      var(--cyan-1) 0%,
+      var(--cyan-2) 14%,
+      var(--cyan-3) 30%,
+      rgba(0, 97, 128, 0.62) 48%,
+      rgba(0, 97, 128, 0.18) 62%,
+      rgba(0, 97, 128, 0) 74%
+    ),
+    linear-gradient(180deg, #0c1118 0%, #05070b 100%);
+  box-shadow: 0 0 8px var(--glow);
+  transition:
+    filter 0.2s ease,
+    border-color 0.2s ease,
+    translate 0.2s ease;
+}
+
+/* side edge-light: a 1px gradient ring that fades out towards the top */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(154, 217, 236, 0) 28%,
+    rgba(154, 217, 236, 0.5) 78%,
+    rgba(154, 217, 236, 0.85) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+
+.btn:hover {
+  filter: brightness(1.16);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.btn:active {
+  translate: 0 1px;
+}
+.btn[aria-disabled="true"],
+.btn:disabled {
+  filter: grayscale(0.7) brightness(0.75);
+  cursor: not-allowed;
+}
+
+/* nav variant: smaller, with a specular line on the top edge */
+.nav {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16%;
+  right: 16%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  pointer-events: none;
+}
+
+.sm {
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+/* secondary: glass outline, no glow bank */
+.ghost {
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.ghost::after {
+  display: none;
+}
+.ghost:hover {
+  filter: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* on light "paper" cards */
+.dark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* very narrow screens: long labels (ru/fi) may wrap instead of widening the page */
+@media (max-width: 420px) {
+  .btn {
+    max-width: 100%;
+    padding-block: 10px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+  }
+}

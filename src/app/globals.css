@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #020204;
+  --surface: #0a111d;
+  --surface-2: #0d1117;
+  --text: #ffffff;
+  --muted: #a9aeb5;
+  --hairline: rgba(255, 255, 255, 0.105);
+  --cyan-1: #9ad9ec;
+  --cyan-2: #3ec8e4;
+  --cyan-3: #0596b3;
+  --cyan-4: #006180;
+  --glow: rgba(60, 190, 235, 0.1);
+  --paper: #f4f7fa;
+  --ink: #0b1220;
+  --ink-muted: #4a5568;
+  --nav-h: 64px;
+  --container: 1172px;
+}
+
+/* Metric-matched fallback for Poppins (same numbers next/font would generate), limited to Latin,
+   punctuation, currency and arrows so that Cyrillic falls through to Montserrat. */
+@font-face {
+  font-family: "Poppins Latin Fallback";
+  src: local("Arial");
+  ascent-override: 93.62%;
+  descent-override: 31.21%;
+  line-gap-override: 8.92%;
+  size-adjust: 112.16%;
+  unicode-range: U+0000-024F, U+02B0-036F, U+1E00-1EFF, U+2000-22FF, U+FEFF, U+FFFD;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-muted: var(--muted);
+  --color-hairline: var(--hairline);
+  --color-cyan-1: var(--cyan-1);
+  --color-cyan-2: var(--cyan-2);
+  --color-cyan-3: var(--cyan-3);
+  --color-cyan-4: var(--cyan-4);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --font-sans: var(--font-latin, "Poppins"), "Poppins Latin Fallback", var(--font-cyr, "Montserrat"), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-accent), ui-serif, Georgia, serif;
+  --breakpoint-nav: 1081px;
+}
+
+html {
+  background: var(--bg);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 40px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* long Finnish compounds ("pääkaupunkiseudulla") must never widen a column on small screens */
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+@media (max-width: 700px) {
+  /* room for the sticky bottom bar */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+}
+
+/* returning visitors: the consent script marks <html> before paint, so the banner never flashes */
+html[data-consent="set"] [data-cookie-banner]:not([data-forced]) {
+  display: none;
+}
+
+/* the booking wizard has its own bottom bar (total + continue): the global shortcuts step aside */
+body:has([data-booking-wizard]) [data-sticky-bar],
+body:has([data-booking-wizard]) [data-wa-fab] {
+  display: none;
+}
+@media (max-width: 1023px) {
+  body:has([data-booking-wizard]) {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan-2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  background: var(--cyan-3);
+  color: #fff;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------- layout primitives ---------- */
+
+.container-x {
+  width: 100%;
+  max-width: calc(var(--container) + 48px);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+@media (max-width: 700px) {
+  .container-x {
+    padding-inline: 16px;
+  }
+}
+
+.section {
+  padding-block: clamp(56px, 8vw, 104px);
+}
+
+.page-top {
+  padding-top: calc(var(--nav-h) + 56px);
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan-2);
+}
+
+.h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.h3 {
+  font-size: clamp(19px, 2.2vw, 23px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.lead {
+  font-size: clamp(16px, 1.7vw, 19px);
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--cyan-1);
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(13, 22, 37, 0.82), rgba(8, 13, 22, 0.82));
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+}
+
+.paper {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 20px;
+}
+
+.link {
+  color: var(--cyan-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(154, 217, 236, 0.45);
+}
+.link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* long-form text (legal pages, articles) */
+.prose-puro {
+  color: #d5d9df;
+  font-size: 17px;
+  line-height: 1.75;
+}
+.prose-puro > * + * {
+  margin-top: 1.1em;
+}
+.prose-puro h2 {
+  margin-top: 2em;
+  font-size: clamp(23px, 3vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+.prose-puro h3 {
+  margin-top: 1.6em;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.prose-puro a {
+  color: var(--cyan-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-puro ul,
+.prose-puro ol {
+  padding-left: 1.3em;
+}
+.prose-puro ul {
+  list-style: disc;
+}
+.prose-puro ol {
+  list-style: decimal;
+}
+.prose-puro li + li {
+  margin-top: 0.4em;
+}
+.prose-puro strong {
+  color: #fff;
+  font-weight: 600;
+}
+.prose-puro table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.prose-puro th,
+.prose-puro td {
+  border-bottom: 1px solid var(--hairline);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.prose-puro th {
+  color: #fff;
+  font-weight: 600;
+}
+.prose-puro blockquote {
+  border-left: 3px solid var(--cyan-3);
+  padding-left: 16px;
+  color: var(--muted);
+}
+
+/* form controls */
+.field {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font: inherit;
+}
+.field::placeholder {
+  color: #7d848d;
+}
+.field:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.field[aria-invalid="true"] {
+  border-color: #ff8a8a;
+}
+select.field option {
+  background: var(--surface);
+  color: #fff;
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dfe3e8;
+}
+.field-error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ffa3a3;
+}
+/* honeypot: visually removed, still in the DOM for bots */
+.hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,86 @@
+/* bundle offers: a lit panel with three light "price tag" cards */
+.panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+  border-radius: 28px;
+  border: 1px solid var(--hairline);
+  background:
+    radial-gradient(70% 90% at 100% 0%, rgba(62, 200, 228, 0.16), transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(0, 97, 128, 0.32), transparent 65%),
+    var(--surface);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 24px;
+  border-radius: 22px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+/* every card ends with its button at the bottom, whatever the text length */
+.card > :last-child {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.saving {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #0b5c3b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cyan-4);
+}
+.icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(140deg, var(--cyan-3) 0%, var(--cyan-4) 60%, #0a1c3a 100%);
+}
+
+.chip {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(154, 217, 236, 0.35);
+  background: rgba(62, 200, 228, 0.1);
+  color: var(--cyan-1);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.drying {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 360px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(154, 217, 236, 0.35);
+  background: rgba(2, 2, 4, 0.45);
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.drying svg {
+  color: var(--cyan-2);
+}
