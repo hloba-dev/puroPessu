@@ -1,39 +1,8 @@
 import {expect, test, type Page} from '@playwright/test';
+import {dismissCookies, fillAddress, pickFreeSlot, selectSlot} from './helpers';
 
 const next = (page: Page) => page.getByTestId('booking-next');
 const sum = (page: Page, id: string) => page.getByTestId(`sum-${id}`);
-
-/** A free slot a few days ahead, straight from the availability API (same source the calendar uses). */
-async function pickFreeSlot(page: Page, durationMin: number, dayOffset: number) {
-  const res = await page.request.get(`/api/availability?duration=${durationMin}`);
-  expect(res.ok()).toBeTruthy();
-  const {days} = (await res.json()) as {days: Record<string, string[]>};
-  const free = Object.entries(days).filter(([, slots]) => slots.length > 0);
-  const [date, slots] = free[Math.min(dayOffset, free.length - 1)];
-  return {date, time: slots[Math.floor(slots.length / 2)]};
-}
-
-async function dismissCookies(page: Page) {
-  await page.addInitScript(() =>
-    localStorage.setItem('puro-consent', JSON.stringify({analytics: false, marketing: false, ts: 1}))
-  );
-}
-
-async function fillAddress(page: Page, postalCode = '00100') {
-  await page.getByLabel('Katuosoite').fill('Testikatu 1 A 2');
-  await page.getByLabel('Postinumero').fill(postalCode);
-}
-
-async function selectSlot(page: Page, slot: {date: string; time: string}) {
-  const month = page.locator('[data-month]');
-  await month.waitFor();
-  // the day may be in a later month of the calendar
-  for (let i = 0; i < 3 && (await month.getAttribute('data-month')) !== slot.date.slice(0, 7); i++) {
-    await page.getByRole('button', {name: 'Seuraava kuukausi'}).click();
-  }
-  await page.locator(`[data-date="${slot.date}"]`).click();
-  await page.locator(`[data-time="${slot.time}"]`).click();
-}
 
 // every test customer has an own phone number, so each one is a "first order" unless a test says otherwise
 let phoneCounter = 0;
@@ -59,8 +28,8 @@ async function walkToConfirm(page: Page, slot: {date: string; time: string}, ema
   await expect(page.getByLabel('Postitoimipaikka')).toHaveValue('Helsinki');
   await next(page).click();
 
+  // choosing a time moves straight on to the contact step
   await selectSlot(page, slot);
-  await next(page).click();
 
   await fillContact(page, email, phone);
   await next(page).click();

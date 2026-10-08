@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import dynamic from 'next/dynamic';
 import {useTranslations} from 'next-intl';
 import {getPathname} from '@/i18n/navigation';
@@ -86,7 +86,8 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
       mounted.current = true;
       return;
     }
-    headingRef.current?.focus();
+    // focus() would scroll instantly; the scroll below follows the html scroll-behavior (smooth)
+    headingRef.current?.focus({preventScroll: true});
     headingRef.current?.scrollIntoView({block: 'start'});
   }, [step]);
 
@@ -94,6 +95,15 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
     setError(null);
     setStep(next);
   };
+
+  // a chosen time moves straight on to the contact step; `null` (another day tapped, a slot that went) does not
+  const chooseSlot = useCallback((next: SlotValue | null) => {
+    setSlot(next);
+    if (next) {
+      setError(null);
+      setStep(3);
+    }
+  }, []);
 
   const submit = async () => {
     if (!address || !slot || !contact) return;
@@ -256,7 +266,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                   durationMin={quote.durationMin}
                   timezone={timezone}
                   value={slot}
-                  onChange={setSlot}
+                  onChange={chooseSlot}
                   reloadKey={reloadKey}
                 />
                 {slotLabel && (

@@ -57,7 +57,9 @@ export default async function LocaleLayout({children, params}: LayoutProps<'/[lo
   return (
     // the inline consent script adds data-consent to <html> before hydration (returning visitors)
     // and sets the Consent Mode defaults, so it has to stay above the Tag Manager loader
-    <html lang={locale} className={fontVariables} style={fontFamilies} suppressHydrationWarning>
+    // data-scroll-behavior: Next 16 only neutralises the smooth scrolling of globals.css during route
+    // transitions when the page opts in; without it a navigation from far down a page can stay scrolled
+    <html lang={locale} className={fontVariables} style={fontFamilies} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{__html: consentDefaultScript}} />
         <GoogleTagManager />

@@ -1,6 +1,6 @@
 'use client';
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
 import type {Locale} from '@/i18n/routing';
 import {parseHm, zonedToUtc} from '@/lib/booking/tz';
@@ -39,6 +39,9 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
   const [month, setMonth] = useState<string | null>(null);
   const [day, setDay] = useState<string | null>(value?.date ?? null);
   const [attempt, setAttempt] = useState(0);
+  const slotsRef = useRef<HTMLDivElement>(null);
+  // set by a tap on a day: the free times of that day are then brought into view (not on the initial pick)
+  const revealSlots = useRef(false);
 
   const load = useCallback(
     async (signal: AbortSignal) => {
@@ -69,6 +72,20 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
   }, [load, attempt, reloadKey]);
 
   const days = state.status === 'ready' ? state.days : null;
+
+  // on phones the list of free times sits under the calendar, often below the fold
+  useEffect(() => {
+    if (!revealSlots.current) return;
+    revealSlots.current = false;
+    const panel = slotsRef.current;
+    if (!panel) return;
+    const rect = panel.getBoundingClientRect();
+    const top = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    // the wizard's fixed bottom bar (total + next button) covers the last ~90px on small screens
+    const bottom = window.innerHeight - 96;
+    // no explicit `behavior`: the html scroll-behavior applies (smooth, or auto under reduced motion)
+    if (rect.top < top || rect.bottom > bottom) panel.scrollIntoView({block: 'start'});
+  }, [day]);
 
   // a previously chosen slot may have been taken in the meantime
   useEffect(() => {
@@ -172,6 +189,8 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
                     : t('dayFull', {date: fmt.full.format(asDate(date))})
                 }
                 onClick={() => {
+                  if (date === day) return;
+                  revealSlots.current = true;
                   setDay(date);
                   if (value?.date !== date) onChange(null);
                 }}
@@ -190,7 +209,7 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
         </div>
       </div>
 
-      <div>
+      <div ref={slotsRef}>
         {day ? (
           <>
             <h3 className="font-semibold first-letter:uppercase">{t('slotsFor', {date: fmt.full.format(asDate(day))})}</h3>
