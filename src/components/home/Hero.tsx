@@ -66,7 +66,8 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
       <Stars />
 
       <div className={`container-x ${styles.top}`}>
-        <div>
+        {/* on phones the wrapper dissolves (display: contents) and the slider slots in between the headline and the buttons */}
+        <div className={styles.copy}>
           <p className={`${styles.badge} ${styles.rise}`}>
             <span className={styles.badgeIcon}>
               <IconClock width={18} height={18} />
@@ -85,8 +86,10 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
             {t('sub', {price: formatEur(fromPriceCents, locale)})}
           </p>
           <div className={`${styles.ctas} ${styles.rise}`} style={delay(0.4)}>
-            <GlowButton href="/varaa-aika">{t('cta')}</GlowButton>
-            <GlowButton href="/hinnasto" variant="ghost">
+            <GlowButton href="/varaa-aika" className={styles.cta}>
+              {t('cta')}
+            </GlowButton>
+            <GlowButton href="/hinnasto" variant="ghost" className={styles.cta}>
               {t('ctaSecondary')}
             </GlowButton>
           </div>

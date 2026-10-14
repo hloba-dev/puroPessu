@@ -1,14 +1,14 @@
 .frame {
   position: relative;
-  aspect-ratio: 4 / 3;
+  /* the hero overrides the ratio on phones (see Hero.module.css) */
+  aspect-ratio: var(--ba-ratio, 4 / 3);
   overflow: hidden;
   border-radius: 18px;
   background: var(--paper);
+  /* a mouse may drag anywhere on the photo; a finger only drags the handle (touch-action lives there) */
   cursor: ew-resize;
   user-select: none;
   -webkit-user-select: none;
-  /* horizontal drags move the divider, vertical swipes still scroll the page */
-  touch-action: pan-y;
 }
 
 .img {
@@ -64,6 +64,20 @@
   background: #fff;
   color: var(--ink);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  /* a finger on the handle drags the divider and never scrolls the page; everywhere else on the photo
+     the browser scrolls as usual (the component ignores touches that start off the handle) */
+  touch-action: none;
+}
+.handle:active {
+  cursor: grabbing;
+}
+/* a larger touch target than the visible 48px circle */
+.handle::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
 }
 .handle:focus-visible {
   outline: 3px solid var(--cyan-2);
@@ -91,4 +105,14 @@
   font-size: 15px;
   font-weight: 500;
   color: #e3e6ea;
+}
+
+/* phones: the hint must not cover half of the sofa */
+@media (max-width: 700px) {
+  .hint {
+    bottom: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
 }

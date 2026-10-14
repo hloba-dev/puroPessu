@@ -28,13 +28,31 @@ export function BeforeAfter({before, after, caption, priority = false, sizes, hi
   const [pos, setPos] = useState(50);
   const [touched, setTouched] = useState(false);
   const frameRef = useRef<HTMLDivElement>(null);
+  const handleRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+  // px from the pointer to the divider when a drag starts on the handle: the handle then follows the
+  // finger instead of jumping under it
+  const grabOffset = useRef(0);
 
   const moveTo = (clientX: number) => {
     const rect = frameRef.current?.getBoundingClientRect();
     if (!rect || rect.width === 0) return;
-    setPos(clamp(((clientX - rect.left) / rect.width) * 100));
+    setPos(clamp(((clientX + grabOffset.current - rect.left) / rect.width) * 100));
     setTouched(true);
+  };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0) return;
+    const onHandle = handleRef.current?.contains(e.target as Node) ?? false;
+    // a finger (or pen) only drags the handle: a touch anywhere else on the photo scrolls the page
+    // like the rest of it, so flicking through the page never moves the divider
+    if (!onHandle && e.pointerType !== 'mouse') return;
+    const rect = frameRef.current?.getBoundingClientRect();
+    if (!rect || rect.width === 0) return;
+    grabOffset.current = onHandle ? rect.left + (rect.width * pos) / 100 - e.clientX : 0;
+    dragging.current = true;
+    e.currentTarget.setPointerCapture(e.pointerId);
+    moveTo(e.clientX);
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -61,12 +79,7 @@ export function BeforeAfter({before, after, caption, priority = false, sizes, hi
       <div
         ref={frameRef}
         className={styles.frame}
-        onPointerDown={(e) => {
-          if (e.button !== 0) return;
-          dragging.current = true;
-          e.currentTarget.setPointerCapture(e.pointerId);
-          moveTo(e.clientX);
-        }}
+        onPointerDown={onPointerDown}
         onPointerMove={(e) => dragging.current && moveTo(e.clientX)}
         onPointerUp={() => (dragging.current = false)}
         onPointerCancel={() => (dragging.current = false)}
@@ -101,6 +114,7 @@ export function BeforeAfter({before, after, caption, priority = false, sizes, hi
 
         <div className={styles.divider} style={{left: `${pos}%`}}>
           <div
+            ref={handleRef}
             role="slider"
             tabIndex={0}
             aria-label={t('label', {item: caption})}
