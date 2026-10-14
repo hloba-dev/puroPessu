@@ -60,19 +60,21 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
   );
   const mockTotal = mockRows.reduce((sum, r) => sum + r.service.priceCents * r.qty, 0);
 
+  const hours = t('badge', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)});
+
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.bg} aria-hidden="true" />
       <Stars />
 
       <div className={`container-x ${styles.top}`}>
-        {/* on phones the wrapper dissolves (display: contents) and the slider slots in between the headline and the buttons */}
+        {/* on phones the wrapper dissolves (display: contents), the badge hides and the slider slots in between the headline and the buttons */}
         <div className={styles.copy}>
           <p className={`${styles.badge} ${styles.rise}`}>
             <span className={styles.badgeIcon}>
               <IconClock width={18} height={18} />
             </span>
-            <span>{t('badge', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)})}</span>
+            <span>{hours}</span>
           </p>
           <h1 id="hero-title" className={styles.h1}>
             <span className={styles.wipe} style={delay(0.05)}>
@@ -86,6 +88,11 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
             {t('sub', {price: formatEur(fromPriceCents, locale)})}
           </p>
           <div className={`${styles.ctas} ${styles.rise}`} style={delay(0.4)}>
+            {/* phones only: the opening hours shrink to a small chip above the prices button */}
+            <p className={styles.hoursMini}>
+              <IconClock width={14} height={14} />
+              <span>{hours}</span>
+            </p>
             <GlowButton href="/varaa-aika" className={styles.cta}>
               {t('cta')}
             </GlowButton>

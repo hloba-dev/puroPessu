@@ -120,6 +120,11 @@
   margin-top: 28px;
 }
 
+/* compact copy of the badge for phones, see the phone block below */
+.hoursMini {
+  display: none;
+}
+
 .slider {
   width: 100%;
   max-width: 440px;
@@ -395,20 +400,13 @@
   .copy {
     display: contents;
   }
+  /* the big badge leaves the top: its text reappears as a chip right above the prices button */
   .badge {
-    order: 1;
-    min-height: 34px;
-    gap: 10px;
-    padding: 3px 12px 3px 3px;
-    font-size: 13px;
-  }
-  .badgeIcon {
-    width: 28px;
-    height: 28px;
+    display: none;
   }
   .h1 {
     order: 2;
-    margin-top: 14px;
+    margin-top: 0;
     font-size: clamp(30px, 8.8vw, 64px);
   }
   .slider {
@@ -425,8 +423,29 @@
     order: 4;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px 10px;
     margin-top: 14px;
+  }
+  /* spans the whole row and hugs the right edge, so it sits above the prices button and never truncates */
+  .hoursMini {
+    display: inline-flex;
+    grid-column: 1 / -1;
+    justify-self: end;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+    padding: 4px 10px 4px 7px;
+    border-radius: 8px;
+    border: 1px solid var(--hairline);
+    background: #090d14;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #e8ebef;
+  }
+  .hoursMini svg {
+    flex-shrink: 0;
+    color: var(--cyan-1);
   }
   .ctas .cta {
     min-width: 0;
