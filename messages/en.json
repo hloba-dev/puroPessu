@@ -343,6 +343,8 @@
       "notes": "Additional information",
       "photos": "Photos of the items",
       "photosHint": "Up to {max} photos, 10 MB per photo (JPG, PNG, WebP or HEIC).",
+      "choosePhotos": "Choose photos",
+      "noPhotos": "No photos selected",
       "photosTooMany": "You can attach up to {max} photos.",
       "photosTooBig": "One of the photos is larger than 10 MB.",
       "photosType": "Please attach image files only (JPG, PNG, WebP or HEIC).",
@@ -588,6 +590,8 @@
     "photos": {
       "title": "Photos of the furniture",
       "hint": "Attach up to {max} photos (10 MB each). They show us the material and how soiled it is — if the price differs, we contact you before the visit.",
+      "choose": "Choose photos",
+      "none": "No photos selected",
       "tooMany": "You can attach up to {max} photos.",
       "tooBig": "One of the photos is larger than 10 MB.",
       "type": "Please attach image files only (JPG, PNG, WebP or HEIC).",

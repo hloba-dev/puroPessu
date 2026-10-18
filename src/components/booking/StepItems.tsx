@@ -8,6 +8,7 @@ import {BOOKING_PHOTO_TYPES, MAX_BOOKING_PHOTOS, MAX_BOOKING_PHOTO_BYTES} from '
 import {formatDuration, formatEur, l10n} from '@/lib/format';
 import type {Catalog, Service} from '@/lib/types';
 import {IconChevron} from '@/components/ui/icons';
+import {PhotoPicker} from '@/components/forms/PhotoPicker';
 
 interface Props {
   catalog: Catalog;
@@ -166,17 +167,15 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
         <p id="booking-photos-hint" className="mt-1 text-[15px] text-muted">
           {tf('hint', {max: MAX_BOOKING_PHOTOS})}
         </p>
-        <input
+        <PhotoPicker
           id="booking-photos"
-          type="file"
-          multiple
           accept={BOOKING_PHOTO_TYPES.join(',')}
           aria-describedby="booking-photos-hint"
-          className="field mt-4 file:mr-4 file:rounded-lg file:border-0 file:bg-white/10 file:px-3 file:py-1.5 file:text-white"
-          onChange={(e) => {
-            addPhotos(e.target.files);
-            e.target.value = '';
-          }}
+          className="mt-4"
+          label={tf('choose')}
+          empty={tf('none')}
+          count={photos.length}
+          onPick={addPhotos}
         />
         {photoError && (
           <p className="field-error" role="alert">

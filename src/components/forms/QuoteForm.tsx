@@ -17,6 +17,7 @@ import {
 } from '@/lib/forms/schema';
 import {createBrowserSupabase} from '@/lib/supabase/browser';
 import {Field} from './Field';
+import {PhotoPicker} from './PhotoPicker';
 import {FormFooter, FormSuccess, useFieldMessage, useFormSubmit} from './shared';
 
 const BUCKET = 'quote-photos';
@@ -145,15 +146,12 @@ export function QuoteForm() {
 
       <div className="sm:col-span-2">
         <Field label={t('photos')} optional={tf('optional')} hint={t('photosHint', {max: MAX_PHOTOS})} error={fileError ?? undefined}>
-          <input
-            type="file"
-            multiple
+          <PhotoPicker
             accept={PHOTO_TYPES.join(',')}
-            className="field file:mr-4 file:rounded-lg file:border-0 file:bg-white/10 file:px-3 file:py-1.5 file:text-white"
-            onChange={(e) => {
-              pickFiles(e.target.files);
-              e.target.value = '';
-            }}
+            label={t('choosePhotos')}
+            empty={t('noPhotos')}
+            count={files.length}
+            onPick={pickFiles}
           />
         </Field>
         {files.length > 0 && (

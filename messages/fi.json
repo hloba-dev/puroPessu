@@ -343,6 +343,8 @@
       "notes": "Lisätiedot",
       "photos": "Kuvat kohteesta",
       "photosHint": "Enintään {max} kuvaa, 10 Mt / kuva (JPG, PNG, WebP tai HEIC).",
+      "choosePhotos": "Valitse kuvat",
+      "noPhotos": "Ei valittuja kuvia",
       "photosTooMany": "Voit liittää enintään {max} kuvaa.",
       "photosTooBig": "Yksi kuvista on yli 10 Mt.",
       "photosType": "Liitä vain kuvatiedostoja (JPG, PNG, WebP tai HEIC).",
@@ -588,6 +590,8 @@
     "photos": {
       "title": "Kuvat kalusteista",
       "hint": "Liitä enintään {max} kuvaa (10 Mt / kuva). Kuvista näemme materiaalin ja lian määrän — jos hinta poikkeaa, otamme yhteyttä ennen käyntiä.",
+      "choose": "Valitse kuvat",
+      "none": "Ei valittuja kuvia",
       "tooMany": "Voit liittää enintään {max} kuvaa.",
       "tooBig": "Yksi kuvista on yli 10 Mt.",
       "type": "Liitä vain kuvatiedostoja (JPG, PNG, WebP tai HEIC).",
