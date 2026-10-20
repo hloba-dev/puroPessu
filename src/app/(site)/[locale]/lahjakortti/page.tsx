@@ -67,7 +67,7 @@ export default async function GiftCardPageRoute({params}: PageProps<'/[locale]/l
             <h2 className="h3">{content.terms.title}</h2>
             <CheckList
               items={content.terms.items.map((item) => fill(item, {months: GIFT_VALID_MONTHS}))}
-              className="mt-5 text-[15px] text-text"
+              className="mt-5 text-base text-text"
             />
           </div>
         </div>

@@ -38,7 +38,7 @@ export async function ReviewsBlock({reviews, settings, locale}: {reviews: Review
         )}
         {googleUrl && (
           <p className="mt-8">
-            <a href={googleUrl} className="link" rel="noopener" target="_blank">
+            <a href={googleUrl} className="link py-2" rel="noopener" target="_blank">
               {t('google')}
             </a>
           </p>

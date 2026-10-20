@@ -15,7 +15,7 @@ export function CardGrid({items, columns = 3, numbered = false}: {items: TitleTe
             </span>
           )}
           <h3 className={`text-lg font-semibold ${numbered ? 'mt-3' : ''}`}>{item.title}</h3>
-          <p className="mt-2 text-[15px] text-muted">{item.text}</p>
+          <p className="mt-2 text-base text-muted">{item.text}</p>
         </li>
       ))}
     </Tag>
@@ -55,7 +55,7 @@ interface CompareProps {
 export function CompareTable({headers, rows, caption}: CompareProps) {
   return (
     <div className="overflow-x-auto rounded-[20px] border border-hairline" tabIndex={0} role="region" aria-label={caption}>
-      <table className="w-full min-w-[620px] border-collapse text-left text-[15px]">
+      <table className="w-full min-w-[620px] border-collapse text-left text-base">
         <caption className="sr-only">{caption}</caption>
         <thead>
           <tr className="bg-surface text-sm">

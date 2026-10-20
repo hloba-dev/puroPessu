@@ -94,6 +94,26 @@
   display: none;
 }
 
+/* guarantee · no prepayment · drying included */
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.trust svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
 .slider {
   width: 100%;
   max-width: 440px;
@@ -495,14 +515,22 @@
     min-width: 0;
     padding-inline: 12px;
   }
-  .sub {
+  .trust {
     order: 5;
-    margin-top: 16px;
-    max-width: none;
-    font-size: 15px;
+    gap: 6px 14px;
+    margin-top: 14px;
+    font-size: 13px;
   }
-  .mock:hover {
-    translate: 0 0;
+  .sub {
+    order: 6;
+    margin-top: 14px;
+    max-width: none;
+    font-size: 16px;
+  }
+  /* the fake booking widget reads as a real one on a phone (taps do nothing) and pushes the
+     benefits a whole screen down: phones go straight from the strip to the benefits */
+  .mock {
+    display: none;
   }
   /* a CSS-animated 3D ring cannot be swiped: phones get the native strip instead */
   .ringViewport {

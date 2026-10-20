@@ -6,6 +6,15 @@
   z-index: 100;
   padding-inline: 16px;
   pointer-events: none;
+  transition: translate 0.25s ease;
+}
+@media (max-width: 700px) {
+  .wrap[data-hidden="true"] {
+    translate: 0 calc(-100% - 16px);
+  }
+  .wrap:focus-within {
+    translate: 0;
+  }
 }
 
 /* glass capsule */
@@ -35,6 +44,12 @@
   font-weight: 700;
   font-size: 19px;
   letter-spacing: 0.02em;
+}
+@media (max-width: 700px) {
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .panel {

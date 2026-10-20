@@ -98,8 +98,14 @@ test.describe('layout', () => {
       await page.waitForTimeout(1200);
       // the 3D ring on wide screens, the native swipe strip on phones
       const ring = await page.locator('[data-paused], [data-carousel="hero"]').filter({visible: true}).first().boundingBox();
-      const mock = await page.getByRole('link', {name: 'Avaa varaus: valitse pestävät kalusteet ja vapaa aika'}).boundingBox();
       expect(ring).not.toBeNull();
+      const mockLink = page.getByRole('link', {name: 'Avaa varaus: valitse pestävät kalusteet ja vapaa aika'});
+      // phones do not show the mock at all (see Hero.module.css)
+      if (width <= 700) {
+        await expect(mockLink).toBeHidden();
+        continue;
+      }
+      const mock = await mockLink.boundingBox();
       expect(mock).not.toBeNull();
       const gap = mock!.y - (ring!.y + ring!.height);
       if (gap < 0) overlapping.push(`@${width}px (${Math.round(-gap)}px over the ring)`);

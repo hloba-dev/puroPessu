@@ -32,7 +32,7 @@ export function ContactForm() {
       className="grid gap-5 sm:grid-cols-2"
     >
       <Field label={t('name')} error={message(errors.name?.message)} className="sm:col-span-2">
-        <input className="field" autoComplete="name" {...register('name')} />
+        <input className="field" autoComplete="name" autoCapitalize="words" {...register('name')} />
       </Field>
       <Field label={t('email')} error={message(errors.email?.message)}>
         <input className="field" type="email" autoComplete="email" {...register('email')} />

@@ -16,7 +16,7 @@ export async function ServiceZones({settings, locale}: {settings: Settings; loca
           <h3 className="text-sm font-semibold uppercase tracking-widest text-teal-2">
             {zone.feeCents === 0 ? t('zoneFree') : t('zoneFee', {fee: formatEur(zone.feeCents, locale)})}
           </h3>
-          <p className="mt-3 text-[15px] leading-7 text-text">{zone.municipalities.join(' · ')}</p>
+          <p className="mt-3 text-base leading-7 text-text">{zone.municipalities.join(' · ')}</p>
         </div>
       ))}
     </div>

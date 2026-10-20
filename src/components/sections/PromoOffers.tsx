@@ -72,7 +72,7 @@ export async function PromoOffers({catalog, promotions, locale}: Props) {
                     </span>
                   </div>
                   <h3 className="mt-5 text-xl leading-snug font-bold">{t(`${key}.title`, {count: promotions.bundleChairsCount})}</h3>
-                  <p className="mt-1.5 text-[15px] text-ink-muted">{t(`${key}.text`)}</p>
+                  <p className="mt-1.5 text-base text-ink-muted">{t(`${key}.text`)}</p>
 
                   <p className="mt-5 text-sm font-semibold tracking-wide text-teal-3 uppercase">
                     {t('formula', {extra: formatEur(offer.extraCents, locale)})}
@@ -115,7 +115,7 @@ export async function PromoOffers({catalog, promotions, locale}: Props) {
 function BundleTable({caption, columns, rows}: {caption: string; columns: string[]; rows: string[][]}) {
   return (
     <div className="overflow-x-auto rounded-[20px] border border-hairline" tabIndex={0} role="region" aria-label={caption}>
-      <table className="w-full min-w-[520px] border-collapse text-left text-[15px]">
+      <table className="w-full min-w-[520px] border-collapse text-left text-base">
         <caption className="bg-surface p-4 text-left text-lg font-semibold">{caption}</caption>
         <thead>
           <tr className="border-t border-hairline text-sm text-muted">
@@ -165,7 +165,7 @@ export async function PromoTables({catalog, promotions, locale}: Props) {
         <div className="mt-4">
           <DiscountChips promotions={promotions} />
         </div>
-        <p className="mt-4 max-w-[80ch] text-[15px] text-muted">{t(promotions.stackBundlesWithPercent ? 'noteStack' : 'noteBest')}</p>
+        <p className="mt-4 max-w-[80ch] text-base text-muted">{t(promotions.stackBundlesWithPercent ? 'noteStack' : 'noteBest')}</p>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-2">

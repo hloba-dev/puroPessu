@@ -72,7 +72,7 @@ export default async function ServicesPageRoute({params}: PageProps<'/[locale]/p
                 <CheckList items={section.bullets} className="mt-6 text-text" />
                 {href && (
                   <p className="mt-6">
-                    <Link href={href} className="link">
+                    <Link href={href} className="link py-2">
                       {content.moreLabel}: {section.title}
                     </Link>
                   </p>

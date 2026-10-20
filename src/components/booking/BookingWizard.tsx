@@ -197,7 +197,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                   disabled={!done}
                   aria-current={current ? 'step' : undefined}
                   onClick={() => goTo(index)}
-                  className={`flex w-full flex-col items-start gap-2 rounded-xl border-t-2 pt-3 text-left text-[13px] font-medium sm:text-sm ${
+                  className={`flex min-h-11 w-full flex-col items-start gap-2 rounded-xl border-t-2 pt-3 text-left text-[13px] font-medium sm:text-sm ${
                     current ? 'border-accent text-text' : done ? 'border-teal-3 text-teal-1 hover:text-text' : 'border-hairline text-muted'
                   }`}
                 >
@@ -342,9 +342,9 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                     {t('summary.total')}: {quote.hasFromPrice ? `${t('summary.from')} ` : ''}
                     {formatEur(quote.totalCents, locale)}
                   </p>
-                  <p className="mt-1 text-[15px] text-muted">{t('confirm.payment')}</p>
-                  {quote.needsEstimate && <p className="mt-1 text-[15px] text-muted">{t('confirm.estimateNote')}</p>}
-                  {photos.length > 0 && <p className="mt-1 text-[15px] text-muted">{t('confirm.photos', {count: photos.length})}</p>}
+                  <p className="mt-1 text-base text-muted">{t('confirm.payment')}</p>
+                  {quote.needsEstimate && <p className="mt-1 text-base text-muted">{t('confirm.estimateNote')}</p>}
+                  {photos.length > 0 && <p className="mt-1 text-base text-muted">{t('confirm.photos', {count: photos.length})}</p>}
                 </div>
               </dl>
             )}

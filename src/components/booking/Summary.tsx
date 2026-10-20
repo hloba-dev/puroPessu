@@ -47,10 +47,10 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
       </h2>
 
       {quote.lines.length === 0 ? (
-        <p className="mt-3 text-[15px] text-muted">{t('empty')}</p>
+        <p className="mt-3 text-base text-muted">{t('empty')}</p>
       ) : (
         <>
-          <ul className="mt-4 space-y-2.5 text-[15px]">
+          <ul className="mt-4 space-y-2.5 text-base">
             {quote.lines.map((line) => (
               <li key={line.service.slug} className={row}>
                 <span>
@@ -69,7 +69,7 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
             ))}
           </ul>
 
-          <dl className="mt-4 space-y-2 border-t border-hairline pt-4 text-[15px]">
+          <dl className="mt-4 space-y-2 border-t border-hairline pt-4 text-base">
             <div className={row}>
               <dt className="text-muted">{t('subtotal')}</dt>
               <dd data-testid="sum-subtotal">{formatEur(quote.subtotalCents, locale)}</dd>
@@ -119,7 +119,7 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
               {t('promoHint', {first: promotions.firstOrderPct, repeat: promotions.repeatOrderPct})}
             </p>
           )}
-          {slotLabel && <p className="mt-3 text-[15px] font-medium text-teal-1 first-letter:uppercase">{slotLabel}</p>}
+          {slotLabel && <p className="mt-3 text-base font-medium text-teal-1 first-letter:uppercase">{slotLabel}</p>}
         </>
       )}
 

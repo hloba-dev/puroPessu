@@ -172,6 +172,10 @@ h3 {
 }
 
 @media (max-width: 700px) {
+  /* a lower header capsule on phones: 56px instead of 64px */
+  :root {
+    --nav-h: 56px;
+  }
   /* room for the sticky bottom bar */
   body {
     padding-bottom: calc(64px + env(safe-area-inset-bottom));
@@ -185,7 +189,8 @@ html[data-consent="set"] [data-cookie-banner]:not([data-forced]) {
 
 /* the booking wizard has its own bottom bar (total + continue): the global shortcuts step aside */
 body:has([data-booking-wizard]) [data-sticky-bar],
-body:has([data-booking-wizard]) [data-wa-fab] {
+body:has([data-booking-wizard]) [data-wa-fab],
+body:has([data-booking-wizard]) [data-back-to-top] {
   display: none;
 }
 @media (max-width: 1023px) {

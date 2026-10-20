@@ -119,7 +119,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
           <Paragraphs items={cityContent[kind].intro} className="text-[17px] text-text" />
           <aside className="glass h-fit p-6">
             <h2 className="text-lg font-semibold">{f(templates.travelTitle)}</h2>
-            <p className="mt-3 text-[15px] text-text">{travelSentence(templates, settings, locale, city, {city: cityContent.name, inCity: cityContent.inCity})}</p>
+            <p className="mt-3 text-base text-text">{travelSentence(templates, settings, locale, city, {city: cityContent.name, inCity: cityContent.inCity})}</p>
           </aside>
         </div>
       </section>
@@ -130,7 +130,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
           <div className="mt-6">
             <PriceRows services={services} locale={locale} detailed />
           </div>
-          <p className="mt-5 max-w-[66ch] text-[15px] text-muted">{f(parent.prices.note)}</p>
+          <p className="mt-5 max-w-[66ch] text-base text-muted">{f(parent.prices.note)}</p>
         </div>
       </section>
 
@@ -142,7 +142,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
             </h2>
             <ul className="mt-5 flex flex-wrap gap-2">
               {cityContent.districts.map((district) => (
-                <li key={district} className="rounded-xl border border-hairline bg-text/4 px-3.5 py-1.5 text-[15px]">
+                <li key={district} className="rounded-xl border border-hairline bg-text/4 px-3.5 py-1.5 text-base">
                   {district}
                 </li>
               ))}
@@ -192,7 +192,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
               <li key={slug}>
                 <Link
                   href={{pathname: route, params: {city: slug}}}
-                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] hover:border-teal-2 hover:text-teal-1"
+                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-base hover:border-teal-2 hover:text-teal-1"
                 >
                   {fill(templates.otherCityLink, {city: content.cities[slug].name})}
                 </Link>

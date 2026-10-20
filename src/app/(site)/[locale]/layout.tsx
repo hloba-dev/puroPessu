@@ -11,6 +11,7 @@ import {fontFamilies, fontVariables} from '@/app/fonts';
 import {Header} from '@/components/layout/Header';
 import {Footer} from '@/components/layout/Footer';
 import {StickyBar} from '@/components/layout/StickyBar';
+import {BackToTop} from '@/components/layout/BackToTop';
 import {CookieBanner} from '@/components/layout/CookieBanner';
 import {Analytics} from '@/components/layout/Analytics';
 import {GoogleTagManager, GoogleTagManagerNoScript} from '@/components/layout/GoogleTagManager';
@@ -76,6 +77,7 @@ export default async function LocaleLayout({children, params}: LayoutProps<'/[lo
           </main>
           <Footer />
           <StickyBar />
+          <BackToTop label={t('backToTop')} />
           <CookieBanner />
           <Analytics />
         </NextIntlClientProvider>

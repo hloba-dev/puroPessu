@@ -76,11 +76,11 @@ export default async function OdorPageRoute({params}: PageProps<'/[locale]/hajun
           <div className="space-y-6">
             <div className="glass p-6">
               <h2 className="h3">{content.included.title}</h2>
-              <p className="mt-3 text-[15px] text-text">{content.included.text}</p>
+              <p className="mt-3 text-base text-text">{content.included.text}</p>
             </div>
             <div className="glass p-6">
               <h2 className="h3">{content.insurance.title}</h2>
-              <p className="mt-3 text-[15px] text-text">{content.insurance.text}</p>
+              <p className="mt-3 text-base text-text">{content.insurance.text}</p>
             </div>
           </div>
         </div>

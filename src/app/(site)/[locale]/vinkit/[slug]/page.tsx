@@ -101,7 +101,7 @@ export default async function ArticlePage({params}: PageProps<'/[locale]/vinkit/
             {toc.length > 0 && (
               <nav aria-label={t('toc')} className="glass p-6">
                 <h2 className="text-sm font-semibold tracking-widest uppercase">{t('toc')}</h2>
-                <ol className="mt-4 space-y-2.5 text-[15px]">
+                <ol className="mt-4 space-y-2.5 text-base">
                   {toc.map((item) => (
                     <li key={item.id}>
                       <a href={`#${item.id}`} className="text-muted hover:text-text">
@@ -128,7 +128,7 @@ export default async function ArticlePage({params}: PageProps<'/[locale]/vinkit/
                 >
                   <p className="text-sm text-teal-1">{t(`categories.${item.category}`)}</p>
                   <h3 className="mt-2 text-lg leading-snug font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-[15px] text-muted">{item.excerpt}</p>
+                  <p className="mt-2 text-base text-muted">{item.excerpt}</p>
                 </Link>
               </li>
             ))}

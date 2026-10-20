@@ -41,8 +41,10 @@
       "prev": "Edellinen",
       "next": "Seuraava",
       "slide": "Kuva {n}/{total}",
-      "gallery": "Ennen ja jälkeen -kuvat"
-    }
+      "gallery": "Ennen ja jälkeen -kuvat",
+      "steps": "Näin se toimii"
+    },
+    "backToTop": "Takaisin ylös"
   },
   "footer": {
     "tagline": "Sohvien, nojatuolien ja patjojen höyrypesu kotonasi. Helsinki, Espoo, Vantaa ja koko pääkaupunkiseutu.",
@@ -117,7 +119,13 @@
       "mockUrl": "puropesu.fi/varaa-aika",
       "mockTotal": "Yhteensä",
       "mockLabel": "Avaa varaus: valitse pestävät kalusteet ja vapaa aika",
-      "stripLabel": "Esimerkkejä pesutuloksista"
+      "stripLabel": "Esimerkkejä pesutuloksista",
+      "trust": [
+        "Tyytyväisyystakuu",
+        "Ei ennakkomaksua",
+        "Kuivatus veloituksetta"
+      ],
+      "trustLabel": "Lupauksemme"
     },
     "benefits": {
       "title": "Miksi varata meiltä",

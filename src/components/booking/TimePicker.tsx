@@ -229,7 +229,7 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
                         onClick={() =>
                           onChange({date: day, time, iso: zonedToUtc(day, parseHm(time), timezone).toISOString()})
                         }
-                        className={`min-h-12 w-full rounded-xl border text-[15px] font-semibold transition-colors ${
+                        className={`min-h-12 w-full rounded-xl border text-base font-semibold transition-colors ${
                           selected
                             ? 'border-teal-2 bg-teal-3 text-white'
                             : 'border-hairline bg-text/4 hover:border-teal-2'

@@ -11,7 +11,7 @@ export async function BookingDetails({booking, locale, timezone}: {booking: Book
 
   return (
     <div className="glass p-6" data-testid="booking-details">
-      <dl className="space-y-3 text-[15px]">
+      <dl className="space-y-3 text-base">
         <div className={row}>
           <dt className="text-muted">{t('ref')}</dt>
           <dd className="font-semibold" data-testid="booking-ref">
@@ -42,7 +42,7 @@ export async function BookingDetails({booking, locale, timezone}: {booking: Book
         </div>
       </dl>
 
-      <ul className="mt-5 space-y-2 border-t border-hairline pt-5 text-[15px]">
+      <ul className="mt-5 space-y-2 border-t border-hairline pt-5 text-base">
         {booking.items.map((item) => (
           <li key={`${item.serviceSlug}-${item.name}`} className={row}>
             <span>
@@ -53,7 +53,7 @@ export async function BookingDetails({booking, locale, timezone}: {booking: Book
         ))}
       </ul>
 
-      <dl className="mt-4 space-y-2 border-t border-hairline pt-4 text-[15px]">
+      <dl className="mt-4 space-y-2 border-t border-hairline pt-4 text-base">
         {booking.minFillCents > 0 && (
           <div className={row}>
             <dt className="text-muted">{t('minFill')}</dt>

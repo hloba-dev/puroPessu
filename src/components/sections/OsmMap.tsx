@@ -42,7 +42,7 @@ export function OsmMap({lat, lng, title, showLabel, openLabel, note}: Props) {
         )}
       </div>
       <p className="mt-3 text-sm">
-        <a href={link} className="link" rel="noopener" target="_blank">
+        <a href={link} className="link py-2" rel="noopener" target="_blank">
           {openLabel}
         </a>
       </p>

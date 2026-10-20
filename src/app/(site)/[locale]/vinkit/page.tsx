@@ -35,7 +35,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
               <li key={category}>
                 <a
                   href={`#${category}`}
-                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] font-medium hover:border-teal-2 hover:text-teal-1"
+                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-base font-medium hover:border-teal-2 hover:text-teal-1"
                 >
                   {t(`categories.${category}`)}
                 </a>
@@ -65,7 +65,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
                         {t('readingTime', {minutes: article.readingMinutes})}
                       </p>
                       <h3 className="mt-3 text-xl leading-snug font-semibold">{article.title}</h3>
-                      <p className="mt-3 flex-1 text-[15px] text-muted">{article.excerpt}</p>
+                      <p className="mt-3 flex-1 text-base text-muted">{article.excerpt}</p>
                       <p className="mt-5 flex items-center gap-2 font-medium text-teal-1">
                         {t('read')} <IconArrow className="transition-transform group-hover:translate-x-1" width={18} height={18} />
                       </p>

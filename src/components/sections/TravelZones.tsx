@@ -10,7 +10,7 @@ export async function TravelZones({settings, locale}: {settings: Settings; local
   const last = zones[zones.length - 1];
 
   return (
-    <ul className="space-y-2 text-[15px]">
+    <ul className="space-y-2 text-base">
       {zones.map((zone, index) => (
         <li key={zone.maxKm} className="flex justify-between gap-4">
           <span className="text-muted">

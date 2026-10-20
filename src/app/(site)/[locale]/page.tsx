@@ -16,6 +16,7 @@ import {PriceRows, priceLabel} from '@/components/sections/PriceRows';
 import {PromoOffers} from '@/components/sections/PromoOffers';
 import {ReviewsBlock} from '@/components/sections/ReviewsBlock';
 import {SectionHeader} from '@/components/sections/SectionHeader';
+import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {ServiceZones} from '@/components/sections/ServiceZones';
 import {TravelZones} from '@/components/sections/TravelZones';
 import {JsonLd} from '@/components/seo/JsonLd';
@@ -86,10 +87,11 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
   const {locale} = (await params) as {locale: Locale};
   setRequestLocale(locale);
 
-  const [t, tp, tm, catalog, settings, gallery, reviews] = await Promise.all([
+  const [t, tp, tm, tc, catalog, settings, gallery, reviews] = await Promise.all([
     getTranslations('home'),
     getTranslations('prices'),
     getTranslations('meta'),
+    getTranslations('common'),
     getActiveCatalog(),
     getSettings(),
     getGallery(),
@@ -131,7 +133,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
                   </span>
                   <div>
                     <h3 className="font-semibold">{fill(item.title, hours)}</h3>
-                    <p className="mt-1 text-[15px] text-muted">{item.text}</p>
+                    <p className="mt-1 text-base text-muted">{item.text}</p>
                   </div>
                 </li>
               );
@@ -144,29 +146,30 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
       <section className="section" aria-labelledby="services-title">
         <div className="container-x">
           <SectionHeader id="services-title" eyebrow={t('services.eyebrow')} title={t('services.title')} lead={t('services.lead')} />
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {/* phones: a two-column price grid to scan in one screen; wider: full cards with a description */}
+          <ul className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-5 lg:grid-cols-3">
             {cards.map((card) => (
               <li key={card.key}>
                 <Link
                   href={card.hash ? {pathname: card.href, hash: card.hash} : card.href}
-                  className="glass group flex h-full flex-col p-6 transition-colors hover:border-teal-2"
+                  className="glass group flex h-full flex-col p-4 transition-colors hover:border-teal-2 sm:p-6"
                 >
-                  <h3 className="h3">{t(`services.cards.${card.key}.title`)}</h3>
-                  <p className="mt-2 flex-1 text-[15px] text-muted">{t(`services.cards.${card.key}.text`)}</p>
-                  <p className="mt-5 flex items-center justify-between">
-                    <span className="text-lg font-semibold text-teal-1">
+                  <h3 className="text-[17px] leading-tight font-semibold sm:text-[21px]">{t(`services.cards.${card.key}.title`)}</h3>
+                  <p className="mt-2 hidden flex-1 text-base text-muted sm:block">{t(`services.cards.${card.key}.text`)}</p>
+                  <p className="mt-3 flex items-center justify-between sm:mt-5">
+                    <span className="text-base font-semibold text-teal-1 sm:text-lg">
                       {bySlug.get(card.priceSlug)!.priceCents === 0
                         ? tp('included')
                         : `${tp('from')} ${priceLabel({...bySlug.get(card.priceSlug)!, priceFrom: false}, locale, tp)}`}
                     </span>
-                    <IconArrow className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-teal-1" />
+                    <IconArrow className="hidden text-muted transition-transform group-hover:translate-x-1 group-hover:text-teal-1 sm:block" />
                   </p>
                 </Link>
               </li>
             ))}
           </ul>
-          <p className="mt-8">
-            <Link href="/palvelut" className="link">
+          <p className="mt-6 sm:mt-8">
+            <Link href="/palvelut" className="link inline-flex min-h-11 items-center">
               {t('services.all')}
             </Link>
           </p>
@@ -180,17 +183,30 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
       <section className="section bg-surface-2" aria-labelledby="steps-title">
         <div className="container-x">
           <SectionHeader id="steps-title" eyebrow={t('steps.eyebrow')} title={t('steps.title')} />
-          <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* phones: the four steps are swiped through one by one instead of stacking four screens high */}
+          <SnapCarousel
+            as="ol"
+            name="steps"
+            count={steps.length}
+            align="center"
+            label={tc('carousel.steps')}
+            dotLabels={steps.map((step) => step.title)}
+            prevLabel={tc('carousel.prev')}
+            nextLabel={tc('carousel.next')}
+            className="mt-8 sm:mt-10"
+            navClassName="min-[701px]:hidden"
+            trackClassName="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 py-1 min-[701px]:mx-0 min-[701px]:grid min-[701px]:grid-cols-2 min-[701px]:gap-5 min-[701px]:overflow-visible min-[701px]:px-0 min-[701px]:py-0 lg:grid-cols-4"
+          >
             {steps.map((step, index) => (
-              <li key={step.title} className="glass p-6">
+              <li key={step.title} className="glass w-[82%] shrink-0 snap-center p-5 min-[701px]:w-auto min-[701px]:p-6">
                 <span className="font-serif text-4xl font-semibold text-accent" aria-hidden="true">
                   {index + 1}
                 </span>
                 <h3 className="mt-3 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-[15px] text-muted">{step.text}</p>
+                <p className="mt-2 text-base text-muted">{step.text}</p>
               </li>
             ))}
-          </ol>
+          </SnapCarousel>
         </div>
       </section>
 
@@ -198,17 +214,17 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
       <section className="section" aria-labelledby="why-title">
         <div className="container-x grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeader id="why-title" eyebrow={t('why.eyebrow')} title={t('why.title')} lead={t('why.lead')} />
-          <ul className="space-y-4">
+          <ul className="space-y-3 sm:space-y-4">
             {why.map((item, index) => {
               const Icon = WHY_ICONS[index % WHY_ICONS.length];
               return (
-                <li key={item.title} className="glass flex gap-4 p-5">
+                <li key={item.title} className="glass flex gap-4 p-4 sm:p-5">
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-1">
                     <Icon width={22} height={22} />
                   </span>
                   <div>
                     <h3 className="font-semibold">{item.title}</h3>
-                    <p className="mt-1 text-[15px] text-muted">{item.text}</p>
+                    <p className="mt-1 text-base text-muted">{item.text}</p>
                   </div>
                 </li>
               );
@@ -235,7 +251,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
             <div className="mt-6">
               <PriceRows services={miniPrices} locale={locale} />
             </div>
-            <p className="mt-6 max-w-[62ch] text-[15px] text-muted">
+            <p className="mt-6 max-w-[62ch] text-base text-muted">
               {t('pricing.minOrder', {min: formatEur(settings.minOrderCents, locale)})}
             </p>
             <div className="mt-6">
@@ -302,7 +318,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
             <Faq items={faq} />
           </div>
           <p className="mt-6">
-            <Link href={{pathname: '/yhteystiedot', hash: 'faq'}} className="link">
+            <Link href={{pathname: '/yhteystiedot', hash: 'faq'}} className="link inline-flex min-h-11 items-center">
               {t('faq.all')}
             </Link>
           </p>

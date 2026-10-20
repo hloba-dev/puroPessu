@@ -44,7 +44,7 @@ export default async function AboutPageRoute({params}: PageProps<'/[locale]/tiet
             {content.facts.map((fact) => (
               <li key={fact.title}>
                 <p className="text-lg font-semibold text-teal-1">{fill(fact.title, vars)}</p>
-                <p className="mt-1 text-[15px] text-muted">{fill(fact.text, vars)}</p>
+                <p className="mt-1 text-base text-muted">{fill(fact.text, vars)}</p>
               </li>
             ))}
           </ul>

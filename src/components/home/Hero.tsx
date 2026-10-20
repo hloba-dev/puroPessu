@@ -7,7 +7,7 @@ import {formatEur, l10n, shortHour} from '@/lib/format';
 import type {Catalog, GalleryItem, Settings} from '@/lib/types';
 import {BeforeAfter} from '@/components/BeforeAfter';
 import {GlowButton} from '@/components/ui/GlowButton';
-import {IconClock} from '@/components/ui/icons';
+import {IconCheck, IconClock} from '@/components/ui/icons';
 import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {RingMotion} from './RingMotion';
 import styles from './Hero.module.css';
@@ -61,6 +61,7 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
   const mockTotal = mockRows.reduce((sum, r) => sum + r.service.priceCents * r.qty, 0);
 
   const hours = t('badge', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)});
+  const trust = t.raw('trust') as string[];
 
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
@@ -99,6 +100,15 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
               {t('ctaSecondary')}
             </GlowButton>
           </div>
+          {/* the three promises that remove the usual doubts, right where the decision is made */}
+          <ul className={`${styles.trust} ${styles.rise}`} style={delay(0.5)} aria-label={t('trustLabel')}>
+            {trust.map((item) => (
+              <li key={item}>
+                <IconCheck width={16} height={16} />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {featured && (

@@ -81,8 +81,8 @@ export default async function PricingPageRoute({params}: PageProps<'/[locale]/hi
           ))}
         </div>
         <div className="container-x mt-6">
-          <p className="text-[15px] text-muted">
-            <a href={waLink(settings.whatsapp)} className="link" rel="noopener" target="_blank">
+          <p className="text-base text-muted">
+            <a href={waLink(settings.whatsapp)} className="link py-2" rel="noopener" target="_blank">
               {content.photoHint}
             </a>
           </p>

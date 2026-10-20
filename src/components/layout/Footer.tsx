@@ -42,7 +42,7 @@ export async function Footer() {
     {href: settings.social.googleReviews, label: t('googleReviews')}
   ].filter((s) => s.href);
 
-  const linkCls = 'text-[15px] text-muted transition-colors hover:text-text';
+  const linkCls = 'flex min-h-11 items-center text-base text-muted transition-colors hover:text-text min-[701px]:min-h-0';
 
   return (
     <footer className="on-dark border-t border-hairline bg-bg">
@@ -52,7 +52,7 @@ export async function Footer() {
             <Image src="/brand/logo-96.png" alt="" width={48} height={48} />
             {settings.companyName}
           </Link>
-          <p className="mt-4 max-w-xs text-[15px] text-muted">{t('tagline')}</p>
+          <p className="mt-4 max-w-xs text-base text-muted">{t('tagline')}</p>
           {social.length > 0 && (
             <ul className="mt-4 flex flex-wrap gap-4">
               {social.map((s) => (
@@ -68,7 +68,7 @@ export async function Footer() {
 
         <nav aria-label={t('servicesTitle')}>
           <h2 className="text-sm font-semibold uppercase tracking-widest text-white">{t('servicesTitle')}</h2>
-          <ul className="mt-4 space-y-2.5">
+          <ul className="mt-3 min-[701px]:mt-4 min-[701px]:space-y-2.5">
             {services.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className={linkCls}>
@@ -81,7 +81,7 @@ export async function Footer() {
 
         <nav aria-label={t('infoTitle')}>
           <h2 className="text-sm font-semibold uppercase tracking-widest text-white">{t('infoTitle')}</h2>
-          <ul className="mt-4 space-y-2.5">
+          <ul className="mt-3 min-[701px]:mt-4 min-[701px]:space-y-2.5">
             {info.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className={linkCls}>
@@ -94,19 +94,19 @@ export async function Footer() {
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-widest text-white">{t('contactTitle')}</h2>
-          <ul className="mt-4 space-y-3 text-[15px]">
+          <ul className="mt-3 space-y-1 text-base min-[701px]:mt-4 min-[701px]:space-y-3">
             <li>
-              <a href={telLink(settings.phone)} className="flex items-center gap-2.5 hover:text-teal-1">
+              <a href={telLink(settings.phone)} className="flex min-h-11 items-center gap-2.5 hover:text-teal-1 min-[701px]:min-h-0">
                 <IconPhone className="text-teal-2" /> {settings.phone}
               </a>
             </li>
             <li>
-              <a href={waLink(settings.whatsapp)} className="flex items-center gap-2.5 hover:text-teal-1" rel="noopener" target="_blank">
+              <a href={waLink(settings.whatsapp)} className="flex min-h-11 items-center gap-2.5 hover:text-teal-1 min-[701px]:min-h-0" rel="noopener" target="_blank">
                 <IconWhatsApp className="text-teal-2" /> WhatsApp
               </a>
             </li>
             <li>
-              <a href={`mailto:${settings.email}`} className="flex items-center gap-2.5 hover:text-teal-1">
+              <a href={`mailto:${settings.email}`} className="flex min-h-11 items-center gap-2.5 hover:text-teal-1 min-[701px]:min-h-0">
                 <IconMail className="text-teal-2" /> {settings.email}
               </a>
             </li>
@@ -114,7 +114,7 @@ export async function Footer() {
               <IconClock className="text-teal-2" /> {t('hours', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)})}
             </li>
           </ul>
-          <address className="mt-4 text-[15px] not-italic text-muted">
+          <address className="mt-4 text-base not-italic text-muted">
             {settings.legalName}
             <br />
             {settings.address.street}, {settings.address.postalCode} {settings.address.city}
@@ -129,19 +129,19 @@ export async function Footer() {
           <p>
             © {new Date().getFullYear()} {settings.legalName}
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+          <ul className="flex flex-wrap gap-x-6 gap-y-1">
             <li>
-              <Link href="/tietosuoja" className="hover:text-text">
+              <Link href="/tietosuoja" className="inline-flex min-h-11 items-center hover:text-text min-[701px]:min-h-0">
                 {t('links.privacy')}
               </Link>
             </li>
             <li>
-              <Link href="/tietojen-poisto" className="hover:text-text">
+              <Link href="/tietojen-poisto" className="inline-flex min-h-11 items-center hover:text-text min-[701px]:min-h-0">
                 {t('links.dataDeletion')}
               </Link>
             </li>
             <li>
-              <CookieSettingsButton className="hover:text-text">{t('cookieSettings')}</CookieSettingsButton>
+              <CookieSettingsButton className="inline-flex min-h-11 items-center hover:text-text min-[701px]:min-h-0">{t('cookieSettings')}</CookieSettingsButton>
             </li>
           </ul>
         </div>

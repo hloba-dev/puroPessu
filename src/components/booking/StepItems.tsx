@@ -117,7 +117,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                     </div>
 
                     {line && (
-                      <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
+                      <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-base">
                         {service.options.map((option) => (
                           <label key={option.slug} className="flex min-h-9 cursor-pointer items-center gap-2.5">
                             <input
@@ -164,7 +164,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
         <label htmlFor="booking-photos" className="text-lg font-semibold">
           {tf('title')}
         </label>
-        <p id="booking-photos-hint" className="mt-1 text-[15px] text-muted">
+        <p id="booking-photos-hint" className="mt-1 text-base text-muted">
           {tf('hint', {max: MAX_BOOKING_PHOTOS})}
         </p>
         <PhotoPicker
@@ -201,8 +201,8 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
         )}
       </div>
 
-      <p className="text-[15px] text-muted">
-        <a href={whatsappUrl} className="link" rel="noopener" target="_blank">
+      <p className="text-base text-muted">
+        <a href={whatsappUrl} className="link py-2" rel="noopener" target="_blank">
           {t('photoHint')}
         </a>
       </p>

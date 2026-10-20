@@ -8,6 +8,8 @@ interface Props {
   /** the slides: <li> elements */
   children: ReactNode;
   count: number;
+  /** list element of the track */
+  as?: 'ul' | 'ol';
   /** scroll-snap-align of the slides — decides which slide counts as the current one */
   align?: 'start' | 'center';
   /** accessible name of the carousel */
@@ -32,6 +34,7 @@ interface Props {
 export function SnapCarousel({
   children,
   count,
+  as: Track = 'ul',
   align = 'start',
   label,
   dotLabels,
@@ -42,7 +45,7 @@ export function SnapCarousel({
   trackClassName,
   navClassName
 }: Props) {
-  const trackRef = useRef<HTMLUListElement>(null);
+  const trackRef = useRef<HTMLUListElement & HTMLOListElement>(null);
   const [index, setIndex] = useState(0);
   // assume it scrolls until measured: the dots are in the server HTML, no pop-in after hydration
   const [scrollable, setScrollable] = useState(count > 1);
@@ -126,9 +129,9 @@ export function SnapCarousel({
       data-carousel={name}
       data-scrollable={scrollable}
     >
-      <ul ref={trackRef} className={`${styles.track} ${trackClassName ?? ''}`} tabIndex={scrollable ? 0 : -1} onKeyDown={onKeyDown}>
+      <Track ref={trackRef} className={`${styles.track} ${trackClassName ?? ''}`} tabIndex={scrollable ? 0 : -1} onKeyDown={onKeyDown}>
         {children}
-      </ul>
+      </Track>
       {count > 1 && (
         <div className={`${styles.nav} ${navClassName ?? ''}`}>
           <button type="button" className={styles.arrow} onClick={() => go(index - 1)} aria-label={prevLabel} disabled={index === 0}>

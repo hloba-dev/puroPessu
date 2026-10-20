@@ -69,7 +69,7 @@ export function GiftCardForm({options, customLabel}: Props) {
       )}
 
       <Field label={t('buyerName')} error={message(errors.buyerName?.message)}>
-        <input className="field" autoComplete="name" {...register('buyerName')} />
+        <input className="field" autoComplete="name" autoCapitalize="words" {...register('buyerName')} />
       </Field>
       <Field label={t('buyerEmail')} error={message(errors.buyerEmail?.message)}>
         <input className="field" type="email" autoComplete="email" {...register('buyerEmail')} />

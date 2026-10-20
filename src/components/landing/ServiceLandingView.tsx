@@ -99,8 +99,8 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
           <div className="mt-6">
             <PriceRows services={services} locale={locale} detailed />
           </div>
-          {optionNames.length > 0 && <p className="mt-5 text-[15px] text-muted">+ {optionNames.join(' · ')}</p>}
-          <p className="mt-3 max-w-[66ch] text-[15px] text-muted">{f(content.prices.note)}</p>
+          {optionNames.length > 0 && <p className="mt-5 text-base text-muted">+ {optionNames.join(' · ')}</p>}
+          <p className="mt-3 max-w-[66ch] text-base text-muted">{f(content.prices.note)}</p>
         </div>
       </section>
 
@@ -152,9 +152,9 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
           <div className="mt-10">
             <CardGrid items={content.odor.cases} columns={4} />
           </div>
-          <p className="glass mt-6 max-w-3xl p-5 text-[15px] text-text">{content.odor.insurance}</p>
+          <p className="glass mt-6 max-w-3xl p-5 text-base text-text">{content.odor.insurance}</p>
           <p className="mt-5">
-            <Link href="/hajunpoisto" className="link">
+            <Link href="/hajunpoisto" className="link py-2">
               {content.odor.linkLabel}
             </Link>
           </p>
@@ -172,7 +172,7 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
             {content.materials.exceptions.map((item) => (
               <li key={item.title} className="rounded-[20px] border border-warn-border bg-warn-soft p-5">
                 <p className="font-semibold text-warn">{item.title}</p>
-                <p className="mt-1.5 text-[15px] text-text">{item.text}</p>
+                <p className="mt-1.5 text-base text-text">{item.text}</p>
               </li>
             ))}
           </ul>
@@ -186,7 +186,7 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
             <CompareTable headers={content.compare.headers} rows={content.compare.rows} caption={content.compare.title} />
           </div>
           <p className="mt-5">
-            <Link href="/vuokrapesuri-vai-ammattilainen" className="link">
+            <Link href="/vuokrapesuri-vai-ammattilainen" className="link py-2">
               {content.compare.linkLabel}
             </Link>
           </p>

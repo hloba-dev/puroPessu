@@ -1,0 +1,35 @@
+.btn {
+  position: fixed;
+  right: 16px;
+  /* above the phone bottom bar */
+  bottom: calc(64px + 14px + env(safe-area-inset-bottom));
+  z-index: 89;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 24px -8px rgba(27, 31, 38, 0.35);
+  opacity: 0;
+  translate: 0 8px;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    translate 0.2s ease;
+}
+.btn[data-shown="true"] {
+  opacity: 1;
+  translate: 0 0;
+  pointer-events: auto;
+}
+/* wide screens: next to the floating WhatsApp button (bottom 22px, 58px tall) */
+@media (min-width: 701px) {
+  .btn {
+    right: 22px;
+    bottom: 96px;
+  }
+}

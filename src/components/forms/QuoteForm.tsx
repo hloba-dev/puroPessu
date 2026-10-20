@@ -102,7 +102,7 @@ export function QuoteForm() {
       className="grid gap-5 sm:grid-cols-2"
     >
       <Field label={t('contactName')} error={message(errors.contactName?.message)}>
-        <input className="field" autoComplete="name" {...register('contactName')} />
+        <input className="field" autoComplete="name" autoCapitalize="words" {...register('contactName')} />
       </Field>
       <Field label={t('company')} error={message(errors.company?.message)}>
         <input className="field" autoComplete="organization" {...register('company')} />

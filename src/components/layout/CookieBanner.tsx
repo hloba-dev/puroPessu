@@ -47,7 +47,7 @@ export function CookieBanner() {
       data-cookie-banner
       data-forced={forced || undefined}
       // phones: a card above the sticky bar; wide screens: a low bar along the bottom that never covers the hero buttons
-      className="fixed inset-x-3 bottom-[76px] z-[120] mx-auto max-w-[560px] rounded-2xl border border-hairline bg-surface p-5 shadow-[0_18px_60px_rgba(27,31,38,.18)] min-[701px]:bottom-24 min-[901px]:flex min-[901px]:max-w-[1040px] min-[901px]:items-center min-[901px]:gap-8 min-[1240px]:bottom-5"
+      className="fixed inset-x-3 bottom-[76px] z-[120] mx-auto max-w-[560px] rounded-2xl border border-hairline bg-surface p-4 shadow-[0_18px_60px_rgba(27,31,38,.18)] min-[701px]:bottom-24 min-[701px]:p-5 min-[901px]:flex min-[901px]:max-w-[1040px] min-[901px]:items-center min-[901px]:gap-8 min-[1240px]:bottom-5"
     >
       <div className="min-w-0 flex-1">
       <h2 id="cookie-title" className="text-base font-semibold">
@@ -55,7 +55,7 @@ export function CookieBanner() {
       </h2>
       <p className="mt-2 text-sm text-muted">
         {t('text')}{' '}
-        <Link href="/tietosuoja" className="link">
+        <Link href="/tietosuoja" className="link py-2">
           {t('more')}
         </Link>
       </p>
@@ -98,7 +98,7 @@ export function CookieBanner() {
       )}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2 min-[901px]:mt-0 min-[901px]:w-[340px] min-[901px]:shrink-0">
+      <div className="mt-3 flex flex-wrap gap-2 min-[901px]:mt-0 min-[901px]:w-[340px] min-[901px]:shrink-0">
         <button
           type="button"
           onClick={() => close({analytics: true, marketing: true})}

@@ -73,7 +73,7 @@ export function FormFooter({form, privacy, privacyError, submitLabel, pendingLab
         <span>
           {t.rich('privacy', {
             link: (chunks) => (
-              <Link href="/tietosuoja" className="link" target="_blank">
+              <Link href="/tietosuoja" className="link py-2" target="_blank">
                 {chunks}
               </Link>
             )

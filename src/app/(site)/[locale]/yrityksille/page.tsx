@@ -68,7 +68,7 @@ export default async function BusinessPageRoute({params}: PageProps<'/[locale]/y
             <article key={segment.id} id={segment.id} className="glass scroll-mt-28 p-7">
               <h2 className="h3">{segment.title}</h2>
               <p className="mt-3 text-text">{segment.text}</p>
-              <CheckList items={segment.bullets} className="mt-5 text-[15px] text-text" />
+              <CheckList items={segment.bullets} className="mt-5 text-base text-text" />
             </article>
           ))}
         </div>
@@ -81,7 +81,7 @@ export default async function BusinessPageRoute({params}: PageProps<'/[locale]/y
             <div className="mt-6">
               <PriceRows services={examples} locale={locale} bookable={false} />
             </div>
-            <p className="mt-5 text-[15px] text-muted">{content.prices.note}</p>
+            <p className="mt-5 text-base text-muted">{content.prices.note}</p>
           </div>
           {exampleVars && (
             <aside className="paper h-fit p-7 sm:p-9">
@@ -93,7 +93,7 @@ export default async function BusinessPageRoute({params}: PageProps<'/[locale]/y
                 ))}
               </ul>
               <p className="mt-4 text-xl font-bold">{fill(content.example.total, exampleVars)}</p>
-              <p className="mt-3 text-[15px] text-ink-muted">{content.example.note}</p>
+              <p className="mt-3 text-base text-ink-muted">{content.example.note}</p>
             </aside>
           )}
         </div>

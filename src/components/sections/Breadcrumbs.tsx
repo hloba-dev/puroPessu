@@ -23,7 +23,7 @@ export async function Breadcrumbs({items}: {items: Crumb[]}) {
             <li key={crumb.label} className="flex items-center gap-2">
               {index > 0 && <span aria-hidden="true">/</span>}
               {crumb.href ? (
-                <Link href={crumb.href} className="hover:text-text">
+                <Link href={crumb.href} className="inline-flex min-h-11 items-center hover:text-text min-[701px]:min-h-0">
                   {crumb.label}
                 </Link>
               ) : (

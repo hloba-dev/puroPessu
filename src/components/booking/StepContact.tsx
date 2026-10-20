@@ -104,7 +104,7 @@ export function StepContact({
   return (
     <form id={formId} onSubmit={submit} noValidate className="grid gap-5 sm:grid-cols-2">
       <Field label={t('name')} error={message(errors.name?.message)} className="sm:col-span-2">
-        <input className="field" autoComplete="name" {...register('name')} />
+        <input className="field" autoComplete="name" autoCapitalize="words" {...register('name')} />
       </Field>
       <Field label={t('phone')} error={message(errors.phone?.message)}>
         <input className="field" type="tel" autoComplete="tel" placeholder={t('phonePlaceholder')} {...register('phone')} />
@@ -183,7 +183,7 @@ export function StepContact({
           <span>
             {t.rich('privacy', {
               link: (chunks) => (
-                <Link href="/tietosuoja" className="link" target="_blank">
+                <Link href="/tietosuoja" className="link py-2" target="_blank">
                   {chunks}
                 </Link>
               )

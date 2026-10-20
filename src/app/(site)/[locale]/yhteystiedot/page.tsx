@@ -81,20 +81,20 @@ export default async function ContactPageRoute({params}: PageProps<'/[locale]/yh
               </span>
               <div>
                 <h2 className="font-semibold">{content.hoursTitle}</h2>
-                <p className="mt-1 text-[15px] text-text">{fill(content.hoursText, hours)}</p>
+                <p className="mt-1 text-base text-text">{fill(content.hoursText, hours)}</p>
               </div>
             </div>
 
             <div className="glass p-5">
               <h2 className="font-semibold">{content.billing.title}</h2>
-              <address className="mt-2 text-[15px] not-italic text-text">
+              <address className="mt-2 text-base not-italic text-text">
                 {settings.legalName}
                 <br />
                 {settings.address.street}, {settings.address.postalCode} {settings.address.city}
                 <br />
                 {tp('businessId')}: {settings.yTunnus}
               </address>
-              <p className="mt-3 text-[15px] text-muted">{content.billing.text}</p>
+              <p className="mt-3 text-base text-muted">{content.billing.text}</p>
             </div>
           </div>
 

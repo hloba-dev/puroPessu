@@ -34,7 +34,7 @@ export async function PriceRows({services, locale, detailed = false, bookable = 
             <div className="min-w-0 flex-1 basis-56">
               <p className="font-medium">{name}</p>
               {detailed && (
-                <p className="mt-0.5 text-sm text-muted">
+                <p className="mt-0.5 text-base text-muted">
                   {l10n(service.description, locale)}
                   {service.durationMin > 0 && ` · ${t('duration', {duration: formatDuration(service.durationMin, locale)})}`}
                 </p>

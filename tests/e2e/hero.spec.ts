@@ -98,6 +98,41 @@ test.describe('home hero on a phone', () => {
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(scrolled + 40);
   });
 
+  test('the promises sit under the buttons, the fake booking widget is gone and the header hides while reading', async ({page}) => {
+    await page.goto('/');
+    await page.waitForTimeout(ENTRANCE_MS);
+    const trust = hero(page).getByRole('list', {name: 'Lupauksemme'});
+    await expect(trust).toBeVisible();
+    await expect(trust.getByRole('listitem')).toHaveCount(3);
+    const cta = hero(page).getByRole('link', {name: 'Varaa aika'}).first();
+    const [ctaBox, trustBox] = await Promise.all([cta.boundingBox(), trust.boundingBox()]);
+    expect(trustBox!.y).toBeGreaterThan(ctaBox!.y + ctaBox!.height - 1);
+    await expect(page.getByRole('link', {name: 'Avaa varaus: valitse pestävät kalusteet ja vapaa aika'})).toBeHidden();
+
+    // the header capsule slides away on the way down and returns on the first scroll up
+    const header = page.locator('header');
+    await expect(header).toHaveAttribute('data-hidden', 'false');
+    // separate frames, as with a real thumb: scrolls inside one frame coalesce into a single event
+    await page.evaluate(() => window.scrollTo({top: 600, behavior: 'instant'}));
+    await page.waitForTimeout(100);
+    await page.evaluate(() => window.scrollTo({top: 900, behavior: 'instant'}));
+    await expect(header).toHaveAttribute('data-hidden', 'true');
+    await page.waitForTimeout(100);
+    await page.evaluate(() => window.scrollTo({top: 850, behavior: 'instant'}));
+    await expect(header).toHaveAttribute('data-hidden', 'false');
+  });
+
+  test('"back to top" appears after two screens and scrolls to the top', async ({page}) => {
+    await page.goto('/');
+    const top = page.locator('[data-back-to-top]');
+    await expect(top).toHaveAttribute('data-shown', 'false');
+    await page.evaluate(() => window.scrollTo({top: 3000, behavior: 'instant'}));
+    await expect(top).toHaveAttribute('data-shown', 'true');
+    await expect(top).toHaveAccessibleName('Takaisin ylös');
+    await top.click();
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5);
+  });
+
   test('dragging the handle moves the divider', async ({page}) => {
     await page.goto('/');
     const scrolled = await showSlider(page);
@@ -184,6 +219,21 @@ test.describe('carousels on a phone', () => {
     // a mostly vertical swipe over the cards scrolls the page as usual
     await swipe(page, {x: start.x, y: start.y + 60}, {x: start.x + 30, y: start.y - 160});
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(scrolled + 40);
+  });
+
+  test('the "how it works" steps swipe one by one on a phone', async ({page}) => {
+    await page.goto('/');
+    const steps = page.locator('[data-carousel="steps"]');
+    const track = steps.locator('ol');
+    await track.evaluate((el) => el.scrollIntoView({block: 'center', behavior: 'instant'}));
+    await page.waitForTimeout(ENTRANCE_MS);
+    const firstTitle = (await track.locator('li h3').first().textContent())!;
+    await expect(steps.locator('button[aria-current="true"]')).toHaveAttribute('aria-label', firstTitle);
+    const first = (await track.locator('li').first().boundingBox())!;
+    const start = {x: first.x + first.width * 0.5, y: first.y + first.height * 0.5};
+    await swipe(page, start, {x: start.x - 200, y: start.y});
+    await expect.poll(() => track.evaluate((el) => el.scrollLeft)).toBeGreaterThan(150);
+    await expect(steps.locator('button[aria-current="true"]')).not.toHaveAttribute('aria-label', firstTitle);
   });
 
   test('the before/after gallery swipes to the next slide and the dots show the position', async ({page}) => {

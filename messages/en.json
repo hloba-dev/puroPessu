@@ -41,8 +41,10 @@
       "prev": "Previous",
       "next": "Next",
       "slide": "Photo {n} of {total}",
-      "gallery": "Before and after photos"
-    }
+      "gallery": "Before and after photos",
+      "steps": "How it works"
+    },
+    "backToTop": "Back to top"
   },
   "footer": {
     "tagline": "Steam cleaning for sofas, armchairs and mattresses at your home. Helsinki, Espoo, Vantaa and the whole capital region.",
@@ -117,7 +119,13 @@
       "mockUrl": "puropesu.fi/varaa-aika",
       "mockTotal": "Total",
       "mockLabel": "Open booking: choose the furniture to clean and a free time slot",
-      "stripLabel": "Examples of our results"
+      "stripLabel": "Examples of our results",
+      "trust": [
+        "Satisfaction guarantee",
+        "No prepayment",
+        "Drying included"
+      ],
+      "trustLabel": "Our promise"
     },
     "benefits": {
       "title": "Why book with us",

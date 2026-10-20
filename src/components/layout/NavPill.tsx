@@ -30,6 +30,8 @@ interface Props {
 
 export function NavPill({brand, links, bookLabel, phone, callLabel, menuLabel, closeLabel, navLabel}: Props) {
   const [open, setOpen] = useState(false);
+  // phones: the capsule slides away while reading down and returns on the first scroll up
+  const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
   const panelId = useId();
   const pillRef = useRef<HTMLDivElement>(null);
@@ -54,10 +56,29 @@ export function NavPill({brand, links, bookLabel, phone, callLabel, menuLabel, c
     };
   }, [open]);
 
+  useEffect(() => {
+    let last = window.scrollY;
+    let frame = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y < 80 || y < last - 4) setHidden(false);
+        else if (y > 160 && y > last + 4) setHidden(true);
+        last = y;
+      });
+    };
+    window.addEventListener('scroll', onScroll, {passive: true});
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
+
   const close = () => setOpen(false);
 
   return (
-    <header className={styles.wrap}>
+    <header className={styles.wrap} data-hidden={hidden && !open}>
       <div ref={pillRef} className={styles.pill}>
         <Link href="/" className={styles.logo} onClick={close}>
           <Image src="/brand/logo-96.png" alt="" width={40} height={40} priority />
