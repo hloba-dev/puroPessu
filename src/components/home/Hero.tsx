@@ -8,6 +8,7 @@ import type {Catalog, GalleryItem, Settings} from '@/lib/types';
 import {BeforeAfter} from '@/components/BeforeAfter';
 import {GlowButton} from '@/components/ui/GlowButton';
 import {IconClock} from '@/components/ui/icons';
+import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {RingMotion} from './RingMotion';
 import {Stars} from './Stars';
 import styles from './Hero.module.css';
@@ -31,9 +32,9 @@ interface Props {
 
 const delay = (seconds: number) => ({'--d': `${seconds}s`}) as CSSProperties;
 
-/** Optimized (AVIF/WebP, 1x/2x) URL set for a ring tile, as a CSS image-set(). */
+/** Optimized (AVIF/WebP, 1x/2x) URL set for a ring / strip tile, as a CSS image-set(). */
 function tileImage(src: string) {
-  const {srcSet, src: fallback} = getImageProps({src, alt: '', width: 130, height: 150}).props;
+  const {srcSet, src: fallback} = getImageProps({src, alt: '', width: 160, height: 184}).props;
   const candidates = (srcSet ?? `${fallback} 1x`).split(', ').map((entry) => {
     const [url, density] = entry.split(' ');
     return `url("${url}") ${density}`;
@@ -42,12 +43,12 @@ function tileImage(src: string) {
 }
 
 export async function Hero({locale, catalog, settings, gallery, fromPriceCents}: Props) {
-  const [t, ba] = await Promise.all([getTranslations('home.hero'), getTranslations('beforeAfter')]);
+  const [t, ba, tc] = await Promise.all([getTranslations('home.hero'), getTranslations('beforeAfter'), getTranslations('common')]);
 
   const featured = gallery.find((g) => g.isFeatured) ?? gallery[0];
   const creatives = gallery.slice(0, RING_CREATIVES);
-  // 37 cards share 10 creatives: the images are declared once as CSS backgrounds instead of 74 <img> tags.
-  // They load at low priority and can never become the LCP element.
+  // 37 ring cards (and the 10 strip cards on phones) share 10 creatives: the images are declared once as
+  // CSS backgrounds instead of <img> tags. They load at low priority and can never become the LCP element.
   const ringCss = creatives
     .map(
       (item, n) =>
@@ -118,25 +119,62 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
 
       <div className={styles.stage}>
         {creatives.length > 0 && (
-          <RingMotion className={`${styles.ringViewport} ${styles.fade}`}>
+          <>
             <style dangerouslySetInnerHTML={{__html: ringCss}} />
-            <div className={styles.ring}>
-              {Array.from({length: RING_CARDS}, (_, i) => {
-                const n = i % creatives.length;
-                return (
-                  <div key={i} className={`${styles.card} rc${n}`} style={{'--i': i} as CSSProperties}>
-                    <div className={`${styles.half} rb`}>
-                      <span className={styles.mini}>{ba('before')}</span>
-                    </div>
-                    <div className={`${styles.half} ra`}>
-                      <span className={styles.mini}>{ba('after')}</span>
-                    </div>
-                    <span className={styles.cardCaption}>{l10n(creatives[n].caption, locale)}</span>
+
+            {/* wide screens: the 3D ring, turned by the arrows or ← → */}
+            <RingMotion
+              className={`${styles.ringViewport} ${styles.fade}`}
+              clipClassName={styles.ringClip}
+              arrowClassName={styles.ringArrow}
+              prevLabel={tc('carousel.prev')}
+              nextLabel={tc('carousel.next')}
+            >
+              <div className={styles.ringTurn}>
+                <div className={styles.ring} data-ring>
+                  {Array.from({length: RING_CARDS}, (_, i) => {
+                    const n = i % creatives.length;
+                    return (
+                      <div key={i} className={`${styles.card} rc${n}`} style={{'--i': i} as CSSProperties}>
+                        <div className={`${styles.half} rb`}>
+                          <span className={styles.mini}>{ba('before')}</span>
+                        </div>
+                        <div className={`${styles.half} ra`}>
+                          <span className={styles.mini}>{ba('after')}</span>
+                        </div>
+                        <span className={styles.cardCaption}>{l10n(creatives[n].caption, locale)}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </RingMotion>
+
+            {/* phones: the same cards as a native swipe strip — a finger cannot turn a CSS-animated ring,
+                and the ring looks exactly like a carousel that should swipe */}
+            <SnapCarousel
+              name="hero"
+              count={creatives.length}
+              label={t('stripLabel')}
+              dotLabels={creatives.map((_, i) => tc('carousel.slide', {n: i + 1, total: creatives.length}))}
+              prevLabel={tc('carousel.prev')}
+              nextLabel={tc('carousel.next')}
+              className={`${styles.strip} ${styles.fade}`}
+              trackClassName={styles.stripTrack}
+            >
+              {creatives.map((item, n) => (
+                <li key={item.id} className={`${styles.stripCard} rc${n}`}>
+                  <div className={`${styles.half} rb`}>
+                    <span className={styles.mini}>{ba('before')}</span>
                   </div>
-                );
-              })}
-            </div>
-          </RingMotion>
+                  <div className={`${styles.half} ra`}>
+                    <span className={styles.mini}>{ba('after')}</span>
+                  </div>
+                  <span className={styles.cardCaption}>{l10n(item.caption, locale)}</span>
+                </li>
+              ))}
+            </SnapCarousel>
+          </>
         )}
 
         <Link href="/varaa-aika" className={`${styles.mock} ${styles.rise}`} style={delay(0.55)} aria-label={t('mockLabel')}>

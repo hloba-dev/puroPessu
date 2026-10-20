@@ -137,3 +137,102 @@ test.describe('call button on a desktop', () => {
     expect(await pill.evaluate((el) => el.scrollWidth - el.clientWidth)).toBeLessThanOrEqual(0);
   });
 });
+
+test.describe('carousels on a phone', () => {
+  test.use({viewport: PHONE, isMobile: true, hasTouch: true});
+
+  test.beforeEach(async ({page}) => {
+    await dismissCookies(page);
+  });
+
+  test('the hero strip swipes sideways, snaps to a card and never blocks vertical scrolling', async ({page}) => {
+    await page.goto('/');
+    await page.waitForTimeout(ENTRANCE_MS);
+    const strip = page.locator('[data-carousel="hero"]');
+    await expect(strip).toBeVisible();
+    // the 3D ring is for wide screens only: on a phone the strip replaces it
+    await expect(page.locator('[data-paused]')).toBeHidden();
+
+    const track = strip.locator('ul');
+    await track.evaluate((el) => el.scrollIntoView({block: 'center', behavior: 'instant'}));
+    await page.waitForTimeout(100);
+    const scrolled = await page.evaluate(() => window.scrollY);
+    const box = (await track.boundingBox())!;
+
+    // the third card peeks in from the right edge: an obvious hint that the strip scrolls
+    const third = (await track.locator('li').nth(2).boundingBox())!;
+    expect(third.x).toBeLessThan(PHONE.width);
+    expect(third.x + third.width).toBeGreaterThan(PHONE.width);
+    const dots = strip.getByRole('button', {name: /^Kuva \d+\/\d+$/});
+    await expect(dots.first()).toHaveAttribute('aria-current', 'true');
+
+    const start = {x: box.x + box.width * 0.7, y: box.y + box.height / 2};
+    await swipe(page, start, {x: start.x - 220, y: start.y});
+    await expect.poll(() => track.evaluate((el) => el.scrollLeft)).toBeGreaterThan(100);
+    expect(await page.evaluate(() => window.scrollY)).toBe(scrolled);
+    await expect(dots.first()).not.toHaveAttribute('aria-current', 'true');
+    // once the fling has settled, some card's left edge sits exactly on the padding (snapped)
+    await expect
+      .poll(() =>
+        track.evaluate((el) => {
+          const pad = parseFloat(getComputedStyle(el).paddingLeft);
+          return Math.min(...[...el.children].map((card) => Math.abs((card as HTMLElement).offsetLeft - pad - el.scrollLeft)));
+        })
+      )
+      .toBeLessThan(2);
+
+    // a mostly vertical swipe over the cards scrolls the page as usual
+    await swipe(page, {x: start.x, y: start.y + 60}, {x: start.x + 30, y: start.y - 160});
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(scrolled + 40);
+  });
+
+  test('the before/after gallery swipes to the next slide and the dots show the position', async ({page}) => {
+    await page.goto('/');
+    const gallery = page.locator('[data-carousel="gallery"]');
+    const track = gallery.locator('ul');
+    await track.evaluate((el) => el.scrollIntoView({block: 'center', behavior: 'instant'}));
+    await page.waitForTimeout(ENTRANCE_MS);
+    const scrolled = await page.evaluate(() => window.scrollY);
+    const first = (await track.locator('li').first().boundingBox())!;
+    const dots = gallery.getByRole('button', {name: /^Kuva \d+\/\d+$/});
+    await expect(dots.first()).toHaveAttribute('aria-current', 'true');
+
+    // a swipe across the photo, away from the slider handle in the middle
+    const start = {x: first.x + first.width * 0.25, y: first.y + first.height * 0.3};
+    await swipe(page, start, {x: start.x - 200, y: start.y});
+    await expect.poll(() => track.evaluate((el) => el.scrollLeft)).toBeGreaterThan(150);
+    await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+    expect(await page.evaluate(() => window.scrollY)).toBe(scrolled);
+    // the divider of the slider stayed put
+    await expect(track.getByRole('slider').first()).toHaveAttribute('aria-valuenow', '50');
+
+    // a dot jumps straight to its slide
+    await dots.nth(3).click();
+    await expect(dots.nth(3)).toHaveAttribute('aria-current', 'true');
+  });
+});
+
+test.describe('hero ring on a desktop', () => {
+  test.use({viewport: {width: 1280, height: 900}});
+
+  test('the arrows and ← → turn the ring by one card, hovering pauses the spin', async ({page}) => {
+    await dismissCookies(page);
+    await page.goto('/');
+    await page.waitForTimeout(ENTRANCE_MS);
+    const ring = page.locator('[data-paused]');
+    await expect(ring).toBeVisible();
+    await expect(page.locator('[data-carousel="hero"]')).toBeHidden();
+    await expect(ring).toHaveAttribute('data-turn', '0');
+
+    await ring.getByRole('button', {name: 'Seuraava'}).click();
+    await expect(ring).toHaveAttribute('data-turn', '1');
+    await page.keyboard.press('ArrowRight');
+    await expect(ring).toHaveAttribute('data-turn', '2');
+    await page.keyboard.press('ArrowLeft');
+    await expect(ring).toHaveAttribute('data-turn', '1');
+    await ring.getByRole('button', {name: 'Edellinen'}).click();
+    await expect(ring).toHaveAttribute('data-turn', '0');
+    // the mouse is over the ring after the click: the endless spin is paused meanwhile
+    expect(await ring.locator('[data-ring]').evaluate((el) => getComputedStyle(el).animationPlayState)).toBe('paused');
+  });
+});

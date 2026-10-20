@@ -1,0 +1,103 @@
+/* Native scroll-snap carousel. The consumer styles the track's layout (flex/grid, widths, gaps);
+   only what Tailwind classes never set lives here. */
+.wrap {
+  position: relative;
+}
+
+.track {
+  position: relative;
+  scroll-padding-inline: var(--snap-pad, 16px);
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.track::-webkit-scrollbar {
+  display: none;
+}
+.track:focus-visible {
+  outline: 2px solid var(--cyan-2);
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.wrap[data-scrollable="false"] .nav {
+  visibility: hidden;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+/* 24×44 tap targets, a 7px dot inside; the current one stretches into a pill */
+.dot {
+  position: relative;
+  width: 24px;
+  height: 44px;
+  border-radius: 8px;
+  color: currentColor;
+}
+.dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  translate: -50% -50%;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.35;
+  transition:
+    width 0.2s ease,
+    opacity 0.2s ease;
+}
+.dot[aria-current="true"]::before {
+  width: 18px;
+  opacity: 1;
+}
+
+/* arrows: only where there is a mouse; a thumb swipes */
+.arrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  color: currentColor;
+  transition:
+    border-color 0.15s,
+    opacity 0.15s;
+}
+.arrow:hover {
+  border-color: var(--cyan-2);
+}
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+@media (hover: hover) and (pointer: fine) {
+  .arrow {
+    display: inline-flex;
+  }
+}
+.chevronPrev {
+  rotate: 90deg;
+}
+.chevronNext {
+  rotate: -90deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot::before {
+    transition: none;
+  }
+}

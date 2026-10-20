@@ -96,7 +96,8 @@ test.describe('layout', () => {
       await page.goto('/');
       // measure the final state, after the entrance animation has moved the mock into place
       await page.waitForTimeout(1200);
-      const ring = await page.locator('[data-paused]').boundingBox();
+      // the 3D ring on wide screens, the native swipe strip on phones
+      const ring = await page.locator('[data-paused], [data-carousel="hero"]').filter({visible: true}).first().boundingBox();
       const mock = await page.getByRole('link', {name: 'Avaa varaus: valitse pestävät kalusteet ja vapaa aika'}).boundingBox();
       expect(ring).not.toBeNull();
       expect(mock).not.toBeNull();
@@ -170,7 +171,7 @@ test.describe('before/after slider', () => {
     const context = await browser.newContext({reducedMotion: 'reduce'});
     const page = await context.newPage();
     await page.goto('/');
-    const animation = await page.locator('[data-paused] > div').first().evaluate((el) => getComputedStyle(el).animationName);
+    const animation = await page.locator('[data-ring]').evaluate((el) => getComputedStyle(el).animationName);
     expect(animation).toBe('none');
     await context.close();
   });

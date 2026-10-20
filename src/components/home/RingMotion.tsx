@@ -1,14 +1,27 @@
 'use client';
 
-import {useEffect, useRef, type ReactNode} from 'react';
+import {useEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type ReactNode} from 'react';
+import {IconChevron} from '@/components/ui/icons';
+
+interface Props {
+  className?: string;
+  /** the masked 3D viewport around the ring (aria-hidden: the ring is decorative) */
+  clipClassName?: string;
+  arrowClassName?: string;
+  prevLabel: string;
+  nextLabel: string;
+  children: ReactNode;
+}
 
 /**
- * Pauses the CSS ring animation while the hero is off screen or the tab is hidden.
- * Pausing (instead of letting the timeline run) means the ring resumes exactly where it stopped — no jump.
- * prefers-reduced-motion is handled in CSS (the animation is removed entirely).
+ * The 3D ring of before/after cards (wide screens).
+ * - Pauses the CSS spin while the hero is off screen or the tab is hidden, so it resumes where it stopped.
+ * - The arrows and ← → turn the ring by one card: `--turn` is read by the CSS transform.
+ * prefers-reduced-motion is handled in CSS (the spin is removed entirely).
  */
-export function RingMotion({className, children}: {className?: string; children: ReactNode}) {
+export function RingMotion({className, clipClassName, arrowClassName, prevLabel, nextLabel, children}: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const [turn, setTurn] = useState(0);
 
   useEffect(() => {
     const el = ref.current;
@@ -33,9 +46,30 @@ export function RingMotion({className, children}: {className?: string; children:
     };
   }, []);
 
+  const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    e.preventDefault();
+    setTurn((t) => t + (e.key === 'ArrowRight' ? 1 : -1));
+  };
+
   return (
-    <div ref={ref} className={className} data-paused="false" aria-hidden="true">
-      {children}
+    <div
+      ref={ref}
+      className={className}
+      data-paused="false"
+      data-turn={turn}
+      style={{'--turn': turn} as CSSProperties}
+      onKeyDown={onKeyDown}
+    >
+      <div className={clipClassName} aria-hidden="true">
+        {children}
+      </div>
+      <button type="button" className={arrowClassName} data-dir="prev" aria-label={prevLabel} onClick={() => setTurn((t) => t - 1)}>
+        <IconChevron style={{rotate: '90deg'}} />
+      </button>
+      <button type="button" className={arrowClassName} data-dir="next" aria-label={nextLabel} onClick={() => setTurn((t) => t + 1)}>
+        <IconChevron style={{rotate: '-90deg'}} />
+      </button>
     </div>
   );
 }
