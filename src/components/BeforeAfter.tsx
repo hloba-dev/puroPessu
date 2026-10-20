@@ -89,7 +89,10 @@ export function BeforeAfter({before, after, caption, priority = false, sizes, hi
           alt={`${caption} — ${t('before')}`}
           fill
           sizes={imageSizes}
+          quality={65}
           priority={priority}
+          // the "before" photo is the LCP element of the home page: tell the browser so, not just the preloader
+          fetchPriority={priority ? 'high' : undefined}
           draggable={false}
           className={styles.img}
         />
@@ -99,6 +102,7 @@ export function BeforeAfter({before, after, caption, priority = false, sizes, hi
             alt={`${caption} — ${t('after')}`}
             fill
             sizes={imageSizes}
+            quality={65}
             priority={priority}
             draggable={false}
             className={styles.img}
