@@ -51,7 +51,7 @@ export default async function BookingPage({params, searchParams}: PageProps<'/[l
           <h1 className="h2 mt-5">{t('title')}</h1>
           <p className="lead mt-3">{t('lead')}</p>
           {isDemoMode && (
-            <p className="mt-4 rounded-xl border border-[#ffb86b]/40 bg-[#ffb86b]/10 px-4 py-3 text-sm text-[#ffd9ad]">{t('demo')}</p>
+            <p className="mt-4 rounded-xl border border-warn-border bg-warn-soft px-4 py-3 text-sm text-warn">{t('demo')}</p>
           )}
           <div className="mt-10">
             <NextIntlClientProvider messages={clientMessages}>

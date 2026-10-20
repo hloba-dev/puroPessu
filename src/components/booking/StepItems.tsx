@@ -65,10 +65,10 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
               <span>
                 {l10n(category.name, locale)}
                 {selected > 0 && (
-                  <span className="ml-3 rounded-full bg-cyan-4 px-2.5 py-0.5 text-xs font-semibold">{t('selected', {count: selected})}</span>
+                  <span className="ml-3 rounded-full bg-teal-3 px-2.5 py-0.5 text-xs font-semibold">{t('selected', {count: selected})}</span>
                 )}
               </span>
-              <IconChevron className="shrink-0 text-cyan-2 transition-transform group-open:rotate-180" />
+              <IconChevron className="shrink-0 text-teal-2 transition-transform group-open:rotate-180" />
             </summary>
 
             <ul className="divide-y divide-hairline border-t border-hairline">
@@ -87,7 +87,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                           {service.durationMin > 0 && ` · ${t('duration', {duration: formatDuration(service.durationMin, locale)})}`}
                         </p>
                       </div>
-                      <p className="font-semibold whitespace-nowrap text-cyan-1">
+                      <p className="font-semibold whitespace-nowrap text-teal-1">
                         {service.priceFrom ? `${tp('from')} ` : ''}
                         {formatEur(service.priceCents, locale)}
                         {unit}
@@ -95,7 +95,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                       <div className="flex items-center gap-1" role="group" aria-label={t('qty', {item: name})}>
                         <button
                           type="button"
-                          className="flex size-11 items-center justify-center rounded-xl border border-white/20 text-xl disabled:opacity-30"
+                          className="flex size-11 items-center justify-center rounded-xl border border-text/20 text-xl disabled:opacity-30"
                           onClick={() => setQty(service, qty - 1)}
                           disabled={qty === 0}
                           aria-label={t('decrease', {item: name})}
@@ -107,7 +107,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                         </output>
                         <button
                           type="button"
-                          className="flex size-11 items-center justify-center rounded-xl border border-cyan-3 bg-cyan-4 text-xl text-white"
+                          className="flex size-11 items-center justify-center rounded-xl border border-teal-2 bg-teal-3 text-xl text-white"
                           onClick={() => setQty(service, qty + 1)}
                           aria-label={t('increase', {item: name})}
                         >
@@ -122,7 +122,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                           <label key={option.slug} className="flex min-h-9 cursor-pointer items-center gap-2.5">
                             <input
                               type="checkbox"
-                              className="size-[18px] accent-cyan-600"
+                              className="size-[18px] accent-teal-3"
                               checked={line.options.includes(option.slug)}
                               onChange={(e) =>
                                 patch(service.slug, (l) => ({
@@ -133,14 +133,14 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                             />
                             <span>
                               {l10n(option.name, locale)}
-                              {option.priceCents > 0 && <span className="text-cyan-1"> +{formatEur(option.priceCents, locale)}</span>}
+                              {option.priceCents > 0 && <span className="text-teal-1"> +{formatEur(option.priceCents, locale)}</span>}
                             </span>
                           </label>
                         ))}
                         <label className="flex min-h-9 cursor-pointer items-center gap-2.5">
                           <input
                             type="checkbox"
-                            className="size-[18px] accent-cyan-600"
+                            className="size-[18px] accent-teal-3"
                             checked={line.veryDirty}
                             onChange={(e) => patch(service.slug, (l) => ({...l, veryDirty: e.target.checked}))}
                           />
@@ -189,7 +189,7 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
                 <span className="max-w-40 truncate">{file.name}</span>
                 <button
                   type="button"
-                  className="text-muted hover:text-white"
+                  className="text-muted hover:text-text"
                   aria-label={tf('remove', {name: file.name})}
                   onClick={() => onPhotos(photos.filter((_, i) => i !== index))}
                 >

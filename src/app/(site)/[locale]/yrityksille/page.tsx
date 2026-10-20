@@ -58,7 +58,7 @@ export default async function BusinessPageRoute({params}: PageProps<'/[locale]/y
       <section className="section bg-surface-2" aria-labelledby="b2b-method">
         <div className="container-x max-w-4xl">
           <SectionHeader id="b2b-method" title={content.method.title} />
-          <Paragraphs items={content.method.paragraphs} className="mt-6 text-[17px] text-[#d3d7dd]" />
+          <Paragraphs items={content.method.paragraphs} className="mt-6 text-[17px] text-text" />
         </div>
       </section>
 
@@ -67,8 +67,8 @@ export default async function BusinessPageRoute({params}: PageProps<'/[locale]/y
           {content.segments.map((segment) => (
             <article key={segment.id} id={segment.id} className="glass scroll-mt-28 p-7">
               <h2 className="h3">{segment.title}</h2>
-              <p className="mt-3 text-[#d3d7dd]">{segment.text}</p>
-              <CheckList items={segment.bullets} className="mt-5 text-[15px] text-[#d3d7dd]" />
+              <p className="mt-3 text-text">{segment.text}</p>
+              <CheckList items={segment.bullets} className="mt-5 text-[15px] text-text" />
             </article>
           ))}
         </div>

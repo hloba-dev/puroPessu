@@ -21,12 +21,12 @@ export async function ReviewsBlock({reviews, settings, locale}: {reviews: Review
           <ul className="mt-10 grid gap-5 md:grid-cols-2">
             {sorted.map((review) => (
               <li key={review.id} className="glass p-6">
-                <p className="flex gap-0.5 text-[#ffc94d]" role="img" aria-label={t('rating', {rating: review.rating})}>
+                <p className="flex gap-0.5 text-star" role="img" aria-label={t('rating', {rating: review.rating})}>
                   {Array.from({length: review.rating}, (_, i) => (
                     <IconStar key={i} width={18} height={18} />
                   ))}
                 </p>
-                <blockquote className="mt-3 text-[#dfe3e8]" lang={review.locale}>
+                <blockquote className="mt-3 text-text" lang={review.locale}>
                   {review.text}
                 </blockquote>
                 <p className="mt-4 text-sm text-muted">

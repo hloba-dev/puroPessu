@@ -10,7 +10,6 @@ import {GlowButton} from '@/components/ui/GlowButton';
 import {IconClock} from '@/components/ui/icons';
 import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {RingMotion} from './RingMotion';
-import {Stars} from './Stars';
 import styles from './Hero.module.css';
 
 const RING_CARDS = 37;
@@ -66,7 +65,6 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.bg} aria-hidden="true" />
-      <Stars />
 
       <div className={`container-x ${styles.top}`}>
         {/* on phones the wrapper dissolves (display: contents), the badge hides and the slider slots in between the headline and the buttons */}

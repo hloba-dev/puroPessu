@@ -16,9 +16,9 @@ export function Faq({items, jsonLd = true}: {items: FaqItem[]; jsonLd?: boolean}
           <details key={item.q} className="group px-5 sm:px-7">
             <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 py-4 text-[17px] font-semibold [&::-webkit-details-marker]:hidden">
               {item.q}
-              <IconChevron className="shrink-0 text-cyan-2 transition-transform group-open:rotate-180" />
+              <IconChevron className="shrink-0 text-teal-2 transition-transform group-open:rotate-180" />
             </summary>
-            <p className="max-w-[70ch] pb-6 text-[#cdd2d8]">{item.a}</p>
+            <p className="max-w-[70ch] pb-6 text-text">{item.a}</p>
           </details>
         ))}
       </div>

@@ -14,7 +14,7 @@
   display: none;
 }
 .track:focus-visible {
-  outline: 2px solid var(--cyan-2);
+  outline: 2px solid var(--teal-2);
   outline-offset: -2px;
   border-radius: 12px;
 }
@@ -78,7 +78,7 @@
     opacity 0.15s;
 }
 .arrow:hover {
-  border-color: var(--cyan-2);
+  border-color: var(--teal-2);
 }
 .arrow:disabled {
   opacity: 0.35;

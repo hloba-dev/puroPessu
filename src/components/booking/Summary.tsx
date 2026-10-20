@@ -82,11 +82,11 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
             )}
             {quote.promoCents > 0 && (
               <div className={row}>
-                <dt className="text-cyan-1">
+                <dt className="text-teal-1">
                   {promoLabel}
                   <span className="block text-sm text-muted">{promoReasons.join(' · ')}</span>
                 </dt>
-                <dd className="font-medium whitespace-nowrap text-cyan-1" data-testid="sum-promo">
+                <dd className="font-medium whitespace-nowrap text-teal-1" data-testid="sum-promo">
                   −{formatEur(quote.promoCents, locale)}
                 </dd>
               </div>
@@ -115,18 +115,18 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
           </dl>
 
           {customer === 'unknown' && promotions.firstOrderPct > 0 && (
-            <p className="mt-3 rounded-xl border border-cyan-4 bg-cyan-4/15 px-3 py-2 text-sm text-cyan-1">
+            <p className="mt-3 rounded-xl border border-teal-3 bg-teal-soft px-3 py-2 text-sm text-teal-1">
               {t('promoHint', {first: promotions.firstOrderPct, repeat: promotions.repeatOrderPct})}
             </p>
           )}
-          {slotLabel && <p className="mt-3 text-[15px] font-medium text-cyan-1 first-letter:uppercase">{slotLabel}</p>}
+          {slotLabel && <p className="mt-3 text-[15px] font-medium text-teal-1 first-letter:uppercase">{slotLabel}</p>}
         </>
       )}
 
       <ul className="mt-5 space-y-2 border-t border-hairline pt-4 text-sm text-muted">
         {trust.map((item) => (
           <li key={item} className="flex items-center gap-2">
-            <IconCheck width={16} height={16} className="shrink-0 text-cyan-2" /> {item}
+            <IconCheck width={16} height={16} className="shrink-0 text-teal-2" /> {item}
           </li>
         ))}
       </ul>

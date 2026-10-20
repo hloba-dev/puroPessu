@@ -32,7 +32,7 @@ export default async function BookingSuccessPage({params}: PageProps<'/[locale]/
   return (
     <section className="page-top section">
       <div className="container-x max-w-3xl">
-        <span className="flex size-14 items-center justify-center rounded-full bg-cyan-4 text-white">
+        <span className="flex size-14 items-center justify-center rounded-full bg-teal-3 text-white">
           <IconCheck width={30} height={30} />
         </span>
         <h1 className="h2 mt-6">{t('title')}</h1>
@@ -59,10 +59,10 @@ export default async function BookingSuccessPage({params}: PageProps<'/[locale]/
         <ol className="mt-4 space-y-3">
           {(t.raw('next') as string[]).map((item, index) => (
             <li key={item} className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-semibold">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-text/8 text-sm font-semibold">
                 {index + 1}
               </span>
-              <span className="text-[#d3d7dd]">{item}</span>
+              <span className="text-text">{item}</span>
             </li>
           ))}
         </ol>

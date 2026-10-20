@@ -46,7 +46,7 @@ export function PhotoPicker({id, accept, label, empty, count, onPick, className,
         type="button"
         {...aria}
         onClick={() => input.current?.click()}
-        className="inline-flex min-h-11 items-center rounded-xl border border-white/20 bg-white/10 px-4 text-[15px] font-medium text-white hover:bg-white/15 aria-invalid:border-[#ff8a8a]"
+        className="inline-flex min-h-11 items-center rounded-xl border border-text/20 bg-text/8 px-4 text-[15px] font-medium text-text hover:bg-text/12 aria-invalid:border-danger"
       >
         {label}
       </button>

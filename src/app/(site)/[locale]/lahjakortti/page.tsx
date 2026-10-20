@@ -57,7 +57,7 @@ export default async function GiftCardPageRoute({params}: PageProps<'/[locale]/l
               {options.map((option) => (
                 <li key={option.value} className="flex justify-between gap-4 py-3.5">
                   <span className="font-medium">{option.name}</span>
-                  <span className="font-semibold text-cyan-1">{option.price}</span>
+                  <span className="font-semibold text-teal-1">{option.price}</span>
                 </li>
               ))}
               <li className="py-3.5 font-medium">{content.options.custom}</li>
@@ -67,7 +67,7 @@ export default async function GiftCardPageRoute({params}: PageProps<'/[locale]/l
             <h2 className="h3">{content.terms.title}</h2>
             <CheckList
               items={content.terms.items.map((item) => fill(item, {months: GIFT_VALID_MONTHS}))}
-              className="mt-5 text-[15px] text-[#d3d7dd]"
+              className="mt-5 text-[15px] text-text"
             />
           </div>
         </div>

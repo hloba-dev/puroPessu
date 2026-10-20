@@ -42,10 +42,10 @@ export async function Footer() {
     {href: settings.social.googleReviews, label: t('googleReviews')}
   ].filter((s) => s.href);
 
-  const linkCls = 'text-[15px] text-muted transition-colors hover:text-white';
+  const linkCls = 'text-[15px] text-muted transition-colors hover:text-text';
 
   return (
-    <footer className="border-t border-hairline bg-surface-2">
+    <footer className="on-dark border-t border-hairline bg-bg">
       <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" className="flex items-center gap-3 text-xl font-bold">
@@ -96,22 +96,22 @@ export async function Footer() {
           <h2 className="text-sm font-semibold uppercase tracking-widest text-white">{t('contactTitle')}</h2>
           <ul className="mt-4 space-y-3 text-[15px]">
             <li>
-              <a href={telLink(settings.phone)} className="flex items-center gap-2.5 hover:text-cyan-1">
-                <IconPhone className="text-cyan-2" /> {settings.phone}
+              <a href={telLink(settings.phone)} className="flex items-center gap-2.5 hover:text-teal-1">
+                <IconPhone className="text-teal-2" /> {settings.phone}
               </a>
             </li>
             <li>
-              <a href={waLink(settings.whatsapp)} className="flex items-center gap-2.5 hover:text-cyan-1" rel="noopener" target="_blank">
-                <IconWhatsApp className="text-cyan-2" /> WhatsApp
+              <a href={waLink(settings.whatsapp)} className="flex items-center gap-2.5 hover:text-teal-1" rel="noopener" target="_blank">
+                <IconWhatsApp className="text-teal-2" /> WhatsApp
               </a>
             </li>
             <li>
-              <a href={`mailto:${settings.email}`} className="flex items-center gap-2.5 hover:text-cyan-1">
-                <IconMail className="text-cyan-2" /> {settings.email}
+              <a href={`mailto:${settings.email}`} className="flex items-center gap-2.5 hover:text-teal-1">
+                <IconMail className="text-teal-2" /> {settings.email}
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-muted">
-              <IconClock className="text-cyan-2" /> {t('hours', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)})}
+              <IconClock className="text-teal-2" /> {t('hours', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)})}
             </li>
           </ul>
           <address className="mt-4 text-[15px] not-italic text-muted">
@@ -131,17 +131,17 @@ export async function Footer() {
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
-              <Link href="/tietosuoja" className="hover:text-white">
+              <Link href="/tietosuoja" className="hover:text-text">
                 {t('links.privacy')}
               </Link>
             </li>
             <li>
-              <Link href="/tietojen-poisto" className="hover:text-white">
+              <Link href="/tietojen-poisto" className="hover:text-text">
                 {t('links.dataDeletion')}
               </Link>
             </li>
             <li>
-              <CookieSettingsButton className="hover:text-white">{t('cookieSettings')}</CookieSettingsButton>
+              <CookieSettingsButton className="hover:text-text">{t('cookieSettings')}</CookieSettingsButton>
             </li>
           </ul>
         </div>

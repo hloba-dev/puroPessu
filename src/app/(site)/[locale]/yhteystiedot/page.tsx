@@ -60,10 +60,10 @@ export default async function ContactPageRoute({params}: PageProps<'/[locale]/yh
                 <li key={channel.label}>
                   <a
                     href={channel.href}
-                    className="glass flex items-center gap-4 p-5 transition-colors hover:border-cyan-3"
+                    className="glass flex items-center gap-4 p-5 transition-colors hover:border-teal-2"
                     {...(channel.external ? {rel: 'noopener', target: '_blank'} : {})}
                   >
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-cyan-4/40 text-cyan-1">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-1">
                       <channel.icon width={22} height={22} />
                     </span>
                     <span>
@@ -76,18 +76,18 @@ export default async function ContactPageRoute({params}: PageProps<'/[locale]/yh
             </ul>
 
             <div className="glass flex items-start gap-4 p-5">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-cyan-4/40 text-cyan-1">
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-1">
                 <IconClock width={22} height={22} />
               </span>
               <div>
                 <h2 className="font-semibold">{content.hoursTitle}</h2>
-                <p className="mt-1 text-[15px] text-[#d3d7dd]">{fill(content.hoursText, hours)}</p>
+                <p className="mt-1 text-[15px] text-text">{fill(content.hoursText, hours)}</p>
               </div>
             </div>
 
             <div className="glass p-5">
               <h2 className="font-semibold">{content.billing.title}</h2>
-              <address className="mt-2 text-[15px] not-italic text-[#d3d7dd]">
+              <address className="mt-2 text-[15px] not-italic text-text">
                 {settings.legalName}
                 <br />
                 {settings.address.street}, {settings.address.postalCode} {settings.address.city}

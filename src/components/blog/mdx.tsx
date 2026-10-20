@@ -45,10 +45,10 @@ export function mdxComponents(locale: Locale, catalog: Catalog, labels: Labels):
     Callout: ({type = 'tip', title, children}: {type?: 'tip' | 'warning'; title?: string; children?: ReactNode}) => (
       <aside
         className={`rounded-2xl border p-5 ${
-          type === 'warning' ? 'border-[#ffb86b]/40 bg-[#ffb86b]/[0.07]' : 'border-cyan-4 bg-cyan-4/20'
+          type === 'warning' ? 'border-warn-border bg-warn-soft' : 'border-teal-3 bg-teal-soft'
         }`}
       >
-        <p className={`text-sm font-semibold tracking-wide uppercase ${type === 'warning' ? 'text-[#ffd9ad]' : 'text-cyan-1'}`}>
+        <p className={`text-sm font-semibold tracking-wide uppercase ${type === 'warning' ? 'text-warn' : 'text-teal-1'}`}>
           {title ?? labels[type]}
         </p>
         <div className="mt-2 text-[16px] [&>*+*]:mt-3">{children}</div>

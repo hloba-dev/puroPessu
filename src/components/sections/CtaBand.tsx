@@ -20,7 +20,7 @@ export async function CtaBand({title, text, item}: Props) {
         <div className="relative overflow-hidden rounded-[28px] border border-hairline bg-surface px-6 py-12 text-center sm:px-12 sm:py-16">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_50%_120%,rgba(5,150,179,.34),transparent_70%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_50%_120%,rgba(14,124,148,.16),transparent_70%)]"
           />
           <div className="relative">
             <h2 className="h2 mx-auto max-w-3xl">{title}</h2>

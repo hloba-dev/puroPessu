@@ -76,14 +76,14 @@ export function StepAddress({formId, defaultValues, travel, onTravel, onValid, l
       <div className="sm:col-span-2" aria-live="polite" data-testid="travel-result">
         {complete && !travel && <p className="text-muted">{t('travelChecking')}</p>}
         {travel?.status === 'ok' && (
-          <p className="rounded-xl border border-cyan-4 bg-cyan-4/20 px-4 py-3 font-medium text-cyan-1">
+          <p className="rounded-xl border border-teal-3 bg-teal-soft px-4 py-3 font-medium text-teal-1">
             {travel.feeCents === 0
               ? t('travelFree', {municipality: travel.municipality})
               : t('travelOk', {fee: formatEur(travel.feeCents, locale), municipality: travel.municipality, km: Math.round(travel.km)})}
           </p>
         )}
         {(travel?.status === 'unknown' || travel?.status === 'out_of_range') && (
-          <div className="rounded-xl border border-[#ffb86b]/40 bg-[#ffb86b]/10 px-4 py-3 text-[#ffd9ad]">
+          <div className="rounded-xl border border-warn-border bg-warn-soft px-4 py-3 text-warn">
             <p>
               {travel.status === 'unknown'
                 ? t('travelUnknown')

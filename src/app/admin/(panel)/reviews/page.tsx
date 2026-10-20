@@ -43,7 +43,7 @@ function ReviewForm({review}: {review?: Tables<'reviews'>}) {
         <textarea name="text" required defaultValue={review?.text} className={`${adminInput} min-h-20`} />
       </label>
       <label className="flex min-h-10 items-center gap-2 text-sm md:col-span-2">
-        <input type="checkbox" name="is_published" defaultChecked={review?.is_published ?? false} className="size-4 accent-cyan-600" />
+        <input type="checkbox" name="is_published" defaultChecked={review?.is_published ?? false} className="size-4 accent-teal-3" />
         Опубликован на сайте
       </label>
       <button type="submit" className={review ? adminBtn : adminBtnPrimary}>

@@ -28,12 +28,12 @@ export function OsmMap({lat, lng, title, showLabel, openLabel, note}: Props) {
         {loaded ? (
           <iframe src={src} title={title} loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 size-full border-0" />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[radial-gradient(70%_70%_at_50%_50%,rgba(5,150,179,.22),transparent)] p-6 text-center">
-            <IconPin width={36} height={36} className="text-cyan-2" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[radial-gradient(70%_70%_at_50%_50%,rgba(14,124,148,.14),transparent)] p-6 text-center">
+            <IconPin width={36} height={36} className="text-teal-2" />
             <button
               type="button"
               onClick={() => setLoaded(true)}
-              className="min-h-12 rounded-xl border border-white/25 bg-white/[0.06] px-5 font-semibold hover:border-cyan-2"
+              className="min-h-12 rounded-xl border border-text/25 bg-text/6 px-5 font-semibold hover:border-teal-2"
             >
               {showLabel}
             </button>

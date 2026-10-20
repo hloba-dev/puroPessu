@@ -77,14 +77,14 @@ export function GalleryUploader({categories}: {categories: {slug: string; name: 
         </label>
       ))}
       <label className="flex items-center gap-2 text-sm">
-        <input type="checkbox" name="is_featured" defaultChecked className="size-4 accent-cyan-600" /> Показывать на главной
+        <input type="checkbox" name="is_featured" defaultChecked className="size-4 accent-teal-3" /> Показывать на главной
       </label>
       <div className="md:col-span-2 xl:col-span-3">
         <button type="submit" className={adminBtnPrimary} disabled={busy}>
           {busy ? 'Загрузка…' : 'Добавить пару'}
         </button>
         {message && (
-          <span role={message.kind === 'error' ? 'alert' : 'status'} className={`ml-4 ${message.kind === 'error' ? 'text-[#ffb3b3]' : 'text-cyan-1'}`}>
+          <span role={message.kind === 'error' ? 'alert' : 'status'} className={`ml-4 ${message.kind === 'error' ? 'text-danger' : 'text-teal-1'}`}>
             {message.text}
           </span>
         )}

@@ -144,7 +144,7 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
         <div className="flex items-center justify-between">
           <button
             type="button"
-            className="flex size-11 items-center justify-center rounded-xl border border-white/15 disabled:opacity-30"
+            className="flex size-11 items-center justify-center rounded-xl border border-hairline disabled:opacity-30"
             onClick={() => setMonth(months[monthIndex - 1])}
             disabled={monthIndex <= 0}
             aria-label={t('prevMonth')}
@@ -156,7 +156,7 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
           </p>
           <button
             type="button"
-            className="flex size-11 items-center justify-center rounded-xl border border-white/15 disabled:opacity-30"
+            className="flex size-11 items-center justify-center rounded-xl border border-hairline disabled:opacity-30"
             onClick={() => setMonth(months[monthIndex + 1])}
             disabled={monthIndex >= months.length - 1}
             aria-label={t('nextMonth')}
@@ -196,10 +196,10 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
                 }}
                 className={`flex aspect-square min-h-10 items-center justify-center rounded-xl text-sm font-medium transition-colors ${
                   selected
-                    ? 'bg-cyan-4 text-white ring-2 ring-cyan-2'
+                    ? 'bg-teal-3 text-white ring-2 ring-teal-2'
                     : count > 0
-                      ? 'bg-white/[0.06] hover:bg-white/15'
-                      : 'text-white/25'
+                      ? 'bg-text/6 hover:bg-text/12'
+                      : 'text-text/30'
                 }`}
               >
                 {Number(date.slice(8))}
@@ -231,8 +231,8 @@ export function TimePicker({durationMin, timezone, value, onChange, excludeToken
                         }
                         className={`min-h-12 w-full rounded-xl border text-[15px] font-semibold transition-colors ${
                           selected
-                            ? 'border-cyan-2 bg-cyan-4 text-white'
-                            : 'border-white/15 bg-white/[0.04] hover:border-cyan-2'
+                            ? 'border-teal-2 bg-teal-3 text-white'
+                            : 'border-hairline bg-text/4 hover:border-teal-2'
                         }`}
                       >
                         {time}

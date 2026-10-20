@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 // The admin panel is its own root layout: Russian UI, no public header or footer, never indexed.
 export default function AdminRootLayout({children}: {children: ReactNode}) {
   return (
-    <html lang="ru" className={fontVariables} style={fontFamilies} data-scroll-behavior="smooth">
+    <html lang="ru" className={`${fontVariables} theme-dark`} style={fontFamilies} data-scroll-behavior="smooth">
       <body>{children}</body>
     </html>
   );

@@ -52,7 +52,7 @@ export function ManageBooking({token, durationMin, timezone}: {token: string; du
         <p
           role={notice.kind === 'error' ? 'alert' : 'status'}
           className={`mb-5 rounded-xl border px-4 py-3 ${
-            notice.kind === 'ok' ? 'border-cyan-4 bg-cyan-4/20 text-cyan-1' : 'border-[#ff8a8a]/40 bg-[#ff8a8a]/10 text-[#ffc2c2]'
+            notice.kind === 'ok' ? 'border-teal-3 bg-teal-soft text-teal-1' : 'border-danger-border bg-danger-soft text-danger'
           }`}
         >
           {notice.text}
@@ -100,7 +100,7 @@ export function ManageBooking({token, durationMin, timezone}: {token: string; du
               type="button"
               onClick={cancel}
               disabled={pending}
-              className="min-h-12 rounded-xl bg-[#b3261e] px-5 font-semibold text-white hover:bg-[#c8342b] disabled:opacity-50"
+              className="min-h-12 rounded-xl bg-danger px-5 font-semibold text-white hover:bg-danger-hover disabled:opacity-50"
             >
               {t('cancelYes')}
             </button>

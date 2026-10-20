@@ -16,8 +16,8 @@ export default function GlobalError({error, reset}: {error: Error & {digest?: st
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
-          background: '#020204',
-          color: '#fff',
+          background: '#faf7f2',
+          color: '#1b1f26',
           fontFamily: 'system-ui, sans-serif',
           textAlign: 'center',
           padding: 24
@@ -35,9 +35,9 @@ export default function GlobalError({error, reset}: {error: Error & {digest?: st
               minHeight: 48,
               padding: '0 24px',
               borderRadius: 12,
-              border: '1px solid #3ec8e4',
+              border: '1px solid #c44a12',
               background: 'transparent',
-              color: '#fff',
+              color: '#1b1f26',
               fontSize: 16,
               cursor: 'pointer'
             }}

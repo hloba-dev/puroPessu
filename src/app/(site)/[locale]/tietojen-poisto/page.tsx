@@ -28,15 +28,15 @@ export default async function DeletionPageRoute({params}: PageProps<'/[locale]/t
       <section className="pb-20">
         <div className="container-x grid gap-10 lg:grid-cols-2">
           <div>
-            <Paragraphs items={content.paragraphs} className="text-[17px] text-[#d3d7dd]" />
+            <Paragraphs items={content.paragraphs} className="text-[17px] text-text" />
             <h2 className="h3 mt-10">{content.steps.title}</h2>
             <ol className="mt-5 space-y-3">
               {content.steps.items.map((item, index) => (
                 <li key={item} className="flex gap-3">
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-semibold">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-text/8 text-sm font-semibold">
                     {index + 1}
                   </span>
-                  <span className="text-[#d3d7dd]">{item}</span>
+                  <span className="text-text">{item}</span>
                 </li>
               ))}
             </ol>

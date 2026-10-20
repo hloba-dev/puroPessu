@@ -198,12 +198,12 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                   aria-current={current ? 'step' : undefined}
                   onClick={() => goTo(index)}
                   className={`flex w-full flex-col items-start gap-2 rounded-xl border-t-2 pt-3 text-left text-[13px] font-medium sm:text-sm ${
-                    current ? 'border-cyan-2 text-white' : done ? 'border-cyan-4 text-cyan-1 hover:text-white' : 'border-white/15 text-muted'
+                    current ? 'border-accent text-text' : done ? 'border-teal-3 text-teal-1 hover:text-text' : 'border-hairline text-muted'
                   }`}
                 >
                   <span
                     className={`flex size-7 items-center justify-center rounded-full text-[13px] font-semibold ${
-                      current ? 'bg-cyan-2 text-ink' : done ? 'bg-cyan-4 text-white' : 'bg-white/10'
+                      current ? 'bg-accent text-white' : done ? 'bg-teal-3 text-white' : 'bg-text/8'
                     }`}
                   >
                     {done ? <IconCheck width={15} height={15} /> : index + 1}
@@ -224,7 +224,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
           </h2>
 
           {error && (
-            <p role="alert" className="mt-4 rounded-xl border border-[#ff8a8a]/40 bg-[#ff8a8a]/10 p-4 text-[#ffc2c2]">
+            <p role="alert" className="mt-4 rounded-xl border border-danger-border bg-danger-soft p-4 text-danger">
               {error === 'price_changed'
                 ? t('errors.price_changed', {total: formatEur(priceNotice?.server ?? quote.totalCents, locale)})
                 : t(`errors.${error}`)}
@@ -270,7 +270,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                   reloadKey={reloadKey}
                 />
                 {slotLabel && (
-                  <p className="mt-5 font-medium text-cyan-1" role="status">
+                  <p className="mt-5 font-medium text-teal-1" role="status">
                     {t('time.selected', {when: slotLabel})}
                   </p>
                 )}
@@ -375,7 +375,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
       </div>
 
       {/* mobile / tablet navigation: fixed to the bottom edge together with the running total */}
-      <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-hairline bg-[#06090f]/95 px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-hairline bg-surface/95 px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
         <div className="mx-auto flex max-w-xl items-center gap-3">
           <p className="min-w-0 flex-1 leading-tight">
             <span className="block text-xs text-muted">{t('summary.total')}</span>

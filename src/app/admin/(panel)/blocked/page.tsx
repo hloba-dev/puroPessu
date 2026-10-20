@@ -102,14 +102,14 @@ export default async function AdminBlockedPage({searchParams}: PageProps<'/admin
         </p>
         <p className="mt-2 mb-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted">
           <span>
-            <span className="rounded border border-[#ff8a8a]/60 bg-[#ff8a8a]/20 px-1 text-[#ffc2c2] line-through">8–10</span> занято
+            <span className="rounded border border-[#ff8a8a]/60 bg-[#ff8a8a]/20 px-1 text-danger line-through">8–10</span> занято
           </span>
           <span>
-            <span className="rounded border border-[#ffb86b]/50 bg-[#ffb86b]/15 px-1 text-[#ffd9ad]">8–10</span> занято частично: другие
+            <span className="rounded border border-[#ffb86b]/50 bg-warn-soft px-1 text-warn">8–10</span> занято частично: другие
             часы или один мастер
           </span>
           <span>
-            <span className="text-cyan-1">●</span> есть брони клиентов
+            <span className="text-teal-1">●</span> есть брони клиентов
           </span>
         </p>
         <BlockCalendar days={days} slots={slots} />

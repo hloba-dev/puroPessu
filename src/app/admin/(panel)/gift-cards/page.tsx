@@ -28,7 +28,7 @@ export default async function AdminGiftCardsPage({searchParams}: PageProps<'/adm
               <div>
                 <p className="text-lg font-semibold">
                   {card.amount_cents ? eur(card.amount_cents) : (serviceName.get(card.service_id ?? 0) ?? 'Услуга')}
-                  {card.code && <code className="ml-3 rounded bg-white/10 px-2 py-0.5 text-base">{card.code}</code>}
+                  {card.code && <code className="ml-3 rounded bg-text/8 px-2 py-0.5 text-base">{card.code}</code>}
                 </p>
                 <p className="text-sm text-muted">
                   {fmtDateTime(card.created_at)} · язык: {card.locale}

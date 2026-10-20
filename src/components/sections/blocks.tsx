@@ -10,7 +10,7 @@ export function CardGrid({items, columns = 3, numbered = false}: {items: TitleTe
       {items.map((item, index) => (
         <li key={item.title} className="glass p-6">
           {numbered && (
-            <span className="font-serif text-4xl font-semibold text-cyan-2" aria-hidden="true">
+            <span className="font-serif text-4xl font-semibold text-accent" aria-hidden="true">
               {index + 1}
             </span>
           )}
@@ -27,7 +27,7 @@ export function CheckList({items, className = ''}: {items: string[]; className?:
     <ul className={`space-y-2.5 ${className}`}>
       {items.map((item) => (
         <li key={item} className="flex gap-3">
-          <IconCheck className="mt-1 shrink-0 text-cyan-2" width={18} height={18} />
+          <IconCheck className="mt-1 shrink-0 text-teal-2" width={18} height={18} />
           <span>{item}</span>
         </li>
       ))}
@@ -65,7 +65,7 @@ export function CompareTable({headers, rows, caption}: CompareProps) {
             <th scope="col" className="p-4 font-semibold">
               {headers.rental}
             </th>
-            <th scope="col" className="p-4 font-semibold text-cyan-1">
+            <th scope="col" className="p-4 font-semibold text-teal-1">
               {headers.pro}
             </th>
           </tr>

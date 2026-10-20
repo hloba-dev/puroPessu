@@ -21,7 +21,7 @@ export function PageHero({crumbs, badge, title, intro, children, aside}: Props) 
         <div className={`mt-7 grid gap-10 ${aside ? 'lg:grid-cols-[1.15fr_0.85fr] lg:items-center' : ''}`}>
           <div className="min-w-0">
             {badge && (
-              <p className="inline-flex min-h-9 items-center rounded-xl border border-hairline bg-[#090d14] px-4 text-sm font-medium text-cyan-1">
+              <p className="inline-flex min-h-9 items-center rounded-xl border border-hairline bg-surface px-4 text-sm font-medium text-teal-1">
                 {badge}
               </p>
             )}

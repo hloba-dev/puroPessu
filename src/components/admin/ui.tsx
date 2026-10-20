@@ -2,11 +2,11 @@ import type {ReactNode} from 'react';
 import {addDays, toHm, utcToZoned} from '@/lib/booking/tz';
 
 export const adminBtn =
-  'inline-flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-3.5 text-sm font-semibold hover:border-cyan-2 hover:text-cyan-1 disabled:opacity-50';
+  'inline-flex min-h-10 items-center justify-center rounded-lg border border-text/20 px-3.5 text-sm font-semibold hover:border-teal-2 hover:text-teal-1 disabled:opacity-50';
 export const adminBtnPrimary =
-  'inline-flex min-h-10 items-center justify-center rounded-lg bg-cyan-4 px-4 text-sm font-semibold text-white hover:bg-cyan-3 disabled:opacity-50';
+  'inline-flex min-h-10 items-center justify-center rounded-lg bg-teal-3 px-4 text-sm font-semibold text-white hover:bg-teal-2 disabled:opacity-50';
 export const adminBtnDanger =
-  'inline-flex min-h-10 items-center justify-center rounded-lg border border-[#ff8a8a]/40 px-3.5 text-sm font-semibold text-[#ffb3b3] hover:bg-[#ff8a8a]/10';
+  'inline-flex min-h-10 items-center justify-center rounded-lg border border-danger-border px-3.5 text-sm font-semibold text-danger hover:bg-danger-soft';
 export const adminInput = 'field min-h-10 rounded-lg px-3 py-2 text-sm';
 
 export function AdminPage({
@@ -29,12 +29,12 @@ export function AdminPage({
         {actions && <div className="flex flex-wrap gap-2">{actions}</div>}
       </div>
       {error && (
-        <p role="alert" className="mt-4 rounded-xl border border-[#ff8a8a]/40 bg-[#ff8a8a]/10 px-4 py-3 text-[#ffc2c2]">
+        <p role="alert" className="mt-4 rounded-xl border border-danger-border bg-danger-soft px-4 py-3 text-danger">
           {error}
         </p>
       )}
       {notice && (
-        <p role="status" className="mt-4 rounded-xl border border-cyan-4 bg-cyan-4/20 px-4 py-3 text-cyan-1">
+        <p role="status" className="mt-4 rounded-xl border border-teal-3 bg-teal-soft px-4 py-3 text-teal-1">
           {notice}
         </p>
       )}
@@ -53,16 +53,16 @@ export function Card({title, children, className = ''}: {title?: string; childre
 }
 
 const tones: Record<string, string> = {
-  pending: 'bg-[#ffb86b]/15 text-[#ffd9ad]',
-  new: 'bg-[#ffb86b]/15 text-[#ffd9ad]',
-  requested: 'bg-[#ffb86b]/15 text-[#ffd9ad]',
-  confirmed: 'bg-cyan-4/40 text-cyan-1',
-  in_progress: 'bg-cyan-4/40 text-cyan-1',
-  paid: 'bg-cyan-4/40 text-cyan-1',
-  done: 'bg-white/10 text-white',
-  redeemed: 'bg-white/10 text-white',
-  cancelled: 'bg-[#ff8a8a]/15 text-[#ffb3b3]',
-  expired: 'bg-[#ff8a8a]/15 text-[#ffb3b3]'
+  pending: 'bg-warn-soft text-warn',
+  new: 'bg-warn-soft text-warn',
+  requested: 'bg-warn-soft text-warn',
+  confirmed: 'bg-teal-soft text-teal-1',
+  in_progress: 'bg-teal-soft text-teal-1',
+  paid: 'bg-teal-soft text-teal-1',
+  done: 'bg-text/8 text-white',
+  redeemed: 'bg-text/8 text-white',
+  cancelled: 'bg-danger-soft text-danger',
+  expired: 'bg-danger-soft text-danger'
 };
 
 export const STATUS_RU: Record<string, string> = {
@@ -80,7 +80,7 @@ export const STATUS_RU: Record<string, string> = {
 
 export function StatusBadge({status}: {status: string}) {
   return (
-    <span className={`inline-block rounded-md px-2 py-0.5 text-xs font-semibold whitespace-nowrap ${tones[status] ?? 'bg-white/10'}`}>
+    <span className={`inline-block rounded-md px-2 py-0.5 text-xs font-semibold whitespace-nowrap ${tones[status] ?? 'bg-text/8'}`}>
       {STATUS_RU[status] ?? status}
     </span>
   );

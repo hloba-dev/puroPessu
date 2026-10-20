@@ -61,7 +61,7 @@ export default async function AdminGalleryPage({searchParams}: PageProps<'/admin
                 <input name="sort" type="number" defaultValue={item.sort} className={adminInput} />
               </label>
               <label className="flex min-h-10 items-center gap-2 text-sm">
-                <input type="checkbox" name="is_featured" defaultChecked={item.is_featured} className="size-4 accent-cyan-600" />
+                <input type="checkbox" name="is_featured" defaultChecked={item.is_featured} className="size-4 accent-teal-3" />
                 На главной
               </label>
               <button type="submit" className={adminBtn}>

@@ -47,7 +47,7 @@ export function CookieBanner() {
       data-cookie-banner
       data-forced={forced || undefined}
       // phones: a card above the sticky bar; wide screens: a low bar along the bottom that never covers the hero buttons
-      className="fixed inset-x-3 bottom-[76px] z-[120] mx-auto max-w-[560px] rounded-2xl border border-hairline bg-surface p-5 shadow-[0_18px_60px_rgba(0,0,0,.6)] min-[701px]:bottom-24 min-[901px]:flex min-[901px]:max-w-[1040px] min-[901px]:items-center min-[901px]:gap-8 min-[1240px]:bottom-5"
+      className="fixed inset-x-3 bottom-[76px] z-[120] mx-auto max-w-[560px] rounded-2xl border border-hairline bg-surface p-5 shadow-[0_18px_60px_rgba(27,31,38,.18)] min-[701px]:bottom-24 min-[901px]:flex min-[901px]:max-w-[1040px] min-[901px]:items-center min-[901px]:gap-8 min-[1240px]:bottom-5"
     >
       <div className="min-w-0 flex-1">
       <h2 id="cookie-title" className="text-base font-semibold">
@@ -64,7 +64,7 @@ export function CookieBanner() {
         <fieldset className="mt-4 space-y-3 text-sm">
           <legend className="sr-only">{t('title')}</legend>
           <label className="flex items-start gap-3">
-            <input type="checkbox" checked disabled className="mt-1 size-4 accent-cyan-600" />
+            <input type="checkbox" checked disabled className="mt-1 size-4 accent-teal-3" />
             <span>
               <span className="font-medium">{t('necessary')}</span>
               <span className="block text-muted">{t('necessaryText')}</span>
@@ -75,7 +75,7 @@ export function CookieBanner() {
               type="checkbox"
               checked={analytics}
               onChange={(e) => setAnalytics(e.target.checked)}
-              className="mt-1 size-4 accent-cyan-600"
+              className="mt-1 size-4 accent-teal-3"
             />
             <span>
               <span className="font-medium">{t('analytics')}</span>
@@ -87,7 +87,7 @@ export function CookieBanner() {
               type="checkbox"
               checked={marketing}
               onChange={(e) => setMarketing(e.target.checked)}
-              className="mt-1 size-4 accent-cyan-600"
+              className="mt-1 size-4 accent-teal-3"
             />
             <span>
               <span className="font-medium">{t('marketing')}</span>
@@ -102,21 +102,21 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={() => close({analytics: true, marketing: true})}
-          className="min-h-11 flex-1 rounded-xl bg-white px-4 text-sm font-semibold text-ink hover:bg-cyan-1"
+          className="min-h-11 flex-1 rounded-xl bg-accent px-4 text-sm font-semibold text-white hover:bg-accent-hover"
         >
           {t('acceptAll')}
         </button>
         <button
           type="button"
           onClick={() => close({analytics: false, marketing: false})}
-          className="min-h-11 flex-1 rounded-xl border border-white/25 px-4 text-sm font-semibold hover:bg-white/10"
+          className="min-h-11 flex-1 rounded-xl border border-text/25 px-4 text-sm font-semibold hover:bg-text/5"
         >
           {t('onlyNecessary')}
         </button>
         <button
           type="button"
           onClick={() => (details ? close({analytics, marketing}) : setDetails(true))}
-          className="min-h-11 w-full rounded-xl px-4 text-sm font-medium text-cyan-1 underline underline-offset-4 hover:text-white"
+          className="min-h-11 w-full rounded-xl px-4 text-sm font-medium text-teal-1 underline underline-offset-4 hover:text-text"
         >
           {details ? t('save') : t('settings')}
         </button>

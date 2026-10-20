@@ -104,11 +104,11 @@ export default async function AdminNewBookingPage({searchParams}: PageProps<'/ad
             онлайн-записи.
           </p>
           <label className="mt-4 flex items-center gap-2 text-sm">
-            <input type="checkbox" name="no_promo" className="size-4 accent-cyan-600" /> Без скидок и комплектов (по умолчанию
+            <input type="checkbox" name="no_promo" className="size-4 accent-teal-3" /> Без скидок и комплектов (по умолчанию
             применяются те же, что при онлайн-записи)
           </label>
           <label className="mt-2 flex items-center gap-2 text-sm">
-            <input type="checkbox" name="send_email" className="size-4 accent-cyan-600" /> Отправить клиенту письмо с подтверждением
+            <input type="checkbox" name="send_email" className="size-4 accent-teal-3" /> Отправить клиенту письмо с подтверждением
           </label>
           <div className="mt-5 flex gap-3">
             <button type="submit" className={adminBtnPrimary}>

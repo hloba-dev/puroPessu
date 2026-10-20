@@ -1,22 +1,105 @@
 @import "tailwindcss";
 
+/* ---------- palette: warm linen + the copper of the logo ----------
+   Every colour on the site comes from these tokens. Change them here, not in components.
+   .on-dark flips a block to the graphite scheme (footer, offer panel); .on-light restores the page
+   scheme inside such a block; .theme-dark on <html> keeps the admin panel dark as it was. */
 :root {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --surface-2: #f3eee6;
+  --text: #1b1f26;
+  --muted: #5b6270;
+  --hairline: rgba(27, 31, 38, 0.12);
+  --field-border: rgba(27, 31, 38, 0.22);
+  --shadow-card: 0 1px 2px rgba(27, 31, 38, 0.04), 0 12px 32px -14px rgba(27, 31, 38, 0.16);
+
+  /* the one colour for calls to action */
+  --accent: #c44a12;
+  --accent-hover: #a83c0c;
+  --accent-soft: #fdebe0;
+
+  /* secondary: links, icons, prices */
+  --teal-1: #0b6f86;
+  --teal-2: #0e7c94;
+  --teal-3: #0a5d70;
+  --teal-soft: #e3f1f5;
+
+  --warn: #8a4b00;
+  --warn-soft: #fff2e0;
+  --warn-border: #f0c28b;
+  --danger: #b3261e;
+  --danger-hover: #c8342b;
+  --danger-soft: #fdecec;
+  --danger-border: #f2b8b5;
+  --star: #e9a800;
+  --whatsapp: #1f9d55;
+
+  /* light "paper" cards (kept for the offer tags and the booking mock) */
+  --paper: #ffffff;
+  --ink: #1b1f26;
+  --ink-muted: #5b6270;
+
+  --nav-h: 64px;
+  --container: 1172px;
+}
+
+.on-dark,
+.theme-dark {
+  --bg: #1b1f26;
+  --surface: #242933;
+  --surface-2: #1b1f26;
+  --text: #ffffff;
+  --muted: #b5bac3;
+  --hairline: rgba(255, 255, 255, 0.12);
+  --field-border: rgba(255, 255, 255, 0.18);
+  --shadow-card: none;
+  --accent-soft: rgba(224, 96, 31, 0.18);
+  --teal-1: #9ad9ec;
+  --teal-2: #3ec8e4;
+  --teal-soft: rgba(14, 124, 148, 0.3);
+  --warn: #ffd9ad;
+  --warn-soft: rgba(255, 184, 107, 0.1);
+  --warn-border: rgba(255, 184, 107, 0.4);
+  --danger: #ffc2c2;
+  --danger-soft: rgba(255, 138, 138, 0.1);
+  --danger-border: rgba(255, 138, 138, 0.4);
+  --star: #ffc94d;
+  --whatsapp: #3fe07a;
+  color: var(--text);
+  color-scheme: dark;
+}
+.on-light {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --surface-2: #f3eee6;
+  --text: #1b1f26;
+  --muted: #5b6270;
+  --hairline: rgba(27, 31, 38, 0.12);
+  --field-border: rgba(27, 31, 38, 0.22);
+  --accent-soft: #fdebe0;
+  --teal-1: #0b6f86;
+  --teal-2: #0e7c94;
+  --teal-soft: #e3f1f5;
+  --warn: #8a4b00;
+  --warn-soft: #fff2e0;
+  --warn-border: #f0c28b;
+  --danger: #b3261e;
+  --danger-soft: #fdecec;
+  --danger-border: #f2b8b5;
+  color: var(--text);
+  color-scheme: light;
+}
+/* the admin panel: the old dark page colours */
+.theme-dark {
   --bg: #020204;
   --surface: #0a111d;
   --surface-2: #0d1117;
-  --text: #ffffff;
   --muted: #a9aeb5;
   --hairline: rgba(255, 255, 255, 0.105);
-  --cyan-1: #9ad9ec;
-  --cyan-2: #3ec8e4;
-  --cyan-3: #0596b3;
-  --cyan-4: #006180;
-  --glow: rgba(60, 190, 235, 0.1);
-  --paper: #f4f7fa;
-  --ink: #0b1220;
-  --ink-muted: #4a5568;
-  --nav-h: 64px;
-  --container: 1172px;
+  --accent: #e0601f;
+  --accent-hover: #f07a3a;
+  background: var(--bg);
 }
 
 /* Metric-matched fallback for Poppins (same numbers next/font would generate), limited to Latin,
@@ -35,12 +118,25 @@
   --color-bg: var(--bg);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
   --color-muted: var(--muted);
   --color-hairline: var(--hairline);
-  --color-cyan-1: var(--cyan-1);
-  --color-cyan-2: var(--cyan-2);
-  --color-cyan-3: var(--cyan-3);
-  --color-cyan-4: var(--cyan-4);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-teal-1: var(--teal-1);
+  --color-teal-2: var(--teal-2);
+  --color-teal-3: var(--teal-3);
+  --color-teal-soft: var(--teal-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-warn-border: var(--warn-border);
+  --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-border: var(--danger-border);
+  --color-star: var(--star);
+  --color-whatsapp: var(--whatsapp);
   --color-paper: var(--paper);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
@@ -51,7 +147,7 @@
 
 html {
   background: var(--bg);
-  color-scheme: dark;
+  color-scheme: light;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-h) + 40px);
   -webkit-text-size-adjust: 100%;
@@ -99,14 +195,14 @@ body:has([data-booking-wizard]) [data-wa-fab] {
 }
 
 :focus-visible {
-  outline: 2px solid var(--cyan-2);
+  outline: 2px solid var(--teal-2);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
 ::selection {
-  background: var(--cyan-3);
-  color: #fff;
+  background: var(--accent-soft);
+  color: var(--text);
 }
 
 .skip-link {
@@ -116,8 +212,8 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   z-index: 200;
   padding: 10px 16px;
   border-radius: 10px;
-  background: #fff;
-  color: var(--ink);
+  background: var(--text);
+  color: var(--bg);
   font-weight: 600;
   transition: top 0.15s;
 }
@@ -152,7 +248,7 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cyan-2);
+  color: var(--teal-1);
 }
 
 .h2 {
@@ -179,26 +275,29 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 600;
-  color: var(--cyan-1);
+  color: var(--accent);
 }
 
+/* cards */
 .glass {
-  background: linear-gradient(180deg, rgba(13, 22, 37, 0.82), rgba(8, 13, 22, 0.82));
+  background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 20px;
+  box-shadow: var(--shadow-card);
 }
 
 .paper {
   background: var(--paper);
   color: var(--ink);
+  border: 1px solid var(--hairline);
   border-radius: 20px;
 }
 
 .link {
-  color: var(--cyan-1);
+  color: var(--teal-1);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(154, 217, 236, 0.45);
+  text-decoration-color: color-mix(in oklab, var(--teal-1) 45%, transparent);
 }
 .link:hover {
   text-decoration-color: currentColor;
@@ -206,7 +305,7 @@ body:has([data-booking-wizard]) [data-wa-fab] {
 
 /* long-form text (legal pages, articles) */
 .prose-puro {
-  color: #d5d9df;
+  color: var(--text);
   font-size: 17px;
   line-height: 1.75;
 }
@@ -218,16 +317,14 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   font-size: clamp(23px, 3vw, 30px);
   font-weight: 700;
   line-height: 1.2;
-  color: #fff;
 }
 .prose-puro h3 {
   margin-top: 1.6em;
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
 }
 .prose-puro a {
-  color: var(--cyan-1);
+  color: var(--teal-1);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -245,7 +342,6 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   margin-top: 0.4em;
 }
 .prose-puro strong {
-  color: #fff;
   font-weight: 600;
 }
 .prose-puro table {
@@ -261,11 +357,10 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   vertical-align: top;
 }
 .prose-puro th {
-  color: #fff;
   font-weight: 600;
 }
 .prose-puro blockquote {
-  border-left: 3px solid var(--cyan-3);
+  border-left: 3px solid var(--teal-2);
   padding-left: 16px;
   color: var(--muted);
 }
@@ -277,35 +372,35 @@ body:has([data-booking-wizard]) [data-wa-fab] {
   min-height: 48px;
   padding: 11px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.04);
-  color: #fff;
+  border: 1px solid var(--field-border);
+  background: var(--surface);
+  color: var(--text);
   font: inherit;
 }
 .field::placeholder {
-  color: #7d848d;
+  color: color-mix(in oklab, var(--muted) 70%, transparent);
 }
 .field:hover {
-  border-color: rgba(255, 255, 255, 0.28);
+  border-color: color-mix(in oklab, var(--text) 40%, transparent);
 }
 .field[aria-invalid="true"] {
-  border-color: #ff8a8a;
+  border-color: var(--danger);
 }
 select.field option {
   background: var(--surface);
-  color: #fff;
+  color: var(--text);
 }
 .label {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
   font-weight: 500;
-  color: #dfe3e8;
+  color: var(--text);
 }
 .field-error {
   margin-top: 6px;
   font-size: 13px;
-  color: #ffa3a3;
+  color: var(--danger);
 }
 /* honeypot: visually removed, still in the DOM for bots */
 .hp {

@@ -52,7 +52,7 @@ export default async function AdminServicesPage({searchParams}: PageProps<'/admi
                 <input name="sort" type="number" defaultValue={category.sort} className={adminInput} />
               </label>
               <label className="flex min-h-10 items-center gap-2 text-sm">
-                <input type="checkbox" name="is_active" defaultChecked={category.is_active} className="size-4 accent-cyan-600" />
+                <input type="checkbox" name="is_active" defaultChecked={category.is_active} className="size-4 accent-teal-3" />
                 Активна
               </label>
               <button type="submit" className={adminBtnPrimary}>
@@ -67,7 +67,7 @@ export default async function AdminServicesPage({searchParams}: PageProps<'/admi
                   <div
                     key={service.id}
                     id={`service-${service.id}`}
-                    className={`scroll-mt-6 py-4 ${service === addedService ? '-mx-3 rounded-xl bg-cyan-4/15 px-3' : ''}`}
+                    className={`scroll-mt-6 py-4 ${service === addedService ? '-mx-3 rounded-xl bg-teal-soft px-3' : ''}`}
                   >
                     <form action={updateService} className="grid items-end gap-3 md:grid-cols-6">
                       <input type="hidden" name="id" value={service.id} />
@@ -98,11 +98,11 @@ export default async function AdminServicesPage({searchParams}: PageProps<'/admi
                         <input name="sort" type="number" defaultValue={service.sort} className={adminInput} />
                       </label>
                       <label className="flex min-h-10 items-center gap-2 text-sm">
-                        <input type="checkbox" name="price_from" defaultChecked={service.price_from} className="size-4 accent-cyan-600" />
+                        <input type="checkbox" name="price_from" defaultChecked={service.price_from} className="size-4 accent-teal-3" />
                         Цена «от»
                       </label>
                       <label className="flex min-h-10 items-center gap-2 text-sm">
-                        <input type="checkbox" name="is_active" defaultChecked={service.is_active} className="size-4 accent-cyan-600" />
+                        <input type="checkbox" name="is_active" defaultChecked={service.is_active} className="size-4 accent-teal-3" />
                         Активна
                       </label>
                       <button type="submit" className={adminBtn}>
@@ -168,11 +168,11 @@ export default async function AdminServicesPage({searchParams}: PageProps<'/admi
                   </select>
                 </label>
                 <label className="flex min-h-10 items-center gap-2 text-sm">
-                  <input type="checkbox" name="price_from" className="size-4 accent-cyan-600" />
+                  <input type="checkbox" name="price_from" className="size-4 accent-teal-3" />
                   Цена «от»
                 </label>
                 <label className="flex min-h-10 items-center gap-2 text-sm">
-                  <input type="checkbox" name="is_active" defaultChecked className="size-4 accent-cyan-600" />
+                  <input type="checkbox" name="is_active" defaultChecked className="size-4 accent-teal-3" />
                   Активна
                 </label>
                 <button type="submit" className={adminBtnPrimary}>

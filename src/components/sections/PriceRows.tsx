@@ -40,12 +40,12 @@ export async function PriceRows({services, locale, detailed = false, bookable = 
                 </p>
               )}
             </div>
-            <p className="text-lg font-semibold whitespace-nowrap text-cyan-1">{price}</p>
+            <p className="text-lg font-semibold whitespace-nowrap text-teal-1">{price}</p>
             {bookable && !service.isAddon && (
               <Link
                 href={{pathname: '/varaa-aika', query: {item: service.slug}}}
                 aria-label={t('bookItem', {item: name, price})}
-                className="flex min-h-11 items-center rounded-xl border border-white/20 px-4 text-sm font-semibold transition-colors hover:border-cyan-2 hover:text-cyan-1"
+                className="flex min-h-11 items-center rounded-xl border border-text/20 px-4 text-sm font-semibold transition-colors hover:border-teal-2 hover:text-teal-1"
               >
                 {t('book')}
               </Link>

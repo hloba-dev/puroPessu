@@ -32,7 +32,7 @@ export default async function AdminPanelLayout({children}: {children: ReactNode}
           <ul className="flex flex-wrap gap-1 lg:flex-col">
             {NAV.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="block rounded-lg px-3 py-2 text-[15px] text-[#d3d7dd] hover:bg-white/10 hover:text-white">
+                <Link href={item.href} className="block rounded-lg px-3 py-2 text-[15px] text-text hover:bg-text/8 hover:text-text">
                   {item.label}
                 </Link>
               </li>

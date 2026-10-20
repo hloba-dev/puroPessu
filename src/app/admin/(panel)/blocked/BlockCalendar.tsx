@@ -30,9 +30,9 @@ export interface CalendarSlot extends DaySlot {
 const WEEKDAYS = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 
 const SLOT_STYLE: Record<Coverage, string> = {
-  free: 'border-white/15 text-[#d3d7dd] hover:border-cyan-2 hover:text-cyan-1',
-  partial: 'border-[#ffb86b]/50 bg-[#ffb86b]/15 text-[#ffd9ad] hover:border-[#ffb86b]',
-  blocked: 'border-[#ff8a8a]/60 bg-[#ff8a8a]/20 text-[#ffc2c2] line-through hover:border-[#ff8a8a]'
+  free: 'border-hairline text-text hover:border-teal-2 hover:text-teal-1',
+  partial: 'border-[#ffb86b]/50 bg-warn-soft text-warn hover:border-[#ffb86b]',
+  blocked: 'border-[#ff8a8a]/60 bg-[#ff8a8a]/20 text-danger line-through hover:border-[#ff8a8a]'
 };
 const SLOT_HINT: Record<Coverage, string> = {
   free: 'Отметить занятым',
@@ -73,7 +73,7 @@ export function BlockCalendar({days, slots}: {days: CalendarDay[]; slots: Calend
   return (
     <div>
       {error && (
-        <p role="alert" className="mb-3 rounded-xl border border-[#ff8a8a]/40 bg-[#ff8a8a]/10 px-4 py-3 text-[#ffc2c2]">
+        <p role="alert" className="mb-3 rounded-xl border border-danger-border bg-danger-soft px-4 py-3 text-danger">
           Не сохранилось: {error}
         </p>
       )}
@@ -85,7 +85,7 @@ export function BlockCalendar({days, slots}: {days: CalendarDay[]; slots: Calend
       <ul className="grid gap-2 md:grid-cols-7" aria-busy={saving}>
         {shown.map((day) => {
           const closed = day.slots.length > 0 && day.slots.every((state) => state === 'blocked');
-          const tone = closed ? 'border-[#ff8a8a]/50 bg-[#ff8a8a]/10' : 'border-hairline bg-white/[0.03]';
+          const tone = closed ? 'border-[#ff8a8a]/50 bg-danger-soft' : 'border-hairline bg-text/4';
           // on a phone the month is a list: days that are over would only push today down
           const dim = day.past ? 'opacity-40 max-md:hidden' : day.inMonth ? '' : 'md:opacity-60';
           return (
@@ -97,14 +97,14 @@ export function BlockCalendar({days, slots}: {days: CalendarDay[]; slots: Calend
                 aria-label={`${day.label}: весь день занят`}
                 title={closed ? 'Открыть весь день' : 'Отметить весь день занятым'}
                 onClick={() => toggle(day.date, 'all', !closed)}
-                className="flex min-h-10 w-full items-center justify-between gap-1 rounded-lg px-1.5 text-left hover:bg-white/10 disabled:pointer-events-none"
+                className="flex min-h-10 w-full items-center justify-between gap-1 rounded-lg px-1.5 text-left hover:bg-text/8 disabled:pointer-events-none"
               >
-                <span className={`font-semibold ${day.isToday ? 'text-cyan-2' : ''}`}>
+                <span className={`font-semibold ${day.isToday ? 'text-teal-2' : ''}`}>
                   <span className="md:hidden">{day.short}</span>
                   <span className="hidden text-lg md:inline">{day.day}</span>
                 </span>
                 {/* narrow grid cells (tablet) have room for the mark only */}
-                <span className={`text-[11px] whitespace-nowrap ${closed ? 'font-semibold text-[#ffc2c2]' : 'text-muted'}`}>
+                <span className={`text-[11px] whitespace-nowrap ${closed ? 'font-semibold text-danger' : 'text-muted'}`}>
                   {closed && '✕'}
                   <span className="md:max-lg:hidden">{closed ? ' занят' : 'весь день'}</span>
                 </span>
@@ -129,7 +129,7 @@ export function BlockCalendar({days, slots}: {days: CalendarDay[]; slots: Calend
                 })}
               </div>
               {day.bookings.length > 0 && (
-                <p className="mt-1 truncate px-1.5 text-[11px] text-cyan-1" title={day.bookings.join(', ')}>
+                <p className="mt-1 truncate px-1.5 text-[11px] text-teal-1" title={day.bookings.join(', ')}>
                   ● {bookingsLabel(day.bookings.length)}: {day.bookings.join(', ')}
                 </p>
               )}

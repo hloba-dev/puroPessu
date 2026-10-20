@@ -43,7 +43,7 @@ export default async function AboutPageRoute({params}: PageProps<'/[locale]/tiet
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {content.facts.map((fact) => (
               <li key={fact.title}>
-                <p className="text-lg font-semibold text-cyan-1">{fill(fact.title, vars)}</p>
+                <p className="text-lg font-semibold text-teal-1">{fill(fact.title, vars)}</p>
                 <p className="mt-1 text-[15px] text-muted">{fill(fact.text, vars)}</p>
               </li>
             ))}
@@ -54,7 +54,7 @@ export default async function AboutPageRoute({params}: PageProps<'/[locale]/tiet
       <section className="section" aria-labelledby="about-story">
         <div className="container-x max-w-4xl">
           <SectionHeader id="about-story" title={content.story.title} />
-          <Paragraphs items={content.story.paragraphs} className="mt-6 text-[17px] text-[#d3d7dd]" />
+          <Paragraphs items={content.story.paragraphs} className="mt-6 text-[17px] text-text" />
         </div>
       </section>
 
@@ -70,7 +70,7 @@ export default async function AboutPageRoute({params}: PageProps<'/[locale]/tiet
       <section className="section" aria-labelledby="about-method">
         <div className="container-x max-w-4xl">
           <SectionHeader id="about-method" title={content.method.title} />
-          <Paragraphs items={content.method.paragraphs} className="mt-6 text-[17px] text-[#d3d7dd]" />
+          <Paragraphs items={content.method.paragraphs} className="mt-6 text-[17px] text-text" />
         </div>
       </section>
 

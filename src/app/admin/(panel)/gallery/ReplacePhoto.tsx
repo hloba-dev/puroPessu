@@ -40,7 +40,7 @@ export function ReplacePhoto({id, kind}: {id: string; kind: 'before' | 'after'})
   return (
     <>
       <label
-        className={`absolute right-2 bottom-2 inline-flex min-h-9 cursor-pointer items-center rounded-lg border border-white/30 bg-black/75 px-3 text-sm font-semibold hover:border-cyan-2 hover:text-cyan-1 focus-within:outline-2 focus-within:outline-cyan-2 ${busy ? 'pointer-events-none opacity-70' : ''}`}
+        className={`absolute right-2 bottom-2 inline-flex min-h-9 cursor-pointer items-center rounded-lg border border-text/30 bg-black/75 px-3 text-sm font-semibold hover:border-teal-2 hover:text-teal-1 focus-within:outline-2 focus-within:outline-teal-2 ${busy ? 'pointer-events-none opacity-70' : ''}`}
       >
         {busy ? 'Загрузка…' : 'Заменить'}
         <input
@@ -53,7 +53,7 @@ export function ReplacePhoto({id, kind}: {id: string; kind: 'before' | 'after'})
         />
       </label>
       {error && (
-        <p role="alert" className="absolute inset-x-2 top-10 rounded-lg bg-black/85 px-2 py-1 text-xs text-[#ffb3b3]">
+        <p role="alert" className="absolute inset-x-2 top-10 rounded-lg bg-black/85 px-2 py-1 text-xs text-danger">
           {error}
         </p>
       )}

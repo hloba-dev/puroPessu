@@ -71,7 +71,7 @@ export default async function AdminSettingsPage({searchParams}: PageProps<'/admi
             {field('bundle_double_extra', 'Диван + двусп. матрас: доплата, €', s.promotions.bundleMattressDoubleExtraCents / 100, {inputMode: 'decimal'})}
           </div>
           <label className="mt-4 flex items-center gap-2 text-sm">
-            <input type="checkbox" name="promo_stack" defaultChecked={s.promotions.stackBundlesWithPercent} className="size-4 accent-cyan-600" />
+            <input type="checkbox" name="promo_stack" defaultChecked={s.promotions.stackBundlesWithPercent} className="size-4 accent-teal-3" />
             Суммировать комплект со скидкой в процентах (если выключено — клиент получает то, что выгоднее)
           </label>
           <p className="mt-3 text-sm text-muted">
@@ -113,7 +113,7 @@ export default async function AdminSettingsPage({searchParams}: PageProps<'/admi
                 <input type="hidden" name="id" value={member.id} />
                 <input name="name" defaultValue={member.name} className={`${adminInput} w-56`} aria-label="Имя мастера" />
                 <label className="flex items-center gap-2 text-sm">
-                  <input type="checkbox" name="is_active" defaultChecked={member.is_active} className="size-4 accent-cyan-600" /> Активен
+                  <input type="checkbox" name="is_active" defaultChecked={member.is_active} className="size-4 accent-teal-3" /> Активен
                 </label>
                 <button type="submit" className={adminBtn}>
                   Сохранить

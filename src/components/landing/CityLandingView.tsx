@@ -116,10 +116,10 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
 
       <section className="pb-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <Paragraphs items={cityContent[kind].intro} className="text-[17px] text-[#d3d7dd]" />
+          <Paragraphs items={cityContent[kind].intro} className="text-[17px] text-text" />
           <aside className="glass h-fit p-6">
             <h2 className="text-lg font-semibold">{f(templates.travelTitle)}</h2>
-            <p className="mt-3 text-[15px] text-[#d3d7dd]">{travelSentence(templates, settings, locale, city, {city: cityContent.name, inCity: cityContent.inCity})}</p>
+            <p className="mt-3 text-[15px] text-text">{travelSentence(templates, settings, locale, city, {city: cityContent.name, inCity: cityContent.inCity})}</p>
           </aside>
         </div>
       </section>
@@ -142,7 +142,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
             </h2>
             <ul className="mt-5 flex flex-wrap gap-2">
               {cityContent.districts.map((district) => (
-                <li key={district} className="rounded-xl border border-hairline bg-white/[0.04] px-3.5 py-1.5 text-[15px]">
+                <li key={district} className="rounded-xl border border-hairline bg-text/4 px-3.5 py-1.5 text-[15px]">
                   {district}
                 </li>
               ))}
@@ -151,11 +151,11 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
           <div className="space-y-8">
             <div>
               <h2 className="h3">{f(templates.arrivalTitle)}</h2>
-              <p className="mt-3 text-[#d3d7dd]">{cityContent.arrival}</p>
+              <p className="mt-3 text-text">{cityContent.arrival}</p>
             </div>
             <div>
               <h2 className="h3">{f(templates.homesTitle)}</h2>
-              <p className="mt-3 text-[#d3d7dd]">{cityContent.homes}</p>
+              <p className="mt-3 text-text">{cityContent.homes}</p>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export async function CityLandingPage({kind, params}: {kind: CityKind; params: P
               <li key={slug}>
                 <Link
                   href={{pathname: route, params: {city: slug}}}
-                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] hover:border-cyan-2 hover:text-cyan-1"
+                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] hover:border-teal-2 hover:text-teal-1"
                 >
                   {fill(templates.otherCityLink, {city: content.cities[slug].name})}
                 </Link>

@@ -4,7 +4,8 @@
   aspect-ratio: var(--ba-ratio, 4 / 3);
   overflow: hidden;
   border-radius: 18px;
-  background: var(--paper);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-card);
   /* a mouse may drag anywhere on the photo; a finger only drags the handle (touch-action lives there) */
   cursor: ew-resize;
   user-select: none;
@@ -26,7 +27,7 @@
   top: 12px;
   padding: 4px 10px;
   border-radius: 8px;
-  background: rgba(2, 2, 4, 0.78);
+  background: rgba(27, 31, 38, 0.8);
   color: #fff;
   font-size: 12px;
   font-weight: 600;
@@ -63,7 +64,7 @@
   border-radius: 50%;
   background: #fff;
   color: var(--ink);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(27, 31, 38, 0.35);
   cursor: grab;
   /* a finger on the handle drags the divider and never scrolls the page; everywhere else on the photo
      the browser scrolls as usual (the component ignores touches that start off the handle) */
@@ -80,7 +81,7 @@
   border-radius: 50%;
 }
 .handle:focus-visible {
-  outline: 3px solid var(--cyan-2);
+  outline: 3px solid var(--teal-2);
   outline-offset: 3px;
   border-radius: 50%;
 }
@@ -93,7 +94,7 @@
   max-width: calc(100% - 24px);
   padding: 6px 12px;
   border-radius: 10px;
-  background: rgba(2, 2, 4, 0.78);
+  background: rgba(27, 31, 38, 0.8);
   color: #fff;
   font-size: 13px;
   text-align: center;
@@ -104,7 +105,7 @@
   margin-top: 10px;
   font-size: 15px;
   font-weight: 500;
-  color: #e3e6ea;
+  color: var(--text);
 }
 
 /* phones: the hint must not cover half of the sofa */

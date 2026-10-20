@@ -75,7 +75,7 @@ export function LoginForm({initialError}: {initialError?: string}) {
         />
       </div>
       {message && (
-        <p role={message.kind === 'error' ? 'alert' : 'status'} className={message.kind === 'error' ? 'text-[#ffb3b3]' : 'text-cyan-1'}>
+        <p role={message.kind === 'error' ? 'alert' : 'status'} className={message.kind === 'error' ? 'text-danger' : 'text-teal-1'}>
           {message.text}
         </p>
       )}

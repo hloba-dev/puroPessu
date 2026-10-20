@@ -65,7 +65,7 @@ export function FormFooter({form, privacy, privacyError, submitLabel, pendingLab
       <label className="flex cursor-pointer items-start gap-3">
         <input
           type="checkbox"
-          className="mt-1 size-[18px] shrink-0 accent-cyan-600"
+          className="mt-1 size-[18px] shrink-0 accent-teal-3"
           aria-invalid={privacyError ? true : undefined}
           aria-describedby={privacyError ? `${id}-privacy` : undefined}
           {...privacy}
@@ -102,7 +102,7 @@ export function FormFooter({form, privacy, privacyError, submitLabel, pendingLab
       </div>
 
       {form.error && (
-        <p role="alert" className="rounded-xl border border-[#ff8a8a]/40 bg-[#ff8a8a]/10 px-4 py-3 text-[#ffc2c2]">
+        <p role="alert" className="rounded-xl border border-danger-border bg-danger-soft px-4 py-3 text-danger">
           {t(errorKey)}
         </p>
       )}
@@ -117,7 +117,7 @@ export function FormFooter({form, privacy, privacyError, submitLabel, pendingLab
 export function FormSuccess({children}: {children: ReactNode}) {
   return (
     <div role="status" className="glass flex items-start gap-4 p-6">
-      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-cyan-4 text-white">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-teal-3 text-white">
         <IconCheck />
       </span>
       <p className="pt-1.5 text-lg font-medium">{children}</p>

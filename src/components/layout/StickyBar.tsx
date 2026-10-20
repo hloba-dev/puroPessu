@@ -14,11 +14,11 @@ export async function StickyBar() {
     <>
       <nav aria-label={t('label')} className={styles.bar} data-sticky-bar>
         <a href={wa} className={styles.item} rel="noopener" target="_blank">
-          <IconWhatsApp width={22} height={22} className="text-[#3fe07a]" />
+          <IconWhatsApp width={22} height={22} className="text-whatsapp" />
           WhatsApp
         </a>
         <a href={telLink(settings.phone)} className={styles.item}>
-          <IconPhone width={22} height={22} className="text-cyan-2" />
+          <IconPhone width={22} height={22} className="text-teal-2" />
           {t('call')}
         </a>
         <Link href="/varaa-aika" className={`${styles.item} ${styles.primary}`}>

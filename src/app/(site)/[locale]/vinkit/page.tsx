@@ -35,7 +35,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
               <li key={category}>
                 <a
                   href={`#${category}`}
-                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] font-medium hover:border-cyan-2 hover:text-cyan-1"
+                  className="flex min-h-11 items-center rounded-xl border border-hairline px-4 text-[15px] font-medium hover:border-teal-2 hover:text-teal-1"
                 >
                   {t(`categories.${category}`)}
                 </a>
@@ -48,7 +48,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
       {categories.map((category) => (
         <section key={category} id={category} className="scroll-mt-24 pb-16" aria-labelledby={`${category}-title`}>
           <div className="container-x">
-            <h2 id={`${category}-title`} className="h3 text-cyan-1">
+            <h2 id={`${category}-title`} className="h3 text-teal-1">
               {t(`categories.${category}`)}
             </h2>
             <ul className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +58,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
                   <li key={article.id}>
                     <Link
                       href={{pathname: '/vinkit/[slug]', params: {slug: article.slug}}}
-                      className="glass group flex h-full flex-col p-6 transition-colors hover:border-cyan-3"
+                      className="glass group flex h-full flex-col p-6 transition-colors hover:border-teal-2"
                     >
                       <p className="text-sm text-muted">
                         <time dateTime={article.published}>{formatDate(article.published, locale)}</time> ·{' '}
@@ -66,7 +66,7 @@ export default async function BlogIndexPage({params}: PageProps<'/[locale]/vinki
                       </p>
                       <h3 className="mt-3 text-xl leading-snug font-semibold">{article.title}</h3>
                       <p className="mt-3 flex-1 text-[15px] text-muted">{article.excerpt}</p>
-                      <p className="mt-5 flex items-center gap-2 font-medium text-cyan-1">
+                      <p className="mt-5 flex items-center gap-2 font-medium text-teal-1">
                         {t('read')} <IconArrow className="transition-transform group-hover:translate-x-1" width={18} height={18} />
                       </p>
                     </Link>

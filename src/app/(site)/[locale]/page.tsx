@@ -126,7 +126,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
               const Icon = BENEFIT_ICONS[index % BENEFIT_ICONS.length];
               return (
                 <li key={item.title} className="flex gap-4">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-cyan-4/40 text-cyan-1">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-1">
                     <Icon width={22} height={22} />
                   </span>
                   <div>
@@ -149,17 +149,17 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
               <li key={card.key}>
                 <Link
                   href={card.hash ? {pathname: card.href, hash: card.hash} : card.href}
-                  className="glass group flex h-full flex-col p-6 transition-colors hover:border-cyan-3"
+                  className="glass group flex h-full flex-col p-6 transition-colors hover:border-teal-2"
                 >
                   <h3 className="h3">{t(`services.cards.${card.key}.title`)}</h3>
                   <p className="mt-2 flex-1 text-[15px] text-muted">{t(`services.cards.${card.key}.text`)}</p>
                   <p className="mt-5 flex items-center justify-between">
-                    <span className="text-lg font-semibold text-cyan-1">
+                    <span className="text-lg font-semibold text-teal-1">
                       {bySlug.get(card.priceSlug)!.priceCents === 0
                         ? tp('included')
                         : `${tp('from')} ${priceLabel({...bySlug.get(card.priceSlug)!, priceFrom: false}, locale, tp)}`}
                     </span>
-                    <IconArrow className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-cyan-1" />
+                    <IconArrow className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-teal-1" />
                   </p>
                 </Link>
               </li>
@@ -183,7 +183,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
           <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <li key={step.title} className="glass p-6">
-                <span className="font-serif text-4xl font-semibold text-cyan-2" aria-hidden="true">
+                <span className="font-serif text-4xl font-semibold text-accent" aria-hidden="true">
                   {index + 1}
                 </span>
                 <h3 className="mt-3 text-lg font-semibold">{step.title}</h3>
@@ -203,7 +203,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
               const Icon = WHY_ICONS[index % WHY_ICONS.length];
               return (
                 <li key={item.title} className="glass flex gap-4 p-5">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-cyan-4/40 text-cyan-1">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-soft text-teal-1">
                     <Icon width={22} height={22} />
                   </span>
                   <div>
@@ -258,7 +258,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
         <div className="container-x">
           <div className="paper grid gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-cyan-4">{t('b2b.eyebrow')}</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-teal-3">{t('b2b.eyebrow')}</p>
               <h2 id="b2b-title" className="h2 mt-3">
                 {t('b2b.title')}
               </h2>
@@ -268,7 +268,7 @@ export default async function HomePage({params}: PageProps<'/[locale]'>) {
               <ul className="space-y-3">
                 {b2bPoints.map((point) => (
                   <li key={point} className="flex items-center gap-3 font-medium">
-                    <IconCheck className="text-cyan-4" /> {point}
+                    <IconCheck className="text-teal-3" /> {point}
                   </li>
                 ))}
               </ul>

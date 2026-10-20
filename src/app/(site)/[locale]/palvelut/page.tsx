@@ -69,7 +69,7 @@ export default async function ServicesPageRoute({params}: PageProps<'/[locale]/p
                   {section.title}
                 </h2>
                 <p className="lead mt-4">{section.text}</p>
-                <CheckList items={section.bullets} className="mt-6 text-[#d3d7dd]" />
+                <CheckList items={section.bullets} className="mt-6 text-text" />
                 {href && (
                   <p className="mt-6">
                     <Link href={href} className="link">

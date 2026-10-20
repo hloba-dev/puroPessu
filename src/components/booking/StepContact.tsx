@@ -119,9 +119,9 @@ export function StepContact({
           {CUSTOMER_TYPES.map((type) => (
             <label
               key={type}
-              className="flex min-h-12 cursor-pointer items-center gap-2.5 rounded-xl border border-white/15 px-4 has-checked:border-cyan-2 has-checked:bg-cyan-4/25"
+              className="flex min-h-12 cursor-pointer items-center gap-2.5 rounded-xl border border-hairline px-4 has-checked:border-teal-2 has-checked:bg-teal-soft"
             >
-              <input type="radio" value={type} className="size-[18px] accent-cyan-600" {...register('customerType')} />
+              <input type="radio" value={type} className="size-[18px] accent-teal-3" {...register('customerType')} />
               {t(type)}
             </label>
           ))}
@@ -157,17 +157,17 @@ export function StepContact({
             type="button"
             onClick={checkGift}
             disabled={checking}
-            className="min-h-12 rounded-xl border border-white/20 px-5 font-semibold hover:border-cyan-2 disabled:opacity-50"
+            className="min-h-12 rounded-xl border border-text/20 px-5 font-semibold hover:border-teal-2 disabled:opacity-50"
           >
             {t('giftCheck')}
           </button>
         </div>
         <p aria-live="polite" className="mt-1.5 text-sm">
           {gift && !giftMissingService && (
-            <span className="text-cyan-1">{t('giftValid', {amount: formatEur(giftDiscountCents, locale)})}</span>
+            <span className="text-teal-1">{t('giftValid', {amount: formatEur(giftDiscountCents, locale)})}</span>
           )}
-          {gift && giftMissingService && <span className="text-[#ffd9ad]">{t('giftService', {service: giftMissingService})}</span>}
-          {giftError && <span className="text-[#ffa3a3]">{t(giftError === 'rate_limited' ? 'giftRateLimited' : 'giftInvalid')}</span>}
+          {gift && giftMissingService && <span className="text-warn">{t('giftService', {service: giftMissingService})}</span>}
+          {giftError && <span className="text-danger">{t(giftError === 'rate_limited' ? 'giftRateLimited' : 'giftInvalid')}</span>}
         </p>
       </div>
 
@@ -175,7 +175,7 @@ export function StepContact({
         <label className="flex cursor-pointer items-start gap-3">
           <input
             type="checkbox"
-            className="mt-1 size-[18px] shrink-0 accent-cyan-600"
+            className="mt-1 size-[18px] shrink-0 accent-teal-3"
             aria-invalid={errors.privacy ? true : undefined}
             aria-describedby={errors.privacy ? `${formId}-privacy-error` : undefined}
             {...register('privacy')}
@@ -196,7 +196,7 @@ export function StepContact({
           </p>
         )}
         <label className="flex cursor-pointer items-start gap-3">
-          <input type="checkbox" className="mt-1 size-[18px] shrink-0 accent-cyan-600" {...register('marketing')} />
+          <input type="checkbox" className="mt-1 size-[18px] shrink-0 accent-teal-3" {...register('marketing')} />
           <span>
             {t('marketing')} <span className="text-muted">({tf('optional')})</span>
           </span>

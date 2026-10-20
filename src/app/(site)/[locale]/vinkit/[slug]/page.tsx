@@ -104,7 +104,7 @@ export default async function ArticlePage({params}: PageProps<'/[locale]/vinkit/
                 <ol className="mt-4 space-y-2.5 text-[15px]">
                   {toc.map((item) => (
                     <li key={item.id}>
-                      <a href={`#${item.id}`} className="text-muted hover:text-white">
+                      <a href={`#${item.id}`} className="text-muted hover:text-text">
                         {item.text}
                       </a>
                     </li>
@@ -124,9 +124,9 @@ export default async function ArticlePage({params}: PageProps<'/[locale]/vinkit/
               <li key={item.id}>
                 <Link
                   href={{pathname: '/vinkit/[slug]', params: {slug: item.slug}}}
-                  className="glass flex h-full flex-col p-6 transition-colors hover:border-cyan-3"
+                  className="glass flex h-full flex-col p-6 transition-colors hover:border-teal-2"
                 >
-                  <p className="text-sm text-cyan-1">{t(`categories.${item.category}`)}</p>
+                  <p className="text-sm text-teal-1">{t(`categories.${item.category}`)}</p>
                   <h3 className="mt-2 text-lg leading-snug font-semibold">{item.title}</h3>
                   <p className="mt-2 text-[15px] text-muted">{item.excerpt}</p>
                 </Link>

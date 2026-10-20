@@ -30,7 +30,7 @@ export function LocaleSwitcher({className}: {className?: string}) {
 
   return (
     <nav aria-label={t('language')} className={className}>
-      <ul className="flex items-center gap-0.5 rounded-xl border border-hairline bg-white/[0.03] p-0.5 text-[13px] font-semibold">
+      <ul className="flex items-center gap-0.5 rounded-xl border border-hairline bg-text/4 p-0.5 text-[13px] font-semibold">
         {locales.map((locale) => (
           <li key={locale}>
             {/* No prefetch: the router guesses the route of an unprefixed Finnish URL from the current
@@ -43,7 +43,7 @@ export function LocaleSwitcher({className}: {className?: string}) {
               aria-current={locale === current ? 'true' : undefined}
               aria-label={t(`lang.${locale}`)}
               className={`flex h-9 min-w-9 items-center justify-center rounded-[10px] px-2 uppercase tracking-wide transition-colors ${
-                locale === current ? 'bg-white/12 text-white' : 'text-muted hover:text-white'
+                locale === current ? 'bg-text/10 text-text' : 'text-muted hover:text-text'
               }`}
             >
               {locale}

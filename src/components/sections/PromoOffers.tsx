@@ -46,7 +46,7 @@ export async function PromoOffers({catalog, promotions, locale}: Props) {
   return (
     <section className="section" aria-labelledby="promo-title">
       <div className="container-x">
-        <div className={styles.panel}>
+        <div className={`on-dark ${styles.panel}`}>
           <div className="max-w-3xl">
             <p className="eyebrow">{t('eyebrow')}</p>
             <h2 id="promo-title" className="h2 mt-3">
@@ -60,7 +60,7 @@ export async function PromoOffers({catalog, promotions, locale}: Props) {
               const Added = ADDED_ICON[offer.kind];
               const key = TITLE_KEY[offer.kind];
               return (
-                <li key={offer.kind} className={styles.card}>
+                <li key={offer.kind} className={`on-light ${styles.card}`}>
                   <p className={styles.saving}>{t('save', {amount: formatEur(offer.savingCents, locale)})}</p>
                   <div className={styles.icons} aria-hidden="true">
                     <span>
@@ -74,7 +74,7 @@ export async function PromoOffers({catalog, promotions, locale}: Props) {
                   <h3 className="mt-5 text-xl leading-snug font-bold">{t(`${key}.title`, {count: promotions.bundleChairsCount})}</h3>
                   <p className="mt-1.5 text-[15px] text-ink-muted">{t(`${key}.text`)}</p>
 
-                  <p className="mt-5 text-sm font-semibold tracking-wide text-cyan-4 uppercase">
+                  <p className="mt-5 text-sm font-semibold tracking-wide text-teal-3 uppercase">
                     {t('formula', {extra: formatEur(offer.extraCents, locale)})}
                   </p>
                   <p className="mt-2 flex flex-wrap items-baseline gap-x-3">
@@ -135,7 +135,7 @@ function BundleTable({caption, columns, rows}: {caption: string; columns: string
                     {cell}
                   </th>
                 ) : (
-                  <td key={index} className={`p-4 text-right whitespace-nowrap ${index === row.length - 1 ? 'text-cyan-1' : ''} ${index === row.length - 2 ? 'font-semibold' : 'text-muted'}`}>
+                  <td key={index} className={`p-4 text-right whitespace-nowrap ${index === row.length - 1 ? 'text-teal-1' : ''} ${index === row.length - 2 ? 'font-semibold' : 'text-muted'}`}>
                     {cell}
                   </td>
                 )

@@ -30,18 +30,18 @@ export default async function CareProductsPageRoute({params}: PageProps<'/[local
             {content.products.map((product) => (
               <li key={product.title} className="glass flex flex-col p-6">
                 <h2 className="text-lg font-semibold">{product.title}</h2>
-                <p className="mt-2 flex-1 text-[15px] text-[#d3d7dd]">{product.text}</p>
+                <p className="mt-2 flex-1 text-[15px] text-text">{product.text}</p>
                 <p className="mt-4 border-t border-hairline pt-4 text-[15px] text-muted">{product.use}</p>
               </li>
             ))}
           </ul>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[20px] border border-[#ffb86b]/30 bg-[#ffb86b]/[0.06] p-7">
-              <h2 className="h3 text-[#ffd9ad]">{content.avoid.title}</h2>
-              <CheckList items={content.avoid.items} className="mt-5 text-[#d3d7dd]" />
+            <div className="rounded-[20px] border border-warn-border bg-warn-soft p-7">
+              <h2 className="h3 text-warn">{content.avoid.title}</h2>
+              <CheckList items={content.avoid.items} className="mt-5 text-text" />
             </div>
-            <p className="glass h-fit p-7 text-[#d3d7dd]">{content.note}</p>
+            <p className="glass h-fit p-7 text-text">{content.note}</p>
           </div>
         </div>
       </section>

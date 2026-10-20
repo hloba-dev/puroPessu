@@ -1,4 +1,5 @@
-/* bundle offers: a lit panel with three light "price tag" cards */
+/* bundle offers: a graphite panel (the charcoal of the logo) with three white "price tag" cards.
+   The panel carries the dark token set (.on-dark in the markup), the cards switch back (.on-light). */
 .panel {
   position: relative;
   isolation: isolate;
@@ -7,9 +8,9 @@
   border-radius: 28px;
   border: 1px solid var(--hairline);
   background:
-    radial-gradient(70% 90% at 100% 0%, rgba(62, 200, 228, 0.16), transparent 60%),
-    radial-gradient(60% 80% at 0% 100%, rgba(0, 97, 128, 0.32), transparent 65%),
-    var(--surface);
+    radial-gradient(70% 90% at 100% 0%, rgba(224, 96, 31, 0.22), transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(14, 124, 148, 0.3), transparent 65%),
+    #1b1f26;
 }
 
 .card {
@@ -45,7 +46,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--cyan-4);
+  color: var(--teal-1);
 }
 .icons span {
   display: flex;
@@ -55,15 +56,15 @@
   height: 58px;
   border-radius: 16px;
   color: #fff;
-  background: linear-gradient(140deg, var(--cyan-3) 0%, var(--cyan-4) 60%, #0a1c3a 100%);
+  background: linear-gradient(140deg, var(--teal-2) 0%, var(--teal-3) 60%, #0a2a3a 100%);
 }
 
 .chip {
   padding: 8px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(154, 217, 236, 0.35);
-  background: rgba(62, 200, 228, 0.1);
-  color: var(--cyan-1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
   font-size: 15px;
   font-weight: 600;
 }
@@ -75,12 +76,12 @@
   max-width: 360px;
   padding: 16px 18px;
   border-radius: 18px;
-  border: 1px solid rgba(154, 217, 236, 0.35);
-  background: rgba(2, 2, 4, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
   color: #fff;
   font-weight: 600;
   line-height: 1.35;
 }
 .drying svg {
-  color: var(--cyan-2);
+  color: var(--teal-2);
 }

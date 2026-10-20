@@ -54,7 +54,7 @@ export default async function ComparePageRoute({params}: PageProps<'/[locale]/vu
       <section className="section" aria-labelledby="compare-cost">
         <div className="container-x max-w-4xl">
           <SectionHeader id="compare-cost" title={content.cost.title} />
-          <Paragraphs items={content.cost.paragraphs.map(f)} className="mt-6 text-[17px] text-[#d3d7dd]" />
+          <Paragraphs items={content.cost.paragraphs.map(f)} className="mt-6 text-[17px] text-text" />
         </div>
       </section>
 
@@ -71,11 +71,11 @@ export default async function ComparePageRoute({params}: PageProps<'/[locale]/vu
         <div className="container-x grid gap-6 md:grid-cols-2">
           <div className="glass p-7">
             <h2 className="h3">{content.whenRental.title}</h2>
-            <CheckList items={content.whenRental.items} className="mt-5 text-[#d3d7dd]" />
+            <CheckList items={content.whenRental.items} className="mt-5 text-text" />
           </div>
-          <div className="glass border-cyan-3 p-7">
-            <h2 className="h3 text-cyan-1">{content.whenPro.title}</h2>
-            <CheckList items={content.whenPro.items} className="mt-5 text-[#d3d7dd]" />
+          <div className="glass border-teal-2 p-7">
+            <h2 className="h3 text-teal-1">{content.whenPro.title}</h2>
+            <CheckList items={content.whenPro.items} className="mt-5 text-text" />
           </div>
         </div>
       </section>

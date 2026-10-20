@@ -161,7 +161,7 @@ export function QuoteForm() {
                 <span className="max-w-40 truncate">{file.name}</span>
                 <button
                   type="button"
-                  className="text-muted hover:text-white"
+                  className="text-muted hover:text-text"
                   aria-label={t('removePhoto', {name: file.name})}
                   onClick={() => setFiles(files.filter((_, i) => i !== index))}
                 >

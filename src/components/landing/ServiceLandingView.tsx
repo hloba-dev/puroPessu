@@ -152,7 +152,7 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
           <div className="mt-10">
             <CardGrid items={content.odor.cases} columns={4} />
           </div>
-          <p className="glass mt-6 max-w-3xl p-5 text-[15px] text-[#d3d7dd]">{content.odor.insurance}</p>
+          <p className="glass mt-6 max-w-3xl p-5 text-[15px] text-text">{content.odor.insurance}</p>
           <p className="mt-5">
             <Link href="/hajunpoisto" className="link">
               {content.odor.linkLabel}
@@ -170,9 +170,9 @@ export async function ServiceLandingView({locale, content, config}: {locale: Loc
           <h3 className="h3 mt-12">{content.materials.exceptionsTitle}</h3>
           <ul className="mt-5 grid gap-4 md:grid-cols-2">
             {content.materials.exceptions.map((item) => (
-              <li key={item.title} className="rounded-[20px] border border-[#ffb86b]/30 bg-[#ffb86b]/[0.06] p-5">
-                <p className="font-semibold text-[#ffd9ad]">{item.title}</p>
-                <p className="mt-1.5 text-[15px] text-[#d3d7dd]">{item.text}</p>
+              <li key={item.title} className="rounded-[20px] border border-warn-border bg-warn-soft p-5">
+                <p className="font-semibold text-warn">{item.title}</p>
+                <p className="mt-1.5 text-[15px] text-text">{item.text}</p>
               </li>
             ))}
           </ul>

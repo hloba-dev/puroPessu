@@ -63,7 +63,7 @@ function BookingCard({b}: {b: Booking}) {
             {b.booking_items.map((item) => (
               <li key={item.name}>
                 {item.name} × {item.qty}
-                {item.very_dirty && <span className="text-[#ffd9ad]"> · очень грязное</span>}
+                {item.very_dirty && <span className="text-warn"> · очень грязное</span>}
               </li>
             ))}
           </ul>
@@ -183,7 +183,7 @@ export default async function AdminBookingsPage({searchParams}: PageProps<'/admi
                   new Date(`${day}T12:00:00Z`)
                 )}
               </h2>
-              <ul className="mt-2 space-y-2 border-l-2 border-cyan-4 pl-4">
+              <ul className="mt-2 space-y-2 border-l-2 border-teal-3 pl-4">
                 {items.map((b) => {
                   const start = utcToZoned(new Date(b.starts_at), TZ).minutes;
                   const end = start + b.duration_min;
