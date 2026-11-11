@@ -12,9 +12,9 @@ export const compare: ComparePage = {
     headers: {aspect: 'Asia', rental: 'Vuokrapesuri', pro: 'Puro'},
     rows: [
       {
-        aspect: 'Veden lämpötila ja höyry',
-        rental: 'Lämmin vesi hanasta, laite ei yleensä lämmitä sitä itse.',
-        pro: 'Kuuma höyry irrottaa rasvan ja lian kuitujen syvältä.',
+        aspect: 'Pesuaineet',
+        rental: 'Kaupan hyllyltä ostettu aine, jonka annostelu jää omalle vastuulle.',
+        pro: 'Ammattikäyttöön tarkoitetut pesuaineet, jotka ovat turvallisia lapsille ja lemmikeille.',
       },
       {
         aspect: 'Imuteho',

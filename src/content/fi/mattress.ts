@@ -3,12 +3,12 @@ import type {ServiceLanding} from '../types';
 export const mattress: ServiceLanding = {
   metaTitle: 'Patjan pesu Helsinki, Espoo, Vantaa — alk. {price}',
   metaDescription:
-    'Patjan ja sängyn höyrypesu kotonasi Helsingissä, Espoossa ja Vantaalla alk. {price}. Hiki- ja virtsatahrat ja pölypunkit vähemmälle, maksu työn jälkeen.',
+    'Patjan ja sängyn syväpesu kotonasi Helsingissä, Espoossa ja Vantaalla alk. {price}. Hiki- ja virtsatahrat ja pölypunkit vähemmälle, maksu työn jälkeen.',
   breadcrumb: 'Patjan pesu',
   badge: 'Patjat ja sängyt',
   h1: 'Patjan pesu pääkaupunkiseudulla — patjat ja sängyt kotonasi',
   intro:
-    'Pesemme jousipatjat, runkopatjat, sijauspatjat ja lasten patjat kuumalla höyryllä suoraan makuuhuoneessa. Hinnat alkaen {price}, ja aamuaikoja on jo klo {from} alkaen, joten patjalla on koko päivä aikaa kuivua. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+    'Pesemme jousipatjat, runkopatjat, sijauspatjat ja lasten patjat suoraan makuuhuoneessa ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Hinnat alkaen {price}, ja aamuaikoja on jo klo {from} alkaen, joten patjalla on koko päivä aikaa kuivua. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
   prices: {
     title: 'Patjan pesun hinnat',
     lead: 'Hinta riippuu patjan koosta ja tyypistä – yhden hengen patja, parisänky tai sijauspatja. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
@@ -21,7 +21,7 @@ export const mattress: ServiceLanding = {
   promise: {
     title: 'Rehellisesti patjan tahroista',
     paragraphs: [
-      'Tuoreet virtsa-, oksennus- ja juomatahrat sekä patjan yleinen harmaus lähtevät useimmiten hyvin. Esikäsittelemme tahrat ennen höyrypesua.',
+      'Tuoreet virtsa-, oksennus- ja juomatahrat sekä patjan yleinen harmaus lähtevät useimmiten hyvin. Esikäsittelemme tahrat ennen pesua.',
       'Vanhat, kellastuneet hikitahrat ovat imeytyneet syvälle kankaaseen. Ne vaalenevat selvästi, mutta eivät aina katoa kokonaan. Kerromme tämän ennen kuin aloitamme.',
       'Jos lopputulos ei miellytä, pesemme patjan uudelleen veloituksetta.',
     ],
@@ -38,8 +38,8 @@ export const mattress: ServiceLanding = {
         text: 'Patjaan ei saa jäädä vettä. Käytämme vain sen verran kosteutta kuin pesu vaatii, ja tehokas imu vie loput pois.',
       },
       {
-        title: 'Kuuma höyry',
-        text: 'Höyry irrottaa kankaasta hien, ihohilseen ja lian – samalla pölypunkit menettävät ravintoaan.',
+        title: 'Syväpesu painehuuhtelukoneella',
+        text: 'Pesuliuos irrottaa kankaasta hien, ihohilseen ja lian, ja imu vie ne saman tien pois – samalla pölypunkit menettävät ravintoaan.',
       },
       {
         title: 'Allergiaystävälliset aineet',
@@ -67,8 +67,8 @@ export const mattress: ServiceLanding = {
         text: 'Käsittelemme virtsa-, hiki- ja muut tahrat niiden laadun mukaan.',
       },
       {
-        title: 'Höyrypesu ja imu',
-        text: 'Pesemme pinnan ja reunat kuumalla höyryllä ja imemme lian ja kosteuden pois. Kääntöpatjasta pesemme halutessasi molemmat puolet.',
+        title: 'Pesu ja imu',
+        text: 'Pesemme pinnan ja reunat pesuliuoksella ja imemme lian ja kosteuden saman tien pois. Kääntöpatjasta pesemme halutessasi molemmat puolet.',
       },
       {
         title: 'Kuivatus puhaltimilla',
@@ -107,7 +107,7 @@ export const mattress: ServiceLanding = {
     suitable: [
       {
         title: 'Jousipatjat',
-        text: 'Tavallisin patjatyyppi. Kestää höyrypesun hyvin ja kuivuu nopeasti, kun ilma pääsee kiertämään.',
+        text: 'Tavallisin patjatyyppi. Kestää pesun hyvin ja kuivuu nopeasti, kun ilma pääsee kiertämään.',
       },
       {
         title: 'Runkopatjat ja jenkkisängyt',
@@ -163,9 +163,9 @@ export const mattress: ServiceLanding = {
         pro: 'Kuivatus puhaltimilla nopeuttaa kuivumista ja sisältyy hintaan',
       },
       {
-        aspect: 'Lämpö',
-        rental: 'Lämmin vesi ei irrota hikeä ja rasvaa kunnolla',
-        pro: 'Kuuma höyry irrottaa hien ja rasvan',
+        aspect: 'Pesuaineet',
+        rental: 'Yleisaine, joka ei irrota hikeä ja rasvaa kunnolla',
+        pro: 'Ammattiaineet irrottavat hien ja rasvan ja ovat turvallisia lapsille ja lemmikeille',
       },
       {
         aspect: 'Pesuainejäämät',

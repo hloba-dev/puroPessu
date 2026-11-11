@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "Puro — sofa cleaning at your home, every day {from}–{to}",
-    "defaultDescription": "On-site steam cleaning for sofas, armchairs and mattresses in Helsinki and the whole capital region. Drying is always included. Book online — no prepayment."
+    "defaultDescription": "On-site cleaning for sofas, armchairs and mattresses in Helsinki and the capital region. Professional products, safe for children and pets. Drying is always included."
   },
   "nav": {
     "main": "Main menu",
@@ -47,7 +47,7 @@
     "backToTop": "Back to top"
   },
   "footer": {
-    "tagline": "Steam cleaning for sofas, armchairs and mattresses at your home. Helsinki, Espoo, Vantaa and the whole capital region.",
+    "tagline": "Sofa, armchair and mattress cleaning at your home with professional products that are safe for children and pets. Helsinki, Espoo, Vantaa and the whole capital region.",
     "servicesTitle": "Services",
     "infoTitle": "Info",
     "contactTitle": "Contact",
@@ -107,12 +107,12 @@
   },
   "home": {
     "metaTitle": "Sofa cleaning at home in Helsinki — from {price}, every day {from}–{to} | Puro",
-    "metaDescription": "Sofa, armchair and mattress cleaning at your home in Helsinki, Espoo and Vantaa. Every day {from}–{to}, from {price}. Drying is always free.",
+    "metaDescription": "Sofa, armchair and mattress cleaning at your home in Helsinki, Espoo and Vantaa. Every day {from}–{to}, from {price}. Child- and pet-safe professional products, drying always free.",
     "hero": {
       "badge": "On site · every day {from}–{to}",
       "h1Line1": "Sofa cleaning",
       "h1Line2": "at your home",
-      "sub": "Steam cleaning for sofas, armchairs and mattresses in Helsinki and the whole capital region. From {price} — blower drying always free, no prepayment.",
+      "sub": "Deep cleaning for sofas, armchairs and mattresses with professional products, in Helsinki and the whole capital region. From {price} — blower drying always free, no prepayment.",
       "cta": "Book now",
       "ctaSecondary": "See prices",
       "mockTitle": "What needs cleaning?",
@@ -125,7 +125,8 @@
         "No prepayment",
         "Drying included"
       ],
-      "trustLabel": "Our promise"
+      "trustLabel": "Our promise",
+      "safe": "Safe for children and pets"
     },
     "benefits": {
       "title": "Why book with us",
@@ -180,7 +181,7 @@
         },
         "vehicles": {
           "title": "Car upholstery",
-          "text": "Seats steam cleaned in your driveway or parking garage."
+          "text": "Seats cleaned in your driveway or parking garage."
         }
       }
     },
@@ -197,8 +198,8 @@
           "text": "We arrive at the agreed time with our equipment. All we need is a power outlet and water."
         },
         {
-          "title": "Steam cleaning and stain removal",
-          "text": "We pre-treat stains, clean with steam and extract the dirt and detergent from the fabric."
+          "title": "Cleaning and stain removal",
+          "text": "We pre-treat stains with professional products, wash the fabric with an extractor and pull the dirt and detergent back out."
         },
         {
           "title": "Drying — free of charge",
@@ -216,12 +217,12 @@
           "text": "We do not leave the sofa to dry on its own: after every cleaning we dry it with blower fans, free of charge."
         },
         {
-          "title": "Steam in every cleaning",
-          "text": "Hot steam lifts dirt from deep in the fabric and reduces dust mites without harsh chemicals."
+          "title": "Professional cleaning products",
+          "text": "We work with professional-grade products chosen for the fabric and the stain. The extractor then rinses the dirt and the product out from deep in the fabric."
         },
         {
-          "title": "Allergy-friendly products",
-          "text": "We use biodegradable, fragrance-free detergents that suit families with children and pets."
+          "title": "Safe for children and pets",
+          "text": "Our products are allergy-friendly, biodegradable and fragrance-free, and they are rinsed out of the fabric. The sofa is safe for children and pets too."
         },
         {
           "title": "No detergent residue",
@@ -240,7 +241,7 @@
     "gallery": {
       "eyebrow": "Before and after",
       "title": "See the difference for yourself",
-      "lead": "Drag the slider to see what steam cleaning does to the fabric."
+      "lead": "Drag the slider to see what a proper clean does to the fabric."
     },
     "pricing": {
       "eyebrow": "Prices",
@@ -687,7 +688,7 @@
     "related": "Read also",
     "read": "Read article",
     "ctaTitle": "Stain or odor still there? We'll take care of it",
-    "ctaText": "Steam cleaning at your home, every day. See the price and free slots instantly.",
+    "ctaText": "Professional cleaning at your home, every day. See the price and free slots instantly.",
     "tip": "Tip",
     "warning": "Note"
   },

@@ -8,7 +8,7 @@ export const leather: ServiceLanding = {
   badge: 'Leather and faux leather',
   h1: 'Leather Sofa Cleaning in Helsinki — by Hand, at Your Home',
   intro:
-    'We clean leather sofas and armchairs by hand with products made for leather, without steam or excess moisture. Prices start at {price}, and we come every day from {from} to {to}. We finish with blower fans to speed up drying, and drying is always included in the price.',
+    'We clean leather sofas and armchairs by hand with professional products made for leather, without excess moisture or harsh scrubbing. Prices start at {price}, and we come every day from {from} to {to}. We finish with blower fans to speed up drying, and drying is always included in the price.',
   prices: {
     title: 'Leather sofa cleaning prices',
     lead: 'The price depends on the size of the sofa. You see the fixed price before you book.',
@@ -31,11 +31,11 @@ export const leather: ServiceLanding = {
     items: [
       {
         title: 'Done by hand',
-        text: 'Leather is cleaned by hand with a soft brush and cloth. No steam, no harsh scrubbing.',
+        text: 'Leather is cleaned by hand with a soft brush and cloth. No soaking, no harsh scrubbing.',
       },
       {
-        title: 'Leather-safe products',
-        text: 'We use cleaners made for leather that don\'t dry out the surface or lift the colour.',
+        title: 'Professional leather-safe products',
+        text: 'We use professional cleaners made for leather that don\'t dry out the surface or lift the colour.',
       },
       {
         title: 'Free drying with blower fans',
@@ -115,7 +115,7 @@ export const leather: ServiceLanding = {
       },
       {
         title: 'Aniline leather',
-        text: 'Unprotected and absorbent. We use our gentlest method, with no steam and very little moisture.',
+        text: 'Unprotected and absorbent. We use our gentlest method, with very little moisture.',
       },
       {
         title: 'Faux leather',
@@ -164,7 +164,7 @@ export const leather: ServiceLanding = {
       },
       {
         aspect: 'Moisture',
-        rental: 'A wet cloth or steam can leave marks and stiffen the leather',
+        rental: 'A soaking-wet cloth can leave marks and stiffen the leather',
         pro: 'Minimal moisture, surface dried straight away',
       },
       {
@@ -199,7 +199,7 @@ export const leather: ServiceLanding = {
     },
     {
       q: 'Are the products safe for children and pets?',
-      a: 'We use products made for leather, and any excess is wiped off the surface. Keep pets off the sofa until it has dried.',
+      a: 'We use professional products made for leather, and any excess is wiped off the surface. Keep pets off the sofa until it has dried.',
     },
     {
       q: 'How long does it take?',

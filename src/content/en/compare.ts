@@ -12,9 +12,9 @@ export const compare: ComparePage = {
     headers: {aspect: 'Aspect', rental: 'Rental machine', pro: 'Puro'},
     rows: [
       {
-        aspect: 'Water temperature and steam',
-        rental: 'Warm tap water — the machine usually doesn’t heat it.',
-        pro: 'Hot steam loosens grease and dirt deep in the fibres.',
+        aspect: 'Cleaning products',
+        rental: 'A general-purpose shampoo sold with the machine; the dosing is up to you.',
+        pro: 'Professional products chosen for the fabric, safe for children and pets.',
       },
       {
         aspect: 'Suction power',

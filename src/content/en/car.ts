@@ -3,7 +3,7 @@ import type {ServiceLanding} from '../types';
 export const car: ServiceLanding = {
   metaTitle: "Car upholstery cleaning Helsinki — from {price}, on site",
   metaDescription:
-    "Car upholstery cleaning in Helsinki, Espoo and Vantaa: we steam clean seats and mats in your driveway or parking garage. Odor removal included, no prepayment.",
+    "Car upholstery cleaning in Helsinki, Espoo and Vantaa: we deep clean seats and mats in your driveway or parking garage. Odor removal included, no prepayment.",
   breadcrumb: "Car upholstery cleaning",
   badge: "We come to your car",
   h1: "Car upholstery cleaning in Helsinki, done where your car is parked",
@@ -21,7 +21,7 @@ export const car: ServiceLanding = {
   promise: {
     title: "An honest word about stains",
     paragraphs: [
-      "Most stains come out: coffee, milk, road grime, grease and whatever the kids had for a snack. We pre-treat each stain and rinse it out of the fabric with hot steam.",
+      "Most stains come out: coffee, milk, road grime, grease and whatever the kids had for a snack. We pre-treat each stain and rinse it out of the fabric with a professional extractor.",
       "Old, set-in or bleached stains may get lighter but stay visible. We tell you that straight away, before we start.",
       "If you are not happy with the result, we come back and clean again for free. That is our satisfaction guarantee.",
     ],
@@ -42,8 +42,8 @@ export const car: ServiceLanding = {
         text: "If the car smells of smoke, dog or spilled milk, we deal with the smell as part of the clean.",
       },
       {
-        title: "Gentle detergents",
-        text: "We use allergy-friendly, biodegradable detergents, so seats and child-seat covers are safe for kids once dry.",
+        title: "Professional, child-safe products",
+        text: "We use professional products that are allergy-friendly and biodegradable, so seats and child-seat covers are safe for kids and pets once dry.",
       },
       {
         title: "Pay when it is done",
@@ -67,8 +67,8 @@ export const car: ServiceLanding = {
         text: "We look at the materials and stains with you and tell you what to expect. Then the stains get pre-treated.",
       },
       {
-        title: "Steam and extraction",
-        text: "We wash the upholstery with hot steam and extract the dirt and moisture. Leather seats are cleaned by hand.",
+        title: "Extraction cleaning",
+        text: "We wash the upholstery with a professional extractor that pulls the dirt and moisture straight back out. Leather seats are cleaned by hand.",
       },
       {
         title: "Drying with blower fans",
@@ -94,7 +94,7 @@ export const car: ServiceLanding = {
       },
       {
         title: "Vomit",
-        text: "Remove the worst of it right away and book a clean. Pre-treatment breaks down what causes the smell before we steam.",
+        text: "Remove the worst of it right away and book a clean. Pre-treatment breaks down what causes the smell before the wash.",
       },
     ],
     insurance: "On request, we give you a written statement of the work done for your insurance company.",
@@ -114,7 +114,7 @@ export const car: ServiceLanding = {
       },
       {
         title: "Leather seats",
-        text: "Leather is cleaned by hand with a mild cleaner. We never point steam straight at it.",
+        text: "Leather is cleaned by hand with a mild cleaner and never soaked.",
       },
       {
         title: "Child-seat covers",
@@ -146,7 +146,7 @@ export const car: ServiceLanding = {
     lead: "A wet vacuum from the hardware store will lift surface dirt, but the result and drying time are very different.",
     headers: {aspect: "Aspect", rental: "Hardware-store wet vacuum", pro: "Puro"},
     rows: [
-      {aspect: "Temperature", rental: "Usually cold or lukewarm water", pro: "Hot steam dissolves greasy dirt"},
+      {aspect: "Equipment", rental: "A light wet vacuum with modest suction", pro: "A professional extractor that rinses the fabric and pulls the dirt out"},
       {aspect: "Detergent", rental: "Often stays in the fabric and attracts dirt", pro: "Rinsed out and extracted"},
       {aspect: "Moisture", rental: "Seats stay wet and dry slowly", pro: "Strong extraction plus free blower drying"},
       {aspect: "Stains", rental: "One product for everything", pro: "Pre-treatment matched to the stain"},

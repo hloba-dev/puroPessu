@@ -12,7 +12,7 @@ export async function pickFreeSlot(page: Page, durationMin: number, dayOffset: n
 
 export async function dismissCookies(page: Page) {
   await page.addInitScript(() =>
-    localStorage.setItem('puro-consent', JSON.stringify({analytics: false, marketing: false, ts: 1}))
+    localStorage.setItem('puro-consent', JSON.stringify({analytics: false, marketing: false, ts: Date.now()}))
   );
 }
 

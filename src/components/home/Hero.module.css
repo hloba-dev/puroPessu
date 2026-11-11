@@ -34,6 +34,11 @@
   gap: 48px;
 }
 
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .badge {
   display: inline-flex;
   align-items: center;
@@ -58,6 +63,16 @@
   border-radius: 8px;
   color: var(--accent);
   background: var(--accent-soft);
+}
+/* "safe for children and pets": the one tinted badge, so it reads as a promise and not as a detail */
+.badgeSafe {
+  border-color: color-mix(in oklab, var(--teal-2) 34%, transparent);
+  background: var(--teal-soft);
+  font-weight: 600;
+}
+.badgeSafe .badgeIcon {
+  color: var(--teal-1);
+  background: var(--surface);
 }
 
 .h1 {
@@ -89,8 +104,8 @@
   margin-top: 28px;
 }
 
-/* compact copy of the badge for phones, see the phone block below */
-.hoursMini {
+/* compact copies of the badges for phones, see the phone block below */
+.chips {
   display: none;
 }
 
@@ -464,8 +479,8 @@
   .copy {
     display: contents;
   }
-  /* the big badge leaves the top: its text reappears as a chip right above the prices button */
-  .badge {
+  /* the big badges leave the top: their texts reappear as chips right above the buttons */
+  .badges {
     display: none;
   }
   .h1 {
@@ -479,9 +494,9 @@
     max-width: none;
     margin-top: 18px;
   }
+  /* the caption row under the photo makes room for the chips: the furniture type stays in the alt text */
   .slider figcaption {
-    margin-top: 6px;
-    font-size: 13px;
+    display: none;
   }
   .ctas {
     order: 4;
@@ -490,11 +505,15 @@
     gap: 8px 10px;
     margin-top: 14px;
   }
-  /* spans the whole row and hugs the right edge, so it sits above the prices button and never truncates */
-  .hoursMini {
-    display: inline-flex;
+  /* span the whole row above the two buttons and wrap, so no chip ever truncates */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
     grid-column: 1 / -1;
-    justify-self: end;
+    gap: 6px;
+  }
+  .chip {
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     max-width: 100%;
@@ -507,9 +526,17 @@
     line-height: 1.2;
     color: var(--text);
   }
-  .hoursMini svg {
+  .chip svg {
     flex-shrink: 0;
     color: var(--accent);
+  }
+  .chipSafe {
+    border-color: color-mix(in oklab, var(--teal-2) 34%, transparent);
+    background: var(--teal-soft);
+    font-weight: 600;
+  }
+  .chipSafe svg {
+    color: var(--teal-1);
   }
   .ctas .cta {
     min-width: 0;

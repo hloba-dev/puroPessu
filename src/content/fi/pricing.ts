@@ -46,7 +46,7 @@ export const pricing: PricingPage = {
   faq: [
     {
       q: 'Mitä hintaan sisältyy?',
-      a: 'Tahrojen esikäsittely, höyrypesu ja imu, hajunpoisto, kuivatus puhaltimilla sekä pesuaineet ja laitteet. Pesemme paikan päällä, joten huonekalua ei tarvitse kuljettaa minnekään.',
+      a: 'Tahrojen esikäsittely, pesu ja imu, hajunpoisto, kuivatus puhaltimilla sekä ammattipesuaineet ja laitteet. Pesemme paikan päällä, joten huonekalua ei tarvitse kuljettaa minnekään.',
     },
     {
       q: 'Miksi on vähimmäistilaus?',

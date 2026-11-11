@@ -8,7 +8,7 @@ export const odor: OdorPage = {
   badge: "Included in the cleaning price",
   h1: "Odor removal from sofas, armchairs and mattresses",
   intro:
-    "Smells rarely sit on the surface of the fabric. They usually go deeper, into the padding, the foam or the inside of a mattress. That is why air freshener only helps for a moment. We find the source of the smell and rinse it out with steam cleaning, right in your home.",
+    "Smells rarely sit on the surface of the fabric. They usually go deeper, into the padding, the foam or the inside of a mattress. That is why air freshener only helps for a moment. We find the source of the smell and rinse it out with professional products and extraction, right in your home.",
   sources: {
     title: "Where smells come from",
     lead: "Once you know where a smell sits, you know how to get it out.",
@@ -52,8 +52,8 @@ export const odor: OdorPage = {
         text: "We apply an enzymatic, odor-neutralising pre-treatment that breaks down what causes the smell.",
       },
       {
-        title: "Hot steam and extraction",
-        text: "Steam carries the cleaning solution deep in, and strong extraction rinses the source out together with the dirt.",
+        title: "Deep extraction cleaning",
+        text: "The extractor works the cleaning solution deep into the fabric, and strong suction rinses the source out together with the dirt.",
       },
       {
         title: "Another pass on the worst spots",
@@ -105,7 +105,7 @@ export const odor: OdorPage = {
     },
     {
       q: "Is it safe for children and pets?",
-      a: "Yes. We use allergy-friendly, biodegradable products and rinse them out of the fabric. Once the surface is dry, you can use the furniture as normal.",
+      a: "Yes. We use professional products that are allergy-friendly and biodegradable, and we rinse them out of the fabric. Once the surface is dry, you can use the furniture as normal.",
     },
     {
       q: "What should I do before you arrive?",

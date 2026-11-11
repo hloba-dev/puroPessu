@@ -30,7 +30,7 @@ import {
   IconLeaf,
   IconShield,
   IconSparkle,
-  IconSteam,
+  IconSpray,
   IconWind
 } from '@/components/ui/icons';
 
@@ -81,7 +81,7 @@ const SERVICE_CARDS: {key: string; href: StaticPathname; hash?: string; priceSlu
 ];
 const MINI_PRICE_SLUGS = ['armchair', 'sofa-2', 'sofa-3', 'corner', 'bed-double', 'chair-full'];
 const BENEFIT_ICONS = [IconClock, IconHome, IconWind, IconShield];
-const WHY_ICONS = [IconWind, IconSteam, IconLeaf, IconSparkle, IconCheck, IconShield];
+const WHY_ICONS = [IconWind, IconSpray, IconLeaf, IconSparkle, IconCheck, IconShield];
 
 export default async function HomePage({params}: PageProps<'/[locale]'>) {
   const {locale} = (await params) as {locale: Locale};

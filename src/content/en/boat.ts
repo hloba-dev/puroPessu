@@ -21,7 +21,7 @@ export const boat: ServiceLanding = {
   promise: {
     title: "An honest word about stains",
     paragraphs: [
-      "Most stains come out: food, drinks, sunscreen and marina dust. We pre-treat the stains and rinse them out with hot steam.",
+      "Most stains come out: food, drinks, sunscreen and marina dust. We pre-treat the stains and rinse them out with a professional extractor.",
       "Old mildew spots and stains that have bleached the fabric may get lighter but stay visible. We tell you before we start.",
       "If you are not happy, we clean again for free. That is our satisfaction guarantee.",
     ],
@@ -67,8 +67,8 @@ export const boat: ServiceLanding = {
         text: "We look at the materials, stains and any mildew and tell you what to expect. Then the stains get pre-treated.",
       },
       {
-        title: "Steam and extraction",
-        text: "We wash the fabric with hot steam and extract the dirt and moisture. Vinyl and faux leather are cleaned by hand.",
+        title: "Extraction cleaning",
+        text: "We wash the fabric with professional products that are safe for children and pets, and extract the dirt and moisture straight away. Vinyl and faux leather are cleaned by hand.",
       },
       {
         title: "Drying with blower fans",
@@ -86,7 +86,7 @@ export const boat: ServiceLanding = {
       },
       {
         title: "Diesel smell",
-        text: "Fuel odor clings to fabric. Pre-treatment loosens the oily residue before we steam.",
+        text: "Fuel odor clings to fabric. Pre-treatment loosens the oily residue before the wash.",
       },
       {
         title: "Mildew spots",
@@ -148,7 +148,7 @@ export const boat: ServiceLanding = {
     rows: [
       {aspect: "Moisture", rental: "Foam soaks up water and takes days to dry", pro: "Water is extracted right after washing"},
       {aspect: "Mildew risk", rental: "Wet padding in a damp boat goes mouldy", pro: "Moisture is controlled throughout"},
-      {aspect: "Dirt", rental: "The surface gets clean, the dirt stays inside", pro: "Hot steam and extraction pull the dirt out"},
+      {aspect: "Dirt", rental: "The surface gets clean, the dirt stays inside", pro: "Professional products and extraction pull the dirt out"},
       {aspect: "Detergent", rental: "Stays in the fabric if not rinsed well", pro: "Rinsed out and extracted"},
       {aspect: "Smell", rental: "Often gets worse if the cushion stays damp", pro: "The source is washed out"},
     ],

@@ -45,7 +45,7 @@ export const careProducts: CareProductsPage = {
       'Valkaisuaineet ja klooripohjaiset tuotteet — ne haalistavat ja heikentävät kuitua pysyvästi.',
       'Värilliset liinat ja pyyhkeet — väri voi siirtyä kosteaan kankaaseen.',
       'Vauvan kosteuspyyhkeet nahkaan — niiden aineet kuivattavat ja voivat vahingoittaa pintaa ajan myötä.',
-      'Höyrypuhdistin aniliininahkaan tai samettiin, jos et tunne materiaalia — kuumuus ja kosteus voivat jättää pysyviä jälkiä.',
+      'Kuuma vesi ja runsas kastelu aniliininahkaan tai samettiin, jos et tunne materiaalia — kuumuus ja kosteus voivat jättää pysyviä jälkiä.',
       'Etikka- ja ruokasoodakikat arkoihin kankaisiin — ne voivat jättää rajoja, haalistaa väriä tai jättää jäämiä.',
       'Hiustenkuivaaja kuivatukseen — kuumuus voi kutistaa kangasta ja kiinnittää jäljelle jääneen tahran.',
     ],

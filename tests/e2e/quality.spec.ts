@@ -23,7 +23,7 @@ const WIDTHS = [320, 375, 768, 1280, 2560];
 
 test.beforeEach(async ({page}) => {
   await page.addInitScript(() =>
-    localStorage.setItem('puro-consent', JSON.stringify({analytics: false, marketing: false, ts: 1}))
+    localStorage.setItem('puro-consent', JSON.stringify({analytics: false, marketing: false, ts: Date.now()}))
   );
 });
 

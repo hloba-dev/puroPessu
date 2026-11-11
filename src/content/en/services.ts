@@ -6,11 +6,11 @@ export const services: ServicesPage = {
     "Upholstery cleaning at home in the Helsinki region: sofas, leather, chairs, mattresses, car interiors and boat textiles. Odor removal and drying are included.",
   h1: "Services",
   intro:
-    "We clean upholstered furniture, mattresses and other textiles where they are: in your home, in your driveway or at the marina. The method is the same throughout: stain pre-treatment, hot steam and strong extraction that takes the dirt and detergent away.",
+    "We clean upholstered furniture, mattresses and other textiles where they are: in your home, in your driveway or at the marina. The method is the same throughout: stain pre-treatment, professional cleaning products that are safe for children and pets, and strong extraction that takes the dirt and the product away.",
   sections: {
     sofas: {
       title: "Sofas and armchairs",
-      text: "A fabric sofa greys so slowly you barely notice. Steam cleaning brings back the colour and freshness, and stains are pre-treated first. We clean sofas of every size, corner sofas and armchairs.",
+      text: "A fabric sofa greys so slowly you barely notice. Deep extraction cleaning brings back the colour and freshness, and stains are pre-treated first. We clean sofas of every size, corner sofas and armchairs.",
       bullets: [
         "Fabric, microfibre and velvet",
         "Corner sofas, chaises and footstools",
@@ -20,7 +20,7 @@ export const services: ServicesPage = {
     },
     leather: {
       title: "Leather furniture",
-      text: "Leather is cleaned by hand, not with steam. We lift grease and dirt off the surface with a mild cleaner so the leather stays supple.",
+      text: "Leather is cleaned by hand and never soaked. We lift grease and dirt off the surface with a mild cleaner so the leather stays supple.",
       bullets: ["Leather sofas and armchairs", "Hand cleaning without excess moisture", "We tell you if the finish is already worn"],
     },
     chairs: {
@@ -30,7 +30,7 @@ export const services: ServicesPage = {
     },
     beds: {
       title: "Mattresses and beds",
-      text: "Mattresses collect sweat, skin flakes and dust mites. Steam and extraction clean the surface and freshen the mattress from within. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans at no extra cost.",
+      text: "Mattresses collect sweat, skin flakes and dust mites. Extraction cleaning washes the surface and freshens the mattress from within. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans at no extra cost.",
       bullets: [
         "Spring, foam and box-spring mattresses",
         "Guest and children's mattresses",
@@ -65,7 +65,7 @@ export const services: ServicesPage = {
     steps: [
       {title: "Book online", text: "Choose what to clean and a free slot. You see the price straight away."},
       {title: "We come to you", text: "We bring the equipment and detergents. All we need is a power outlet."},
-      {title: "We clean and dry", text: "Pre-treatment, hot steam and extraction, then blower fans to speed up drying. Drying is always included in the price."},
+      {title: "We clean and dry", text: "Pre-treatment, professional products and extraction, then blower fans to speed up drying. Drying is always included in the price."},
       {title: "You pay afterwards", text: "Payment only once the work is done. No prepayment."},
     ],
   },
@@ -85,7 +85,7 @@ export const services: ServicesPage = {
     },
     {
       q: "Are the detergents safe for children and pets?",
-      a: "Yes. We use allergy-friendly, biodegradable detergents and rinse them out of the fabric.",
+      a: "Yes. We use professional, allergy-friendly and biodegradable products and rinse them out of the fabric.",
     },
     {
       q: "Can the price change on site?",

@@ -6,6 +6,7 @@ import {redirect} from 'next/navigation';
 import {z} from 'zod';
 import {locales, type Locale} from '@/i18n/routing';
 import {requireAdmin} from '@/lib/admin/auth';
+import {weekStart} from '@/lib/admin/board';
 import {slugify, uniqueSlug} from '@/lib/admin/slug';
 import {blockFromRow, dayRangeInterval, planClose, planOpen, type DayRange} from '@/lib/booking/blocks';
 import {priceCart} from '@/lib/booking/cart';
@@ -50,20 +51,30 @@ function refresh(...tags: (keyof typeof CACHE_TAGS)[]) {
 }
 
 function fail(path: string, message: string): never {
-  redirect(`${path}?error=${encodeURIComponent(message)}`);
+  const [base, hash = ''] = path.split('#');
+  redirect(`${base}${base.includes('?') ? '&' : '?'}error=${encodeURIComponent(message)}${hash && `#${hash}`}`);
 }
 
 // ---------- bookings ----------
 
 const BOOKING_STATUSES = ['pending', 'confirmed', 'done', 'cancelled'] as const;
 
+/** Where a booking form came from: the same view of the booking board is shown again if the action fails. */
+function bookingsBack(form: FormData) {
+  const back = str(form, 'back');
+  return /^\/admin\/bookings(\?[\w=&.%:+-]*)?$/.test(back) ? back : '/admin/bookings';
+}
+
 export async function setBookingStatus(form: FormData) {
   const {supabase} = await requireAdmin();
   const id = str(form, 'id');
+  const back = bookingsBack(form);
   const status = z.enum(BOOKING_STATUSES).parse(str(form, 'status'));
   const {data: before} = await supabase.from('bookings').select('status').eq('id', id).maybeSingle();
   const {data: row, error} = await supabase.from('bookings').update({status}).eq('id', id).select('*').maybeSingle();
-  if (error || !row) fail('/admin/bookings', error?.message ?? 'Бронь не найдена');
+  // 23P01: the exclusion constraint — a cancelled booking cannot come back onto a time that was taken since
+  if (error?.code === '23P01') fail(back, 'Это время уже занято другой бронью: восстановить бронь на него нельзя.');
+  if (error || !row) fail(back, error?.message ?? 'Бронь не найдена');
 
   // tell the customer when the booking is confirmed or cancelled by us
   if (before?.status !== status && (status === 'confirmed' || status === 'cancelled')) {
@@ -153,7 +164,8 @@ export async function createManualBooking(form: FormData) {
     await sendBookingEmails({...result.booking, status: 'confirmed'}, settings, 'confirmed', {customerOnly: true}).catch(() => undefined);
   }
   revalidatePath('/admin', 'layout');
-  redirect('/admin/bookings');
+  // straight to the new booking on the week board
+  redirect(`/admin/bookings?week=${weekStart(date)}#booking-${result.booking.id}`);
 }
 
 // ---------- blocked times ----------

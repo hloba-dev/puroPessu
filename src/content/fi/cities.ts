@@ -4,15 +4,15 @@ export const cityTemplates: CityTemplates = {
   sofa: {
     metaTitle: 'Sohvan pesu {city} — alk. {price}, paikan päällä',
     metaDescription:
-      'Sohvan ja nojatuolin höyrypesu kotonasi {inCity} alk. {price}. Joka päivä klo {from}–{to}, ei ennakkomaksua. Katso vapaat ajat ja varaa helposti netissä.',
-    h1: 'Sohvan pesu {inCity} — höyrypesu kotonasi',
+      'Sohvan ja nojatuolin syväpesu kotonasi {inCity} alk. {price}. Joka päivä klo {from}–{to}, ei ennakkomaksua. Katso vapaat ajat ja varaa helposti netissä.',
+    h1: 'Sohvan pesu {inCity} — syväpesu kotonasi',
     breadcrumb: '{city}',
     pricesTitle: 'Sohvan pesun hinnat {inCity}'
   },
   mattress: {
     metaTitle: 'Patjan pesu {city} — alk. {price}, paikan päällä',
     metaDescription:
-      'Patjan höyrypesu ja hajunpoisto kotonasi {inCity} alk. {price}. Joka päivä klo {from}–{to}, maksu vasta työn jälkeen. Katso vapaat ajat ja varaa netissä.',
+      'Patjan syväpesu ja hajunpoisto kotonasi {inCity} alk. {price}. Joka päivä klo {from}–{to}, maksu vasta työn jälkeen. Katso vapaat ajat ja varaa netissä.',
     h1: 'Patjan pesu {inCity} — patja pestään sängyssä',
     breadcrumb: '{city}',
     pricesTitle: 'Patjan pesun hinnat {inCity}'
@@ -43,13 +43,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Helsingissä sohva on usein kannettu kerrostaloon kapeaa porraskäytävää pitkin, eikä sitä huvita viedä samaa reittiä takaisin pesulaan. Siksi tulemme kotiisi ja pesemme sohvan siinä, missä se on – Töölön ja Kallion kivitaloissa yhtä hyvin kuin Lauttasaaren tai Vuosaaren uudemmissa kodeissa.',
-        'Pesemme sohvat, nojatuolit, rahit ja sängynpäädyt kuumalla höyryllä ja imemme lian ja kosteuden kankaasta saman tien. Pesuaineet ovat allergiaystävällisiä ja biohajoavia, ja hajunpoisto kuuluu aina hintaan. Pesun jälkeen kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
+        'Pesemme sohvat, nojatuolit, rahit ja sängynpäädyt painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Käytämme ammattikäyttöön tarkoitettuja pesuaineita, jotka ovat allergiaystävällisiä, biohajoavia ja turvallisia lapsille ja lemmikeille, ja hajunpoisto kuuluu aina hintaan. Pesun jälkeen kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
       ]
     },
     mattress: {
       intro: [
         'Helsinkiläisessä yksiössä tai kaksiossa samassa huoneessa usein nukutaan, tehdään etätöitä ja kuivataan pyykkiä. Patja kerää siksi pölyä, hikeä ja kosteutta tavallista nopeammin, eikä sen kantaminen hissittömän talon portaissa houkuttele ketään.',
-        'Patjan pesu Helsingissä tehdään kotonasi höyryllä ja tehokkaalla imulla, joten patja pysyy sängyssä koko ajan. Patja kuivuu ilman apua sohvaa hitaammin, joten nopeutamme kuivumista puhaltimilla. Kuivatus sisältyy aina hintaan, ja aamupäivän pesu jättää patjalle koko päivän aikaa kuivua.'
+        'Patjan pesu Helsingissä tehdään kotonasi lapsille ja lemmikeille turvallisilla ammattipesuaineilla ja tehokkaalla imulla, joten patja pysyy sängyssä koko ajan. Patja kuivuu ilman apua sohvaa hitaammin, joten nopeutamme kuivumista puhaltimilla. Kuivatus sisältyy aina hintaan, ja aamupäivän pesu jättää patjalle koko päivän aikaa kuivua.'
       ]
     },
     districts: [
@@ -94,13 +94,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Espoossa pesemme paljon perheiden sohvia: Tapiolan ja Haukilahden omakotitaloissa, Matinkylän ja Olarin kerrostaloissa sekä Espoonlahden ja Kivenlahden rivitaloissa. Mehutahrat, kurainen koira ja iltapalan murut näkyvät sohvassa ennen pitkää.',
-        'Sohvan pesu Espoossa tehdään kotonasi kuumalla höyryllä ja imulla, ja hajunpoisto kuuluu aina hintaan – siitä on apua etenkin, jos koira tai kissa nukkuu sohvalla. Biohajoavat ja allergiaystävälliset pesuaineet sopivat koteihin, joissa on pieniä lapsia ja lemmikkejä.'
+        'Sohvan pesu Espoossa tehdään kotonasi painehuuhtelukoneella ja tehokkaalla imulla, ja hajunpoisto kuuluu aina hintaan – siitä on apua etenkin, jos koira tai kissa nukkuu sohvalla. Ammattikäyttöön tarkoitetut, biohajoavat ja allergiaystävälliset pesuaineemme ovat turvallisia pienille lapsille ja lemmikeille.'
       ]
     },
     mattress: {
       intro: [
         'Lapsiperheessä patjoja on monta, ja jokaisella on oma tarinansa: vuotanut vaippa, vatsatauti tai iltasadun aikana kaatunut mehulasi. Patjan pesu Espoossa hoituu kotonasi, joten yhdellä käynnillä voi pestä koko perheen sängyt.',
-        'Höyrypesu ja imu poistavat likaa ja hajuja patjan pintakerroksista, ja hajunpoisto kuuluu hintaan. Nopeutamme patjan kuivumista puhaltimilla veloituksetta, ja rivi- tai omakotitalossa kuivumista auttaa lisäksi lämmin huone, jossa ilma kiertää hyvin.'
+        'Painehuuhtelu ja imu poistavat likaa ja hajuja patjan pintakerroksista, ja hajunpoisto kuuluu hintaan. Käyttämämme ammattipesuaineet ovat turvallisia lapsille ja lemmikeille. Nopeutamme patjan kuivumista puhaltimilla veloituksetta, ja rivi- tai omakotitalossa kuivumista auttaa lisäksi lämmin huone, jossa ilma kiertää hyvin.'
       ]
     },
     districts: [
@@ -145,7 +145,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Vantaalla moni lähtee töihin aikaisin tai palaa myöhään – lentoasemalle, logistiikka-alan työpaikoille tai junalla Helsinkiin. Siksi sohvan pesu Vantaalla onnistuu joka päivä, myös iltaisin ja viikonloppuisin, ja vapaat ajat näet suoraan kalenterista.',
-        'Tulemme Tikkurilaan, Myyrmäkeen, Korsoon tai Kivistöön ja pesemme sohvan, nojatuolin tai irtotyynyt kotonasi kuumalla höyryllä. Maksat vasta, kun työ on tehty, ja hinta on se, minkä näit varauksessa. Jos lopputulos ei miellytä, pesemme uudelleen veloituksetta.'
+        'Tulemme Tikkurilaan, Myyrmäkeen, Korsoon tai Kivistöön ja pesemme sohvan, nojatuolin tai irtotyynyt kotonasi ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Maksat vasta, kun työ on tehty, ja hinta on se, minkä näit varauksessa. Jos lopputulos ei miellytä, pesemme uudelleen veloituksetta.'
       ]
     },
     mattress: {
@@ -194,13 +194,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kauniaisissa koti on usein väljä omakotitalo, ja olohuoneen sohva on valittu sisustuksen mukaan – monesti vaaleaa pellavaa, villaa tai muuta luonnonkuitua. Vaalea kangas on kaunis, mutta jokainen kahvitahra ja harmaantunut käsinoja näkyy siinä heti.',
-        'Sohvan pesu Kauniaisissa tehdään kotonasi: tarkistamme ensin kankaan, säädämme höyryn ja pesuaineen sen mukaan ja pesemme koko pinnan tasaisesti, jotta siihen ei jää reunoja. Lopuksi kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
+        'Sohvan pesu Kauniaisissa tehdään kotonasi: tarkistamme ensin kankaan, valitsemme sille sopivan ammattipesuaineen – turvallisen myös lapsille ja lemmikeille – ja pesemme koko pinnan tasaisesti, jotta siihen ei jää reunoja. Lopuksi kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
       ]
     },
     mattress: {
       intro: [
         'Isossa talossa sänkyjä on usein useampi: makuuhuoneet, vierashuone ja ehkä jo kotoa muuttaneiden lasten huoneet. Patjan pesu Kauniaisissa kannattaa siksi tehdä kerralla, jolloin kaikki patjat hoituvat yhdellä käynnillä.',
-        'Pesemme patjat höyryllä ja imulla allergiaystävällisillä, biohajoavilla aineilla, ja hajunpoisto kuuluu hintaan. Väljässä talossa patjat kuivuvat yleensä hyvin, kun huoneissa on lämmin ja ilma pääsee kiertämään.'
+        'Pesemme patjat painehuuhtelukoneella ja allergiaystävällisillä, biohajoavilla ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille, ja hajunpoisto kuuluu hintaan. Väljässä talossa patjat kuivuvat yleensä hyvin, kun huoneissa on lämmin ja ilma pääsee kiertämään.'
       ]
     },
     districts: [
@@ -220,7 +220,7 @@ export const cities: Record<CitySlug, CityContent> = {
       'Kauniaisissa on paljon omakotitaloja, joista osa on vanhoja huviloita, sekä pienempiä kerrostaloja keskustan lähellä. Isoissa taloissa sohva on usein suuri kulmasohva tai useamman huonekalun kokonaisuus, joten varaa pesulle riittävästi aikaa. Kuivatamme pestyt huonekalut puhaltimilla veloituksetta, ja isossa huoneessa raollaan oleva ikkuna ja tasainen lämpö auttavat lisäksi.',
     faq: [
       {
-        q: 'Sopiiko höyrypesu vaalealle pellavasohvalle?',
+        q: 'Sopiiko pesu vaalealle pellavasohvalle?',
         a: 'Useimmiten sopii. Testaamme kankaan ensin huomaamattomasta kohdasta, ja jos se ei kestä märkäpesua, kerromme sen ennen kuin aloitamme.'
       },
       {
@@ -240,7 +240,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kerava on pääradan varren kaupunki, josta moni käy töissä pääkaupunkiseudulla. Kun arki kuluu junassa, sohvan pesua ei halua jättää viikonlopun puuhaksi – siksi tulemme Keravalle joka päivä, myös iltaisin ja viikonloppuisin.',
-        'Pesemme sohvan kotonasi Kalevassa, Sompiossa, Kaskelassa tai missä päin Keravaa asutkin, kuumalla höyryllä ja imulla. Kuivatamme sohvan lopuksi puhaltimilla, ja kuivatus sisältyy hintaan. Hinta on lopullinen: maksat vasta, kun työ on tehty.'
+        'Pesemme sohvan kotonasi Kalevassa, Sompiossa, Kaskelassa tai missä päin Keravaa asutkin – ammattitason painehuuhtelukoneella ja pesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Kuivatamme sohvan lopuksi puhaltimilla, ja kuivatus sisältyy hintaan. Hinta on lopullinen: maksat vasta, kun työ on tehty.'
       ]
     },
     mattress: {
@@ -289,7 +289,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Järvenpää sijaitsee pääradan ja Tuusulanjärven välissä, ja kodit vaihtelevat keskustan kerrostaloista Kyrölän, Saunakallion ja Haarajoen omakotitaloihin. Sohvan pesu Järvenpäässä tehdään aina kotona, joten sohvaa ei tarvitse kuljettaa minnekään.',
-        'Kuuma höyry ja imu nostavat lian kankaasta, ja hajunpoisto kuuluu jokaiseen pesuun. Jos sohva on kulunut lapsiperheen arjessa tai koiran lepopaikkana, mainitse siitä varauksessa, niin varaudumme tahroihin ja hajuihin.'
+        'Ammattipesuaineet ja tehokas imu nostavat lian kankaasta, ja hajunpoisto kuuluu jokaiseen pesuun. Aineet ovat turvallisia lapsille ja lemmikeille. Jos sohva on kulunut lapsiperheen arjessa tai koiran lepopaikkana, mainitse siitä varauksessa, niin varaudumme tahroihin ja hajuihin.'
       ]
     },
     mattress: {
@@ -338,7 +338,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Tuusulassa moni asuu omakotitalossa Hyrylässä, Jokelassa, Kellokoskella tai Tuusulanjärven rannan tuntumassa. Isot olohuoneet ja kulmasohvat ovat tavallisia, ja niissä vietetään paljon aikaa koko perheen kanssa.',
-        'Sohvan pesu Tuusulassa tehdään kotonasi kuumalla höyryllä ja imulla. Luonnon keskellä sohvaan kertyy hiekkaa, siitepölyä ja lemmikin karvoja, joten imuroimme ne ensin ja pesemme sitten koko pinnan tasaisesti.'
+        'Sohvan pesu Tuusulassa tehdään kotonasi painehuuhtelukoneella ja ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Luonnon keskellä sohvaan kertyy hiekkaa, siitepölyä ja lemmikin karvoja, joten imuroimme ne ensin ja pesemme sitten koko pinnan tasaisesti.'
       ]
     },
     mattress: {
@@ -386,7 +386,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Sipoossa kodit ovat usein väljiä ja pihat isoja – Nikkilässä, Söderkullassa ja Talmassa sekä kylien välisellä maaseudulla. Sohvan vieminen pesulaan tarkoittaisi pakettiautoa ja kahta kantajaa, joten pesemme sen mieluummin kotonasi.',
-        'Sohvan pesu Sipoossa onnistuu joka päivä, myös iltaisin ja viikonloppuisin. Pesemme kankaan höyryllä ja imulla, hinta näkyy varauksessa valmiina, eikä ennakkomaksua tarvita.'
+        'Sohvan pesu Sipoossa onnistuu joka päivä, myös iltaisin ja viikonloppuisin. Pesemme kankaan lapsille ja lemmikeille turvallisilla ammattipesuaineilla ja imemme lian pois, hinta näkyy varauksessa valmiina, eikä ennakkomaksua tarvita.'
       ]
     },
     mattress: {
@@ -434,13 +434,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kirkkonummella asutaan Masalan ja keskustan kerrostaloissa, Veikkolan omakotitaloissa ja meren rannalla Kantvikissa ja Upinniemessä. Moni pitää lisäksi kesämökkiä kunnan pitkällä rannikolla.',
-        'Sohvan pesu Kirkkonummella tehdään kotonasi höyryllä ja imulla. Kostea meri-ilma ja mökkitalven jälkeinen tunkkainen haju tarttuvat kankaaseen, ja siksi hajunpoisto kuuluu jokaiseen pesuun.'
+        'Sohvan pesu Kirkkonummella tehdään kotonasi: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Ammattipesuaineemme ovat turvallisia lapsille ja lemmikeille. Kostea meri-ilma ja mökkitalven jälkeinen tunkkainen haju tarttuvat kankaaseen, ja siksi hajunpoisto kuuluu jokaiseen pesuun.'
       ]
     },
     mattress: {
       intro: [
         'Kesämökin patjat ovat usein seisseet koko talven viileässä ja kosteassa, ja keväällä niistä nousee ummehtunut haju. Patjan pesu Kirkkonummella sopii hyvin mökkikauden alkuun tai loppuun – kunhan mökille pääsee autolla.',
-        'Höyry ja imu poistavat pölyä ja hajuja patjan pinnasta, ja nopeutamme patjan kuivumista puhaltimilla veloituksetta. Jos patjassa on hometta, sanomme sen suoraan: sitä ei saa pesulla pois.'
+        'Pesemme patjat lapsille ja lemmikeille turvallisilla ammattipesuaineilla, ja tehokas imu vie pölyn ja hajut patjan pinnasta. Nopeutamme patjan kuivumista puhaltimilla veloituksetta. Jos patjassa on hometta, sanomme sen suoraan: sitä ei saa pesulla pois.'
       ]
     },
     districts: [
@@ -481,7 +481,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Nurmijärvellä moni asuu isossa omakotitalossa Klaukkalassa, Rajamäellä tai kirkonkylässä, ja olohuoneessa on usein iso kulmasohva, jolle koko perhe mahtuu iltaisin. Sohvan pesu Nurmijärvellä hoituu kotonasi, joten raskasta sohvaa ei tarvitse liikuttaa.',
-        'Pesemme sohvan, nojatuolit ja rahin kuumalla höyryllä ja imulla, ja hajunpoisto kuuluu hintaan. Lopuksi kuivatamme sohvan puhaltimilla, eikä kuivatuksesta tule lisämaksua.'
+        'Pesemme sohvan, nojatuolit ja rahin painehuuhtelukoneella ja ammattipesuaineilla, ja hajunpoisto kuuluu hintaan. Lopuksi kuivatamme sohvan puhaltimilla, eikä kuivatuksesta tule lisämaksua.'
       ]
     },
     mattress: {
@@ -517,7 +517,7 @@ export const cities: Record<CitySlug, CityContent> = {
       },
       {
         q: 'Onko pesu turvallinen lapsille ja koiralle?',
-        a: 'Käytämme allergiaystävällisiä ja biohajoavia pesuaineita. Pidä silti lapset ja lemmikit poissa kostealta sohvalta, kunnes se on kuivunut.'
+        a: 'On. Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, jotka ovat turvallisia lapsille ja lemmikeille. Pidä silti lapset ja lemmikit poissa kostealta sohvalta, kunnes se on kuivunut.'
       }
     ]
   },
@@ -577,7 +577,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Hyvinkää on pääradan varren kaupunki, jossa kodit vaihtelevat keskustan kerrostaloista Paavolan ja Hakalan omakotitaloihin ja Sveitsin alueen metsäisiin kortteleihin. Sohvan pesu Hyvinkäällä tehdään kotonasi, joten sohvaa ei tarvitse kuljettaa minnekään.',
-        'Höyrypesu ja imu irrottavat lian kankaasta, ja hajunpoisto kuuluu hintaan. Kun pesu on valmis, maksat sen hinnan, jonka näit varauksessa – et euroakaan enempää.'
+        'Lapsille ja lemmikeille turvalliset ammattipesuaineet ja tehokas imu irrottavat lian kankaasta, ja hajunpoisto kuuluu hintaan. Kun pesu on valmis, maksat sen hinnan, jonka näit varauksessa – et euroakaan enempää.'
       ]
     },
     mattress: {

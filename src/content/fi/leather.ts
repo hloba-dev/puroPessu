@@ -8,7 +8,7 @@ export const leather: ServiceLanding = {
   badge: 'Nahka ja keinonahka',
   h1: 'Nahkasohvan puhdistus Helsingissä — käsin, kotonasi',
   intro:
-    'Puhdistamme nahkasohvat ja -nojatuolit käsin nahalle tarkoitetuilla aineilla, ilman höyryä ja liikaa kosteutta. Hinnat alkaen {price}, ja tulemme joka päivä klo {from}–{to}. Puhdistuksen päätteeksi kuivatamme pinnan ja saumat puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+    'Puhdistamme nahkasohvat ja -nojatuolit käsin nahalle tarkoitetuilla ammattiaineilla, ilman liikaa kosteutta ja kovaa hankausta. Hinnat alkaen {price}, ja tulemme joka päivä klo {from}–{to}. Puhdistuksen päätteeksi kuivatamme pinnan ja saumat puhaltimilla, ja kuivatus sisältyy aina hintaan.',
   prices: {
     title: 'Nahkasohvan puhdistuksen hinnat',
     lead: 'Hinta riippuu sohvan koosta ja mallista. Kuivatus puhaltimilla sisältyy aina hintaan.',
@@ -31,7 +31,7 @@ export const leather: ServiceLanding = {
     items: [
       {
         title: 'Käsityönä',
-        text: 'Nahka puhdistetaan käsin pehmeällä harjalla ja liinalla. Ei höyryä eikä kovaa hankausta.',
+        text: 'Nahka puhdistetaan käsin pehmeällä harjalla ja liinalla. Ei liikaa kosteutta eikä kovaa hankausta.',
       },
       {
         title: 'Nahalle sopivat aineet',
@@ -115,7 +115,7 @@ export const leather: ServiceLanding = {
       },
       {
         title: 'Aniliininahka',
-        text: 'Suojaamaton ja imukykyinen nahka. Käytämme hellävaraisinta menetelmää, emmekä käytä höyryä tai paljon kosteutta.',
+        text: 'Suojaamaton ja imukykyinen nahka. Käytämme hellävaraisinta menetelmää ja mahdollisimman vähän kosteutta.',
       },
       {
         title: 'Keinonahka',
@@ -164,7 +164,7 @@ export const leather: ServiceLanding = {
       },
       {
         aspect: 'Kosteus',
-        rental: 'Märkä liina tai höyry voi jättää läikkiä ja kovettaa nahkaa',
+        rental: 'Märkä liina tai kuumuus voi jättää läikkiä ja kovettaa nahkaa',
         pro: 'Kosteus pidetään vähäisenä, ja pinta kuivataan heti',
       },
       {

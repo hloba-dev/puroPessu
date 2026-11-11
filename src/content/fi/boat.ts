@@ -3,7 +3,7 @@ import type {ServiceLanding} from '../types';
 export const boat: ServiceLanding = {
   metaTitle: "Veneen tekstiilien pesu Helsinki — alk. {price}, paikan päällä",
   metaDescription:
-    "Veneen patjojen, istuintyynyjen ja verhoilun höyrypesu satamassa tai kotonasi pääkaupunkiseudulla. Ummehtunut haju pois ennen vesillelaskua tai talvea.",
+    "Veneen patjojen, istuintyynyjen ja verhoilun syväpesu satamassa tai kotonasi pääkaupunkiseudulla. Ummehtunut haju pois ennen vesillelaskua tai talvea.",
   breadcrumb: "Veneen tekstiilit",
   badge: "Satamaan tai kotiin",
   h1: "Veneen tekstiilien pesu Helsingissä",
@@ -21,7 +21,7 @@ export const boat: ServiceLanding = {
   promise: {
     title: "Rehellisesti tahroista",
     paragraphs: [
-      "Useimmat tahrat lähtevät: ruoka, juomat, aurinkorasva ja satamapöly. Esikäsittelemme tahrat ja huuhtelemme ne pois kuumalla höyryllä.",
+      "Useimmat tahrat lähtevät: ruoka, juomat, aurinkorasva ja satamapöly. Esikäsittelemme tahrat ja huuhtelemme ne pois painehuuhtelukoneella.",
       "Vanhat hometäplät ja kankaan väriä syöneet tahrat voivat vaalentua mutta jäädä näkyviin. Kerromme sen ennen kuin aloitamme.",
       "Jos et ole tyytyväinen, pesemme uudelleen veloituksetta. Se on tyytyväisyystakuumme.",
     ],
@@ -67,8 +67,8 @@ export const boat: ServiceLanding = {
         text: "Katsomme materiaalit, tahrat ja mahdollisen homeen ja kerromme, mitä on odotettavissa. Sitten tahrat esikäsitellään.",
       },
       {
-        title: "Höyrypesu ja imu",
-        text: "Pesemme kankaat kuumalla höyryllä ja imemme lian ja kosteuden pois. Vinyyli- ja tekonahkapinnat puhdistamme käsin.",
+        title: "Syväpesu ja imu",
+        text: "Pesemme kankaat painehuuhtelukoneella ja imemme lian ja kosteuden pois. Ammattipesuaineemme ovat turvallisia lapsille ja lemmikeille. Vinyyli- ja tekonahkapinnat puhdistamme käsin.",
       },
       {
         title: "Kuivatus puhaltimilla",
@@ -86,7 +86,7 @@ export const boat: ServiceLanding = {
       },
       {
         title: "Dieselin haju",
-        text: "Polttoaineen käry tarttuu kankaisiin. Esikäsittely irrottaa öljyiset jäämät ennen höyrypesua.",
+        text: "Polttoaineen käry tarttuu kankaisiin. Esikäsittely irrottaa öljyiset jäämät ennen pesua.",
       },
       {
         title: "Hometäplät",
@@ -148,7 +148,7 @@ export const boat: ServiceLanding = {
     rows: [
       {aspect: "Kosteus", rental: "Vaahtomuovi imee vettä ja kuivuu päiviä", pro: "Vesi imetään pois, ja kuivatamme puhaltimilla"},
       {aspect: "Homeriski", rental: "Märkä pehmuste kosteassa veneessä homehtuu", pro: "Kosteus hallitaan koko pesun ajan"},
-      {aspect: "Lika", rental: "Pinta puhdistuu, lika jää syvemmälle", pro: "Kuuma höyry ja imu vievät lian pois"},
+      {aspect: "Lika", rental: "Pinta puhdistuu, lika jää syvemmälle", pro: "Painehuuhtelu ja imu vievät lian pois syvältä"},
       {aspect: "Pesuaine", rental: "Jää kankaaseen, jos huuhtelu ei riitä", pro: "Huuhdellaan ja imetään pois"},
       {aspect: "Haju", rental: "Usein pahenee, jos tyyny ei kuivu", pro: "Hajun lähde pestään pois"},
     ],

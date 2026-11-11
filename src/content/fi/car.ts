@@ -3,7 +3,7 @@ import type {ServiceLanding} from '../types';
 export const car: ServiceLanding = {
   metaTitle: "Auton verhoilupesu Helsinki — alk. {price}, paikan päällä",
   metaDescription:
-    "Auton penkkien, mattojen ja oviverhoilujen höyrypesu kotipihallasi tai parkkihallissa Helsingissä, Espoossa ja Vantaalla. Hajunpoisto kuuluu hintaan, ei ennakkomaksua.",
+    "Auton penkkien, mattojen ja oviverhoilujen syväpesu kotipihallasi tai parkkihallissa Helsingissä, Espoossa ja Vantaalla. Hajunpoisto kuuluu hintaan, ei ennakkomaksua.",
   breadcrumb: "Auton verhoilupesu",
   badge: "Tulemme auton luo",
   h1: "Auton verhoilupesu Helsingissä paikan päällä",
@@ -21,7 +21,7 @@ export const car: ServiceLanding = {
   promise: {
     title: "Rehellisesti tahroista",
     paragraphs: [
-      "Useimmat tahrat lähtevät: kahvi, maito, kura, rasva ja lasten eväät. Esikäsittelemme tahrat ja huuhtelemme ne kuumalla höyryllä pois kankaasta.",
+      "Useimmat tahrat lähtevät: kahvi, maito, kura, rasva ja lasten eväät. Esikäsittelemme tahrat ja huuhtelemme ne painehuuhtelukoneella pois kankaasta.",
       "Vanhat, pinttyneet tai kankaan väriä syöneet tahrat voivat vaalentua mutta jäädä näkyviin. Kerromme sen suoraan ennen kuin aloitamme.",
       "Jos et ole tyytyväinen lopputulokseen, pesemme uudelleen veloituksetta. Se on tyytyväisyystakuumme.",
     ],
@@ -35,15 +35,15 @@ export const car: ServiceLanding = {
       },
       {
         title: "Lika lähtee, ei vain siirry",
-        text: "Höyry irrottaa lian ja imu vie sen pois yhdessä pesuaineen kanssa. Kankaaseen ei jää tahmeaa jäämää, joka keräisi uutta likaa.",
+        text: "Pesuliuos irrottaa lian ja imu vie sen pois yhdessä pesuaineen kanssa. Kankaaseen ei jää tahmeaa jäämää, joka keräisi uutta likaa.",
       },
       {
         title: "Hajunpoisto ilman lisämaksua",
         text: "Jos autossa haisee tupakka, koira tai kaatunut maito, käsittelemme hajun pesun yhteydessä.",
       },
       {
-        title: "Miedot pesuaineet",
-        text: "Käytämme allergiaystävällisiä ja biohajoavia pesuaineita, joten turvaistuin ja penkit ovat pesun jälkeen turvallisia lapsillekin.",
+        title: "Turvalliset ammattipesuaineet",
+        text: "Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, joten turvaistuin ja penkit ovat pesun jälkeen turvallisia lapsille ja lemmikeille.",
       },
       {
         title: "Kuivatus puhaltimilla veloituksetta",
@@ -67,8 +67,8 @@ export const car: ServiceLanding = {
         text: "Käymme materiaalit ja tahrat läpi kanssasi ja kerromme, mitä on odotettavissa. Sitten tahrat esikäsitellään.",
       },
       {
-        title: "Höyrypesu ja imu",
-        text: "Pesemme verhoilun kuumalla höyryllä ja imemme lian ja kosteuden pois. Nahkapenkit puhdistamme käsin.",
+        title: "Syväpesu ja imu",
+        text: "Pesemme verhoilun painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Nahkapenkit puhdistamme käsin.",
       },
       {
         title: "Kuivatus puhaltimilla",
@@ -94,7 +94,7 @@ export const car: ServiceLanding = {
       },
       {
         title: "Oksennus",
-        text: "Kuivaa pahin pois heti ja varaa pesu. Esikäsittely hajottaa hajua aiheuttavat aineet ennen höyrypesua.",
+        text: "Kuivaa pahin pois heti ja varaa pesu. Esikäsittely hajottaa hajua aiheuttavat aineet ennen pesua.",
       },
     ],
     insurance: "Saat pyynnöstä kirjallisen selvityksen tehdystä työstä vakuutusyhtiötä varten.",
@@ -114,7 +114,7 @@ export const car: ServiceLanding = {
       },
       {
         title: "Nahkapenkit",
-        text: "Puhdistamme nahan käsin miedolla pesuaineella. Höyryä ei suunnata suoraan nahkaan.",
+        text: "Puhdistamme nahan käsin miedolla pesuaineella, ilman liikaa kosteutta ja kovaa hankausta.",
       },
       {
         title: "Turvaistuinten päälliset",
@@ -146,7 +146,7 @@ export const car: ServiceLanding = {
     lead: "Rautakaupan märkäimurilla saa pintalikaa pois, mutta tulos ja kuivumisaika eroavat selvästi.",
     headers: {aspect: "Vertailukohta", rental: "Märkäimuri rautakaupasta", pro: "Puro"},
     rows: [
-      {aspect: "Lämpötila", rental: "Yleensä kylmä tai haalea vesi", pro: "Kuuma höyry irrottaa rasvaisen lian"},
+      {aspect: "Laite", rental: "Kevyt kotikone, joka pesee vain pintaa", pro: "Ammattitason painehuuhtelukone irrottaa rasvaisen lian syvältä"},
       {aspect: "Pesuaine", rental: "Jää helposti kankaaseen ja kerää likaa", pro: "Huuhdellaan ja imetään pois"},
       {aspect: "Kosteus", rental: "Penkki jää märäksi ja kuivuu hitaasti", pro: "Tehokas imu ja kuivatus puhaltimilla, sisältyy hintaan"},
       {aspect: "Tahrat", rental: "Yksi aine kaikkiin tahroihin", pro: "Esikäsittely tahran mukaan"},

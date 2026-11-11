@@ -39,7 +39,7 @@ export const about: AboutPage = {
   method: {
     title: 'Miten pesemme',
     paragraphs: [
-      'Tahrat esikäsitellään ensin, minkä jälkeen kangas pestään kuumalla höyryllä ja lika imetään pois yhdessä pesuaineen kanssa. Käytämme allergiaystävällisiä, biohajoavia pesuaineita. Hajunpoisto sisältyy jokaiseen pesuun.',
+      'Tahrat esikäsitellään ensin, minkä jälkeen kangas pestään painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, jotka ovat turvallisia lapsille ja lemmikeille. Hajunpoisto sisältyy jokaiseen pesuun.',
       'Nahkahuonekalut puhdistamme käsin. Ilman apua kangaspinnat kuivuvat tyypillisesti 4–8 tunnissa, mutta nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Jos et ole tyytyväinen lopputulokseen, pesemme uudelleen maksutta – se on tyytyväisyystakuumme.',
     ],
   },

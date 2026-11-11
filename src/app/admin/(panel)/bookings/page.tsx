@@ -1,212 +1,302 @@
 import Link from 'next/link';
-import {bookingPhotoUrls, setBookingStatus} from '@/app/admin/actions';
+import {bookingPhotoUrls} from '@/app/admin/actions';
 import {requireAdmin} from '@/lib/admin/auth';
-import {promoLabel} from '@/lib/booking/promo-details';
-import {hoursAgo, utcToZoned} from '@/lib/booking/tz';
-import type {PromoDetails} from '@/lib/data/store';
-import type {Enums, Tables} from '@/lib/supabase/database.types';
-import {AdminPage, Card, StatusBadge, StatusForm, adminBtn, adminBtnPrimary, adminInput, eur, fmtDateTime} from '@/components/admin/ui';
+import {bookingsWord, daySpan, gridHours, searchTerm, weekDays, weekStart} from '@/lib/admin/board';
+import {addDays, hoursAgo, utcToZoned, zonedToUtc} from '@/lib/booking/tz';
+import {getSettings} from '@/lib/data/public';
+import type {Enums} from '@/lib/supabase/database.types';
+import {
+  BOOKING_STATUSES,
+  BookingCard,
+  DayList,
+  DayStrip,
+  PendingQueue,
+  StatusLegend,
+  SummaryTiles,
+  WeekGrid,
+  bookingTimes,
+  fmtWeek,
+  type BoardBooking,
+  type BoardDay,
+  type Tile
+} from '@/components/admin/bookings';
+import {AdminPage, Card, STATUS_RU, adminBtn, adminBtnPrimary, adminInput, eur} from '@/components/admin/ui';
 
 export const metadata = {title: 'Брони'};
 
-const STATUSES = ['pending', 'confirmed', 'done', 'cancelled'];
-const TZ = 'Europe/Helsinki';
-
-type Booking = Tables<'bookings'> & {
-  booking_items: Pick<Tables<'booking_items'>, 'name' | 'qty' | 'very_dirty'>[];
-  photoUrls?: string[];
-};
-
-function BookingCard({b}: {b: Booking}) {
-  const digits = b.phone.replace(/\D/g, '');
-  return (
-    <li className="glass p-5">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <p className="text-lg font-semibold">{fmtDateTime(b.starts_at)}</p>
-          <p className="text-sm text-muted">
-            {b.ref_code} · {b.duration_min} мин · язык: {b.locale}
-          </p>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-lg font-bold">{eur(b.total_cents)}</span>
-          <StatusBadge status={b.status} />
-        </div>
-      </div>
-
-      <div className="mt-4 grid gap-4 text-[15px] md:grid-cols-2">
-        <div>
-          <p className="font-medium">
-            {b.name}
-            {b.company && ` · ${b.company} (${b.y_tunnus ?? '—'})`}
-          </p>
-          <p className="text-muted">
-            {b.address}, {b.postal_code} {b.city}
-            {b.floor && ` · ${b.floor}`}
-            {b.parking && ` · парковка: ${b.parking}`}
-          </p>
-          {b.notes && <p className="mt-1 text-muted">«{b.notes}»</p>}
-          <p className="mt-2 flex flex-wrap gap-2">
-            <a href={`tel:+${digits}`} className={adminBtn}>
-              Позвонить {b.phone}
-            </a>
-            <a href={`https://wa.me/${digits}`} className={adminBtn} target="_blank" rel="noopener">
-              WhatsApp
-            </a>
-            <a href={`mailto:${b.email}`} className={adminBtn}>
-              {b.email}
-            </a>
-          </p>
-        </div>
-        <div>
-          <ul className="space-y-1">
-            {b.booking_items.map((item) => (
-              <li key={item.name}>
-                {item.name} × {item.qty}
-                {item.very_dirty && <span className="text-warn"> · очень грязное</span>}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-2 text-sm text-muted">
-            Работы {eur(b.subtotal_cents)}
-            {b.min_fill_cents > 0 && ` + до минимума ${eur(b.min_fill_cents)}`}
-            {b.promo_cents > 0 && ` − скидка ${eur(b.promo_cents)} (${promoLabel((b.promo_details ?? {}) as PromoDetails)})`} + транспорт{' '}
-            {eur(b.travel_cents)}
-            {b.discount_cents > 0 && ` − сертификат ${eur(b.discount_cents)} (${b.gift_card_code})`}
-          </p>
-          {(b.photoUrls?.length ?? 0) > 0 && (
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {b.photoUrls!.map((url, index) => (
-                <li key={url}>
-                  <a href={url} target="_blank" rel="noopener">
-                    {/* eslint-disable-next-line @next/next/no-img-element -- short-lived signed URL, not worth optimizing */}
-                    <img src={url} alt={`Фото клиента ${index + 1}`} className="size-20 rounded-lg object-cover" loading="lazy" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-          <div className="mt-3">
-            <StatusForm action={setBookingStatus} id={b.id} status={b.status} options={STATUSES} />
-          </div>
-        </div>
-      </div>
-    </li>
-  );
-}
+const WITH_ITEMS = '*, booking_items(name, qty, very_dirty)';
+const LIVE: Enums<'booking_status'>[] = ['pending', 'confirmed', 'done'];
+const isDate = (value: string) => /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value));
+const sum = (values: number[]) => values.reduce((total, value) => total + value, 0);
 
 export default async function AdminBookingsPage({searchParams}: PageProps<'/admin/bookings'>) {
   const {supabase} = await requireAdmin();
-  const params = await searchParams;
-  const status = typeof params.status === 'string' && STATUSES.includes(params.status) ? params.status : '';
-  const view = params.view === 'calendar' ? 'calendar' : 'list';
-  const from = typeof params.from === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(params.from) ? params.from : '';
+  const [params, settings] = await Promise.all([searchParams, getSettings()]);
+  const one = (key: string) => {
+    const value = params[key];
+    return typeof value === 'string' ? value.trim() : '';
+  };
 
-  let query = supabase.from('bookings').select('*, booking_items(name, qty, very_dirty)').order('starts_at', {ascending: view === 'calendar' || !status});
-  if (status) query = query.eq('status', status as Enums<'booking_status'>);
-  if (view === 'calendar') query = query.in('status', ['pending', 'confirmed']);
-  // by default the list starts from today; a date filter moves the start
-  query = query.gte('starts_at', from ? `${from}T00:00:00+02:00` : hoursAgo(12));
-  const {data, error} = await query.limit(200);
-  // photos attached by customers live in a private bucket: short-lived signed URLs for the admin
-  const bookings = await Promise.all(
-    ((data ?? []) as unknown as Booking[]).map(async (b) => ({...b, photoUrls: await bookingPhotoUrls(b.photos ?? [])}))
-  );
+  const tz = settings.timezone;
+  const nowDate = new Date();
+  const now = nowDate.getTime();
+  const nowLocal = utcToZoned(nowDate, tz);
+  const today = nowLocal.date;
+  const tomorrow = addDays(today, 1);
+  const dayStart = (date: string) => zonedToUtc(date, 0, tz).toISOString();
 
-  // calendar view: bookings grouped by local day
-  const byDay = new Map<string, Booking[]>();
-  for (const b of bookings) {
-    const day = utcToZoned(new Date(b.starts_at), TZ).date;
-    byDay.set(day, [...(byDay.get(day) ?? []), b]);
+  // list filters
+  const status = BOOKING_STATUSES.includes(one('status')) ? (one('status') as Enums<'booking_status'>) : '';
+  const fromDate = isDate(one('from')) ? one('from') : '';
+  const q = searchTerm(one('q'));
+  const view = one('view') === 'list' || status || fromDate || q ? 'list' : 'week';
+
+  // week on the board
+  const monday = weekStart(isDate(one('week')) ? one('week') : today);
+  const thisMonday = weekStart(today);
+  const dates = weekDays(monday);
+  const showCancelled = one('cancelled') === '1';
+
+  const weekHref = (week: string, extra: Record<string, string> = {}) => {
+    const query = new URLSearchParams({...(week === thisMonday ? {} : {week}), ...extra}).toString();
+    return `/admin/bookings${query ? `?${query}` : ''}`;
+  };
+  const listHref = (filters: Record<string, string>) =>
+    `/admin/bookings?${new URLSearchParams({view: 'list', ...Object.fromEntries(Object.entries(filters).filter(([, value]) => value))})}`;
+  // the view to come back to when a status button fails
+  const self = view === 'week' ? weekHref(monday, showCancelled ? {cancelled: '1'} : {}) : listHref({status, from: fromDate, q});
+
+  // what both views show on top: bookings waiting for the owner and the days right ahead
+  const pendingQuery = supabase.from('bookings').select(WITH_ITEMS).eq('status', 'pending').order('starts_at').limit(50);
+  const aheadQuery = supabase
+    .from('bookings')
+    .select('starts_at, total_cents')
+    .in('status', LIVE)
+    .gte('starts_at', dayStart(today))
+    .lt('starts_at', dayStart(addDays(today, 7)));
+
+  let mainQuery = supabase.from('bookings').select(WITH_ITEMS);
+  if (view === 'week') {
+    mainQuery = mainQuery.gte('starts_at', dayStart(monday)).lt('starts_at', dayStart(addDays(monday, 7))).order('starts_at');
+  } else {
+    if (status) mainQuery = mainQuery.eq('status', status);
+    if (q) {
+      const like = `*${q}*`;
+      mainQuery = mainQuery.or(
+        ['name', 'phone', 'email', 'ref_code', 'address', 'city', 'company'].map((column) => `${column}.ilike."${like}"`).join(',')
+      );
+    }
+    // a search looks through everything; otherwise the list starts from today, or from the chosen date
+    if (fromDate) mainQuery = mainQuery.gte('starts_at', dayStart(fromDate));
+    else if (!q) mainQuery = mainQuery.gte('starts_at', hoursAgo(12));
+    mainQuery = mainQuery.order('starts_at', {ascending: !q && !status}).limit(200);
   }
 
+  const [main, pending, ahead, blocked, staff] = await Promise.all([
+    mainQuery,
+    pendingQuery,
+    aheadQuery,
+    view === 'week'
+      ? supabase.from('blocked_times').select('*').lt('starts_at', dayStart(addDays(monday, 7))).gt('ends_at', dayStart(monday))
+      : null,
+    view === 'week' ? supabase.from('staff').select('id').eq('is_active', true) : null
+  ]);
+
+  // photos attached by customers live in a private bucket: short-lived signed URLs for the admin
+  const withPhotos = (rows: unknown) =>
+    Promise.all(
+      ((rows ?? []) as BoardBooking[]).map(async (b) => ({...b, photoUrls: b.photos?.length ? await bookingPhotoUrls(b.photos) : []}))
+    );
+  const [bookings, pendingRows] = await Promise.all([withPhotos(main.data), withPhotos(pending.data)]);
+
+  // ---------- tiles ----------
+  const aheadRows = ahead.data ?? [];
+  const onDay = (date: string) => aheadRows.filter((b) => utcToZoned(new Date(b.starts_at), tz).date === date);
+  const dayTile = (label: string, date: string): Tile => {
+    const rows = onDay(date);
+    return {
+      label,
+      value: `${rows.length} ${bookingsWord(rows.length)}`,
+      note: rows.length ? eur(sum(rows.map((b) => b.total_cents))) : undefined,
+      href: `${weekHref(weekStart(date))}#day-${date}`
+    };
+  };
+  const tiles: Tile[] = [
+    {
+      label: 'Ждут подтверждения',
+      value: String(pendingRows.length),
+      href: listHref({status: 'pending'}),
+      attention: pendingRows.length > 0
+    },
+    dayTile('Сегодня', today),
+    dayTile('Завтра', tomorrow),
+    {
+      label: 'Ближайшие 7 дней',
+      value: `${aheadRows.length} ${bookingsWord(aheadRows.length)}`,
+      note: aheadRows.length ? eur(sum(aheadRows.map((b) => b.total_cents))) : undefined,
+      href: listHref({})
+    }
+  ];
+
+  // ---------- week board ----------
+  const blockRows = blocked?.data ?? [];
+  const severalCleaners = (staff?.data?.length ?? 1) > 1;
+  const days: BoardDay[] = dates.map((date) => {
+    const all = bookings.filter((b) => bookingTimes(b, tz).date === date);
+    const live = all.filter((b) => b.status !== 'cancelled');
+    return {
+      date,
+      isToday: date === today,
+      past: date < today,
+      bookings: showCancelled ? all : live,
+      blocks: blockRows.flatMap((row) => {
+        const span = daySpan(row.starts_at, row.ends_at, date, tz);
+        // a block for one cleaner leaves the others bookable
+        return span ? [{...span, reason: row.reason, partial: row.staff_id !== null && severalCleaners}] : [];
+      }),
+      count: live.length,
+      sumCents: sum(live.map((b) => b.total_cents)),
+      workMin: sum(live.map((b) => b.duration_min))
+    };
+  });
+  const hours = gridHours(
+    settings.openFrom,
+    settings.openTo,
+    days.flatMap((day) =>
+      day.bookings.map((b) => {
+        const t = bookingTimes(b, tz);
+        return {start: t.start, end: Math.min(t.busyEnd, 24 * 60)};
+      })
+    )
+  );
+  const cancelledCount = view === 'week' ? bookings.filter((b) => b.status === 'cancelled').length : 0;
+  const weekTotal = {count: sum(days.map((d) => d.count)), cents: sum(days.map((d) => d.sumCents))};
+
   const tab = (label: string, href: string, active: boolean) => (
-    <Link href={href} className={active ? adminBtnPrimary : adminBtn}>
+    <Link href={href} className={active ? adminBtnPrimary : adminBtn} aria-current={active ? 'page' : undefined}>
       {label}
     </Link>
   );
+  const error = one('error') || (main.error ?? pending.error ?? ahead.error ?? blocked?.error)?.message;
 
   return (
     <AdminPage
       title="Брони"
-      error={typeof params.error === 'string' ? params.error : error?.message}
+      error={error}
       actions={
         <Link href="/admin/bookings/new" className={adminBtnPrimary}>
           + Новая бронь
         </Link>
       }
     >
-      <Card>
-        <div className="flex flex-wrap items-end justify-between gap-4">
+      <SummaryTiles tiles={tiles} />
+
+      {view === 'week' && pendingRows.length > 0 && (
+        <div className="mt-6">
+          <PendingQueue bookings={pendingRows} tz={tz} back={self} now={now} />
+        </div>
+      )}
+
+      <Card className="mt-6">
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
           <div className="flex flex-wrap gap-2">
-            {tab('Список', '/admin/bookings', view === 'list')}
-            {tab('Календарь', '/admin/bookings?view=calendar', view === 'calendar')}
+            {tab('Неделя', weekHref(monday), view === 'week')}
+            {tab('Список и поиск', listHref({}), view === 'list')}
           </div>
-          <form className="flex flex-wrap items-end gap-3">
-            {view === 'calendar' && <input type="hidden" name="view" value="calendar" />}
+          {view === 'week' && (
+            <div className="flex flex-wrap items-center gap-2">
+              <Link href={weekHref(addDays(monday, -7))} scroll={false} className={adminBtn} aria-label="Предыдущая неделя">
+                ←
+              </Link>
+              <p className="min-w-40 text-center font-semibold">
+                {fmtWeek(monday, dates[6])}
+                <span className="block text-xs font-normal text-muted tabular-nums">
+                  {weekTotal.count ? `${weekTotal.count} ${bookingsWord(weekTotal.count)} · ${eur(weekTotal.cents)}` : 'броней нет'}
+                </span>
+              </p>
+              <Link href={weekHref(addDays(monday, 7))} scroll={false} className={adminBtn} aria-label="Следующая неделя">
+                →
+              </Link>
+              {monday !== thisMonday && (
+                <Link href={weekHref(thisMonday)} scroll={false} className={adminBtn}>
+                  Сегодня
+                </Link>
+              )}
+            </div>
+          )}
+        </div>
+
+        {view === 'week' ? (
+          <>
+            {/* the time grid needs width: phones get the week as seven tappable days instead */}
+            <div className="mt-5 hidden md:block">
+              <WeekGrid days={days} hours={hours} tz={tz} nowMin={nowLocal.minutes} />
+            </div>
+            <div className="mt-4 md:hidden">
+              <DayStrip days={days} />
+            </div>
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <StatusLegend />
+              {(cancelledCount > 0 || showCancelled) && (
+                <Link href={weekHref(monday, showCancelled ? {} : {cancelled: '1'})} scroll={false} className="link text-sm">
+                  {showCancelled ? 'Скрыть отменённые' : `Показать отменённые (${cancelledCount})`}
+                </Link>
+              )}
+            </div>
+          </>
+        ) : (
+          <form className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_auto] lg:items-end">
+            <input type="hidden" name="view" value="list" />
+            <label className="text-sm">
+              <span className="mb-1 block text-muted">Поиск: имя, телефон, e-mail, адрес или номер брони</span>
+              <input type="search" name="q" defaultValue={q} placeholder="например, Virtanen или PU-1A2B3C" className={adminInput} />
+            </label>
             <label className="text-sm">
               <span className="mb-1 block text-muted">Статус</span>
               <select name="status" defaultValue={status} className={adminInput}>
                 <option value="">Все</option>
-                {STATUSES.map((s) => (
+                {BOOKING_STATUSES.map((s) => (
                   <option key={s} value={s}>
-                    {s}
+                    {STATUS_RU[s] ?? s}
                   </option>
                 ))}
               </select>
             </label>
             <label className="text-sm">
-              <span className="mb-1 block text-muted">С даты</span>
-              <input type="date" name="from" defaultValue={from} className={adminInput} />
+              <span className="mb-1 block text-muted">С даты (пусто — с сегодня)</span>
+              <input type="date" name="from" defaultValue={fromDate} className={adminInput} />
             </label>
-            <button type="submit" className={adminBtn}>
-              Показать
-            </button>
+            <div className="flex gap-2">
+              <button type="submit" className={adminBtnPrimary}>
+                Показать
+              </button>
+              {(q || status || fromDate) && (
+                <Link href={listHref({})} className={adminBtn}>
+                  Сбросить
+                </Link>
+              )}
+            </div>
           </form>
-        </div>
+        )}
       </Card>
 
-      {bookings.length === 0 && <p className="mt-6 text-muted">Броней не найдено.</p>}
-
-      {view === 'list' ? (
-        <ul className="mt-6 space-y-4">
-          {bookings.map((b) => (
-            <BookingCard key={b.id} b={b} />
-          ))}
-        </ul>
-      ) : (
-        <div className="mt-6 space-y-6">
-          {[...byDay.entries()].map(([day, items]) => (
-            <section key={day}>
-              <h2 className="sticky top-0 z-10 bg-bg py-2 text-lg font-semibold">
-                {new Intl.DateTimeFormat('ru-RU', {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'}).format(
-                  new Date(`${day}T12:00:00Z`)
-                )}
-              </h2>
-              <ul className="mt-2 space-y-2 border-l-2 border-teal-3 pl-4">
-                {items.map((b) => {
-                  const start = utcToZoned(new Date(b.starts_at), TZ).minutes;
-                  const end = start + b.duration_min;
-                  const hm = (m: number) => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
-                  return (
-                    <li key={b.id} className="glass flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-                      <p>
-                        <span className="font-semibold">
-                          {hm(start)}–{hm(end)}
-                        </span>{' '}
-                        · {b.name} · {b.address}, {b.city}
-                        <span className="block text-sm text-muted">{b.booking_items.map((i) => `${i.name} × ${i.qty}`).join(', ')}</span>
-                      </p>
-                      <span className="flex items-center gap-3">
-                        {eur(b.total_cents)} <StatusBadge status={b.status} />
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          ))}
+      {view === 'week' ? (
+        <div className="mt-6">
+          <DayList days={days} tz={tz} back={self} now={now} />
         </div>
+      ) : (
+        <>
+          <p className="mt-6 text-sm text-muted">
+            {bookings.length === 0
+              ? 'Броней не найдено.'
+              : `Найдено: ${bookings.length} ${bookingsWord(bookings.length)}${bookings.length === 200 ? ' (показаны первые 200 — уточните поиск или дату)' : ''}`}
+          </p>
+          <ul className="mt-3 space-y-3">
+            {bookings.map((b) => (
+              <BookingCard key={b.id} b={b} tz={tz} back={self} now={now} showDate />
+            ))}
+          </ul>
+        </>
       )}
     </AdminPage>
   );

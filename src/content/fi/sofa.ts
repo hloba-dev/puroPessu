@@ -3,10 +3,10 @@ import type {ServiceLanding} from '../types';
 export const sofa: ServiceLanding = {
   metaTitle: 'Sohvan pesu Helsinki, Espoo, Vantaa — alk. {price}',
   metaDescription:
-    'Kangassohvan höyrypesu kotonasi Helsingissä, Espoossa ja Vantaalla alk. {price}. Tahranpoisto ja hajunpoisto sisältyvät hintaan, maksu vasta työn jälkeen.',
+    'Kangassohvan syväpesu kotonasi Helsingissä, Espoossa ja Vantaalla alk. {price}. Turvalliset ammattipesuaineet, hajunpoisto sisältyy hintaan, maksu työn jälkeen.',
   breadcrumb: 'Sohvan pesu',
   badge: 'Kangassohvat ja nojatuolit',
-  h1: 'Sohvan pesu pääkaupunkiseudulla — höyrypesu kotonasi',
+  h1: 'Sohvan pesu pääkaupunkiseudulla — syväpesu kotonasi',
   intro:
     'Pesemme kangassohvat ja nojatuolit paikan päällä, joten sohvaa ei tarvitse kantaa mihinkään. Hinnat alkaen {price}, ja aikoja on joka päivä klo {from}–{to}, myös iltaisin ja viikonloppuisin. Pesun jälkeen kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan. Maksat vasta, kun työ on tehty.',
   prices: {
@@ -34,12 +34,12 @@ export const sofa: ServiceLanding = {
         text: 'Tulemme paikan päälle välineinemme. Sohva pysyy paikallaan, ja voit jatkaa päivääsi samalla.',
       },
       {
-        title: 'Kuuma höyry ja tehokas imu',
-        text: 'Höyry irrottaa lian syvältä kankaasta, ja imu vie sen pois pesuaineen kanssa. Kankaaseen ei jää jäämiä, jotka keräisivät uutta likaa.',
+        title: 'Ammattitason painehuuhtelukone',
+        text: 'Kone suihkuttaa pesuliuoksen kankaaseen ja imee sen saman tien pois lian mukana. Kankaaseen ei jää jäämiä, jotka keräisivät uutta likaa.',
       },
       {
-        title: 'Hellävaraiset pesuaineet',
-        text: 'Käytämme allergiaystävällisiä ja biohajoavia pesuaineita. Ne sopivat koteihin, joissa on lapsia ja lemmikkejä.',
+        title: 'Turvalliset ammattipesuaineet',
+        text: 'Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita. Ne ovat turvallisia lapsille ja lemmikeille.',
       },
       {
         title: 'Kiinteä hinta, ei ennakkomaksua',
@@ -67,8 +67,8 @@ export const sofa: ServiceLanding = {
         text: 'Esikäsittelemme tahrat ja likaisimmat kohdat, kuten käsinojat ja niskatyynyt, tahran laatuun sopivalla aineella.',
       },
       {
-        title: 'Höyrypesu ja imu',
-        text: 'Pesemme koko pinnan kuumalla höyryllä ja imemme lian ja pesuaineen pois. Kangas jää vain kosteaksi, ei märäksi.',
+        title: 'Syväpesu ja imu',
+        text: 'Pesemme koko pinnan ammattipesuaineella ja imemme lian ja pesuaineen saman tien pois. Kangas jää vain kosteaksi, ei märäksi.',
       },
       {
         title: 'Kuivatus puhaltimilla',
@@ -103,15 +103,15 @@ export const sofa: ServiceLanding = {
   },
   materials: {
     title: 'Mitkä kankaat pesemme',
-    lead: 'Useimmat sohvakankaat kestävät höyrypesun hyvin. Tarkistamme aina pesuohjelapun ja kokeilemme epävarmaa kangasta ensin huomaamattomaan kohtaan.',
+    lead: 'Useimmat sohvakankaat kestävät märkäpesun hyvin. Tarkistamme aina pesuohjelapun ja kokeilemme epävarmaa kangasta ensin huomaamattomaan kohtaan.',
     suitable: [
       {
         title: 'Mikrokuitu',
-        text: 'Yleisin sohvakangas. Kestää höyrypesun hyvin, ja tahrat irtoavat siitä yleensä helposti.',
+        text: 'Yleisin sohvakangas. Kestää pesun hyvin, ja tahrat irtoavat siitä yleensä helposti.',
       },
       {
         title: 'Villa ja villasekoite',
-        text: 'Pesemme miedolla aineella ja maltillisella lämmöllä, jotta kuidut eivät huovu.',
+        text: 'Pesemme miedolla aineella ja hellävaraisesti, jotta kuidut eivät huovu.',
       },
       {
         title: 'Alcantara',
@@ -127,7 +127,7 @@ export const sofa: ServiceLanding = {
       },
       {
         title: 'Polyesteri',
-        text: 'Kestävä kangas, joka sietää kuuman höyryn ja tehokkaan tahranpoiston.',
+        text: 'Kestävä kangas, joka sietää perusteellisen pesun ja tehokkaan tahranpoiston.',
       },
       {
         title: 'Chenille',
@@ -160,9 +160,9 @@ export const sofa: ServiceLanding = {
     headers: {aspect: 'Vertailukohta', rental: 'Vuokrapesuri', pro: 'Ammattilainen'},
     rows: [
       {
-        aspect: 'Lämpö',
-        rental: 'Lämmin vesi, joka ei irrota rasvaa kunnolla',
-        pro: 'Kuuma höyry irrottaa rasvan ja lian syvältä',
+        aspect: 'Pesuaineet',
+        rental: 'Yksi yleisaine kaikille kankaille ja tahroille',
+        pro: 'Ammattiaineet valitaan kankaan ja tahran mukaan, turvallisia lapsille ja lemmikeille',
       },
       {
         aspect: 'Imuteho ja kuivumisaika',

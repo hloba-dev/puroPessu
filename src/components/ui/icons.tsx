@@ -93,10 +93,13 @@ export const IconShield = (p: P) => (
   </svg>
 );
 
-export const IconSteam = (p: P) => (
+/** spray bottle — the professional cleaning products */
+export const IconSpray = (p: P) => (
   <svg {...base(p)}>
-    <path d="M7 3c-1.500 2 1.500 3 0 5.500M12 3c-1.500 2 1.500 3 0 5.500M17 3c-1.500 2 1.500 3 0 5.500" />
-    <path d="M3 13.500h18l-1.500 5.500a2 2 0 0 1-2 1.500h-11a2 2 0 0 1-2-1.500L3 13.500z" />
+    <path d="M7.500 10.500h6a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-6.500a2 2 0 0 1 2-2z" />
+    <path d="M8.500 10.500V7.500h4v3" />
+    <path d="M7 7.500h7.500L13 4H9.500a1.500 1.500 0 0 0-1.500 1.500v2" />
+    <path d="M18.500 3.500h.010M18.500 7h.010M21 5.250h.010" />
   </svg>
 );
 

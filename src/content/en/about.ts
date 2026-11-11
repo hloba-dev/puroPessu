@@ -39,7 +39,7 @@ export const about: AboutPage = {
   method: {
     title: 'How we clean',
     paragraphs: [
-      'Stains are pre-treated first, then the fabric is cleaned with hot steam and the dirt is extracted together with the detergent. We use allergy-friendly, biodegradable detergents. Odour removal is part of every cleaning.',
+      'Stains are pre-treated first, then the fabric is washed with a professional extractor that pulls the dirt out together with the detergent. We use professional cleaning products that are allergy-friendly, biodegradable and safe for children and pets. Odour removal is part of every cleaning.',
       'Leather furniture is cleaned by hand. Left alone, upholstery typically takes 4–8 hours to dry; we speed this up with blower fans, and drying is always included in the price. If you are not happy with the result, we clean again free of charge — that is our satisfaction guarantee.',
     ],
   },

@@ -45,7 +45,7 @@ export const careProducts: CareProductsPage = {
       'Bleach and chlorine-based products — they permanently fade and weaken the fibres.',
       'Coloured cloths and towels — the dye can transfer to damp fabric.',
       'Baby wipes on leather — over time their ingredients dry out and damage the surface.',
-      'A steam cleaner on aniline leather or velvet when you’re not sure what the material is — heat and moisture can leave permanent marks.',
+      'Heat and heavy wetting on aniline leather or velvet when you’re not sure what the material is — they can leave permanent marks.',
       'Vinegar and baking-soda “hacks” on delicate fabrics — they can leave rings, residue or faded colour.',
       'A hair dryer for drying — the heat can shrink the fabric and set whatever is left of the stain.',
     ],

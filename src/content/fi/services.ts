@@ -3,14 +3,14 @@ import type {ServicesPage} from '../types';
 export const services: ServicesPage = {
   metaTitle: "Palvelut — verhoilupesu ja hajunpoisto kotonasi",
   metaDescription:
-    "Sohvien, nahkahuonekalujen, tuolien, patjojen, autojen ja veneiden tekstiilien höyrypesu paikan päällä pääkaupunkiseudulla. Hajunpoisto ja kuivatus sisältyvät.",
+    "Sohvien, nahkahuonekalujen, tuolien, patjojen, autojen ja veneiden tekstiilien pesu paikan päällä pääkaupunkiseudulla. Hajunpoisto ja kuivatus sisältyvät.",
   h1: "Palvelut",
   intro:
-    "Pesemme verhoillut huonekalut, patjat ja muut tekstiilit siellä, missä ne ovat: kotonasi, pihallasi tai satamassa. Menetelmä on sama kaikessa: tahrojen esikäsittely, kuuma höyry ja tehokas imu, joka vie lian ja pesuaineen pois. Lopuksi kuivatamme pestyt tuotteet puhaltimilla, ja kuivatus sisältyy aina hintaan.",
+    "Pesemme verhoillut huonekalut, patjat ja muut tekstiilit siellä, missä ne ovat: kotonasi, pihallasi tai satamassa. Menetelmä on sama kaikessa: tahrojen esikäsittely, pesu ammattikäyttöön tarkoitetuilla, lapsille ja lemmikeille turvallisilla pesuaineilla ja tehokas imu, joka vie lian ja pesuaineen pois. Lopuksi kuivatamme pestyt tuotteet puhaltimilla, ja kuivatus sisältyy aina hintaan.",
   sections: {
     sofas: {
       title: "Sohvat ja nojatuolit",
-      text: "Kangassohva harmaantuu käytössä huomaamatta. Höyrypesu palauttaa värin ja raikkauden, ja tahrat käsitellään ennen pesua. Pesemme kaikenkokoiset sohvat, kulmasohvat ja nojatuolit.",
+      text: "Kangassohva harmaantuu käytössä huomaamatta. Syväpesu palauttaa värin ja raikkauden, ja tahrat käsitellään ennen pesua. Pesemme kaikenkokoiset sohvat, kulmasohvat ja nojatuolit.",
       bullets: [
         "Kangas-, mikrokuitu- ja samettiverhoilut",
         "Kulmasohvat, divaanit ja rahit",
@@ -20,7 +20,7 @@ export const services: ServicesPage = {
     },
     leather: {
       title: "Nahkahuonekalut",
-      text: "Nahka puhdistetaan käsin, ei höyryllä. Poistamme pintaan kertyneen rasvan ja lian miedolla nahkapesuaineella, jotta nahka pysyy pehmeänä.",
+      text: "Nahka puhdistetaan käsin, hellävaraisesti ja ilman kovaa hankausta. Poistamme pintaan kertyneen rasvan ja lian miedolla nahkapesuaineella, jotta nahka pysyy pehmeänä.",
       bullets: ["Nahkasohvat ja -nojatuolit", "Käsin puhdistus, ei liiallista kosteutta", "Kerromme, jos pinta on jo kulunut"],
     },
     chairs: {
@@ -30,7 +30,7 @@ export const services: ServicesPage = {
     },
     beds: {
       title: "Patjat ja sängyt",
-      text: "Patjaan kertyy hikeä, hilsettä ja pölypunkkeja. Höyrypesu ja imu puhdistavat patjan pinnan ja raikastavat sen sisältä. Nopeutamme kuivumista puhaltimilla veloituksetta.",
+      text: "Patjaan kertyy hikeä, hilsettä ja pölypunkkeja. Syväpesu ja tehokas imu puhdistavat patjan pinnan ja raikastavat sen sisältä. Nopeutamme kuivumista puhaltimilla veloituksetta.",
       bullets: [
         "Jousi-, vaahto- ja runkopatjat",
         "Sijauspatjat ja lasten patjat",
@@ -65,7 +65,7 @@ export const services: ServicesPage = {
     steps: [
       {title: "Varaa verkossa", text: "Valitse pestävät tuotteet ja vapaa aika. Näet hinnan heti."},
       {title: "Tulemme kotiisi", text: "Tuomme laitteet ja pesuaineet mukanamme. Tarvitsemme vain pistorasian."},
-      {title: "Pesemme", text: "Esikäsittely, kuuma höyry ja imu. Lopuksi kuivatamme puhaltimilla, veloituksetta. Kerromme etukäteen, jos jokin tahra ei välttämättä lähde."},
+      {title: "Pesemme", text: "Esikäsittely, pesu ammattipesuaineilla ja imu. Lopuksi kuivatamme puhaltimilla, veloituksetta. Kerromme etukäteen, jos jokin tahra ei välttämättä lähde."},
       {title: "Maksat lopuksi", text: "Maksu vasta työn jälkeen. Ei ennakkomaksua."},
     ],
   },
@@ -85,7 +85,7 @@ export const services: ServicesPage = {
     },
     {
       q: "Ovatko pesuaineet turvallisia lapsille ja lemmikeille?",
-      a: "Kyllä. Käytämme allergiaystävällisiä ja biohajoavia pesuaineita, ja ne huuhdellaan pois kankaasta.",
+      a: "Kyllä. Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, ja ne huuhdellaan pois kankaasta.",
     },
     {
       q: "Voiko hinta muuttua paikan päällä?",

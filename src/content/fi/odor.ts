@@ -8,7 +8,7 @@ export const odor: OdorPage = {
   badge: "Sisältyy pesun hintaan",
   h1: "Hajunpoisto sohvasta, nojatuolista ja patjasta",
   intro:
-    "Haju ei yleensä asu kankaan pinnassa vaan syvemmällä: pehmusteessa, vaahtomuovissa tai patjan sisällä. Siksi hajusuihke auttaa vain hetken. Me paikannamme hajun lähteen ja huuhtelemme sen pois höyrypesulla kotonasi.",
+    "Haju ei yleensä asu kankaan pinnassa vaan syvemmällä: pehmusteessa, vaahtomuovissa tai patjan sisällä. Siksi hajusuihke auttaa vain hetken. Me paikannamme hajun lähteen ja huuhtelemme sen pois syväpesulla kotonasi.",
   sources: {
     title: "Mistä haju tulee",
     lead: "Kun tiedetään, missä haju istuu, tiedetään myös, miten se saadaan pois.",
@@ -52,8 +52,8 @@ export const odor: OdorPage = {
         text: "Levitämme hajua neutraloivan, entsyymipohjaisen esikäsittelyn, joka hajottaa hajua aiheuttavat aineet.",
       },
       {
-        title: "Kuuma höyry ja imu",
-        text: "Höyry vie pesuliuoksen syvälle, ja tehokas imu huuhtelee lähteen pois yhdessä lian kanssa.",
+        title: "Painehuuhtelu ja imu",
+        text: "Painehuuhtelukone vie pesuliuoksen syvälle, ja tehokas imu huuhtelee lähteen pois yhdessä lian kanssa.",
       },
       {
         title: "Uusinta pahimpiin kohtiin",
@@ -105,7 +105,7 @@ export const odor: OdorPage = {
     },
     {
       q: "Onko käsittely turvallinen lapsille ja lemmikeille?",
-      a: "On. Käytämme allergiaystävällisiä ja biohajoavia aineita, ja pesuaine huuhdellaan pois. Kun pinta on kuiva, huonekalua voi käyttää normaalisti.",
+      a: "On. Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia aineita, ja pesuaine huuhdellaan pois. Kun pinta on kuiva, huonekalua voi käyttää normaalisti.",
     },
     {
       q: "Mitä teen ennen kuin tulette?",

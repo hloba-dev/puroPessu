@@ -3,10 +3,10 @@ import type {ServiceLanding} from '../types';
 export const sofa: ServiceLanding = {
   metaTitle: 'Sofa Cleaning Helsinki, Espoo, Vantaa — from {price}',
   metaDescription:
-    'Steam cleaning for fabric sofas and armchairs at your home in Helsinki, Espoo and Vantaa from {price}. Stain and odour removal included, pay after the work.',
+    'Deep cleaning for fabric sofas and armchairs at your home in Helsinki, Espoo and Vantaa from {price}. Stain and odour removal included, pay after the work.',
   breadcrumb: 'Sofa cleaning',
   badge: 'Fabric sofas and armchairs',
-  h1: 'Sofa Cleaning in the Helsinki Region — Steam Cleaned at Your Home',
+  h1: 'Sofa Cleaning in the Helsinki Region — Deep Cleaned at Your Home',
   intro:
     'We clean fabric sofas and armchairs right where they stand, so nothing has to be carried out of your home. Prices start at {price}, and we work every day from {from} to {to}, evenings and weekends included. After cleaning we dry the sofa with blower fans, and drying is always included in the price. You pay only once the job is done.',
   prices: {
@@ -34,12 +34,12 @@ export const sofa: ServiceLanding = {
         text: 'We bring all the equipment with us. Your sofa stays where it is, and you can get on with your day.',
       },
       {
-        title: 'Hot steam and strong extraction',
-        text: 'Steam loosens dirt deep in the fabric, and extraction pulls it out together with the detergent. No residue is left behind to attract new dirt.',
+        title: 'Professional extraction cleaning',
+        text: 'The cleaning solution is sprayed into the fabric and vacuumed straight back out together with the dirt. No residue is left behind to attract new dirt.',
       },
       {
-        title: 'Gentle detergents',
-        text: 'We use allergy-friendly, biodegradable detergents that suit homes with children and pets.',
+        title: 'Professional products, safe for children and pets',
+        text: 'We clean with professional products that are allergy-friendly, biodegradable and safe for homes with children and pets.',
       },
       {
         title: 'Fixed price, no prepayment',
@@ -67,8 +67,8 @@ export const sofa: ServiceLanding = {
         text: 'Stains and the dirtiest areas, such as armrests and headrests, are pre-treated with a product matched to the stain.',
       },
       {
-        title: 'Steam cleaning and extraction',
-        text: 'The whole surface is cleaned with hot steam and the dirt and detergent are extracted. The fabric is left damp, not wet.',
+        title: 'Extraction cleaning',
+        text: 'The whole surface is washed with a professional extractor, which rinses the fabric and pulls out the dirt and detergent in the same pass. The fabric is left damp, not wet.',
       },
       {
         title: 'Drying',
@@ -103,15 +103,15 @@ export const sofa: ServiceLanding = {
   },
   materials: {
     title: 'Fabrics we clean',
-    lead: 'Most upholstery fabrics handle steam cleaning well. We always check the care label and test any uncertain fabric on a hidden spot first.',
+    lead: 'Most upholstery fabrics handle extraction cleaning well. We always check the care label and test any uncertain fabric on a hidden spot first.',
     suitable: [
       {
         title: 'Microfibre',
-        text: 'The most common sofa fabric. It takes steam well, and stains usually lift easily.',
+        text: 'The most common sofa fabric. It takes wet cleaning well, and stains usually lift easily.',
       },
       {
         title: 'Wool and wool blends',
-        text: 'Cleaned with a mild detergent and moderate heat so the fibres don\'t felt.',
+        text: 'Cleaned with a mild, wool-safe detergent and a light touch so the fibres don\'t felt.',
       },
       {
         title: 'Alcantara',
@@ -127,7 +127,7 @@ export const sofa: ServiceLanding = {
       },
       {
         title: 'Polyester',
-        text: 'A hard-wearing fabric that tolerates hot steam and thorough stain treatment.',
+        text: 'A hard-wearing fabric that tolerates thorough cleaning and stain treatment.',
       },
       {
         title: 'Chenille',
@@ -160,9 +160,9 @@ export const sofa: ServiceLanding = {
     headers: {aspect: 'What matters', rental: 'Rental machine', pro: 'Professional'},
     rows: [
       {
-        aspect: 'Heat',
-        rental: 'Warm water that doesn\'t really cut through grease',
-        pro: 'Hot steam loosens grease and deep dirt',
+        aspect: 'Cleaning products',
+        rental: 'One all-purpose shampoo that is easy to overdose',
+        pro: 'Professional products matched to the fabric and the stain, safe for children and pets',
       },
       {
         aspect: 'Suction and drying time',

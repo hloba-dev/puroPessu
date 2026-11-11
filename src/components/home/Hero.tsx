@@ -7,7 +7,7 @@ import {formatEur, l10n, shortHour} from '@/lib/format';
 import type {Catalog, GalleryItem, Settings} from '@/lib/types';
 import {BeforeAfter} from '@/components/BeforeAfter';
 import {GlowButton} from '@/components/ui/GlowButton';
-import {IconCheck, IconClock} from '@/components/ui/icons';
+import {IconCheck, IconClock, IconShield} from '@/components/ui/icons';
 import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {RingMotion} from './RingMotion';
 import styles from './Hero.module.css';
@@ -61,6 +61,7 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
   const mockTotal = mockRows.reduce((sum, r) => sum + r.service.priceCents * r.qty, 0);
 
   const hours = t('badge', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)});
+  const safe = t('safe');
   const trust = t.raw('trust') as string[];
 
   return (
@@ -68,14 +69,23 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
       <div className={styles.bg} aria-hidden="true" />
 
       <div className={`container-x ${styles.top}`}>
-        {/* on phones the wrapper dissolves (display: contents), the badge hides and the slider slots in between the headline and the buttons */}
+        {/* on phones the wrapper dissolves (display: contents), the badges hide and the slider slots in between the headline and the buttons */}
         <div className={styles.copy}>
-          <p className={`${styles.badge} ${styles.rise}`}>
-            <span className={styles.badgeIcon}>
-              <IconClock width={18} height={18} />
-            </span>
-            <span>{hours}</span>
-          </p>
+          <div className={`${styles.badges} ${styles.rise}`}>
+            {/* the products are safe for children and pets: said before anything else */}
+            <p className={`${styles.badge} ${styles.badgeSafe}`} data-safe>
+              <span className={styles.badgeIcon}>
+                <IconShield width={18} height={18} />
+              </span>
+              <span>{safe}</span>
+            </p>
+            <p className={styles.badge}>
+              <span className={styles.badgeIcon}>
+                <IconClock width={18} height={18} />
+              </span>
+              <span>{hours}</span>
+            </p>
+          </div>
           <h1 id="hero-title" className={styles.h1}>
             <span className={styles.wipe} style={delay(0.05)}>
               {t('h1Line1')}
@@ -88,11 +98,17 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
             {t('sub', {price: formatEur(fromPriceCents, locale)})}
           </p>
           <div className={`${styles.ctas} ${styles.rise}`} style={delay(0.4)}>
-            {/* phones only: the opening hours shrink to a small chip above the prices button */}
-            <p className={styles.hoursMini}>
-              <IconClock width={14} height={14} />
-              <span>{hours}</span>
-            </p>
+            {/* phones only: the two badges shrink to chips right above the buttons */}
+            <div className={styles.chips}>
+              <p className={`${styles.chip} ${styles.chipSafe}`} data-safe>
+                <IconShield width={15} height={15} />
+                <span>{safe}</span>
+              </p>
+              <p className={styles.chip}>
+                <IconClock width={14} height={14} />
+                <span>{hours}</span>
+              </p>
+            </div>
             <GlowButton href="/varaa-aika" className={styles.cta}>
               {t('cta')}
             </GlowButton>

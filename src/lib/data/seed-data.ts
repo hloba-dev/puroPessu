@@ -88,7 +88,7 @@ const S: SeedService[] = [
     description: {fi: 'Istuintyynyt, selkänoja ja käsinojat.', ru: 'Сиденья, спинка и подлокотники.', en: 'Seat cushions, backrest and armrests.'}},
   {slug: 'sofa-3', category: 'sofas', price: 149, min: 60, odor: true,
     name: {fi: '3-istuttava sohva', ru: '3-местный диван', en: '3-seater sofa'},
-    description: {fi: 'Yleisin sohvakoko, kaikki pinnat höyryllä.', ru: 'Самый частый размер, все поверхности с паром.', en: 'The most common size, all surfaces steam-cleaned.'}},
+    description: {fi: 'Yleisin sohvakoko, kaikki pinnat pestään.', ru: 'Самый частый размер, чистим все поверхности.', en: 'The most common size, all surfaces cleaned.'}},
   {slug: 'sofa-4', category: 'sofas', price: 169, min: 120, odor: true,
     name: {fi: '4-istuttava sohva', ru: '4-местный диван', en: '4-seater sofa'},
     description: {fi: 'Suora 4-istuttava tai divaanisohva.', ru: 'Прямой 4-местный диван или диван с оттоманкой.', en: 'Straight 4-seater or chaise sofa.'}},
@@ -165,7 +165,7 @@ const S: SeedService[] = [
   // Muut pesukohteet
   {slug: 'stroller', category: 'other', price: 25, min: 30, from: true,
     name: {fi: 'Lastenvaunut, rattaat tai turvaistuin', ru: 'Детская коляска или автокресло', en: 'Stroller or child car seat'},
-    description: {fi: 'Kangasosat höyryllä ja allergiaystävällisellä aineella.', ru: 'Тканевые части паром и гипоаллергенным средством.', en: 'Fabric parts with steam and an allergy-friendly product.'}},
+    description: {fi: 'Kangasosat pestään allergiaystävällisellä, lapsille turvallisella aineella.', ru: 'Тканевые части чистим гипоаллергенным средством, безопасным для детей.', en: 'Fabric parts cleaned with an allergy-friendly, child-safe product.'}},
   {slug: 'soft-toy', category: 'other', price: 20, min: 15, from: true,
     name: {fi: 'Isot pehmolelut', ru: 'Большие мягкие игрушки', en: 'Large soft toys'},
     description: {fi: 'Isot pehmolelut, jotka eivät mahdu pesukoneeseen.', ru: 'Большие игрушки, которые не помещаются в стиральную машину.', en: 'Large soft toys that do not fit in a washing machine.'}},

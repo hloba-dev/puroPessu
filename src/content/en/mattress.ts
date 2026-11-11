@@ -3,12 +3,12 @@ import type {ServiceLanding} from '../types';
 export const mattress: ServiceLanding = {
   metaTitle: 'Mattress Cleaning Helsinki, Espoo, Vantaa — from {price}',
   metaDescription:
-    'Mattress and bed steam cleaning at your home in Helsinki, Espoo and Vantaa from {price}. Tackles sweat, urine stains and dust mites. Pay after the work.',
+    'Mattress and bed deep cleaning at your home in Helsinki, Espoo and Vantaa from {price}. Tackles sweat, urine stains and dust mites. Pay after the work.',
   breadcrumb: 'Mattress cleaning',
   badge: 'Mattresses and beds',
   h1: 'Mattress Cleaning in the Helsinki Region — Beds Cleaned at Your Home',
   intro:
-    'We steam clean spring mattresses, box beds, toppers and children\'s mattresses right in your bedroom. Prices start at {price}, and morning slots begin at {from}, so the mattress has plenty of time to dry before bedtime. We speed up drying with blower fans, and drying is always included in the price.',
+    'We deep clean spring mattresses, box beds, toppers and children\'s mattresses right in your bedroom. Prices start at {price}, and morning slots begin at {from}, so the mattress has plenty of time to dry before bedtime. We speed up drying with blower fans, and drying is always included in the price.',
   prices: {
     title: 'Mattress cleaning prices',
     lead: 'The price depends on the size and type – single mattress, double bed or topper. The first-order discount and bundle offers, such as a sofa and a mattress together, are shown in the price list and in the booking.',
@@ -21,7 +21,7 @@ export const mattress: ServiceLanding = {
   promise: {
     title: 'An honest word about mattress stains',
     paragraphs: [
-      'Fresh urine, vomit and drink stains, as well as general greyness, usually come out well. We pre-treat the stains before steam cleaning.',
+      'Fresh urine, vomit and drink stains, as well as general greyness, usually come out well. We pre-treat the stains before the deep clean.',
       'Old yellowed sweat stains have soaked deep into the fabric. They get much lighter but don\'t always vanish completely. We tell you this before we start.',
       'If you\'re not happy with the result, we clean the mattress again free of charge.',
     ],
@@ -38,12 +38,12 @@ export const mattress: ServiceLanding = {
         text: 'Water must not stay in a mattress. We use only as much moisture as the cleaning needs, and strong extraction removes the rest.',
       },
       {
-        title: 'Hot steam',
-        text: 'Steam loosens sweat, skin flakes and dirt from the fabric – the very things dust mites feed on.',
+        title: 'Deep extraction cleaning',
+        text: 'The cleaning solution loosens sweat, skin flakes and dirt from the fabric – the very things dust mites feed on – and the extractor pulls them straight out.',
       },
       {
-        title: 'Allergy-friendly products',
-        text: 'Biodegradable, allergy-friendly detergents are extracted at the end, so no residue stays in the mattress.',
+        title: 'Professional, safe products',
+        text: 'We use professional products that are allergy-friendly, biodegradable and safe for children and pets. They are extracted at the end, so no residue stays in the mattress.',
       },
       {
         title: 'Free drying with blower fans',
@@ -67,8 +67,8 @@ export const mattress: ServiceLanding = {
         text: 'Urine, sweat and other stains are treated according to their type.',
       },
       {
-        title: 'Steam cleaning and extraction',
-        text: 'The top and sides are cleaned with hot steam, then dirt and moisture are extracted. Flippable mattresses can be done on both sides.',
+        title: 'Extraction cleaning',
+        text: 'The top and sides are washed with a professional extractor that pulls the dirt and moisture straight back out. Flippable mattresses can be done on both sides.',
       },
       {
         title: 'Drying with blower fans',
@@ -107,7 +107,7 @@ export const mattress: ServiceLanding = {
     suitable: [
       {
         title: 'Spring mattresses',
-        text: 'The most common type. It takes steam well and dries quickly when air can circulate.',
+        text: 'The most common type. It takes wet cleaning well and dries quickly when air can circulate.',
       },
       {
         title: 'Box beds and continental beds',
@@ -163,9 +163,9 @@ export const mattress: ServiceLanding = {
         pro: 'Strong extraction plus free blower drying',
       },
       {
-        aspect: 'Heat',
-        rental: 'Warm water doesn\'t shift sweat and oils properly',
-        pro: 'Hot steam loosens sweat and grease',
+        aspect: 'Cleaning products',
+        rental: 'A general-purpose shampoo that doesn\'t shift sweat and oils properly',
+        pro: 'Professional products for sweat and urine, safe for children and pets',
       },
       {
         aspect: 'Detergent residue',

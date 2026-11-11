@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {requireAdmin} from '@/lib/admin/auth';
 import {addDays, utcToZoned, zonedToUtc} from '@/lib/booking/tz';
 import {getSettings} from '@/lib/data/public';
+import {bookingHref} from '@/components/admin/bookings';
 import {AdminPage, Card, StatusBadge, adminBtnPrimary, eur, fmtDateTime} from '@/components/admin/ui';
 
 export const metadata = {title: 'Обзор'};
@@ -35,9 +36,9 @@ export default async function AdminDashboard() {
   const upcoming = week.data ?? [];
   const todays = upcoming.filter((b) => b.starts_at < dayEnd);
   const tiles = [
-    {label: 'Брони сегодня', value: todays.length, href: '/admin/bookings'},
-    {label: 'Брони на 7 дней', value: upcoming.length, href: '/admin/bookings'},
-    {label: 'Ждут подтверждения', value: pending.count ?? 0, href: '/admin/bookings?status=pending'},
+    {label: 'Брони сегодня', value: todays.length, href: `/admin/bookings#day-${today}`},
+    {label: 'Брони на 7 дней', value: upcoming.length, href: '/admin/bookings?view=list'},
+    {label: 'Ждут подтверждения', value: pending.count ?? 0, href: '/admin/bookings?view=list&status=pending'},
     {label: 'Новые B2B-запросы', value: quotes.count ?? 0, href: '/admin/quotes'},
     {label: 'Новые сообщения', value: messages.count ?? 0, href: '/admin/messages'},
     {label: 'Заявки на сертификаты', value: giftCards.count ?? 0, href: '/admin/gift-cards'},
@@ -70,17 +71,20 @@ export default async function AdminDashboard() {
         ) : (
           <ul className="divide-y divide-hairline">
             {upcoming.map((b) => (
-              <li key={b.id} className="flex flex-wrap items-center justify-between gap-3 py-3">
-                <div>
-                  <p className="font-semibold">{fmtDateTime(b.starts_at)}</p>
-                  <p className="text-sm text-muted">
-                    {b.ref_code} · {b.name} · {b.city}
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="font-semibold">{eur(b.total_cents)}</span>
-                  <StatusBadge status={b.status} />
-                </div>
+              <li key={b.id}>
+                {/* the whole row opens the booking on the week board */}
+                <Link href={bookingHref(b, settings.timezone)} className="-mx-2 flex flex-wrap items-center justify-between gap-3 rounded-lg px-2 py-3 hover:bg-text/6">
+                  <span>
+                    <span className="block font-semibold">{fmtDateTime(b.starts_at)}</span>
+                    <span className="block text-sm text-muted">
+                      {b.ref_code} · {b.name} · {b.city}
+                    </span>
+                  </span>
+                  <span className="flex items-center gap-3">
+                    <span className="font-semibold">{eur(b.total_cents)}</span>
+                    <StatusBadge status={b.status} />
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>

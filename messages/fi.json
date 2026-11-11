@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "Puro — sohvan pesu kotonasi, joka päivä {from}–{to}",
-    "defaultDescription": "Sohvien, nojatuolien ja patjojen höyrypesu paikan päällä Helsingissä ja koko pääkaupunkiseudulla. Kuivatus sisältyy aina hintaan. Varaa aika verkossa — ei ennakkomaksua."
+    "defaultDescription": "Sohvien, nojatuolien ja patjojen pesu kotonasi Helsingissä ja pääkaupunkiseudulla. Ammattipesuaineet, turvalliset lapsille ja lemmikeille. Kuivatus sisältyy hintaan."
   },
   "nav": {
     "main": "Päävalikko",
@@ -47,7 +47,7 @@
     "backToTop": "Takaisin ylös"
   },
   "footer": {
-    "tagline": "Sohvien, nojatuolien ja patjojen höyrypesu kotonasi. Helsinki, Espoo, Vantaa ja koko pääkaupunkiseutu.",
+    "tagline": "Sohvien, nojatuolien ja patjojen pesu kotonasi ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Helsinki, Espoo, Vantaa ja koko pääkaupunkiseutu.",
     "servicesTitle": "Palvelut",
     "infoTitle": "Tietoa",
     "contactTitle": "Yhteystiedot",
@@ -107,12 +107,12 @@
   },
   "home": {
     "metaTitle": "Sohvan pesu kotonasi Helsingissä — alk. {price}, joka päivä {from}–{to} | Puro",
-    "metaDescription": "Sohvien, nojatuolien ja patjojen höyrypesu kotonasi Helsingissä, Espoossa ja Vantaalla. Joka päivä {from}–{to}, alk. {price}. Kuivatus aina veloituksetta.",
+    "metaDescription": "Sohvien, nojatuolien ja patjojen syväpesu kotonasi Helsingissä, Espoossa ja Vantaalla. Joka päivä {from}–{to}, alk. {price}. Turvalliset ammattipesuaineet, kuivatus veloituksetta.",
     "hero": {
       "badge": "Paikan päällä · joka päivä {from}–{to}",
       "h1Line1": "Sohvan pesu",
       "h1Line2": "kotonasi",
-      "sub": "Sohvien, nojatuolien ja patjojen höyrypesu Helsingissä ja koko pääkaupunkiseudulla. Alk. {price} — kuivatus puhaltimilla aina veloituksetta, ei ennakkomaksua.",
+      "sub": "Sohvien, nojatuolien ja patjojen syväpesu ammattipesuaineilla Helsingissä ja koko pääkaupunkiseudulla. Alk. {price} — kuivatus puhaltimilla aina veloituksetta, ei ennakkomaksua.",
       "cta": "Varaa aika",
       "ctaSecondary": "Katso hinnasto",
       "mockTitle": "Mitä pestään?",
@@ -125,7 +125,8 @@
         "Ei ennakkomaksua",
         "Kuivatus veloituksetta"
       ],
-      "trustLabel": "Lupauksemme"
+      "trustLabel": "Lupauksemme",
+      "safe": "Turvallista lapsille ja lemmikeille"
     },
     "benefits": {
       "title": "Miksi varata meiltä",
@@ -180,7 +181,7 @@
         },
         "vehicles": {
           "title": "Auton verhoilu",
-          "text": "Istuimet höyrypesulla pihassasi tai parkkihallissa."
+          "text": "Pesemme istuimet pihassasi tai parkkihallissa."
         }
       }
     },
@@ -197,8 +198,8 @@
           "text": "Saavumme sovittuna aikana laitteiden kanssa. Tarvitsemme vain pistorasian ja vesipisteen."
         },
         {
-          "title": "Höyrypesu ja tahranpoisto",
-          "text": "Esikäsittelemme tahrat, pesemme höyryllä ja imemme lian ja pesuaineen pois kankaasta."
+          "title": "Pesu ja tahranpoisto",
+          "text": "Esikäsittelemme tahrat ammattipesuaineilla, pesemme kankaan painehuuhtelukoneella ja imemme lian ja pesuaineen pois."
         },
         {
           "title": "Kuivatus — veloituksetta",
@@ -216,12 +217,12 @@
           "text": "Emme jätä sohvaa kuivumaan itsekseen: kuivaamme sen puhaltimilla jokaisen pesun päätteeksi, veloituksetta."
         },
         {
-          "title": "Höyry jokaisessa pesussa",
-          "text": "Kuuma höyry irrottaa lian syvältä ja vähentää pölypunkkeja ilman voimakkaita kemikaaleja."
+          "title": "Ammattilaisten pesuaineet",
+          "text": "Pesemme ammattikäyttöön tarkoitetuilla aineilla, jotka valitsemme kankaan ja tahran mukaan. Painehuuhtelukone huuhtelee lian ja pesuaineen pois syvältä."
         },
         {
-          "title": "Allergiaystävälliset aineet",
-          "text": "Käytämme biohajoavia, hajusteettomia pesuaineita, jotka sopivat lapsi- ja lemmikkiperheille."
+          "title": "Turvallista lapsille ja lemmikeille",
+          "text": "Pesuaineemme ovat allergiaystävällisiä, biohajoavia ja hajusteettomia, ja ne huuhdellaan kankaasta pois. Sohva on turvallinen myös lapsille ja lemmikeille."
         },
         {
           "title": "Ei pesuainejäämiä",
@@ -240,7 +241,7 @@
     "gallery": {
       "eyebrow": "Ennen ja jälkeen",
       "title": "Katso ero itse",
-      "lead": "Vedä palkkia ja katso, mitä höyrypesu tekee kankaalle."
+      "lead": "Vedä palkkia ja katso, mitä pesu tekee kankaalle."
     },
     "pricing": {
       "eyebrow": "Hinnasto",
@@ -687,7 +688,7 @@
     "related": "Lue myös",
     "read": "Lue artikkeli",
     "ctaTitle": "Jäikö tahra tai haju? Me hoidamme sen",
-    "ctaText": "Höyrypesu kotonasi, joka päivä. Näet hinnan ja vapaat ajat heti.",
+    "ctaText": "Ammattilaisen pesu kotonasi, joka päivä. Näet hinnan ja vapaat ajat heti.",
     "tip": "Vinkki",
     "warning": "Huomio"
   },

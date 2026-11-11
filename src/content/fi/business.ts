@@ -11,7 +11,7 @@ export const business: BusinessPage = {
   method: {
     title: 'Menetelmä liiketiloihin',
     paragraphs: [
-      'Käytämme höyrypesua ja tehokasta imua. Kuuma vesi irrottaa lian, ja lika imetään kankaasta pois yhdessä pesuaineen kanssa. Kankaaseen ei jää pesuainejäämiä, jotka keräisivät likaa nopeasti uudelleen. Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      'Käytämme ammattitason painehuuhtelukonetta ja ammattikäyttöön tarkoitettuja pesuaineita. Pesuliuos irrottaa lian, ja lika imetään kankaasta pois yhdessä pesuaineen kanssa. Kankaaseen ei jää pesuainejäämiä, jotka keräisivät likaa nopeasti uudelleen. Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
       'Pesuaineemme ovat allergiaystävällisiä ja biohajoavia, eikä niistä jää tiloihin voimakasta tuoksua. Teemme työn mielellään aikaisin aamulla ennen aukioloaikaa, illalla tai viikonloppuna, jotta asiakkaidenne ja henkilökuntanne arki ei keskeydy.',
     ],
   },

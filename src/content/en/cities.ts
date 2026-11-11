@@ -4,15 +4,15 @@ export const cityTemplates: CityTemplates = {
   sofa: {
     metaTitle: 'Sofa Cleaning {inCity} — from {price}, at Home',
     metaDescription:
-      'Steam cleaning for sofas and armchairs right at your home {inCity}, from {price}. Every day {from}–{to}, no prepayment. See free times and book easily online.',
-    h1: 'Sofa cleaning {inCity} — steam cleaned at your home',
+      'Deep cleaning for sofas and armchairs right at your home {inCity}, from {price}. Every day {from}–{to}, no prepayment. See free times and book easily online.',
+    h1: 'Sofa cleaning {inCity} — deep cleaned at your home',
     breadcrumb: '{city}',
     pricesTitle: 'Sofa cleaning prices {inCity}'
   },
   mattress: {
     metaTitle: 'Mattress Cleaning {inCity} — from {price}, at Home',
     metaDescription:
-      'Mattress steam cleaning and odour removal right at your home {inCity}, from {price}. Every day {from}–{to}, pay after the work. See free times and book online.',
+      'Mattress deep cleaning and odour removal right at your home {inCity}, from {price}. Every day {from}–{to}, pay after the work. See free times and book online.',
     h1: 'Mattress cleaning {inCity} — done right on your bed',
     breadcrumb: '{city}',
     pricesTitle: 'Mattress cleaning prices {inCity}'
@@ -43,13 +43,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'In Helsinki, your sofa probably went up a narrow stairwell to get into the flat, and nobody wants to carry it back down to a cleaner. So we come to you and clean it where it stands — in the old stone buildings of Töölö and Kallio just as well as in newer homes in Lauttasaari or Vuosaari.',
-        'Our sofa cleaning in Helsinki uses hot steam and strong extraction, pulling dirt and moisture out of the fabric in one go. The detergents are allergy-friendly and biodegradable, and odour removal is always included. Afterwards we set up blower fans to speed up drying, at no extra cost.'
+        'Our sofa cleaning in Helsinki uses a professional extractor that pulls the dirt and moisture out of the fabric in one go. Our professional cleaning products are allergy-friendly, biodegradable and safe for children and pets, and odour removal is always included. Afterwards we set up blower fans to speed up drying, at no extra cost.'
       ]
     },
     mattress: {
       intro: [
         'In a Helsinki studio or one-bedroom flat, the same room often doubles as bedroom, home office and drying room. That means the mattress collects dust, sweat and moisture faster than usual — and nobody fancies carrying it down the stairs of a building with no lift.',
-        'We do mattress cleaning in Helsinki at your home with steam and powerful extraction, so the mattress stays on the bed the whole time. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans, and drying is always included in the price. A morning clean leaves the most time before bedtime.'
+        'We do mattress cleaning in Helsinki at your home with professional products and powerful extraction, so the mattress stays on the bed the whole time. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans, and drying is always included in the price. A morning clean leaves the most time before bedtime.'
       ]
     },
     districts: [
@@ -94,13 +94,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'In Espoo we clean a lot of family sofas — in detached houses in Tapiola and Haukilahti, apartment blocks in Matinkylä and Olari, and terraced houses in Espoonlahti and Kivenlahti. Juice spills, a muddy dog and crumbs from evening snacks all leave their mark sooner or later.',
-        'Sofa cleaning in Espoo happens at your home with hot steam and extraction, and odour removal is always included — which helps a lot if the dog or cat likes to sleep on the sofa. Our biodegradable, allergy-friendly detergents suit homes with small children and pets.'
+        'Sofa cleaning in Espoo happens at your home with a professional extractor, and odour removal is always included — which helps a lot if the dog or cat likes to sleep on the sofa. Our professional products are biodegradable, allergy-friendly and safe for small children and pets.'
       ]
     },
     mattress: {
       intro: [
         'Families with children have plenty of mattresses, and each one has its own story: a leaking nappy, a stomach bug or juice knocked over at bedtime. With mattress cleaning in Espoo done at home, one visit can take care of every bed in the house.',
-        'Steam and extraction lift dirt and odours from the upper layers of the mattress, and odour removal is included. Our blower fans speed up drying at no extra cost, and in a terraced or detached house a warm room with good airflow helps too.'
+        'Extraction cleaning with professional, child-safe products lifts dirt and odours from the upper layers of the mattress, and odour removal is included. Our blower fans speed up drying at no extra cost, and in a terraced or detached house a warm room with good airflow helps too.'
       ]
     },
     districts: [
@@ -145,7 +145,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Lots of people in Vantaa leave for work early or get home late — to the airport, logistics jobs or on the train into Helsinki. That’s why sofa cleaning in Vantaa is available every day, including evenings and weekends, and you can see the free times right in the calendar.',
-        'We come to Tikkurila, Myyrmäki, Korso or Kivistö and clean your sofa, armchair or loose cushions at home with hot steam. You only pay once the work is done, and the price is the one you saw in the booking. If you’re not happy with the result, we’ll clean it again free of charge.'
+        'We come to Tikkurila, Myyrmäki, Korso or Kivistö and clean your sofa, armchair or loose cushions at home with a professional extractor and products that are safe for children and pets. You only pay once the work is done, and the price is the one you saw in the booking. If you’re not happy with the result, we’ll clean it again free of charge.'
       ]
     },
     mattress: {
@@ -194,13 +194,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'In Kauniainen, home is often a spacious detached house, and the living-room sofa has been chosen to match the interior — frequently light linen, wool or another natural fibre. Light fabric looks lovely, but every coffee mark and greying armrest shows straight away.',
-        'Sofa cleaning in Kauniainen is done at your home: we check the fabric first, adjust the steam and detergent to suit it and clean the whole surface evenly so no tide marks are left. With a light sofa, that even finish matters most, and our blower fans, always included in the price, speed up drying.'
+        'Sofa cleaning in Kauniainen is done at your home: we check the fabric first, choose a professional, child- and pet-safe product to suit it and clean the whole surface evenly so no tide marks are left. With a light sofa, that even finish matters most, and our blower fans, always included in the price, speed up drying.'
       ]
     },
     mattress: {
       intro: [
         'A large house usually has several beds: the bedrooms, a guest room and perhaps the old rooms of children who have moved out. That’s why mattress cleaning in Kauniainen makes sense in one go — all the mattresses in a single visit.',
-        'We clean mattresses with steam and extraction using allergy-friendly, biodegradable products, and odour removal is included. In a roomy house, mattresses usually dry well when the rooms are warm and the air can circulate.'
+        'We clean mattresses by extraction using professional, allergy-friendly and biodegradable products, and odour removal is included. In a roomy house, mattresses usually dry well when the rooms are warm and the air can circulate.'
       ]
     },
     districts: [
@@ -220,7 +220,7 @@ export const cities: Record<CitySlug, CityContent> = {
       'Kauniainen has many detached houses, some of them old villas, plus smaller apartment buildings near the centre. In larger houses the sofa is often a big corner sofa or a full suite, so allow enough time for the job. When drying happens in a large room, a window left ajar and steady warmth are usually enough.',
     faq: [
       {
-        q: 'Is steam cleaning safe for a light linen sofa?',
+        q: 'Is extraction cleaning safe for a light linen sofa?',
         a: 'In most cases, yes. We test the fabric on a hidden spot first, and if it can’t take wet cleaning, we’ll tell you before we start.'
       },
       {
@@ -240,7 +240,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kerava is a town on the main railway line, and many residents commute to work in the capital region. When your weekdays are spent on the train, you don’t want to leave sofa cleaning to the weekend — so we come to Kerava every day, including evenings and weekends.',
-        'We clean your sofa at home in Kaleva, Sompio, Kaskela or wherever you live in Kerava, using hot steam and extraction. Left alone, a sofa typically takes 4–8 hours to dry; we speed this up with blower fans, always included in the price. The price is final, and you pay only after the work is done.'
+        'We clean your sofa at home in Kaleva, Sompio, Kaskela or wherever you live in Kerava, using a professional extractor and child- and pet-safe products. Left alone, a sofa typically takes 4–8 hours to dry; we speed this up with blower fans, always included in the price. The price is final, and you pay only after the work is done.'
       ]
     },
     mattress: {
@@ -289,7 +289,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Järvenpää lies between the main railway line and Lake Tuusulanjärvi, and homes range from apartment blocks in the centre to detached houses in Kyrölä, Saunakallio and Haarajoki. Sofa cleaning in Järvenpää always takes place at your home, so the sofa never has to be transported.',
-        'Hot steam and extraction lift dirt out of the fabric, and odour removal comes with every clean. If the sofa has been through family life with kids or is the dog’s favourite spot, mention it in your booking so we come prepared for stains and smells.'
+        'A professional extractor lifts the dirt out of the fabric, the products we use are safe for children and pets, and odour removal comes with every clean. If the sofa has been through family life with kids or is the dog’s favourite spot, mention it in your booking so we come prepared for stains and smells.'
       ]
     },
     mattress: {
@@ -338,7 +338,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Many people in Tuusula live in detached houses in Hyrylä, Jokela, Kellokoski or near the shore of Lake Tuusulanjärvi. Big living rooms and corner sofas are common, and the whole family spends a lot of time on them.',
-        'Sofa cleaning in Tuusula is done at your home with hot steam and extraction. Living close to nature means sand, pollen and pet hair work their way into the sofa, so we vacuum those out first and then clean the whole surface evenly.'
+        'Sofa cleaning in Tuusula is done at your home with a professional extractor and cleaning products that are safe for the whole family, pets included. Living close to nature means sand, pollen and pet hair work their way into the sofa, so we vacuum those out first and then clean the whole surface evenly.'
       ]
     },
     mattress: {
@@ -386,7 +386,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Homes in Sipoo tend to be spacious with large plots — in Nikkilä, Söderkulla and Talma and out in the countryside between the villages. Taking a sofa to a cleaner would mean hiring a van and two people to lift it, so we’d much rather clean it at your home.',
-        'Sofa cleaning in Sipoo is available every day, including evenings and weekends. We clean the fabric with steam and extraction, the price is shown in the booking up front, and no prepayment is needed.'
+        'Sofa cleaning in Sipoo is available every day, including evenings and weekends. We clean the fabric by extraction with professional products that are safe for children and pets, the price is shown in the booking up front, and no prepayment is needed.'
       ]
     },
     mattress: {
@@ -434,13 +434,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'People in Kirkkonummi live in apartment buildings in Masala and the centre, detached houses in Veikkola and by the sea in Kantvik and Upinniemi. Many also have a summer cottage somewhere along the municipality’s long coastline.',
-        'Sofa cleaning in Kirkkonummi is done at your home with steam and extraction. Damp sea air and the musty smell a cottage picks up over winter cling to fabric, which is why odour removal is part of every clean.'
+        'Sofa cleaning in Kirkkonummi is done at your home: professional, child- and pet-safe products go into the fabric and the extractor pulls them straight back out with the dirt. Damp sea air and the musty smell a cottage picks up over winter cling to fabric, which is why odour removal is part of every clean.'
       ]
     },
     mattress: {
       intro: [
         'Cottage mattresses often spend the whole winter in cold, damp conditions and smell musty by spring. Mattress cleaning in Kirkkonummi fits nicely at the start or end of cottage season — as long as the cottage can be reached by car.',
-        'Steam and extraction remove dust and odours from the mattress surface, and our blower fans, always included in the price, speed up drying. If there is mould in the mattress, we’ll tell you straight: cleaning won’t remove it.'
+        'Extraction cleaning removes dust and odours from the mattress surface, and our blower fans, always included in the price, speed up drying. If there is mould in the mattress, we’ll tell you straight: cleaning won’t remove it.'
       ]
     },
     districts: [
@@ -481,7 +481,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Many families in Nurmijärvi live in large detached houses in Klaukkala, Rajamäki or the church village, often with a big corner sofa that fits everyone in the evening. Sofa cleaning in Nurmijärvi is done at your home, so the heavy sofa never has to move.',
-        'We clean the sofa, armchairs and footstool with hot steam and extraction, and odour removal is included. Blower fans then speed up drying, and that is always included in the price too.'
+        'We deep clean the sofa, armchairs and footstool with a professional extractor, the products are safe for children and pets, and odour removal is included. Blower fans then speed up drying, and that is always included in the price too.'
       ]
     },
     mattress: {
@@ -577,7 +577,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Hyvinkää is a town on the main railway line with a real mix of homes: apartment blocks in the centre, detached houses in Paavola and Hakala, and the wooded streets around the Sveitsi area. Sofa cleaning in Hyvinkää is done at your home, so the sofa never has to be moved.',
-        'Steam and extraction lift the dirt out of the fabric, and odour removal is included. When the job is done, you pay exactly the price you saw in the booking — not a euro more.'
+        'Professional, child- and pet-safe products and strong extraction lift the dirt out of the fabric, and odour removal is included. When the job is done, you pay exactly the price you saw in the booking — not a euro more.'
       ]
     },
     mattress: {

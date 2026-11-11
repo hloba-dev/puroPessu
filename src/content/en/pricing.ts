@@ -46,7 +46,7 @@ export const pricing: PricingPage = {
   faq: [
     {
       q: 'What is included in the price?',
-      a: 'Stain pre-treatment, steam cleaning with extraction, odour removal, and all detergents and equipment. We clean in your home, so nothing has to be transported. Drying with blower fans is always included too.',
+      a: 'Stain pre-treatment, deep extraction cleaning, odour removal, and all the professional cleaning products and equipment. We clean in your home, so nothing has to be transported. Drying with blower fans is always included too.',
     },
     {
       q: 'Why is there a minimum order?',
