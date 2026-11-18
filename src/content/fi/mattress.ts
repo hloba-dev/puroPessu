@@ -11,7 +11,7 @@ export const mattress: ServiceLanding = {
     'Pesemme jousipatjat, runkopatjat, sijauspatjat ja lasten patjat suoraan makuuhuoneessa ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Hinnat alkaen {price}, ja aamuaikoja on jo klo {from} alkaen, joten patjalla on koko päivä aikaa kuivua. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
   prices: {
     title: 'Patjan pesun hinnat',
-    lead: 'Hinta riippuu patjan koosta ja tyypistä – yhden hengen patja, parisänky tai sijauspatja. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
+    lead: 'Hinta riippuu patjan koosta ja tyypistä – yhden hengen patja, parisänky tai sijauspatja. Patjan hinta koskee yhtä puolta, ilman sijauspatjaa. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
     note: 'Vähimmäistilaus on {min}. Varauksessa näkyvä hinta on lopullinen. Voit liittää varaukseen kuvia. Jos niissä näkyy hyvin likainen patja, otamme yhteyttä ja sovimme hinnan ennen käyntiä.',
   },
   gallery: {
@@ -68,7 +68,7 @@ export const mattress: ServiceLanding = {
       },
       {
         title: 'Pesu ja imu',
-        text: 'Pesemme pinnan ja reunat pesuliuoksella ja imemme lian ja kosteuden saman tien pois. Kääntöpatjasta pesemme halutessasi molemmat puolet.',
+        text: 'Pesemme pinnan ja reunat pesuliuoksella ja imemme lian ja kosteuden saman tien pois. Hintaan sisältyy patjan yksi puoli. Kääntöpatjan toisen puolen pesemme halutessasi, ja se hinnoitellaan erikseen.',
       },
       {
         title: 'Kuivatus puhaltimilla',
@@ -115,7 +115,7 @@ export const mattress: ServiceLanding = {
       },
       {
         title: 'Sijauspatjat',
-        text: 'Sijauspatja on lähimpänä nukkujaa ja likaantuu eniten. Se kannattaa pestä samalla kertaa kuin sänky.',
+        text: 'Sijauspatja on lähimpänä nukkujaa ja likaantuu eniten. Se kannattaa pestä samalla kertaa kuin sänky. Sijauspatja ei sisälly patjan hintaan, vaan se hinnoitellaan erikseen.',
       },
       {
         title: 'Vaahtomuovi ja muistivaahto',
@@ -195,7 +195,7 @@ export const mattress: ServiceLanding = {
     },
     {
       q: 'Miten valmistaudun pesuun?',
-      a: 'Poista lakanat, patjansuojat ja tyynyt ja jätä sängyn ympärille tilaa. Jos haluat pestä myös sijauspatjan tai patjan molemmat puolet, kerro siitä varauksessa.',
+      a: 'Poista lakanat, patjansuojat ja tyynyt ja jätä sängyn ympärille tilaa. Hintaan sisältyy patjan yksi puoli ilman sijauspatjaa. Jos haluat pestä myös sijauspatjan tai patjan toisen puolen, kerro siitä varauksessa – ne hinnoitellaan erikseen.',
     },
     {
       q: 'Sopiiko pesu allergiselle tai lapsen patjalle?',

@@ -11,7 +11,7 @@ export const mattress: ServiceLanding = {
     'We deep clean spring mattresses, box beds, toppers and children\'s mattresses right in your bedroom. Prices start at {price}, and morning slots begin at {from}, so the mattress has plenty of time to dry before bedtime. We speed up drying with blower fans, and drying is always included in the price.',
   prices: {
     title: 'Mattress cleaning prices',
-    lead: 'The price depends on the size and type – single mattress, double bed or topper. The first-order discount and bundle offers, such as a sofa and a mattress together, are shown in the price list and in the booking.',
+    lead: 'The price depends on the size and type – single mattress, double bed or topper. The mattress price covers one side, topper not included. The first-order discount and bundle offers, such as a sofa and a mattress together, are shown in the price list and in the booking.',
     note: 'The minimum order is {min}. The price shown in your booking is final. You can attach photos when booking: if they show heavy soiling, we contact you and agree on the price before the visit.',
   },
   gallery: {
@@ -68,7 +68,7 @@ export const mattress: ServiceLanding = {
       },
       {
         title: 'Extraction cleaning',
-        text: 'The top and sides are washed with a professional extractor that pulls the dirt and moisture straight back out. Flippable mattresses can be done on both sides.',
+        text: 'The top and sides are washed with a professional extractor that pulls the dirt and moisture straight back out. The price covers one side of the mattress. The second side of a flippable mattress can be done on request and is charged separately.',
       },
       {
         title: 'Drying with blower fans',
@@ -115,7 +115,7 @@ export const mattress: ServiceLanding = {
       },
       {
         title: 'Toppers',
-        text: 'The topper is closest to you and gets the dirtiest. It\'s worth cleaning together with the bed.',
+        text: 'The topper is closest to you and gets the dirtiest. It\'s worth cleaning together with the bed. A topper is not included in the mattress price and is charged separately.',
       },
       {
         title: 'Foam and memory foam',
@@ -195,7 +195,7 @@ export const mattress: ServiceLanding = {
     },
     {
       q: 'How should I prepare?',
-      a: 'Strip the sheets, mattress protector and pillows and leave some space around the bed. If you\'d like the topper or both sides of the mattress cleaned too, mention it in your booking.',
+      a: 'Strip the sheets, mattress protector and pillows and leave some space around the bed. The price covers one side of the mattress, without a topper. If you\'d like the topper or the second side cleaned too, mention it in your booking – they are charged separately.',
     },
     {
       q: 'Is it suitable for allergy sufferers and children?',

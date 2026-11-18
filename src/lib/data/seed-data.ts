@@ -62,6 +62,13 @@ export const seedCategories: Category[] = [
 
 const ODOR: L10n = {fi: 'Hajunpoisto (sisältyy hintaan)', ru: 'Удаление запаха (входит в цену)', en: 'Odor removal (included)'};
 
+/** appended to the description of every sofa: loose cushions are priced on top of the sofa */
+const CUSHIONS_EXTRA: L10n = {
+  fi: 'Irtotyynyt eivät sisälly hintaan, ne hinnoitellaan erikseen.',
+  ru: 'Подушки в цену не входят и считаются отдельно.',
+  en: 'Loose cushions are not included in the price and are charged separately.'
+};
+
 interface SeedService {
   slug: string;
   category: string;
@@ -76,6 +83,8 @@ interface SeedService {
   addon?: boolean;
   /** offers the free "odor removal" note as a per-item option */
   odor?: boolean;
+  /** sofa: the description ends with the "cushions are charged separately" note */
+  cushionsExtra?: boolean;
 }
 
 const S: SeedService[] = [
@@ -83,22 +92,22 @@ const S: SeedService[] = [
   {slug: 'armchair', category: 'sofas', price: 50, min: 40, odor: true,
     name: {fi: 'Nojatuoli', ru: 'Кресло', en: 'Armchair'},
     description: {fi: 'Nojatuoli tai korvanojatuoli, kaikki pinnat.', ru: 'Кресло, в том числе «с ушами», все поверхности.', en: 'Armchair or wingback, all surfaces.'}},
-  {slug: 'sofa-2', category: 'sofas', price: 109, min: 45, odor: true,
+  {slug: 'sofa-2', cushionsExtra: true, category: 'sofas', price: 109, min: 45, odor: true,
     name: {fi: '2-istuttava sohva', ru: '2-местный диван', en: '2-seater sofa'},
-    description: {fi: 'Istuintyynyt, selkänoja ja käsinojat.', ru: 'Сиденья, спинка и подлокотники.', en: 'Seat cushions, backrest and armrests.'}},
-  {slug: 'sofa-3', category: 'sofas', price: 149, min: 60, odor: true,
+    description: {fi: 'Istuinosa, selkänoja ja käsinojat.', ru: 'Сиденья, спинка и подлокотники.', en: 'Seats, backrest and armrests.'}},
+  {slug: 'sofa-3', cushionsExtra: true, category: 'sofas', price: 149, min: 60, odor: true,
     name: {fi: '3-istuttava sohva', ru: '3-местный диван', en: '3-seater sofa'},
     description: {fi: 'Yleisin sohvakoko, kaikki pinnat pestään.', ru: 'Самый частый размер, чистим все поверхности.', en: 'The most common size, all surfaces cleaned.'}},
-  {slug: 'sofa-4', category: 'sofas', price: 169, min: 120, odor: true,
+  {slug: 'sofa-4', cushionsExtra: true, category: 'sofas', price: 169, min: 120, odor: true,
     name: {fi: '4-istuttava sohva', ru: '4-местный диван', en: '4-seater sofa'},
     description: {fi: 'Suora 4-istuttava tai divaanisohva.', ru: 'Прямой 4-местный диван или диван с оттоманкой.', en: 'Straight 4-seater or chaise sofa.'}},
-  {slug: 'corner', category: 'sofas', price: 169, min: 90, odor: true,
+  {slug: 'corner', cushionsExtra: true, category: 'sofas', price: 169, min: 90, odor: true,
     name: {fi: 'Kulmasohva', ru: 'Угловой диван', en: 'Corner sofa'},
     description: {fi: 'Tavallinen L-mallinen kulmasohva.', ru: 'Обычный угловой диван Г-образной формы.', en: 'Standard L-shaped corner sofa.'}},
-  {slug: 'corner-large', category: 'sofas', price: 199, min: 120, odor: true,
+  {slug: 'corner-large', cushionsExtra: true, category: 'sofas', price: 199, min: 120, odor: true,
     name: {fi: 'Iso kulmasohva', ru: 'Большой угловой диван', en: 'Large corner sofa'},
     description: {fi: 'U-mallinen tai yli 3 metrin kulmasohva.', ru: 'П-образный или угловой диван длиннее 3 метров.', en: 'U-shaped or over 3 m corner sofa.'}},
-  {slug: 'sofa-5-6', category: 'sofas', price: 199, min: 120, odor: true,
+  {slug: 'sofa-5-6', cushionsExtra: true, category: 'sofas', price: 199, min: 120, odor: true,
     name: {fi: '5–6-istuttava sohva', ru: '5–6-местный диван', en: '5–6-seater sofa'},
     description: {fi: 'Suuri moduulisohva tai kahden sohvan kokonaisuus.', ru: 'Большой модульный диван.', en: 'Large modular sofa.'}},
   {slug: 'ottoman-s', category: 'sofas', price: 25, min: 10,
@@ -112,13 +121,13 @@ const S: SeedService[] = [
   {slug: 'leather-armchair', category: 'leather', price: 50, min: 40,
     name: {fi: 'Nahkanojatuoli', ru: 'Кожаное кресло', en: 'Leather armchair'},
     description: {fi: 'Puhdistus nahalle tarkoitetulla aineella käsin.', ru: 'Ручная чистка средством для кожи.', en: 'Hand-cleaned with a leather-safe product.'}},
-  {slug: 'leather-sofa-2', category: 'leather', price: 109, min: 50,
+  {slug: 'leather-sofa-2', cushionsExtra: true, category: 'leather', price: 109, min: 50,
     name: {fi: '2-istuttava nahkasohva', ru: '2-местный кожаный диван', en: '2-seater leather sofa'},
     description: {fi: 'Puhdistus ja pintalian poisto, sopii aidolle ja keinonahalle.', ru: 'Чистка и снятие поверхностной грязи, для натуральной и искусственной кожи.', en: 'Cleaning and soil removal for genuine and faux leather.'}},
-  {slug: 'leather-sofa-3', category: 'leather', price: 149, min: 70,
+  {slug: 'leather-sofa-3', cushionsExtra: true, category: 'leather', price: 149, min: 70,
     name: {fi: '3-istuttava nahkasohva', ru: '3-местный кожаный диван', en: '3-seater leather sofa'},
     description: {fi: 'Puhdistus saumoja ja taitteita myöten.', ru: 'Чистка, включая швы и складки.', en: 'Cleaning including seams and creases.'}},
-  {slug: 'leather-corner', category: 'leather', price: 169, min: 100,
+  {slug: 'leather-corner', cushionsExtra: true, category: 'leather', price: 169, min: 100,
     name: {fi: 'Nahkakulmasohva', ru: 'Кожаный угловой диван', en: 'Leather corner sofa'},
     description: {fi: 'Kulmasohva tai 4-istuttava nahkasohva.', ru: 'Угловой или 4-местный кожаный диван.', en: 'Corner or 4-seater leather sofa.'}},
 
@@ -136,10 +145,10 @@ const S: SeedService[] = [
   // Sängyt ja patjat
   {slug: 'bed-single', category: 'beds', price: 99, min: 60, odor: true,
     name: {fi: 'Yhden hengen sänky / patja', ru: 'Односпальная кровать / матрас', en: 'Single bed / mattress'},
-    description: {fi: '80–120 cm leveä patja, molemmat puolet tarvittaessa.', ru: 'Матрас шириной 80–120 см, при необходимости с двух сторон.', en: '80–120 cm wide mattress, both sides when needed.'}},
+    description: {fi: '80–120 cm leveä patja. Hinta koskee yhtä puolta, ilman sijauspatjaa.', ru: 'Матрас шириной 80–120 см. Цена за одну сторону, без наматрасника (топпера).', en: '80–120 cm wide mattress. The price covers one side, topper not included.'}},
   {slug: 'bed-double', category: 'beds', price: 160, min: 90, odor: true,
     name: {fi: 'Parisänky / patja', ru: 'Двуспальная кровать / матрас', en: 'Double bed / mattress'},
-    description: {fi: '140–180 cm leveä patja tai runkopatjat ja sijauspatja.', ru: 'Матрас шириной 140–180 см или матрасы с наматрасником.', en: '140–180 cm wide mattress or box springs with a topper.'}},
+    description: {fi: '140–180 cm leveä patja. Hinta koskee yhtä puolta, ilman sijauspatjaa.', ru: 'Матрас шириной 140–180 см. Цена за одну сторону, без наматрасника (топпера).', en: '140–180 cm wide mattress. The price covers one side, topper not included.'}},
 
   // Hajunpoisto
   {slug: 'odor-removal', category: 'odor', price: 0, min: 0, addon: true,
@@ -182,6 +191,10 @@ const S: SeedService[] = [
     description: {fi: 'Hinta koon mukaan, kuten sohvien hinnastossa.', ru: 'Цена по размеру, как в прайсе на диваны.', en: 'Priced by size, as in the sofa price list.'}}
 ];
 
+function withNote(text: L10n, note: L10n): L10n {
+  return {fi: `${text.fi} ${note.fi}`, ru: `${text.ru} ${note.ru}`, en: `${text.en} ${note.en}`};
+}
+
 function buildServices(): Service[] {
   let optionId = 1;
   return S.map((s, index) => {
@@ -196,7 +209,7 @@ function buildServices(): Service[] {
       categorySlug: category.slug,
       slug: s.slug,
       name: s.name,
-      description: s.description,
+      description: s.cushionsExtra ? withNote(s.description, CUSHIONS_EXTRA) : s.description,
       priceCents: s.price * 100,
       priceFrom: s.from ?? false,
       unit: s.unit ?? 'item',

@@ -14,7 +14,7 @@ export const services: ServicesPage = {
       bullets: [
         "Fabric, microfibre and velvet",
         "Corner sofas, chaises and footstools",
-        "Loose cushions done at the same time",
+        "Loose cushions priced separately",
         "Blower drying always included",
       ],
     },
