@@ -1,17 +1,15 @@
 import Link from 'next/link';
 import {createManualBooking} from '@/app/admin/actions';
 import {requireAdmin} from '@/lib/admin/auth';
-import {getCatalog} from '@/lib/data/public';
-import {AdminPage, Card, adminBtn, adminBtnPrimary, adminInput, eur} from '@/components/admin/ui';
+import {getCatalog, getSettings} from '@/lib/data/public';
+import {ManualBookingItems} from '@/components/admin/ManualBookingItems';
+import {AdminPage, Card, adminBtn, adminBtnPrimary, adminInput} from '@/components/admin/ui';
 
 export const metadata = {title: 'Новая бронь'};
 
-const ITEM_ROWS = 5;
-
 export default async function AdminNewBookingPage({searchParams}: PageProps<'/admin/bookings/new'>) {
   await requireAdmin();
-  const [{error}, catalog] = await Promise.all([searchParams, getCatalog()]);
-  const services = catalog.services.filter((s) => s.isActive && !s.isAddon);
+  const [{error}, catalog, settings] = await Promise.all([searchParams, getCatalog(), getSettings()]);
   const label = 'mb-1 block text-sm text-muted';
 
   return (
@@ -84,29 +82,11 @@ export default async function AdminNewBookingPage({searchParams}: PageProps<'/ad
         </Card>
 
         <Card title="Позиции" className="xl:col-span-2">
-          <div className="space-y-3">
-            {Array.from({length: ITEM_ROWS}, (_, i) => (
-              <div key={i} className="grid gap-3 sm:grid-cols-[1fr_120px]">
-                <select name="item_slug" className={adminInput} aria-label={`Позиция ${i + 1}`} defaultValue="">
-                  <option value="">— не выбрано —</option>
-                  {services.map((s) => (
-                    <option key={s.slug} value={s.slug}>
-                      {s.name.ru || s.name.fi} — {eur(s.priceCents)}
-                    </option>
-                  ))}
-                </select>
-                <input name="item_qty" type="number" min={0} max={200} defaultValue={i === 0 ? 1 : 0} className={adminInput} aria-label={`Количество ${i + 1}`} />
-              </div>
-            ))}
-          </div>
-          <p className="mt-3 text-sm text-muted">
-            Цена, длительность и доплата до минимального заказа считаются по каталогу. Занятость времени проверяется так же, как при
-            онлайн-записи.
+          <ManualBookingItems catalog={catalog} minOrderCents={settings.minOrderCents} promotions={settings.promotions} />
+          <p className="mt-4 text-sm text-muted">
+            Цена, длительность и доплата до минимального заказа считаются по каталогу и пересчитываются при сохранении. Занятость
+            времени проверяется так же, как при онлайн-записи.
           </p>
-          <label className="mt-4 flex items-center gap-2 text-sm">
-            <input type="checkbox" name="no_promo" className="size-4 accent-teal-3" /> Без скидок и комплектов (по умолчанию
-            применяются те же, что при онлайн-записи)
-          </label>
           <label className="mt-2 flex items-center gap-2 text-sm">
             <input type="checkbox" name="send_email" className="size-4 accent-teal-3" /> Отправить клиенту письмо с подтверждением
           </label>

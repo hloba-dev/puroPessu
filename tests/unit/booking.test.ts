@@ -1,6 +1,7 @@
 import {describe, expect, it} from 'vitest';
 import {priceCart, type CartLine} from '@/lib/booking/cart';
 import {buildAvailability, buildSlots, validateStart, type Busy} from '@/lib/booking/slots';
+import {manualDiscountCents} from '@/lib/booking/manual-discount';
 import {quoteTravel, zoneFee} from '@/lib/booking/travel';
 import {addDays, utcToZoned, zonedToUtc} from '@/lib/booking/tz';
 import {seedCategories, seedServices, seedSettings} from '@/lib/data/seed-data';
@@ -210,5 +211,22 @@ describe('slots', () => {
     expect(check('2026-07-01T09:00:00.000Z')).toBe('too_soon'); // 12:00 local, lead time until 13:10
     expect(check('2026-12-01T10:00:00.000Z')).toBe('too_far');
     expect(check('not a date')).toBe('invalid');
+  });
+});
+
+describe('manualDiscountCents (the operator\'s own discount in the admin panel)', () => {
+  it('takes euros or a percentage off the cleaning price', () => {
+    expect(manualDiscountCents(14900, '20', 'eur')).toBe(2000);
+    expect(manualDiscountCents(14900, '12,50', 'eur')).toBe(1250);
+    expect(manualDiscountCents(14900, '10', 'pct')).toBe(1490);
+    expect(manualDiscountCents(14900, '', 'eur')).toBe(0);
+  });
+
+  it('never exceeds the price and refuses anything that is not a clean number', () => {
+    expect(manualDiscountCents(10000, '500', 'eur')).toBe(10000);
+    expect(manualDiscountCents(10000, '100', 'pct')).toBe(10000);
+    expect(manualDiscountCents(10000, '101', 'pct')).toBeNull();
+    expect(manualDiscountCents(10000, '-5', 'eur')).toBeNull();
+    expect(manualDiscountCents(10000, 'abc', 'pct')).toBeNull();
   });
 });

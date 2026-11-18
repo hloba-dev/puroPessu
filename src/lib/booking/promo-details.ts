@@ -27,6 +27,7 @@ const BUNDLE_NAMES: Record<string, string> = {
 
 /** The same, in words, for the owner (the admin panel and the owner's e-mail are in Russian). */
 export function promoLabel(details: PromoDetails) {
+  if (details.kind === 'manual') return details.percent ? `вручную, ${details.percent} %` : 'вручную';
   const bundles = [...new Set(details.bundles ?? [])].map((kind) => BUNDLE_NAMES[kind] ?? kind);
   const reasons = [
     details.customer === 'repeat' ? 'повторный заказ' : details.customer === 'first' ? 'первый заказ' : '',

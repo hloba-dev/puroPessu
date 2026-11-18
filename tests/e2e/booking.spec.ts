@@ -168,6 +168,12 @@ test('the total is re-checked on confirmation: nothing is booked at a price the 
 test('bundle offers on the first step put the bundle in the order', async ({page}) => {
   await page.goto('/varaa-aika');
   const offers = page.getByTestId('bundle-offers');
+  // collapsed at first: the header only says how much a bundle saves
+  await expect(offers.locator('summary')).toContainText('85 €');
+  await expect(offers.locator('[data-bundle="chairs"] button')).toBeHidden();
+  // the hint in the summary opens the block
+  await page.getByTestId('bundle-hint').click();
+  await expect(offers.locator('[data-bundle="chairs"] button')).toBeVisible();
   await expect(offers.locator('[data-bundle]')).toHaveCount(3);
   // the hint in the summary is there until a bundle is counted
   await expect(page.getByTestId('bundle-hint')).toContainText('85 €');

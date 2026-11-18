@@ -10,6 +10,7 @@ import {weekStart} from '@/lib/admin/board';
 import {slugify, uniqueSlug} from '@/lib/admin/slug';
 import {blockFromRow, dayRangeInterval, planClose, planOpen, type DayRange} from '@/lib/booking/blocks';
 import {priceCart} from '@/lib/booking/cart';
+import {manualDiscountCents, PROMO_MODES, type DiscountUnit} from '@/lib/booking/manual-discount';
 import {describePromo} from '@/lib/booking/promo-details';
 import {normalizePhone} from '@/lib/booking/schema';
 import {busyEnd} from '@/lib/booking/slots';
@@ -89,6 +90,14 @@ export async function setBookingStatus(form: FormData) {
   revalidatePath('/admin', 'layout');
 }
 
+/** First order or returning customer — for the live price on the manual booking form. */
+export async function checkManualCustomer(email: string, phone: string): Promise<'first' | 'repeat'> {
+  await requireAdmin();
+  const mail = String(email ?? '').trim().slice(0, 160);
+  const tel = normalizePhone(String(phone ?? '')).slice(0, 20);
+  return (await getStore().isReturningCustomer(mail, tel)) ? 'repeat' : 'first';
+}
+
 export async function createManualBooking(form: FormData) {
   await requireAdmin();
   const back = '/admin/bookings/new';
@@ -105,14 +114,29 @@ export async function createManualBooking(form: FormData) {
   const travel = quoteTravel(await getStore().findPostalCode(postalCode), settings);
   const phone = normalizePhone(str(form, 'phone'));
   const customer = (await getStore().isReturningCustomer(str(form, 'email'), phone)) ? 'repeat' : 'first';
+  const promoMode = z.enum(PROMO_MODES).catch('auto').parse(str(form, 'promo_mode'));
   const quote = priceCart(cart, catalog, {
     minOrderCents: settings.minOrderCents,
     travelCents: travel.status === 'ok' ? travel.feeCents : money(form, 'travel_eur', back),
-    // the same discounts and bundle offers as in the online booking
-    promotions: bool(form, 'no_promo') ? null : settings.promotions,
+    // 'auto': the same discounts and bundle offers as in the online booking
+    promotions: promoMode === 'auto' ? settings.promotions : null,
     customer
   });
   if (quote.invalid.length > 0 || quote.durationMin <= 0) fail(back, `Недоступные позиции: ${quote.invalid.join(', ')}`);
+
+  // the operator's own discount replaces the automatic ones; like them it is taken off the cleaning price only
+  let promoCents = quote.promoCents;
+  let promoDetails = describePromo(quote, customer, settings.promotions);
+  if (promoMode === 'manual') {
+    const unit: DiscountUnit = str(form, 'manual_discount_unit') === 'pct' ? 'pct' : 'eur';
+    const value = str(form, 'manual_discount');
+    const cents = manualDiscountCents(quote.subtotalCents + quote.minFillCents, value, unit);
+    if (cents === null) fail(back, `Некорректная скидка «${value}»: введите число, например 20 или 12,50`);
+    promoCents = cents;
+    promoDetails =
+      cents > 0 ? {kind: 'manual', ...(unit === 'pct' ? {percent: Number(value.replace(',', '.'))} : {})} : {kind: 'none'};
+  }
+  const totalCents = quote.totalCents - (promoCents - quote.promoCents);
 
   const date = str(form, 'date');
   const time = str(form, 'time');
@@ -138,10 +162,10 @@ export async function createManualBooking(form: FormData) {
     subtotalCents: quote.subtotalCents,
     travelCents: quote.travelCents,
     minFillCents: quote.minFillCents,
-    promoCents: quote.promoCents,
-    promoDetails: describePromo(quote, customer, settings.promotions),
+    promoCents,
+    promoDetails,
     discountCents: 0,
-    totalCents: quote.totalCents,
+    totalCents,
     marketingConsent: false,
     items: quote.lines.map((line) => ({
       serviceId: line.service.id,

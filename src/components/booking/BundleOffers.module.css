@@ -51,11 +51,11 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-right: auto;
   color: var(--teal-1);
 }
 
 .saving {
-  margin-left: auto;
   padding: 3px 10px;
   border-radius: 999px;
   background: var(--accent-soft);

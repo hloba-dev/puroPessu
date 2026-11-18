@@ -58,8 +58,9 @@ export interface UploadTarget {
 }
 
 export interface PromoDetails {
-  kind?: 'none' | 'bundle' | 'percent' | 'both';
-  /** total percentage applied (first / returning customer + item count) */
+  /** 'manual' = a discount the operator set by hand for a booking entered in the admin panel */
+  kind?: 'none' | 'bundle' | 'percent' | 'both' | 'manual';
+  /** total percentage applied (first / returning customer + item count), or the operator's percentage */
   percent?: number;
   customer?: 'first' | 'repeat';
   /** the item-count discount is part of `percent` */
