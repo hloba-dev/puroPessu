@@ -1,0 +1,128 @@
+/* bundle offers inside the booking form: a quiet row of cards above the catalog.
+   Phones scroll the cards sideways (one and a bit visible), wider screens show all three. */
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(236px, 78%);
+  gap: 12px;
+  margin: 0 -20px;
+  padding: 2px 20px 6px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 20px;
+  scrollbar-width: none;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .row {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--hairline);
+  background: var(--surface-2);
+  scroll-snap-align: start;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.card[data-active='true'] {
+  border-color: var(--teal-2);
+  background: var(--teal-soft);
+}
+/* the button sits at the bottom whatever the title length */
+.card > :last-child {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--teal-1);
+}
+
+.saving {
+  margin-left: auto;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  /* the darker copper keeps small text at AA contrast on the soft background */
+  color: var(--accent-hover);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid var(--teal-2);
+  color: var(--teal-1);
+  font-size: 15px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.add:hover {
+  background: var(--teal-3);
+  border-color: var(--teal-3);
+  color: #fff;
+}
+
+.added {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 44px;
+  color: var(--teal-1);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* the hint in "Your order": one calm line that there is a better price */
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px dashed color-mix(in oklab, var(--accent) 45%, transparent);
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.3;
+  transition: border-color 0.2s;
+}
+.pill:hover {
+  border-color: var(--accent);
+}
+.pill svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.pill strong {
+  color: var(--accent-hover);
+  font-weight: 700;
+}

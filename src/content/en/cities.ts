@@ -319,7 +319,7 @@ export const cities: Record<CitySlug, CityContent> = {
     faq: [
       {
         q: 'Do you come out to Haarajoki?',
-        a: 'We cover all of Järvenpää, Haarajoki included. Any travel fee is calculated from your postal code and shown in the booking before you confirm.'
+        a: 'We cover all of Järvenpää, Haarajoki included. There is no travel fee in Järvenpää.'
       },
       {
         q: 'The sofa is upstairs — does it need to be carried down?',

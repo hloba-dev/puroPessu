@@ -60,6 +60,12 @@ export function bundleOffers(catalog: Catalog, promotions: Promotions): BundleOf
   return offers.filter((offer): offer is BundleOffer => offer !== null && offer.savingCents > 0);
 }
 
+/** What the offer puts in the cart next to a sofa — for the "add to order" buttons of the booking form. */
+export function bundleAddition(kind: BundleOffer['kind'], promotions: Promotions): {slug: string; qty: number} {
+  if (kind === 'chairs') return {slug: 'chair-full', qty: promotions.bundleChairsCount};
+  return {slug: kind === 'mattress-single' ? 'bed-single' : 'bed-double', qty: 1};
+}
+
 export function exampleSofa(catalog: Catalog) {
   return catalog.services.find((s) => s.slug === EXAMPLE_SOFA) ?? null;
 }

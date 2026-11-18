@@ -319,7 +319,7 @@ export const cities: Record<CitySlug, CityContent> = {
     faq: [
       {
         q: 'Tuletteko Haarajoelle asti?',
-        a: 'Tulemme koko Järvenpäähän, myös Haarajoelle. Mahdollinen matkakulu lasketaan postinumerosta, ja näet sen varauksessa ennen vahvistamista.'
+        a: 'Tulemme koko Järvenpäähän, myös Haarajoelle. Järvenpäässä ei veloiteta matkakulua.'
       },
       {
         q: 'Sohva on yläkerrassa – pitääkö se kantaa alas?',

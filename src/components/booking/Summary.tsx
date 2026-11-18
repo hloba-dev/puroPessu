@@ -6,6 +6,7 @@ import type {CustomerKind, Quote} from '@/lib/booking/cart';
 import {formatDuration, formatEur, l10n} from '@/lib/format';
 import type {Promotions} from '@/lib/types';
 import {IconCheck} from '@/components/ui/icons';
+import {BundleHint} from './BundleOffers';
 
 interface Props {
   quote: Quote;
@@ -15,10 +16,12 @@ interface Props {
   customer: CustomerKind;
   travelKnown: boolean;
   slotLabel: string | null;
+  /** the saving a bundle offer would give; 0 hides the hint */
+  bundleHintCents?: number;
 }
 
 /** "Your order": recalculated on every change with the same function the server uses. */
-export function Summary({quote, locale, minOrderCents, promotions, customer, travelKnown, slotLabel}: Props) {
+export function Summary({quote, locale, minOrderCents, promotions, customer, travelKnown, slotLabel, bundleHintCents = 0}: Props) {
   const t = useTranslations('booking.summary');
   // what the promotion row is called and what it consists of
   const promoLabel =
@@ -45,6 +48,12 @@ export function Summary({quote, locale, minOrderCents, promotions, customer, tra
       <h2 id="summary-title" className="text-lg font-semibold">
         {t('title')}
       </h2>
+
+      {bundleHintCents > 0 && (
+        <div className="mt-3">
+          <BundleHint savingCents={bundleHintCents} locale={locale} />
+        </div>
+      )}
 
       {quote.lines.length === 0 ? (
         <p className="mt-3 text-base text-muted">{t('empty')}</p>

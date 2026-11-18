@@ -422,6 +422,20 @@
       "included": "sisältyy hintaan",
       "selected": "{count} valittu"
     },
+    "bundles": {
+      "title": "Pakettitarjoukset",
+      "lead": "Lisää sohvan kanssa tuolit tai patja – paketti lasketaan varaukseen automaattisesti.",
+      "save": "Säästät {amount}",
+      "formula": "Sohvan hinta + {extra}",
+      "instead": "erikseen {price}",
+      "example": "Esimerkki: {sofa}",
+      "inOrder": "Varauksessa: {sofa}",
+      "add": "Lisää varaukseen",
+      "added": "Varauksessa",
+      "sofaNote": "Jos varauksessa ei ole vielä sohvaa, lisäämme siihen kohteen {sofa} – koon voit vaihtaa alla olevasta listasta.",
+      "pillTitle": "Säästä jopa {amount}",
+      "pillText": "pakettina: sohva + tuolit tai patja"
+    },
     "address": {
       "title": "Missä pesu tehdään?",
       "street": "Katuosoite",

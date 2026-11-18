@@ -106,6 +106,16 @@ describe('travel fee', () => {
 
     expect(quoteTravel(null, seedSettings)).toEqual({status: 'unknown'});
   });
+
+  it('never charges a travel fee in Järvenpää, while its neighbours pay by distance', () => {
+    const jarvenpaa = quoteTravel({code: '04400', municipality: 'Järvenpää', lat: 60.46617, lng: 25.07085}, seedSettings);
+    expect(jarvenpaa).toMatchObject({status: 'ok', feeCents: 0, municipality: 'Järvenpää'});
+    // the distance itself is outside the free zone
+    expect(jarvenpaa.status === 'ok' && jarvenpaa.km).toBeGreaterThan(35);
+
+    const tuusula = quoteTravel({code: '04400', municipality: 'Tuusula', lat: 60.46617, lng: 25.07085}, seedSettings);
+    expect(tuusula).toMatchObject({status: 'ok', feeCents: 2500});
+  });
 });
 
 describe('time zone helpers (Europe/Helsinki)', () => {

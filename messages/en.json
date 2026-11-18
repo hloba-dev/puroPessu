@@ -422,6 +422,20 @@
       "included": "included in the price",
       "selected": "{count} selected"
     },
+    "bundles": {
+      "title": "Bundle offers",
+      "lead": "Add chairs or a mattress to your sofa – the bundle price is applied automatically.",
+      "save": "You save {amount}",
+      "formula": "Sofa price + {extra}",
+      "instead": "instead of {price}",
+      "example": "Example: {sofa}",
+      "inOrder": "In your order: {sofa}",
+      "add": "Add to order",
+      "added": "In your order",
+      "sofaNote": "If there is no sofa in your order yet, we add a {sofa} – you can change the size in the list below.",
+      "pillTitle": "Save up to {amount}",
+      "pillText": "as a bundle: sofa + chairs or a mattress"
+    },
     "address": {
       "title": "Where should we clean?",
       "street": "Street address",

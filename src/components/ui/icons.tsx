@@ -176,6 +176,13 @@ export const IconWind = (p: P) => (
   </svg>
 );
 
+export const IconTag = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M3.5 12.2V5a1.500 1.500 0 0 1 1.500-1.500h7.200a1.500 1.500 0 0 1 1.060.440l7.300 7.300a1.500 1.500 0 0 1 0 2.120l-7.200 7.200a1.500 1.500 0 0 1-2.120 0l-7.300-7.300A1.500 1.500 0 0 1 3.500 12.200z" />
+    <circle cx="8" cy="8" r="1.300" />
+  </svg>
+);
+
 export const IconPlus = (p: P) => (
   <svg {...base(p)}>
     <path d="M12 5.5v13M5.5 12h13" />

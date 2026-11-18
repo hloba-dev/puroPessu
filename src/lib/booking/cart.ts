@@ -71,7 +71,7 @@ export interface AppliedBundle {
 export type CustomerKind = 'first' | 'repeat' | 'unknown';
 
 // Which catalog rows take part in the bundle offers of the price sheet.
-const SOFA_SLUGS = ['sofa-2', 'sofa-3', 'sofa-4', 'corner', 'corner-large', 'sofa-5-6', 'leather-sofa-2', 'leather-sofa-3', 'leather-corner'];
+export const SOFA_SLUGS = ['sofa-2', 'sofa-3', 'sofa-4', 'corner', 'corner-large', 'sofa-5-6', 'leather-sofa-2', 'leather-sofa-3', 'leather-corner'];
 const BUNDLE_CHAIR = 'chair-full';
 const BUNDLE_MATTRESS = {single: 'bed-single', double: 'bed-double'};
 

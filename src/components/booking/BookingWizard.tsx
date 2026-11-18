@@ -7,6 +7,7 @@ import {getPathname} from '@/i18n/navigation';
 import type {Locale} from '@/i18n/routing';
 import {checkCustomerAction, createBookingAction} from '@/app/actions/booking';
 import {priceCart, type CartLine, type CustomerKind} from '@/lib/booking/cart';
+import {bundleOffers} from '@/lib/booking/offers';
 import type {AddressValues, BookingError, ContactInput} from '@/lib/booking/schema';
 import type {TravelQuote} from '@/lib/booking/travel';
 import {formatDuration, formatEur, l10n} from '@/lib/format';
@@ -68,6 +69,11 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
   const headingRef = useRef<HTMLHeadingElement>(null);
   const mounted = useRef(false);
 
+  // the biggest saving a bundle offer gives — for the hint in the summary
+  const bestBundleCents = useMemo(
+    () => Math.max(0, ...bundleOffers(catalog, promotions).map((offer) => offer.savingCents)),
+    [catalog, promotions]
+  );
   const quote = useMemo(
     () =>
       priceCart(cart, catalog, {
@@ -217,7 +223,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
       </nav>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
-        <div>
+        <div className="min-w-0">
           <p className="text-sm text-muted">{t('stepOf', {current: step + 1, total: STEPS.length, name: stepName})}</p>
           <h2 ref={headingRef} tabIndex={-1} className="h3 mt-1 scroll-mt-28 outline-none">
             {t(`${STEPS[step]}.title`)}
@@ -237,6 +243,8 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
                 catalog={catalog}
                 cart={cart}
                 onChange={setCart}
+                promotions={promotions}
+                quote={quote}
                 photos={photos}
                 onPhotos={setPhotos}
                 locale={locale}
@@ -371,6 +379,7 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
           customer={customer}
           travelKnown={travel?.status === 'ok'}
           slotLabel={slotLabel}
+          bundleHintCents={step === 0 && quote.bundles.length === 0 ? bestBundleCents : 0}
         />
       </div>
 

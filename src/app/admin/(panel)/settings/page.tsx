@@ -53,7 +53,7 @@ export default async function AdminSettingsPage({searchParams}: PageProps<'/admi
             {field('open_to', 'Работаем до', s.openTo, {type: 'time'})}
             {field('slot_step', 'Шаг слотов, мин (5/10/15/20/30/60)', s.slotStep, {type: 'number'})}
             {field('lead_time_hours', 'Минимум часов до записи', s.leadTimeHours, {type: 'number', min: 0})}
-            {field('buffer_min', 'Буфер на дорогу, мин', s.bufferMin, {type: 'number', min: 0})}
+            {field('buffer_min', 'Резерв до и после брони, мин', s.bufferMin, {type: 'number', min: 0})}
             {field('booking_horizon_days', 'Запись на сколько дней вперёд', s.bookingHorizonDays, {type: 'number', min: 1})}
             {field('min_order', 'Минимальный заказ, €', s.minOrderCents / 100, {inputMode: 'decimal'})}
           </div>

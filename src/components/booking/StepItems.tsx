@@ -3,17 +3,21 @@
 import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import type {Locale} from '@/i18n/routing';
-import {MAX_QTY, MAX_QTY_M2, type CartLine} from '@/lib/booking/cart';
+import {MAX_QTY, MAX_QTY_M2, type CartLine, type Quote} from '@/lib/booking/cart';
 import {BOOKING_PHOTO_TYPES, MAX_BOOKING_PHOTOS, MAX_BOOKING_PHOTO_BYTES} from '@/lib/booking/schema';
 import {formatDuration, formatEur, l10n} from '@/lib/format';
-import type {Catalog, Service} from '@/lib/types';
+import type {Catalog, Promotions, Service} from '@/lib/types';
 import {IconChevron} from '@/components/ui/icons';
 import {PhotoPicker} from '@/components/forms/PhotoPicker';
+import {BundleOffers} from './BundleOffers';
 
 interface Props {
   catalog: Catalog;
   cart: CartLine[];
   onChange: (cart: CartLine[]) => void;
+  /** bundle offers shown above the catalog */
+  promotions: Promotions;
+  quote: Quote;
   /** photos of the furniture, uploaded once the booking is confirmed */
   photos: File[];
   onPhotos: (photos: File[]) => void;
@@ -21,7 +25,7 @@ interface Props {
   whatsappUrl: string;
 }
 
-export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, whatsappUrl}: Props) {
+export function StepItems({catalog, cart, onChange, promotions, quote, photos, onPhotos, locale, whatsappUrl}: Props) {
   const t = useTranslations('booking.items');
   const tf = useTranslations('booking.photos');
   const tp = useTranslations('prices');
@@ -56,7 +60,9 @@ export function StepItems({catalog, cart, onChange, photos, onPhotos, locale, wh
     .filter((g) => g.services.length > 0);
 
   return (
-    <div className="space-y-4">
+    <div className="min-w-0 space-y-4">
+      <BundleOffers catalog={catalog} promotions={promotions} cart={cart} quote={quote} onChange={onChange} locale={locale} />
+
       {groups.map(({category, services}, index) => {
         const selected = services.reduce((sum, s) => sum + (lineOf(s.slug)?.qty ?? 0), 0);
         return (

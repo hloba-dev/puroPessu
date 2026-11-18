@@ -165,6 +165,26 @@ test('the total is re-checked on confirmation: nothing is booked at a price the 
   await second.close();
 });
 
+test('bundle offers on the first step put the bundle in the order', async ({page}) => {
+  await page.goto('/varaa-aika');
+  const offers = page.getByTestId('bundle-offers');
+  await expect(offers.locator('[data-bundle]')).toHaveCount(3);
+  // the hint in the summary is there until a bundle is counted
+  await expect(page.getByTestId('bundle-hint')).toContainText('85 €');
+
+  await offers.locator('[data-bundle="chairs"] button').click();
+  await expect(offers.locator('[data-bundle="chairs"]')).toHaveAttribute('data-active', 'true');
+  await expect(page.getByTestId('booking-summary')).toContainText('Pakettitarjous');
+  await expect(sum(page, 'promo')).toHaveText('−50 €');
+  await expect(sum(page, 'total')).toHaveText('179 €');
+  await expect(page.getByTestId('bundle-hint')).toHaveCount(0);
+
+  // with a sofa already in the order the cards are priced for that sofa
+  await page.getByRole('button', {name: 'Vähennä: 3-istuttava sohva', exact: true}).click();
+  await page.getByRole('button', {name: 'Lisää: 2-istuttava sohva', exact: true}).click();
+  await expect(offers.locator('[data-bundle="chairs"]')).toContainText('139 €');
+});
+
 test('travel fee follows the postal code; outside the service area the booking cannot continue', async ({page}) => {
   await page.goto('/varaa-aika?item=sofa-3');
   await next(page).click();
