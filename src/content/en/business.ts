@@ -11,7 +11,7 @@ export const business: BusinessPage = {
   method: {
     title: 'A method suited to business premises',
     paragraphs: [
-      'We use extraction cleaning with professional products. The cleaning solution loosens the dirt, which is then pulled out of the fabric together with the detergent. No residue is left behind to attract new dirt. Left alone, upholstery typically takes 4–8 hours to dry; we speed this up with blower fans, and drying is always included in the price.',
+      'We use extraction cleaning with professional products. The cleaning solution loosens the dirt, which is then pulled out of the fabric together with the detergent. No residue is left behind to attract new dirt. Left alone, upholstery typically takes 4–8 hours to dry. We run blower fans for 30 minutes after cleaning, always included in the price: the surface will feel dry to the touch, and the furniture dries completely in 2–3 hours — keep the seats free and the room aired until then.',
       'Our professional products are allergy-friendly, biodegradable and safe for children and pets, and they leave no strong scent in the room. We are happy to work early in the morning before opening hours, in the evening or at the weekend, so your customers and staff are not disturbed.',
     ],
   },
@@ -99,7 +99,7 @@ export const business: BusinessPage = {
     },
     {
       q: 'How soon can the premises be used again?',
-      a: 'Left alone, upholstery typically takes 4–8 hours to dry, depending on the material and ventilation. We speed this up with blower fans, and drying is always included in the price. Anything cleaned in the evening is usually ready to use the next morning.',
+      a: 'Left alone, upholstery typically takes 4–8 hours to dry, depending on the material and ventilation. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and the furniture dries completely in 2–3 hours. Anything cleaned in the evening is usually ready to use the next morning.',
     },
     {
       q: 'How is the quote prepared?',

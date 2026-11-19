@@ -8,7 +8,7 @@ export const sofa: ServiceLanding = {
   badge: 'Fabric sofas and armchairs',
   h1: 'Sofa Cleaning in the Helsinki Region — Deep Cleaned at Your Home',
   intro:
-    'We clean fabric sofas and armchairs right where they stand, so nothing has to be carried out of your home. Prices start at {price}, and we work every day from {from} to {to}, evenings and weekends included. After cleaning we dry the sofa with blower fans, and drying is always included in the price. You pay only once the job is done.',
+    'We clean fabric sofas and armchairs right where they stand, so nothing has to be carried out of your home. Prices start at {price}, and we work every day from {from} to {to}, evenings and weekends included. After cleaning we run blower fans on the sofa for 30 minutes, always included in the price: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours. You pay only once the job is done.',
   prices: {
     title: 'Sofa cleaning prices',
     lead: 'The price depends on the size and shape of your sofa. Loose cushions are not included in the sofa price and are charged separately. You see the fixed price before you book. The first-order discount and bundle offers, such as a sofa with dining chairs or a mattress, are shown in the price list and in the booking.',
@@ -46,8 +46,8 @@ export const sofa: ServiceLanding = {
         text: 'You see the price before booking and pay only after you\'ve seen the result.',
       },
       {
-        title: 'Free drying with blower fans',
-        text: 'After cleaning we set up blower fans to speed up drying. It is always included in the price, never an extra.',
+        title: '30 minutes of drying included',
+        text: 'After cleaning we run blower fans on the sofa for 30 minutes. The surface will feel dry to the touch; the sofa dries completely in 2–3 hours. Always included in the price, never an extra.',
       },
     ],
   },
@@ -71,8 +71,8 @@ export const sofa: ServiceLanding = {
         text: 'The whole surface is washed with a professional extractor, which rinses the fabric and pulls out the dirt and detergent in the same pass. The fabric is left damp, not wet.',
       },
       {
-        title: 'Drying',
-        text: 'We finish with blower fans that speed up drying, free of charge. Left alone, upholstery typically takes 4–8 hours to dry, and we\'ll advise you on airing the room.',
+        title: '30 minutes of drying',
+        text: 'We finish with 30 minutes of blower fans, free of charge. The surface will feel dry to the touch; the sofa dries completely in 2–3 hours (left alone it typically takes 4–8). Until then, do not sit on it and air the room.',
       },
     ],
   },
@@ -167,7 +167,7 @@ export const sofa: ServiceLanding = {
       {
         aspect: 'Suction and drying time',
         rental: 'Weak suction leaves the fabric wet and slow to dry',
-        pro: 'Strong extraction, then blower fans speed up drying at no extra cost',
+        pro: 'Strong extraction, then 30 min of blower fans at no extra cost',
       },
       {
         aspect: 'Detergent residue',
@@ -199,7 +199,7 @@ export const sofa: ServiceLanding = {
   faq: [
     {
       q: 'How long does the sofa take to dry?',
-      a: 'Left alone, a fabric sofa typically takes 4–8 hours to dry, depending on the fabric, the thickness of the padding and how well the room is ventilated. We speed this up with blower fans, and drying is always included in the price. A slightly open window and a warm room help too.',
+      a: 'Left alone, a fabric sofa typically takes 4–8 hours to dry, depending on the fabric, the thickness of the padding and how well the room is ventilated. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours. Until then, do not sit on it; a slightly open window and a warm room help too.',
     },
     {
       q: 'Will all the stains come out?',

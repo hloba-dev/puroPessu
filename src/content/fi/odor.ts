@@ -60,8 +60,8 @@ export const odor: OdorPage = {
         text: "Käsittelemme voimakkaimmat kohdat uudelleen, kunnes imuvesi on puhdasta.",
       },
       {
-        title: "Kuivatus puhaltimilla",
-        text: "Lopuksi kuivatamme huonekalun puhaltimilla, ja kuivatus sisältyy aina hintaan. Tuuleta huonetta ja anna ilman kiertää, niin haju ei palaa.",
+        title: "30 min kuivatus puhaltimilla",
+        text: "Lopuksi kuivatamme huonekalua puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa ja patja pidempään. Tuuleta huonetta ja anna ilman kiertää, niin haju ei palaa.",
       },
     ],
   },
@@ -101,7 +101,7 @@ export const odor: OdorPage = {
     },
     {
       q: "Toimiiko hajunpoisto myös patjaan?",
-      a: "Toimii. Patjan haju on usein hiessä ja kosteudessa syvällä täytteessä. Patja kuivuu ilman apua sohvaa hitaammin, joten nopeutamme kuivumista puhaltimilla veloituksetta.",
+      a: "Toimii. Patjan haju on usein hiessä ja kosteudessa syvällä täytteessä. Patja kuivuu ilman apua sohvaa hitaammin, joten kuivatamme sitä puhaltimilla 30 minuuttia veloituksetta – pinta tuntuu sen jälkeen kuivalta.",
     },
     {
       q: "Onko käsittely turvallinen lapsille ja lemmikeille?",

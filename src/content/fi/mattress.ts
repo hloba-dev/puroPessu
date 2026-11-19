@@ -8,7 +8,7 @@ export const mattress: ServiceLanding = {
   badge: 'Patjat ja sängyt',
   h1: 'Patjan pesu pääkaupunkiseudulla — patjat ja sängyt kotonasi',
   intro:
-    'Pesemme jousipatjat, runkopatjat, sijauspatjat ja lasten patjat suoraan makuuhuoneessa ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Hinnat alkaen {price}, ja aamuaikoja on jo klo {from} alkaen, joten patjalla on koko päivä aikaa kuivua. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+    'Pesemme jousipatjat, runkopatjat, sijauspatjat ja lasten patjat suoraan makuuhuoneessa ammattipesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Hinnat alkaen {price}, ja aamuaikoja on jo klo {from} alkaen, joten patjalla on koko päivä aikaa kuivua. Pesun jälkeen kuivatamme patjaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan.',
   prices: {
     title: 'Patjan pesun hinnat',
     lead: 'Hinta riippuu patjan koosta ja tyypistä – yhden hengen patja, parisänky tai sijauspatja. Patjan hinta koskee yhtä puolta, ilman sijauspatjaa. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
@@ -46,8 +46,8 @@ export const mattress: ServiceLanding = {
         text: 'Biohajoavat ja allergiaystävälliset pesuaineet imetään pesun lopuksi pois, joten patjaan ei jää jäämiä.',
       },
       {
-        title: 'Kuivatus puhaltimilla veloituksetta',
-        text: 'Pesun jälkeen kuivatamme patjan puhaltimilla. Kuivatus sisältyy aina hintaan, eikä siitä tule lisämaksua.',
+        title: '30 min kuivatus puhaltimilla kaupan päälle',
+        text: 'Pesun jälkeen kuivatamme patjaa puhaltimilla 30 minuuttia. Se sisältyy aina hintaan, eikä siitä tule lisämaksua. Pinta tuntuu sen jälkeen kuivalta, mutta sisältä patja kuivuu vielä pidempään.',
       },
     ],
   },
@@ -71,8 +71,8 @@ export const mattress: ServiceLanding = {
         text: 'Pesemme pinnan ja reunat pesuliuoksella ja imemme lian ja kosteuden saman tien pois. Hintaan sisältyy patjan yksi puoli. Kääntöpatjan toisen puolen pesemme halutessasi, ja se hinnoitellaan erikseen.',
       },
       {
-        title: 'Kuivatus puhaltimilla',
-        text: 'Lopuksi kuivatamme patjan puhaltimilla veloituksetta. Tuuleta huonetta ja jätä patja ilman lakanoita, kunnes se on kuiva.',
+        title: '30 min kuivatus puhaltimilla',
+        text: 'Lopuksi kuivatamme patjaa puhaltimilla 30 minuuttia veloituksetta: pinta tuntuu sen jälkeen kuivalta. Tuuleta huonetta ja jätä patja ilman lakanoita, kunnes se on kokonaan kuiva.',
       },
     ],
   },
@@ -160,7 +160,7 @@ export const mattress: ServiceLanding = {
       {
         aspect: 'Kuivumisaika',
         rental: 'Voi venyä pitkäksi, ja patja jää kosteaksi yöksi',
-        pro: 'Kuivatus puhaltimilla nopeuttaa kuivumista ja sisältyy hintaan',
+        pro: '30 min kuivatus puhaltimilla nopeuttaa kuivumista ja sisältyy hintaan',
       },
       {
         aspect: 'Pesuaineet',
@@ -187,7 +187,7 @@ export const mattress: ServiceLanding = {
   faq: [
     {
       q: 'Kuinka kauan patja kuivuu?',
-      a: 'Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, ja patja vielä kauemmin, vaahtomuovipatja pisimpään. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Suosittelemme silti aamuaikaa, jotta patjalla on koko päivä aikaa kuivua. Tuuleta huonetta kuivumisen aikana.',
+      a: 'Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, ja patja vielä kauemmin, vaahtomuovipatja pisimpään. Kuivatamme patjaa pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, mutta sisältä patja kuivuu vielä pidempään. Suosittelemme siksi aamuaikaa, jotta patjalla on koko päivä aikaa kuivua. Tuuleta huonetta kuivumisen aikana.',
     },
     {
       q: 'Lähtevätkö virtsa- ja hikitahrat?',

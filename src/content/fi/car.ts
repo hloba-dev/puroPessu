@@ -8,7 +8,7 @@ export const car: ServiceLanding = {
   badge: "Tulemme auton luo",
   h1: "Auton verhoilupesu Helsingissä paikan päällä",
   intro:
-    "Pesemme auton penkit, matot ja oviverhoilut siellä, missä auto seisoo: kotipihalla, taloyhtiön parkkipaikalla tai parkkihallissa. Tarvitsemme vain pistorasian, vesi kulkee mukanamme. Pesun jälkeen kuivatamme sisätilan puhaltimilla, ja kuivatus sisältyy aina hintaan. Hinnat alk. {price}, ja liikumme joka päivä klo {from}–{to}.",
+    "Pesemme auton penkit, matot ja oviverhoilut siellä, missä auto seisoo: kotipihalla, taloyhtiön parkkipaikalla tai parkkihallissa. Tarvitsemme vain pistorasian, vesi kulkee mukanamme. Pesun jälkeen kuivatamme sisätilaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Hinnat alk. {price}, ja liikumme joka päivä klo {from}–{to}.",
   prices: {
     title: "Hinnat",
     lead: "Hinta määräytyy pestävien istuinten ja osien mukaan. Näet hinnan jo varausta tehdessäsi.",
@@ -46,8 +46,8 @@ export const car: ServiceLanding = {
         text: "Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, joten turvaistuin ja penkit ovat pesun jälkeen turvallisia lapsille ja lemmikeille.",
       },
       {
-        title: "Kuivatus puhaltimilla veloituksetta",
-        text: "Pesun jälkeen kuivatamme penkit ja matot puhaltimilla. Kuivatus sisältyy aina hintaan, eikä siitä tule lisämaksua.",
+        title: "30 min kuivatus puhaltimilla kaupan päälle",
+        text: "Pesun jälkeen kuivatamme penkkejä ja mattoja puhaltimilla 30 minuuttia. Se sisältyy aina hintaan, eikä siitä tule lisämaksua. Pinta tuntuu sen jälkeen kuivalta, mutta pehmuste kuivuu vielä pidempään.",
       },
     ],
   },
@@ -71,8 +71,8 @@ export const car: ServiceLanding = {
         text: "Pesemme verhoilun painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Nahkapenkit puhdistamme käsin.",
       },
       {
-        title: "Kuivatus puhaltimilla",
-        text: "Lopuksi kuivatamme sisätilan puhaltimilla veloituksetta. Sen jälkeen ikkunoiden pitäminen raollaan tai lämmitys auttaa vielä.",
+        title: "30 min kuivatus puhaltimilla",
+        text: "Lopuksi kuivatamme sisätilaa puhaltimilla 30 minuuttia veloituksetta: pinta tuntuu sen jälkeen kuivalta. Loppukuivumista auttaa, kun pidät ikkunat raollaan tai lämmityksen päällä.",
       },
     ],
   },
@@ -148,7 +148,7 @@ export const car: ServiceLanding = {
     rows: [
       {aspect: "Laite", rental: "Kevyt kotikone, joka pesee vain pintaa", pro: "Ammattitason painehuuhtelukone irrottaa rasvaisen lian syvältä"},
       {aspect: "Pesuaine", rental: "Jää helposti kankaaseen ja kerää likaa", pro: "Huuhdellaan ja imetään pois"},
-      {aspect: "Kosteus", rental: "Penkki jää märäksi ja kuivuu hitaasti", pro: "Tehokas imu ja kuivatus puhaltimilla, sisältyy hintaan"},
+      {aspect: "Kosteus", rental: "Penkki jää märäksi ja kuivuu hitaasti", pro: "Tehokas imu ja 30 min kuivatus puhaltimilla, sisältyy hintaan"},
       {aspect: "Tahrat", rental: "Yksi aine kaikkiin tahroihin", pro: "Esikäsittely tahran mukaan"},
       {aspect: "Haju", rental: "Peittyy hetkeksi hajusteella", pro: "Hajun lähde pestään pois"},
       {aspect: "Oma vaiva", rental: "Haku, pesu, palautus ja siivous", pro: "Sinä teet muuta, me pesemme"},
@@ -170,7 +170,7 @@ export const car: ServiceLanding = {
     },
     {
       q: "Kauanko penkit kuivuvat?",
-      a: "Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Sen jälkeen auttaa, kun pidät ikkunat raollaan tai lämmityksen päällä. Talvella auto kannattaa jättää lämpimään halliin, jos se on mahdollista.",
+      a: "Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa. Kuivatamme penkkejä pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, mutta pehmuste kuivuu vielä pidempään. Sen jälkeen auttaa, kun pidät ikkunat raollaan tai lämmityksen päällä. Talvella auto kannattaa jättää lämpimään halliin, jos se on mahdollista.",
     },
     {
       q: "Voinko ajaa heti pesun jälkeen?",

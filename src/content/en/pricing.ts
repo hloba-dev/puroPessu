@@ -3,7 +3,7 @@ import type {PricingPage} from '../types';
 export const pricing: PricingPage = {
   metaTitle: 'Prices — sofa cleaning from {price}, minimum order {min}',
   metaDescription:
-    'Puro price list for on-site sofa, armchair and mattress cleaning in Helsinki. Bundle prices and discounts, free drying, no prepayment — pay after the work.',
+    'Puro price list for on-site sofa, armchair and mattress cleaning in Helsinki. Bundle prices and discounts, 30 min of drying included, no prepayment — pay after the work.',
   h1: 'Prices',
   intro:
     'Everything we do is on one price list. The price you see in the booking form is the price on your invoice — no hidden extras and no surprises on the day. The first-order discount, the returning-customer discount and our bundle offers are shown in the price list and in the booking.',
@@ -31,8 +31,8 @@ export const pricing: PricingPage = {
         text: 'When a price says “from”, the final amount depends on size or material. We confirm it with you before cleaning.',
       },
       {
-        title: 'Odour removal and drying always included',
-        text: 'Every cleaning includes odour removal, and drying with blower fans is always included in the price — never an extra.',
+        title: 'Odour removal and 30 minutes of drying always included',
+        text: 'Every cleaning includes odour removal, and 30 minutes of drying with blower fans is always included in the price — never an extra. The surface will feel dry to the touch; a sofa dries completely in 2–3 hours.',
       },
     ],
   },
@@ -46,7 +46,7 @@ export const pricing: PricingPage = {
   faq: [
     {
       q: 'What is included in the price?',
-      a: 'Stain pre-treatment, deep extraction cleaning, odour removal, and all the professional cleaning products and equipment. We clean in your home, so nothing has to be transported. Drying with blower fans is always included too.',
+      a: 'Stain pre-treatment, deep extraction cleaning, odour removal, and all the professional cleaning products and equipment. We clean in your home, so nothing has to be transported. 30 minutes of drying with blower fans is always included too.',
     },
     {
       q: 'Why is there a minimum order?',

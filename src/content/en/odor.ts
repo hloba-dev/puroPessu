@@ -60,8 +60,8 @@ export const odor: OdorPage = {
         text: "We treat the strongest areas again until the extracted water runs clean.",
       },
       {
-        title: "Drying with blower fans",
-        text: "We finish with blower fans that speed up drying, always included in the price. Left alone, upholstery typically takes 4–8 hours to dry and mattresses longer, so air the room and keep the air moving.",
+        title: "30 minutes of blower drying",
+        text: "We finish with 30 minutes of blower fans, always included in the price: the surface will feel dry to the touch. A sofa dries completely in 2–3 hours and a mattress takes longer (left alone, upholstery typically takes 4–8 hours), so keep off it until then, air the room and keep the air moving.",
       },
     ],
   },
@@ -101,7 +101,7 @@ export const odor: OdorPage = {
     },
     {
       q: "Does it work for mattresses as well?",
-      a: "It does. Mattress odor usually comes from sweat and moisture deep in the filling. Mattresses take longer to dry than sofas, so we speed this up with blower fans at no extra cost.",
+      a: "It does. Mattress odor usually comes from sweat and moisture deep in the filling. Mattresses take longer to dry than sofas, so we run blower fans for 30 minutes at no extra cost; the surface will feel dry to the touch, and the filling needs longer.",
     },
     {
       q: "Is it safe for children and pets?",

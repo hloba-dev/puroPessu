@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "Puro — sohvan pesu kotonasi, joka päivä {from}–{to}",
-    "defaultDescription": "Sohvien, nojatuolien ja patjojen pesu kotonasi Helsingissä ja pääkaupunkiseudulla. Ammattipesuaineet, turvalliset lapsille ja lemmikeille. Kuivatus sisältyy hintaan."
+    "defaultDescription": "Sohvien, nojatuolien ja patjojen pesu kotonasi Helsingissä ja pääkaupunkiseudulla. Ammattipesuaineet, turvalliset lapsille ja lemmikeille. 30 min kuivatus sisältyy hintaan."
   },
   "nav": {
     "main": "Päävalikko",
@@ -107,12 +107,12 @@
   },
   "home": {
     "metaTitle": "Sohvan pesu kotonasi Helsingissä — alk. {price}, joka päivä {from}–{to} | Puro",
-    "metaDescription": "Sohvien, nojatuolien ja patjojen syväpesu kotonasi Helsingissä, Espoossa ja Vantaalla. Joka päivä {from}–{to}, alk. {price}. Turvalliset ammattipesuaineet, kuivatus veloituksetta.",
+    "metaDescription": "Sohvien, nojatuolien ja patjojen syväpesu kotonasi Helsingissä, Espoossa ja Vantaalla. Joka päivä {from}–{to}, alk. {price}. Turvalliset ammattipesuaineet, 30 min kuivatus kaupan päälle.",
     "hero": {
       "badge": "Paikan päällä · joka päivä {from}–{to}",
       "h1Line1": "Sohvan pesu",
       "h1Line2": "kotonasi",
-      "sub": "Sohvien, nojatuolien ja patjojen syväpesu ammattipesuaineilla Helsingissä ja koko pääkaupunkiseudulla. Alk. {price} — kuivatus puhaltimilla aina veloituksetta, ei ennakkomaksua.",
+      "sub": "Sohvien, nojatuolien ja patjojen syväpesu ammattipesuaineilla Helsingissä ja koko pääkaupunkiseudulla. Alk. {price} — 30 min kuivatus puhaltimilla aina kaupan päälle, ei ennakkomaksua.",
       "cta": "Varaa aika",
       "ctaSecondary": "Katso hinnasto",
       "mockTitle": "Mitä pestään?",
@@ -123,7 +123,7 @@
       "trust": [
         "Tyytyväisyystakuu",
         "Ei ennakkomaksua",
-        "Kuivatus veloituksetta"
+        "30 min kuivatus kaupan päälle"
       ],
       "trustLabel": "Lupauksemme",
       "safe": "Turvallista lapsille ja lemmikeille"
@@ -140,8 +140,8 @@
           "text": "Tuomme laitteet mukanamme. Sohvaa ei tarvitse kantaa minnekään."
         },
         {
-          "title": "Kuivatus aina veloituksetta",
-          "text": "Kuivaamme kalusteet pesun päätteeksi puhaltimilla. Se kuuluu jokaiseen pesuun ilman lisähintaa."
+          "title": "30 min kuivatus kaupan päälle",
+          "text": "Kuivaamme kalusteita pesun päätteeksi puhaltimilla 30 minuuttia ilman lisähintaa. Pinta tuntuu sen jälkeen kuivalta; kokonaan sohva kuivuu 2–3 tunnissa — älä istu sillä sitä ennen ja tuuleta huone."
         },
         {
           "title": "Tyytyväisyystakuu",
@@ -152,7 +152,7 @@
     "services": {
       "eyebrow": "Palvelut",
       "title": "Mitä pesemme",
-      "lead": "Kaikki pehmustetut kalusteet kotona ja toimistolla. Hinnat ovat lopullisia ja sisältävät tahrojen esikäsittelyn, hajunpoiston ja kuivatuksen puhaltimilla.",
+      "lead": "Kaikki pehmustetut kalusteet kotona ja toimistolla. Hinnat ovat lopullisia ja sisältävät tahrojen esikäsittelyn, hajunpoiston ja 30 minuutin kuivatuksen puhaltimilla.",
       "all": "Kaikki palvelut",
       "cards": {
         "sofas": {
@@ -202,8 +202,8 @@
           "text": "Esikäsittelemme tahrat ammattipesuaineilla, pesemme kankaan painehuuhtelukoneella ja imemme lian ja pesuaineen pois."
         },
         {
-          "title": "Kuivatus — veloituksetta",
-          "text": "Lopuksi kuivaamme kankaan puhaltimilla. Itsekseen kangas kuivuisi 4–8 tuntia; me nopeutamme sitä ilman lisähintaa."
+          "title": "30 min kuivatus — kaupan päälle",
+          "text": "Lopuksi kuivaamme kangasta puhaltimilla 30 minuuttia ilman lisähintaa: pinta tuntuu sen jälkeen kuivalta. Itsekseen kangas kuivuisi 4–8 tuntia; näin sohva kuivuu kokonaan 2–3 tunnissa — älä istu sillä sitä ennen ja tuuleta huone."
         }
       ]
     },
@@ -213,8 +213,8 @@
       "lead": "Pesun tulos ratkeaa siinä, mitä kankaaseen jää pesun jälkeen. Siksi huuhtelemme ja imemme jokaisen pinnan huolella.",
       "items": [
         {
-          "title": "Kuivatus kuuluu aina hintaan",
-          "text": "Emme jätä sohvaa kuivumaan itsekseen: kuivaamme sen puhaltimilla jokaisen pesun päätteeksi, veloituksetta."
+          "title": "30 min kuivatus kuuluu aina hintaan",
+          "text": "Emme jätä sohvaa kuivumaan itsekseen: kuivaamme sitä puhaltimilla 30 minuuttia jokaisen pesun päätteeksi, veloituksetta. Pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa."
         },
         {
           "title": "Ammattilaisten pesuaineet",
@@ -273,7 +273,7 @@
       "items": [
         {
           "q": "Kuinka kauan sohva kuivuu pesun jälkeen?",
-          "a": "Itsekseen kangas kuivuu yleensä 4–8 tunnissa. Me kuivaamme kalusteet pesun päätteeksi puhaltimilla, mikä nopeuttaa kuivumista selvästi — ja kuivatus sisältyy aina hintaan."
+          "a": "Itsekseen kangas kuivuu yleensä 4–8 tunnissa. Me kuivaamme kalusteita pesun päätteeksi puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa — älä istu sillä sitä ennen ja tuuleta huone."
         },
         {
           "q": "Lähtevätkö kaikki tahrat?",
@@ -284,7 +284,7 @@
     },
     "cta": {
       "title": "Varaa sohvan pesu — vapaat ajat näkyvät heti",
-      "text": "Varaus vie pari minuuttia. Kuivatus sisältyy hintaan, ja maksat vasta pesun jälkeen."
+      "text": "Varaus vie pari minuuttia. 30 min kuivatus sisältyy hintaan, ja maksat vasta pesun jälkeen."
     }
   },
   "prices": {
@@ -395,7 +395,7 @@
     "metaTitle": "Varaa aika verkossa — vapaat ajat heti näkyvissä",
     "metaDescription": "Varaa sohvan, nojatuolin tai patjan pesu kotiisi parissa minuutissa. Näet hinnan ja vapaat ajat heti, joka päivä {from}–{to}. Ei ennakkomaksua.",
     "title": "Varaa aika",
-    "lead": "Valitse pestävät kalusteet, niin näet hinnan ja vapaat ajat heti. Kuivatus sisältyy aina hintaan. Varaus vie noin kaksi minuuttia.",
+    "lead": "Valitse pestävät kalusteet, niin näet hinnan ja vapaat ajat heti. 30 min kuivatus sisältyy aina hintaan. Varaus vie noin kaksi minuuttia.",
     "demo": "Demotila: tietokantaa ei ole yhdistetty, joten varaukset tallentuvat vain palvelimen muistiin.",
     "steps": {
       "items": "Tuotteet",
@@ -534,7 +534,7 @@
     },
     "trust": [
       "Varaus noin kahdessa minuutissa",
-      "Kuivatus sisältyy hintaan",
+      "30 min kuivatus sisältyy hintaan",
       "Tyytyväisyystakuu",
       "Maksu vasta pesun jälkeen"
     ],
@@ -572,7 +572,7 @@
         },
         {
           "q": "Kuinka kauan kalusteet kuivuvat?",
-          "a": "Kuivaamme kalusteet pesun päätteeksi puhaltimilla, ja se sisältyy aina hintaan. Itsekseen kangas kuivuisi tyypillisesti 4–8 tuntia ja patja pidempään — puhaltimilla kuivuminen nopeutuu selvästi."
+          "a": "Kuivaamme kalusteita pesun päätteeksi puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta; kokonaan sohva kuivuu 2–3 tunnissa ja patja pidempään — älä istu sohvalla sitä ennen ja tuuleta huone. Itsekseen kangas kuivuisi tyypillisesti 4–8 tuntia."
         },
         {
           "q": "Pitääkö minun valmistella jotain?",
@@ -638,7 +638,7 @@
     "travel": "Matkakulut",
     "giftCard": "Lahjakortti",
     "total": "Yhteensä",
-    "payment": "Maksu vasta pesun jälkeen. Kuivatus puhaltimilla sisältyy hintaan. Jos kuvista näkyy poikkeuksellista likaa, sovimme hinnasta kanssasi ennen käyntiä.",
+    "payment": "Maksu vasta pesun jälkeen. 30 min kuivatus puhaltimilla sisältyy hintaan. Jos kuvista näkyy poikkeuksellista likaa, sovimme hinnasta kanssasi ennen käyntiä.",
     "manage": "Siirrä tai peru varaus",
     "questions": "Kysyttävää? Vastaa tähän viestiin tai soita {phone}.",
     "created": {
@@ -733,7 +733,7 @@
     "multi": "−{pct} %, kun kohteita on vähintään {min}",
     "noteBest": "Paketti ja prosenttialennus eivät yhdisty: saat automaattisesti niistä edullisemman. Alennukset eivät koske matkakuluja, ja vähimmäistilaus lasketaan ennen alennuksia.",
     "noteStack": "Prosenttialennus lasketaan paketin hinnasta. Alennukset eivät koske matkakuluja, ja vähimmäistilaus lasketaan ennen alennuksia.",
-    "drying": "Kuivatus puhaltimilla sisältyy jokaiseen pesuun — aina veloituksetta.",
+    "drying": "30 min kuivatus puhaltimilla sisältyy jokaiseen pesuun — aina veloituksetta.",
     "tableSofa": "Sohva",
     "tableSeparately": "Erikseen",
     "tableBundle": "Pakettina",

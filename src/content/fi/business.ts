@@ -11,7 +11,7 @@ export const business: BusinessPage = {
   method: {
     title: 'Menetelmä liiketiloihin',
     paragraphs: [
-      'Käytämme ammattitason painehuuhtelukonetta ja ammattikäyttöön tarkoitettuja pesuaineita. Pesuliuos irrottaa lian, ja lika imetään kankaasta pois yhdessä pesuaineen kanssa. Kankaaseen ei jää pesuainejäämiä, jotka keräisivät likaa nopeasti uudelleen. Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      'Käytämme ammattitason painehuuhtelukonetta ja ammattikäyttöön tarkoitettuja pesuaineita. Pesuliuos irrottaa lian, ja lika imetään kankaasta pois yhdessä pesuaineen kanssa. Kankaaseen ei jää pesuainejäämiä, jotka keräisivät likaa nopeasti uudelleen. Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa. Pesun jälkeen kuivatamme niitä puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa.',
       'Pesuaineemme ovat allergiaystävällisiä ja biohajoavia, eikä niistä jää tiloihin voimakasta tuoksua. Teemme työn mielellään aikaisin aamulla ennen aukioloaikaa, illalla tai viikonloppuna, jotta asiakkaidenne ja henkilökuntanne arki ei keskeydy.',
     ],
   },
@@ -99,7 +99,7 @@ export const business: BusinessPage = {
     },
     {
       q: 'Kuinka pian tiloja voi käyttää pesun jälkeen?',
-      a: 'Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa materiaalista ja ilmanvaihdosta riippuen. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Illalla pestyt kalusteet ovat yleensä käyttökunnossa seuraavana aamuna.',
+      a: 'Ilman apua kalusteet kuivuvat tyypillisesti 4–8 tunnissa materiaalista ja ilmanvaihdosta riippuen. Kuivatamme niitä pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa – sitä ennen sillä ei kannata istua. Illalla pestyt kalusteet ovat yleensä käyttökunnossa seuraavana aamuna.',
     },
     {
       q: 'Miten tarjous tehdään?',

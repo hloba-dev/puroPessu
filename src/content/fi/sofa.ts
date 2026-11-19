@@ -8,7 +8,7 @@ export const sofa: ServiceLanding = {
   badge: 'Kangassohvat ja nojatuolit',
   h1: 'Sohvan pesu pääkaupunkiseudulla — syväpesu kotonasi',
   intro:
-    'Pesemme kangassohvat ja nojatuolit paikan päällä, joten sohvaa ei tarvitse kantaa mihinkään. Hinnat alkaen {price}, ja aikoja on joka päivä klo {from}–{to}, myös iltaisin ja viikonloppuisin. Pesun jälkeen kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan. Maksat vasta, kun työ on tehty.',
+    'Pesemme kangassohvat ja nojatuolit paikan päällä, joten sohvaa ei tarvitse kantaa mihinkään. Hinnat alkaen {price}, ja aikoja on joka päivä klo {from}–{to}, myös iltaisin ja viikonloppuisin. Pesun jälkeen kuivatamme sohvaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Maksat vasta, kun työ on tehty.',
   prices: {
     title: 'Sohvan pesun hinnat',
     lead: 'Hinta määräytyy sohvan koon ja mallin mukaan. Irtotyynyt eivät sisälly sohvan hintaan, ne hinnoitellaan erikseen. Näet kiinteän hinnan jo varausta tehdessäsi. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
@@ -46,8 +46,8 @@ export const sofa: ServiceLanding = {
         text: 'Näet hinnan ennen varausta. Maksat vasta, kun olet nähnyt lopputuloksen.',
       },
       {
-        title: 'Kuivatus puhaltimilla veloituksetta',
-        text: 'Pesun jälkeen jätämme sohvan kuivumaan puhaltimien avulla. Kuivatus sisältyy aina hintaan, eikä siitä tule lisämaksua.',
+        title: '30 min kuivatus puhaltimilla kaupan päälle',
+        text: 'Pesun jälkeen kuivatamme sohvaa puhaltimilla 30 minuuttia. Se sisältyy aina hintaan, eikä siitä tule lisämaksua. Pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa.',
       },
     ],
   },
@@ -71,8 +71,8 @@ export const sofa: ServiceLanding = {
         text: 'Pesemme koko pinnan ammattipesuaineella ja imemme lian ja pesuaineen saman tien pois. Kangas jää vain kosteaksi, ei märäksi.',
       },
       {
-        title: 'Kuivatus puhaltimilla',
-        text: 'Lopuksi kuivatamme sohvan puhaltimilla. Kuivatus on aina veloituksetta mukana hinnassa, ja neuvomme vielä tuuletuksessa.',
+        title: '30 min kuivatus puhaltimilla',
+        text: 'Lopuksi kuivatamme sohvaa puhaltimilla 30 minuuttia, veloituksetta. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa: älä istu sillä sitä ennen ja tuuleta huone.',
       },
     ],
   },
@@ -167,7 +167,7 @@ export const sofa: ServiceLanding = {
       {
         aspect: 'Imuteho ja kuivumisaika',
         rental: 'Heikko imu, kangas jää märäksi ja kuivuu hitaasti',
-        pro: 'Tehokas imu ja kuivatus puhaltimilla, joka sisältyy hintaan',
+        pro: 'Tehokas imu ja 30 min kuivatus puhaltimilla, joka sisältyy hintaan',
       },
       {
         aspect: 'Pesuainejäämät',
@@ -199,7 +199,7 @@ export const sofa: ServiceLanding = {
   faq: [
     {
       q: 'Kuinka kauan sohva kuivuu?',
-      a: 'Ilman apua kangassohva kuivuu tyypillisesti 4–8 tunnissa. Aikaan vaikuttavat kangas, pehmusteen paksuus ja huoneen ilmanvaihto. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      a: 'Ilman apua kangassohva kuivuu tyypillisesti 4–8 tunnissa. Aikaan vaikuttavat kangas, pehmusteen paksuus ja huoneen ilmanvaihto. Pesun jälkeen kuivatamme sohvaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen ja tuuleta huone.',
     },
     {
       q: 'Lähtevätkö kaikki tahrat?',

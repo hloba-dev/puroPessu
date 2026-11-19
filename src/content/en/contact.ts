@@ -24,7 +24,7 @@ export const contact: ContactPage = {
   faq: [
     {
       q: 'How long does it take to dry?',
-      a: 'Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer, depending on the fabric, the padding and ventilation. We speed this up with blower fans after every cleaning, and drying is always included in the price. An open window helps too.',
+      a: 'Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer, depending on the fabric, the padding and ventilation. After every cleaning we run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and a sofa dries completely in 2–3 hours. Keep off it until then; an open window helps too.',
     },
     {
       q: 'Will every stain come out?',

@@ -24,7 +24,7 @@ export const compare: ComparePage = {
       {
         aspect: 'Kuivumisaika',
         rental: 'Usein vuorokausi tai enemmän, jos vettä jää paljon.',
-        pro: 'Kuivatamme puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+        pro: 'Kuivatamme puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu kuivalta, kokonaan sohva kuivuu 2–3 tunnissa.',
       },
       {
         aspect: 'Pesuainejäämät',
@@ -68,7 +68,7 @@ export const compare: ComparePage = {
     paragraphs: [
       'Pesurin vuokra on tyypillisesti noin 20–40 euroa vuorokaudelta. Siihen tulee lisäksi pesuaine, jota myydään yleensä erikseen, noin 10–20 euroa pullo.',
       'Laite pitää myös hakea ja palauttaa, usein autolla. Kun mukaan lasketaan nouto, pesu, kuivatus ja palautus, kuluu helposti puoli päivää, ja vuokra-ajan paineessa työ tehdään usein kiireellä.',
-      'Kolmen istuttavan sohvan pesu maksaa meillä {price}. Hinta sisältää esikäsittelyn, pesun, huuhtelun, hajunpoiston ja kuivatuksen puhaltimilla, eikä se muutu käynnin aikana. Jos sohva on vahvatekoinen ja vain kevyesti likainen, vuokralaite voi silti olla edullisempi — kunhan muistat laskea mukaan myös oman aikasi.',
+      'Kolmen istuttavan sohvan pesu maksaa meillä {price}. Hinta sisältää esikäsittelyn, pesun, huuhtelun, hajunpoiston ja 30 minuutin kuivatuksen puhaltimilla, eikä se muutu käynnin aikana. Jos sohva on vahvatekoinen ja vain kevyesti likainen, vuokralaite voi silti olla edullisempi — kunhan muistat laskea mukaan myös oman aikasi.',
     ],
   },
   mistakes: {
@@ -123,7 +123,7 @@ export const compare: ComparePage = {
     },
     {
       q: 'Kauanko sohva kuivuu vuokrapesurin jälkeen?',
-      a: 'Se riippuu siitä, kuinka paljon vettä kankaaseen jäi. Usein kuivuminen kestää vuorokauden tai pidempään. Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, kun vettä ei jää liikaa. Me nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      a: 'Se riippuu siitä, kuinka paljon vettä kankaaseen jäi. Usein kuivuminen kestää vuorokauden tai pidempään. Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, kun vettä ei jää liikaa. Me kuivatamme sohvaa pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa.',
     },
     {
       q: 'Voinko pestä nahkasohvan vuokrapesurilla?',

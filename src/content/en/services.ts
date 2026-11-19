@@ -3,7 +3,7 @@ import type {ServicesPage} from '../types';
 export const services: ServicesPage = {
   metaTitle: "Services — upholstery cleaning and odor removal at home",
   metaDescription:
-    "Upholstery cleaning at home in the Helsinki region: sofas, leather, chairs, mattresses, car interiors and boat textiles. Odor removal and drying are included.",
+    "Upholstery cleaning at home in the Helsinki region: sofas, leather, chairs, mattresses, car interiors and boat textiles. Odor removal and 30 min of drying included.",
   h1: "Services",
   intro:
     "We clean upholstered furniture, mattresses and other textiles where they are: in your home, in your driveway or at the marina. The method is the same throughout: stain pre-treatment, professional cleaning products that are safe for children and pets, and strong extraction that takes the dirt and the product away.",
@@ -15,7 +15,7 @@ export const services: ServicesPage = {
         "Fabric, microfibre and velvet",
         "Corner sofas, chaises and footstools",
         "Loose cushions priced separately",
-        "Blower drying always included",
+        "30 min of blower drying always included",
       ],
     },
     leather: {
@@ -30,7 +30,7 @@ export const services: ServicesPage = {
     },
     beds: {
       title: "Mattresses and beds",
-      text: "Mattresses collect sweat, skin flakes and dust mites. Extraction cleaning washes the surface and freshens the mattress from within. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans at no extra cost.",
+      text: "Mattresses collect sweat, skin flakes and dust mites. Extraction cleaning washes the surface and freshens the mattress from within. Left alone, a mattress takes longer to dry than a sofa, so we run blower fans for 30 minutes at no extra cost; the surface will feel dry to the touch.",
       bullets: [
         "Spring, foam and box-spring mattresses",
         "Guest and children's mattresses",
@@ -65,7 +65,7 @@ export const services: ServicesPage = {
     steps: [
       {title: "Book online", text: "Choose what to clean and a free slot. You see the price straight away."},
       {title: "We come to you", text: "We bring the equipment and detergents. All we need is a power outlet."},
-      {title: "We clean and dry", text: "Pre-treatment, professional products and extraction, then blower fans to speed up drying. Drying is always included in the price."},
+      {title: "We clean and dry", text: "Pre-treatment, professional products and extraction, then 30 minutes of blower fans, always included in the price. The surface will feel dry to the touch; a sofa dries completely in 2–3 hours."},
       {title: "You pay afterwards", text: "Payment only once the work is done. No prepayment."},
     ],
   },
@@ -77,7 +77,7 @@ export const services: ServicesPage = {
     },
     {
       q: "How long does furniture take to dry?",
-      a: "Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer. We speed this up with blower fans after every cleaning, and drying is always included in the price.",
+      a: "Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer. After every cleaning we run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and a sofa dries completely in 2–3 hours. Keep off it until then and air the room.",
     },
     {
       q: "Do all stains come out?",

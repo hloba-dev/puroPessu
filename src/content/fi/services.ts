@@ -3,10 +3,10 @@ import type {ServicesPage} from '../types';
 export const services: ServicesPage = {
   metaTitle: "Palvelut — verhoilupesu ja hajunpoisto kotonasi",
   metaDescription:
-    "Sohvien, nahkahuonekalujen, tuolien, patjojen, autojen ja veneiden tekstiilien pesu paikan päällä pääkaupunkiseudulla. Hajunpoisto ja kuivatus sisältyvät.",
+    "Sohvien, nahkahuonekalujen, tuolien, patjojen, autojen ja veneiden tekstiilien pesu paikan päällä pääkaupunkiseudulla. Hajunpoisto ja 30 min kuivatus sisältyvät.",
   h1: "Palvelut",
   intro:
-    "Pesemme verhoillut huonekalut, patjat ja muut tekstiilit siellä, missä ne ovat: kotonasi, pihallasi tai satamassa. Menetelmä on sama kaikessa: tahrojen esikäsittely, pesu ammattikäyttöön tarkoitetuilla, lapsille ja lemmikeille turvallisilla pesuaineilla ja tehokas imu, joka vie lian ja pesuaineen pois. Lopuksi kuivatamme pestyt tuotteet puhaltimilla, ja kuivatus sisältyy aina hintaan.",
+    "Pesemme verhoillut huonekalut, patjat ja muut tekstiilit siellä, missä ne ovat: kotonasi, pihallasi tai satamassa. Menetelmä on sama kaikessa: tahrojen esikäsittely, pesu ammattikäyttöön tarkoitetuilla, lapsille ja lemmikeille turvallisilla pesuaineilla ja tehokas imu, joka vie lian ja pesuaineen pois. Lopuksi kuivatamme pestyjä tuotteita puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa.",
   sections: {
     sofas: {
       title: "Sohvat ja nojatuolit",
@@ -15,7 +15,7 @@ export const services: ServicesPage = {
         "Kangas-, mikrokuitu- ja samettiverhoilut",
         "Kulmasohvat, divaanit ja rahit",
         "Irtotyynyt hinnoitellaan erikseen",
-        "Kuivatus puhaltimilla sisältyy hintaan",
+        "30 min kuivatus puhaltimilla sisältyy hintaan",
       ],
     },
     leather: {
@@ -30,7 +30,7 @@ export const services: ServicesPage = {
     },
     beds: {
       title: "Patjat ja sängyt",
-      text: "Patjaan kertyy hikeä, hilsettä ja pölypunkkeja. Syväpesu ja tehokas imu puhdistavat patjan pinnan ja raikastavat sen sisältä. Nopeutamme kuivumista puhaltimilla veloituksetta.",
+      text: "Patjaan kertyy hikeä, hilsettä ja pölypunkkeja. Syväpesu ja tehokas imu puhdistavat patjan pinnan ja raikastavat sen sisältä. Kuivatamme patjaa puhaltimilla 30 minuuttia veloituksetta; pinta tuntuu sen jälkeen kuivalta.",
       bullets: [
         "Jousi-, vaahto- ja runkopatjat",
         "Sijauspatjat ja lasten patjat",
@@ -65,7 +65,7 @@ export const services: ServicesPage = {
     steps: [
       {title: "Varaa verkossa", text: "Valitse pestävät tuotteet ja vapaa aika. Näet hinnan heti."},
       {title: "Tulemme kotiisi", text: "Tuomme laitteet ja pesuaineet mukanamme. Tarvitsemme vain pistorasian."},
-      {title: "Pesemme", text: "Esikäsittely, pesu ammattipesuaineilla ja imu. Lopuksi kuivatamme puhaltimilla, veloituksetta. Kerromme etukäteen, jos jokin tahra ei välttämättä lähde."},
+      {title: "Pesemme", text: "Esikäsittely, pesu ammattipesuaineilla ja imu. Lopuksi kuivatamme puhaltimilla 30 minuuttia, veloituksetta. Kerromme etukäteen, jos jokin tahra ei välttämättä lähde."},
       {title: "Maksat lopuksi", text: "Maksu vasta työn jälkeen. Ei ennakkomaksua."},
     ],
   },
@@ -77,7 +77,7 @@ export const services: ServicesPage = {
     },
     {
       q: "Kauanko huonekalut kuivuvat?",
-      a: "Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, patja kauemmin. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.",
+      a: "Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, patja kauemmin. Kuivatamme kalusteita pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen ja tuuleta huone.",
     },
     {
       q: "Lähtevätkö kaikki tahrat?",

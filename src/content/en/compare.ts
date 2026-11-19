@@ -24,7 +24,7 @@ export const compare: ComparePage = {
       {
         aspect: 'Drying time',
         rental: 'Often a day or more if a lot of water is left behind.',
-        pro: 'Faster, with blower fans always included in the price.',
+        pro: 'Faster: 30 minutes of blower fans included; surface dry to the touch, fully dry in 2–3 hours.',
       },
       {
         aspect: 'Detergent residue',
@@ -123,7 +123,7 @@ export const compare: ComparePage = {
     },
     {
       q: 'How long does a sofa take to dry after a rental machine?',
-      a: 'It depends on how much water was left in the fabric — often a day or longer. Left alone after professional extraction, upholstery typically takes 4–8 hours to dry; we speed this up with blower fans, and drying is always included in our price.',
+      a: 'It depends on how much water was left in the fabric — often a day or longer. Left alone after professional extraction, upholstery typically takes 4–8 hours to dry; we run blower fans for 30 minutes, always included in our price, so the surface feels dry to the touch and the sofa dries completely in 2–3 hours.',
     },
     {
       q: 'Can I clean a leather sofa with a rental machine?',

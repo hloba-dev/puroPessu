@@ -40,13 +40,13 @@ export const about: AboutPage = {
     title: 'How we clean',
     paragraphs: [
       'Stains are pre-treated first, then the fabric is washed with a professional extractor that pulls the dirt out together with the detergent. We use professional cleaning products that are allergy-friendly, biodegradable and safe for children and pets. Odour removal is part of every cleaning.',
-      'Leather furniture is cleaned by hand. Left alone, upholstery typically takes 4–8 hours to dry; we speed this up with blower fans, and drying is always included in the price. If you are not happy with the result, we clean again free of charge — that is our satisfaction guarantee.',
+      'Leather furniture is cleaned by hand. Left alone, upholstery typically takes 4–8 hours to dry. We run blower fans for 30 minutes after every cleaning, always included in the price: the surface will feel dry to the touch, and a sofa dries completely in 2–3 hours. If you are not happy with the result, we clean again free of charge — that is our satisfaction guarantee.',
     ],
   },
   facts: [
     {title: 'Every day {from}–{to}', text: 'Including evenings and weekends.'},
     {title: 'Minimum order {min}', text: 'Travel fee by postal code, free in the nearby area.'},
-    {title: 'Drying included', text: 'Blower fans after every cleaning, never an extra.'},
+    {title: '30 minutes of drying included', text: 'Blower fans for 30 minutes after every cleaning, never an extra.'},
     {title: 'Pay after the cleaning', text: 'No prepayment, and the price is final.'},
   ],
   cta: {

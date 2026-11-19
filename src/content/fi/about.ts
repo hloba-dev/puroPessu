@@ -40,14 +40,14 @@ export const about: AboutPage = {
     title: 'Miten pesemme',
     paragraphs: [
       'Tahrat esikäsitellään ensin, minkä jälkeen kangas pestään painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Käytämme ammattikäyttöön tarkoitettuja, allergiaystävällisiä ja biohajoavia pesuaineita, jotka ovat turvallisia lapsille ja lemmikeille. Hajunpoisto sisältyy jokaiseen pesuun.',
-      'Nahkahuonekalut puhdistamme käsin. Ilman apua kangaspinnat kuivuvat tyypillisesti 4–8 tunnissa, mutta nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Jos et ole tyytyväinen lopputulokseen, pesemme uudelleen maksutta – se on tyytyväisyystakuumme.',
+      'Nahkahuonekalut puhdistamme käsin. Ilman apua kangaspinnat kuivuvat tyypillisesti 4–8 tunnissa. Pesun jälkeen kuivatamme niitä puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa. Jos et ole tyytyväinen lopputulokseen, pesemme uudelleen maksutta – se on tyytyväisyystakuumme.',
     ],
   },
   facts: [
     {title: 'Joka päivä {from}–{to}', text: 'Myös iltaisin ja viikonloppuisin.'},
     {title: 'Vähimmäistilaus {min}', text: 'Matkakulu lasketaan postinumeron mukaan, lähialueella matka on maksuton.'},
     {title: 'Kolme kieltä', text: 'Palvelemme suomeksi, venäjäksi ja englanniksi.'},
-    {title: 'Maksu vasta pesun jälkeen', text: 'Ei ennakkomaksua, hinta on lopullinen, ja kuivatus puhaltimilla sisältyy aina hintaan.'},
+    {title: 'Maksu vasta pesun jälkeen', text: 'Ei ennakkomaksua, hinta on lopullinen, ja 30 min kuivatus puhaltimilla sisältyy aina hintaan.'},
   ],
   cta: {
     title: 'Varaa pesu',

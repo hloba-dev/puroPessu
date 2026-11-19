@@ -43,13 +43,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'In Helsinki, your sofa probably went up a narrow stairwell to get into the flat, and nobody wants to carry it back down to a cleaner. So we come to you and clean it where it stands — in the old stone buildings of Töölö and Kallio just as well as in newer homes in Lauttasaari or Vuosaari.',
-        'Our sofa cleaning in Helsinki uses a professional extractor that pulls the dirt and moisture out of the fabric in one go. Our professional cleaning products are allergy-friendly, biodegradable and safe for children and pets, and odour removal is always included. Afterwards we set up blower fans to speed up drying, at no extra cost.'
+        'Our sofa cleaning in Helsinki uses a professional extractor that pulls the dirt and moisture out of the fabric in one go. Our professional cleaning products are allergy-friendly, biodegradable and safe for children and pets, and odour removal is always included. Afterwards we run blower fans for 30 minutes at no extra cost: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours. Until then, keep off it and air the room.'
       ]
     },
     mattress: {
       intro: [
         'In a Helsinki studio or one-bedroom flat, the same room often doubles as bedroom, home office and drying room. That means the mattress collects dust, sweat and moisture faster than usual — and nobody fancies carrying it down the stairs of a building with no lift.',
-        'We do mattress cleaning in Helsinki at your home with professional products and powerful extraction, so the mattress stays on the bed the whole time. Left alone, a mattress takes longer to dry than a sofa, so we speed it up with blower fans, and drying is always included in the price. A morning clean leaves the most time before bedtime.'
+        'We do mattress cleaning in Helsinki at your home with professional products and powerful extraction, so the mattress stays on the bed the whole time. Left alone, a mattress takes longer to dry than a sofa, so we run blower fans on it for 30 minutes, always included in the price: the surface will feel dry to the touch, but the filling needs longer. A morning clean leaves the most time before bedtime.'
       ]
     },
     districts: [
@@ -100,7 +100,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Families with children have plenty of mattresses, and each one has its own story: a leaking nappy, a stomach bug or juice knocked over at bedtime. With mattress cleaning in Espoo done at home, one visit can take care of every bed in the house.',
-        'Extraction cleaning with professional, child-safe products lifts dirt and odours from the upper layers of the mattress, and odour removal is included. Our blower fans speed up drying at no extra cost, and in a terraced or detached house a warm room with good airflow helps too.'
+        'Extraction cleaning with professional, child-safe products lifts dirt and odours from the upper layers of the mattress, and odour removal is included. We run blower fans for 30 minutes at no extra cost, so the surface feels dry to the touch, and in a terraced or detached house a warm room with good airflow helps too.'
       ]
     },
     districts: [
@@ -150,7 +150,7 @@ export const cities: Record<CitySlug, CityContent> = {
     },
     mattress: {
       intro: [
-        'Shift work means sleeping by day one week and by night the next, and the mattress gets heavy use. Plan your mattress cleaning in Vantaa so it has time to dry before your next sleep — a mattress takes longer than a sofa, though our blower fans, always included in the price, speed it up.',
+        'Shift work means sleeping by day one week and by night the next, and the mattress gets heavy use. Plan your mattress cleaning in Vantaa so it has time to dry before your next sleep — a mattress takes longer than a sofa, though 30 minutes of blower fans, always included in the price, leave the surface dry to the touch.',
         'Book, for example, a morning slot on a day off or an evening before a free night. We clean the mattress at your home, remove odours and leave it to dry, and you don’t have to move it anywhere.'
       ]
     },
@@ -194,7 +194,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'In Kauniainen, home is often a spacious detached house, and the living-room sofa has been chosen to match the interior — frequently light linen, wool or another natural fibre. Light fabric looks lovely, but every coffee mark and greying armrest shows straight away.',
-        'Sofa cleaning in Kauniainen is done at your home: we check the fabric first, choose a professional, child- and pet-safe product to suit it and clean the whole surface evenly so no tide marks are left. With a light sofa, that even finish matters most, and our blower fans, always included in the price, speed up drying.'
+        'Sofa cleaning in Kauniainen is done at your home: we check the fabric first, choose a professional, child- and pet-safe product to suit it and clean the whole surface evenly so no tide marks are left. With a light sofa, that even finish matters most, and we run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours.'
       ]
     },
     mattress: {
@@ -240,12 +240,12 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kerava is a town on the main railway line, and many residents commute to work in the capital region. When your weekdays are spent on the train, you don’t want to leave sofa cleaning to the weekend — so we come to Kerava every day, including evenings and weekends.',
-        'We clean your sofa at home in Kaleva, Sompio, Kaskela or wherever you live in Kerava, using a professional extractor and child- and pet-safe products. Left alone, a sofa typically takes 4–8 hours to dry; we speed this up with blower fans, always included in the price. The price is final, and you pay only after the work is done.'
+        'We clean your sofa at home in Kaleva, Sompio, Kaskela or wherever you live in Kerava, using a professional extractor and child- and pet-safe products. Left alone, a sofa typically takes 4–8 hours to dry; we run blower fans for 30 minutes, always included in the price, so the surface feels dry to the touch and the sofa dries completely in 2–3 hours — keep off it until then and air the room. The price is final, and you pay only after the work is done.'
       ]
     },
     mattress: {
       intro: [
-        'Mattress cleaning in Kerava is easy to fit into a day off: we come to your home, clean the mattress on the bed and leave it to dry. We speed up drying with blower fans at no extra cost, but a mattress still needs time, so a morning slot tends to work best.',
+        'Mattress cleaning in Kerava is easy to fit into a day off: we come to your home, clean the mattress on the bed and leave it to dry. We run blower fans for 30 minutes at no extra cost, so the surface feels dry to the touch, but a mattress still needs time, so a morning slot tends to work best.',
         'Cleaning removes dust, sweat and stains from the mattress surface, and odour removal is included. The allergy-friendly detergents are suitable for children’s mattresses and allergy sufferers too.'
       ]
     },
@@ -295,7 +295,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'The mattress is the most-used piece of furniture in the home, yet cleaning it keeps getting postponed because it’s so awkward to move. Mattress cleaning in Järvenpää solves that: we bring the equipment, clean it and leave it to dry.',
-        'Left alone, a mattress takes longer to dry than a sofa; we speed it up with blower fans, and drying is always included in the price. If we clean the whole family’s mattresses at once, agree in advance where everyone will sleep in case not all of them are dry by bedtime.'
+        'Left alone, a mattress takes longer to dry than a sofa; we run blower fans on it for 30 minutes, always included in the price, and the surface will feel dry to the touch. If we clean the whole family’s mattresses at once, agree in advance where everyone will sleep in case not all of them are dry by bedtime.'
       ]
     },
     districts: [
@@ -344,7 +344,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'In summer, sand and damp find their way onto mattresses from the lakeside; in winter, indoor air is dry and there is more dust. Mattress cleaning in Tuusula removes dust, sweat and stains from the mattress surface, and odour removal is included.',
-        'We clean the mattress in the room where it is, and our blower fans speed up drying at no extra cost. In a detached house, drying is quicker when the room is warm and a window is open a crack.'
+        'We clean the mattress in the room where it is, and run blower fans for 30 minutes at no extra cost, so the surface feels dry to the touch. In a detached house, drying is quicker when the room is warm and a window is open a crack.'
       ]
     },
     districts: [
@@ -392,7 +392,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Country life is hard on mattresses: a wet dog jumping onto the bed, and dry, dusty indoor air all winter. With mattress cleaning in Sipoo done at home, there’s no need to haul the mattress anywhere.',
-        'We clean the mattress and remove odours on the spot. In a larger house, a mattress usually dries well when the room stays warm and fresh air can get in.'
+        'We clean the mattress and remove odours on the spot, then run blower fans for 30 minutes at no extra cost, so the surface feels dry to the touch. In a larger house, a mattress usually dries well when the room stays warm and fresh air can get in.'
       ]
     },
     districts: [
@@ -440,7 +440,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Cottage mattresses often spend the whole winter in cold, damp conditions and smell musty by spring. Mattress cleaning in Kirkkonummi fits nicely at the start or end of cottage season — as long as the cottage can be reached by car.',
-        'Extraction cleaning removes dust and odours from the mattress surface, and our blower fans, always included in the price, speed up drying. If there is mould in the mattress, we’ll tell you straight: cleaning won’t remove it.'
+        'Extraction cleaning removes dust and odours from the mattress surface, and 30 minutes of blower fans, always included in the price, leave the surface dry to the touch. If there is mould in the mattress, we’ll tell you straight: cleaning won’t remove it.'
       ]
     },
     districts: [
@@ -481,13 +481,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Many families in Nurmijärvi live in large detached houses in Klaukkala, Rajamäki or the church village, often with a big corner sofa that fits everyone in the evening. Sofa cleaning in Nurmijärvi is done at your home, so the heavy sofa never has to move.',
-        'We deep clean the sofa, armchairs and footstool with a professional extractor, the products are safe for children and pets, and odour removal is included. Blower fans then speed up drying, and that is always included in the price too.'
+        'We deep clean the sofa, armchairs and footstool with a professional extractor, the products are safe for children and pets, and odour removal is included. We then run blower fans for 30 minutes, always included in the price too: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours.'
       ]
     },
     mattress: {
       intro: [
         'A big family means lots of mattresses, and the children’s ones usually have the most stains and smells. Mattress cleaning in Nurmijärvi is best done for every bed at once, so you see the whole price as one total in the booking.',
-        'Cleaning is done on site with allergy-friendly, biodegradable products. Mattresses take longer to dry than sofas, so we speed it up with blower fans, and drying is always included in the price. A morning clean leaves the most time before evening.'
+        'Cleaning is done on site with allergy-friendly, biodegradable products. Mattresses take longer to dry than sofas, so we run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, but the filling needs longer. A morning clean leaves the most time before evening.'
       ]
     },
     districts: [
@@ -534,7 +534,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Air moves differently in an old wooden house than in a new apartment block, and mattresses can pick up moisture and smells. Mattress cleaning in Porvoo is done on the bed, so nobody has to carry the mattress down steep stairs.',
-        'Cleaning removes dust, sweat and stains from the mattress surface, and odour removal is included. We speed up drying with blower fans at no extra cost, and in a wooden house steady warmth and airing help too.'
+        'Cleaning removes dust, sweat and stains from the mattress surface, and odour removal is included. We run blower fans for 30 minutes at no extra cost, so the surface feels dry to the touch, and in a wooden house steady warmth and airing help too.'
       ]
     },
     districts: [
@@ -582,7 +582,7 @@ export const cities: Record<CitySlug, CityContent> = {
     },
     mattress: {
       intro: [
-        'Mattress cleaning in Hyvinkää is easy to schedule for a day off: we come in the morning, clean the mattress and it dries during the day, helped by our blower fans, which are always included in the price.',
+        'Mattress cleaning in Hyvinkää is easy to schedule for a day off: we come in the morning, clean the mattress and run blower fans for 30 minutes, always included in the price. The surface will feel dry to the touch, and the mattress finishes drying during the day.',
         'We clean foam, spring and divan mattresses as well as toppers, provided the material can take wet cleaning. The allergy-friendly detergents are suitable for allergy sufferers too.'
       ]
     },
@@ -611,7 +611,7 @@ export const cities: Record<CitySlug, CityContent> = {
       },
       {
         q: 'Can I sleep on the mattress the same night?',
-        a: 'Often, yes, if it is cleaned in the morning or before noon. Left alone, upholstery typically takes 4–8 hours to dry and mattresses longer, depending on room temperature and ventilation; we speed this up with blower fans, always included in the price.'
+        a: 'Often, yes, if it is cleaned in the morning or before noon. Left alone, upholstery typically takes 4–8 hours to dry and mattresses longer, depending on room temperature and ventilation; we run blower fans for 30 minutes, always included in the price, which leaves the surface dry to the touch.'
       },
       {
         q: 'What if a stain doesn’t come out?',

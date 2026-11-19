@@ -3,7 +3,7 @@ import type {PricingPage} from '../types';
 export const pricing: PricingPage = {
   metaTitle: 'Hinnasto — sohvan pesu alk. {price}, vähimmäistilaus {min}',
   metaDescription:
-    'Puron hinnasto: sohvien, nojatuolien ja patjojen pesu paikan päällä pääkaupunkiseudulla. Pakettihinnat ja alennukset, kuivatus veloituksetta, ei ennakkomaksua.',
+    'Puron hinnasto: sohvien, nojatuolien ja patjojen pesu paikan päällä pääkaupunkiseudulla. Pakettihinnat ja alennukset, 30 min kuivatus kaupan päälle, ei ennakkomaksua.',
   h1: 'Hinnasto',
   intro:
     'Kaikki palvelumme löytyvät yhdestä hinnastosta. Sama hinta näkyy varauslomakkeessa ja myöhemmin laskulla. Ei piilokuluja eikä yllätyksiä paikan päällä. Ensitilaajan alennus, kanta-asiakasalennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
@@ -31,8 +31,8 @@ export const pricing: PricingPage = {
         text: 'Kun hinnan edessä lukee alk. (alkaen), lopullinen hinta riippuu koosta tai materiaalista. Vahvistamme sen kanssasi ennen pesua.',
       },
       {
-        title: 'Kuivatus ja hajunpoisto sisältyvät aina hintaan',
-        text: 'Jokaisen pesun jälkeen kuivatamme huonekalut puhaltimilla, ja jokaiseen pesuun kuuluu hajunpoisto. Kumpikaan ei ole lisämaksullinen.',
+        title: '30 min kuivatus ja hajunpoisto sisältyvät aina hintaan',
+        text: 'Jokaisen pesun jälkeen kuivatamme huonekaluja puhaltimilla 30 minuuttia, ja jokaiseen pesuun kuuluu hajunpoisto. Kumpikaan ei ole lisämaksullinen. Kuivatuksen jälkeen pinta tuntuu kuivalta; kokonaan sohva kuivuu 2–3 tunnissa.',
       },
     ],
   },
@@ -46,7 +46,7 @@ export const pricing: PricingPage = {
   faq: [
     {
       q: 'Mitä hintaan sisältyy?',
-      a: 'Tahrojen esikäsittely, pesu ja imu, hajunpoisto, kuivatus puhaltimilla sekä ammattipesuaineet ja laitteet. Pesemme paikan päällä, joten huonekalua ei tarvitse kuljettaa minnekään.',
+      a: 'Tahrojen esikäsittely, pesu ja imu, hajunpoisto, 30 minuutin kuivatus puhaltimilla sekä ammattipesuaineet ja laitteet. Pesemme paikan päällä, joten huonekalua ei tarvitse kuljettaa minnekään.',
     },
     {
       q: 'Miksi on vähimmäistilaus?',

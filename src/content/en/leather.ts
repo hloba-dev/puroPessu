@@ -3,12 +3,12 @@ import type {ServiceLanding} from '../types';
 export const leather: ServiceLanding = {
   metaTitle: 'Leather Sofa Cleaning Helsinki — from {price}, at Home',
   metaDescription:
-    'Leather sofa and armchair cleaning at your home in the Helsinki region from {price}. Done by hand with leather-safe products, drying included.',
+    'Leather sofa and armchair cleaning at your home in the Helsinki region from {price}. Done by hand with leather-safe products, 30 min of drying included.',
   breadcrumb: 'Leather sofa cleaning',
   badge: 'Leather and faux leather',
   h1: 'Leather Sofa Cleaning in Helsinki — by Hand, at Your Home',
   intro:
-    'We clean leather sofas and armchairs by hand with professional products made for leather, without excess moisture or harsh scrubbing. Prices start at {price}, and we come every day from {from} to {to}. We finish with blower fans to speed up drying, and drying is always included in the price.',
+    'We clean leather sofas and armchairs by hand with professional products made for leather, without excess moisture or harsh scrubbing. Prices start at {price}, and we come every day from {from} to {to}. We finish with 30 minutes of blower fans on the seams and stitching, always included in the price.',
   prices: {
     title: 'Leather sofa cleaning prices',
     lead: 'The price depends on the size of the sofa. You see the fixed price before you book.',
@@ -38,8 +38,8 @@ export const leather: ServiceLanding = {
         text: 'We use professional cleaners made for leather that don\'t dry out the surface or lift the colour.',
       },
       {
-        title: 'Free drying with blower fans',
-        text: 'After cleaning we set up blower fans so the seams and padding dry faster. It is always included in the price, never an extra.',
+        title: '30 minutes of drying included',
+        text: 'After cleaning we run blower fans for 30 minutes so the seams and padding dry faster. The surface will feel dry to the touch. Always included in the price, never an extra.',
       },
       {
         title: 'At your home',
@@ -71,8 +71,8 @@ export const leather: ServiceLanding = {
         text: 'Dirt and cleaner are wiped off with a microfibre cloth, section by section, so no residue stays on the surface.',
       },
       {
-        title: 'Drying with blower fans',
-        text: 'We finish with blower fans that dry the surface, seams and stitching faster. Drying is free of charge and always included in the price.',
+        title: '30 minutes of blower drying',
+        text: 'We finish with 30 minutes of blower fans on the surface, seams and stitching. The surface will feel dry to the touch; the seams take a little longer. Free of charge and always included in the price.',
       },
     ],
   },
@@ -187,7 +187,7 @@ export const leather: ServiceLanding = {
   faq: [
     {
       q: 'How soon can I use the sofa?',
-      a: 'Leather is cleaned with very little moisture, so it dries faster than fabric upholstery. We speed up drying with blower fans, and drying is always included in the price. We\'ll tell you on site when it\'s fine to sit down.',
+      a: 'Leather is cleaned with very little moisture, so it dries faster than fabric upholstery. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, while seams and stitching take longest. We\'ll tell you on site when it\'s fine to sit down.',
     },
     {
       q: 'Will all the stains come out?',

@@ -8,7 +8,7 @@ export const boat: ServiceLanding = {
   badge: "Satamaan tai kotiin",
   h1: "Veneen tekstiilien pesu Helsingissä",
   intro:
-    "Pesemme veneen patjat, istuintyynyt ja verhoillut paneelit suoraan veneessä satamassa. Irrotettavat tyynyt voi pestä myös kotonasi. Pesun jälkeen kuivatamme pehmusteet puhaltimilla, ja kuivatus sisältyy aina hintaan. Hinnat alk. {price}, ja tulemme joka päivä klo {from}–{to}.",
+    "Pesemme veneen patjat, istuintyynyt ja verhoillut paneelit suoraan veneessä satamassa. Irrotettavat tyynyt voi pestä myös kotonasi. Pesun jälkeen kuivatamme pehmusteita puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Hinnat alk. {price}, ja tulemme joka päivä klo {from}–{to}.",
   prices: {
     title: "Hinnat",
     lead: "Hinta riippuu patjojen ja tyynyjen määrästä ja koosta. Valitse varauksessa lähin vaihtoehto, niin näet hinnan heti.",
@@ -46,8 +46,8 @@ export const boat: ServiceLanding = {
         text: "Keväällä ennen vesillelaskua tai syksyllä ennen talvisäilytystä. Illat ja viikonloput käyvät myös.",
       },
       {
-        title: "Kuivatus puhaltimilla veloituksetta",
-        text: "Kosteassa veneessä kuivatus on tärkeää. Kuivatamme pehmusteet puhaltimilla, ja kuivatus sisältyy aina hintaan.",
+        title: "30 min kuivatus puhaltimilla kaupan päälle",
+        text: "Kosteassa veneessä kuivatus on tärkeää. Kuivatamme pehmusteita puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta täyte kuivuu vielä pidempään.",
       },
     ],
   },
@@ -71,8 +71,8 @@ export const boat: ServiceLanding = {
         text: "Pesemme kankaat painehuuhtelukoneella ja imemme lian ja kosteuden pois. Ammattipesuaineemme ovat turvallisia lapsille ja lemmikeille. Vinyyli- ja tekonahkapinnat puhdistamme käsin.",
       },
       {
-        title: "Kuivatus puhaltimilla",
-        text: "Lopuksi kuivatamme tyynyt ja patjat puhaltimilla veloituksetta. Pidä sen jälkeen luukut auki tai nosta tyynyt kyljelleen tuulettumaan.",
+        title: "30 min kuivatus puhaltimilla",
+        text: "Lopuksi kuivatamme tyynyjä ja patjoja puhaltimilla 30 minuuttia veloituksetta: pinta tuntuu sen jälkeen kuivalta. Pidä sen jälkeen luukut auki tai nosta tyynyt kyljelleen tuulettumaan, kunnes täyte on kuiva.",
       },
     ],
   },
@@ -146,7 +146,7 @@ export const boat: ServiceLanding = {
     lead: "Moni pesee tyynyt laiturilla harjalla ja puutarhaletkulla. Pinta voi näyttää puhtaalta, mutta vaahtomuovi jää märäksi.",
     headers: {aspect: "Vertailukohta", rental: "Harja ja puutarhaletku", pro: "Puro"},
     rows: [
-      {aspect: "Kosteus", rental: "Vaahtomuovi imee vettä ja kuivuu päiviä", pro: "Vesi imetään pois, ja kuivatamme puhaltimilla"},
+      {aspect: "Kosteus", rental: "Vaahtomuovi imee vettä ja kuivuu päiviä", pro: "Vesi imetään pois, ja kuivatamme puhaltimilla 30 min"},
       {aspect: "Homeriski", rental: "Märkä pehmuste kosteassa veneessä homehtuu", pro: "Kosteus hallitaan koko pesun ajan"},
       {aspect: "Lika", rental: "Pinta puhdistuu, lika jää syvemmälle", pro: "Painehuuhtelu ja imu vievät lian pois syvältä"},
       {aspect: "Pesuaine", rental: "Jää kankaaseen, jos huuhtelu ei riitä", pro: "Huuhdellaan ja imetään pois"},
@@ -173,7 +173,7 @@ export const boat: ServiceLanding = {
     },
     {
       q: "Kauanko tyynyt kuivuvat?",
-      a: "Ilman apua tyynyt kuivuvat tyypillisesti 4–8 tunnissa, patjat kauemmin. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Pidä luukut auki ja nosta tyynyt kyljelleen. Älä sulje venettä, ennen kuin pehmusteet ovat kuivia.",
+      a: "Ilman apua tyynyt kuivuvat tyypillisesti 4–8 tunnissa, patjat kauemmin. Kuivatamme niitä pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, mutta täyte kuivuu vielä pidempään. Pidä luukut auki ja nosta tyynyt kyljelleen. Älä sulje venettä, ennen kuin pehmusteet ovat kuivia.",
     },
     {
       q: "Lähtevätkö hometäplät?",

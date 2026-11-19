@@ -8,7 +8,7 @@ export const boat: ServiceLanding = {
   badge: "At the marina or at home",
   h1: "Boat upholstery and mattress cleaning in Helsinki",
   intro:
-    "We clean cabin mattresses, seat cushions and upholstered panels right on board at the marina. Removable cushions can also be cleaned at your home. After cleaning we speed up drying with blower fans, always included in the price. Prices from {price}, and we come out every day from {from} to {to}.",
+    "We clean cabin mattresses, seat cushions and upholstered panels right on board at the marina. Removable cushions can also be cleaned at your home. After cleaning we run blower fans for 30 minutes, always included in the price, so the surface feels dry to the touch. Prices from {price}, and we come out every day from {from} to {to}.",
   prices: {
     title: "Prices",
     lead: "The price depends on the number and size of mattresses and cushions. Pick the closest option when booking and you will see the price straight away.",
@@ -46,8 +46,8 @@ export const boat: ServiceLanding = {
         text: "In spring before launch or in autumn before lay-up. Evenings and weekends work too.",
       },
       {
-        title: "Free drying with blower fans",
-        text: "After cleaning we set up blower fans so the padding dries faster. It is always included in the price, never an extra.",
+        title: "30 minutes of drying included",
+        text: "After cleaning we run blower fans for 30 minutes so the padding dries faster. The surface will feel dry to the touch; the padding needs more time. Always included in the price, never an extra.",
       },
     ],
   },
@@ -71,8 +71,8 @@ export const boat: ServiceLanding = {
         text: "We wash the fabric with professional products that are safe for children and pets, and extract the dirt and moisture straight away. Vinyl and faux leather are cleaned by hand.",
       },
       {
-        title: "Drying with blower fans",
-        text: "We finish with blower fans that speed up drying, free of charge. Afterwards, keep the hatches open or stand the cushions on edge to air.",
+        title: "30 minutes of blower drying",
+        text: "We finish with 30 minutes of blower fans, free of charge: the surface will feel dry to the touch. Afterwards, keep the hatches open or stand the cushions on edge to air while the padding dries through.",
       },
     ],
   },
@@ -173,7 +173,7 @@ export const boat: ServiceLanding = {
     },
     {
       q: "How long do the cushions take to dry?",
-      a: "Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer. We speed this up with blower fans, and drying is always included in the price. Keep the hatches open and stand the cushions on edge, and do not close up the boat until the padding is dry.",
+      a: "Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, but the padding needs longer. Keep the hatches open and stand the cushions on edge, and do not close up the boat until the padding is dry.",
     },
     {
       q: "Do mildew spots come out?",

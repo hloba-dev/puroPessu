@@ -8,7 +8,7 @@ export const mattress: ServiceLanding = {
   badge: 'Mattresses and beds',
   h1: 'Mattress Cleaning in the Helsinki Region — Beds Cleaned at Your Home',
   intro:
-    'We deep clean spring mattresses, box beds, toppers and children\'s mattresses right in your bedroom. Prices start at {price}, and morning slots begin at {from}, so the mattress has plenty of time to dry before bedtime. We speed up drying with blower fans, and drying is always included in the price.',
+    'We deep clean spring mattresses, box beds, toppers and children\'s mattresses right in your bedroom. Prices start at {price}, and morning slots begin at {from}, so the mattress has plenty of time to dry before bedtime. After cleaning we run blower fans for 30 minutes, always included in the price, so the surface feels dry to the touch.',
   prices: {
     title: 'Mattress cleaning prices',
     lead: 'The price depends on the size and type – single mattress, double bed or topper. The mattress price covers one side, topper not included. The first-order discount and bundle offers, such as a sofa and a mattress together, are shown in the price list and in the booking.',
@@ -46,8 +46,8 @@ export const mattress: ServiceLanding = {
         text: 'We use professional products that are allergy-friendly, biodegradable and safe for children and pets. They are extracted at the end, so no residue stays in the mattress.',
       },
       {
-        title: 'Free drying with blower fans',
-        text: 'After cleaning we set up blower fans to speed up drying. It is always included in the price, never an extra.',
+        title: '30 minutes of drying included',
+        text: 'After cleaning we run blower fans for 30 minutes. The surface will feel dry to the touch; the filling needs longer. Always included in the price, never an extra.',
       },
     ],
   },
@@ -71,8 +71,8 @@ export const mattress: ServiceLanding = {
         text: 'The top and sides are washed with a professional extractor that pulls the dirt and moisture straight back out. The price covers one side of the mattress. The second side of a flippable mattress can be done on request and is charged separately.',
       },
       {
-        title: 'Drying with blower fans',
-        text: 'We finish with blower fans that speed up drying, free of charge. Left alone, a mattress takes longer to dry than upholstered furniture, so air the room and leave the bed unmade until it\'s dry.',
+        title: '30 minutes of blower drying',
+        text: 'We finish with 30 minutes of blower fans, free of charge: the surface will feel dry to the touch. A mattress takes longer to dry through than upholstered furniture, so air the room and leave the bed unmade until it\'s dry.',
       },
     ],
   },
@@ -160,7 +160,7 @@ export const mattress: ServiceLanding = {
       {
         aspect: 'Drying time',
         rental: 'Can drag on, leaving the mattress damp at night',
-        pro: 'Strong extraction plus free blower drying',
+        pro: 'Strong extraction plus 30 min of blower drying, included',
       },
       {
         aspect: 'Cleaning products',
@@ -187,7 +187,7 @@ export const mattress: ServiceLanding = {
   faq: [
     {
       q: 'How long does a mattress take to dry?',
-      a: 'Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer, especially foam. We speed this up with blower fans, and drying is always included in the price. We still recommend a morning appointment so there is plenty of time before bedtime. Keep the room aired while it dries.',
+      a: 'Left alone, upholstery typically takes 4–8 hours to dry, and mattresses longer, especially foam. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, but the filling needs longer. We still recommend a morning appointment so there is plenty of time before bedtime. Keep the room aired while it dries.',
     },
     {
       q: 'Do urine and sweat stains come out?',
@@ -224,6 +224,6 @@ export const mattress: ServiceLanding = {
   ],
   cta: {
     title: 'Book mattress cleaning',
-    text: 'Choose a morning slot to give the mattress the most drying time, with blower drying always included. The price is shown before booking, and you pay after the work.',
+    text: 'Choose a morning slot to give the mattress the most drying time, with 30 minutes of blower drying always included. The price is shown before booking, and you pay after the work.',
   },
 };

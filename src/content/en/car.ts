@@ -8,7 +8,7 @@ export const car: ServiceLanding = {
   badge: "We come to your car",
   h1: "Car upholstery cleaning in Helsinki, done where your car is parked",
   intro:
-    "We clean seats, floor mats and door upholstery wherever your car is parked: in your driveway, at your building's parking spot or in a parking garage. All we need is a power outlet, and we bring the water. Afterwards we speed up drying with blower fans, always included in the price. Prices from {price}, and we work every day from {from} to {to}.",
+    "We clean seats, floor mats and door upholstery wherever your car is parked: in your driveway, at your building's parking spot or in a parking garage. All we need is a power outlet, and we bring the water. Afterwards we run blower fans for 30 minutes, always included in the price, so the surface feels dry to the touch. Prices from {price}, and we work every day from {from} to {to}.",
   prices: {
     title: "Prices",
     lead: "The price depends on how many seats and parts you want cleaned. You see the total while booking.",
@@ -34,8 +34,8 @@ export const car: ServiceLanding = {
         text: "No driving across town and no leaving the car at a valet for the day. It stays where you can see it.",
       },
       {
-        title: "Free drying with blower fans",
-        text: "After cleaning we set up blower fans to speed up drying. It is always included in the price, never an extra.",
+        title: "30 minutes of drying included",
+        text: "After cleaning we run blower fans in the car for 30 minutes. The surface will feel dry to the touch; the seats need a little longer to dry through. Always included in the price, never an extra.",
       },
       {
         title: "Odor removal at no extra cost",
@@ -71,8 +71,8 @@ export const car: ServiceLanding = {
         text: "We wash the upholstery with a professional extractor that pulls the dirt and moisture straight back out. Leather seats are cleaned by hand.",
       },
       {
-        title: "Drying with blower fans",
-        text: "We finish with blower fans that speed up drying, free of charge. Afterwards, leave the windows ajar or run the heater.",
+        title: "30 minutes of blower drying",
+        text: "We finish with 30 minutes of blower fans, free of charge: the surface will feel dry to the touch. Afterwards, leave the windows ajar or run the heater while the seats dry through.",
       },
     ],
   },
@@ -148,7 +148,7 @@ export const car: ServiceLanding = {
     rows: [
       {aspect: "Equipment", rental: "A light wet vacuum with modest suction", pro: "A professional extractor that rinses the fabric and pulls the dirt out"},
       {aspect: "Detergent", rental: "Often stays in the fabric and attracts dirt", pro: "Rinsed out and extracted"},
-      {aspect: "Moisture", rental: "Seats stay wet and dry slowly", pro: "Strong extraction plus free blower drying"},
+      {aspect: "Moisture", rental: "Seats stay wet and dry slowly", pro: "Strong extraction plus 30 min of blower drying, included"},
       {aspect: "Stains", rental: "One product for everything", pro: "Pre-treatment matched to the stain"},
       {aspect: "Smell", rental: "Masked for a while with fragrance", pro: "The source is washed out"},
       {aspect: "Your time", rental: "Pick up, clean, return, tidy up", pro: "You get on with your day, we clean"},
@@ -170,7 +170,7 @@ export const car: ServiceLanding = {
     },
     {
       q: "How long do the seats take to dry?",
-      a: "Left alone, upholstery typically takes 4–8 hours to dry. We speed this up with blower fans, and drying is always included in the price. Windows ajar or the heater on help too, and in winter, park the car somewhere warm if you can.",
+      a: "Left alone, upholstery typically takes 4–8 hours to dry. We run blower fans for 30 minutes, always included in the price: the surface will feel dry to the touch, and the seats then finish drying. Windows ajar or the heater on help too, and in winter, park the car somewhere warm if you can.",
     },
     {
       q: "Can I drive right after the clean?",

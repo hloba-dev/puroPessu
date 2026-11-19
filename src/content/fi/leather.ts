@@ -3,15 +3,15 @@ import type {ServiceLanding} from '../types';
 export const leather: ServiceLanding = {
   metaTitle: 'Nahkasohvan puhdistus Helsinki — alk. {price}, paikan päällä',
   metaDescription:
-    'Nahkasohvan ja nojatuolin puhdistus kotonasi pääkaupunkiseudulla alk. {price}. Käsin nahalle sopivilla aineilla, ja kuivatus puhaltimilla sisältyy hintaan.',
+    'Nahkasohvan ja nojatuolin puhdistus kotonasi pääkaupunkiseudulla alk. {price}. Käsin nahalle sopivilla aineilla, ja 30 min kuivatus puhaltimilla sisältyy hintaan.',
   breadcrumb: 'Nahkasohvan puhdistus',
   badge: 'Nahka ja keinonahka',
   h1: 'Nahkasohvan puhdistus Helsingissä — käsin, kotonasi',
   intro:
-    'Puhdistamme nahkasohvat ja -nojatuolit käsin nahalle tarkoitetuilla ammattiaineilla, ilman liikaa kosteutta ja kovaa hankausta. Hinnat alkaen {price}, ja tulemme joka päivä klo {from}–{to}. Puhdistuksen päätteeksi kuivatamme pinnan ja saumat puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+    'Puhdistamme nahkasohvat ja -nojatuolit käsin nahalle tarkoitetuilla ammattiaineilla, ilman liikaa kosteutta ja kovaa hankausta. Hinnat alkaen {price}, ja tulemme joka päivä klo {from}–{to}. Puhdistuksen päätteeksi kuivatamme pintaa ja saumoja puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan.',
   prices: {
     title: 'Nahkasohvan puhdistuksen hinnat',
-    lead: 'Hinta riippuu sohvan koosta ja mallista. Kuivatus puhaltimilla sisältyy aina hintaan.',
+    lead: 'Hinta riippuu sohvan koosta ja mallista. 30 min kuivatus puhaltimilla sisältyy aina hintaan.',
     note: 'Vähimmäistilaus on {min}. Varauksessa näkyvä hinta on lopullinen. Voit liittää varaukseen kuvia. Jos niissä näkyy hyvin likainen nahka, otamme yhteyttä ja sovimme hinnan ennen käyntiä.',
   },
   gallery: {
@@ -38,8 +38,8 @@ export const leather: ServiceLanding = {
         text: 'Käytämme nahalle tarkoitettuja puhdistusaineita, jotka eivät kuivata pintaa eivätkä irrota väriä.',
       },
       {
-        title: 'Kuivatus puhaltimilla veloituksetta',
-        text: 'Kuivatamme pinnan ja saumat puhaltimilla puhdistuksen päätteeksi. Kuivatus sisältyy aina hintaan, eikä siitä tule lisämaksua.',
+        title: '30 min kuivatus puhaltimilla kaupan päälle',
+        text: 'Kuivatamme pintaa ja saumoja puhaltimilla 30 minuuttia puhdistuksen päätteeksi. Se sisältyy aina hintaan, eikä siitä tule lisämaksua. Pinta tuntuu sen jälkeen kuivalta, saumat kuivuvat vielä pidempään.',
       },
       {
         title: 'Paikan päällä',
@@ -71,8 +71,8 @@ export const leather: ServiceLanding = {
         text: 'Pyyhimme lian ja aineen pois mikrokuituliinalla. Pinnalle ei jää ylimääräistä kosteutta.',
       },
       {
-        title: 'Kuivatus puhaltimilla',
-        text: 'Lopuksi kuivatamme pinnan ja saumat puhaltimilla. Kuivatus on aina mukana hinnassa veloituksetta, ja neuvomme, miten hoidat nahkaa jatkossa.',
+        title: '30 min kuivatus puhaltimilla',
+        text: 'Lopuksi kuivatamme pintaa ja saumoja puhaltimilla 30 minuuttia. Kuivatus on aina mukana hinnassa veloituksetta, ja neuvomme, miten hoidat nahkaa jatkossa.',
       },
     ],
   },
@@ -187,7 +187,7 @@ export const leather: ServiceLanding = {
   faq: [
     {
       q: 'Kuinka pian sohvaa voi käyttää?',
-      a: 'Nahka puhdistetaan vähällä kosteudella, ja kuivatamme pinnan ja saumat lopuksi puhaltimilla. Kuivatus sisältyy aina hintaan. Kerromme paikan päällä, milloin sohvalle voi istua.',
+      a: 'Nahka puhdistetaan vähällä kosteudella, ja kuivatamme pintaa ja saumoja lopuksi puhaltimilla 30 minuuttia. Se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta saumat kuivuvat pidempään – kerromme paikan päällä, milloin sohvalle voi istua.',
     },
     {
       q: 'Lähtevätkö kaikki tahrat?',

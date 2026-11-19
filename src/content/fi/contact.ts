@@ -24,7 +24,7 @@ export const contact: ContactPage = {
   faq: [
     {
       q: 'Kauanko huonekalu kuivuu pesun jälkeen?',
-      a: 'Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, patja kauemmin. Kuivumiseen vaikuttavat kangas, täyte ja huoneen ilmanvaihto. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      a: 'Ilman apua verhoilu kuivuu tyypillisesti 4–8 tunnissa, patja kauemmin. Kuivumiseen vaikuttavat kangas, täyte ja huoneen ilmanvaihto. Kuivatamme kalusteita pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen ja tuuleta huone.',
     },
     {
       q: 'Lähtevätkö kaikki tahrat?',

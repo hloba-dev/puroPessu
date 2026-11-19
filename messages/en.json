@@ -1,7 +1,7 @@
 {
   "meta": {
     "defaultTitle": "Puro — sofa cleaning at your home, every day {from}–{to}",
-    "defaultDescription": "On-site cleaning for sofas, armchairs and mattresses in Helsinki and the capital region. Professional products, safe for children and pets. Drying is always included."
+    "defaultDescription": "On-site cleaning for sofas, armchairs and mattresses in Helsinki and the capital region. Professional products, safe for children and pets. 30 min of drying always included."
   },
   "nav": {
     "main": "Main menu",
@@ -107,12 +107,12 @@
   },
   "home": {
     "metaTitle": "Sofa cleaning at home in Helsinki — from {price}, every day {from}–{to} | Puro",
-    "metaDescription": "Sofa, armchair and mattress cleaning at your home in Helsinki, Espoo and Vantaa. Every day {from}–{to}, from {price}. Child- and pet-safe professional products, drying always free.",
+    "metaDescription": "Sofa, armchair and mattress cleaning at your home in Helsinki, Espoo and Vantaa. Every day {from}–{to}, from {price}. Child- and pet-safe professional products, 30 min of drying included.",
     "hero": {
       "badge": "On site · every day {from}–{to}",
       "h1Line1": "Sofa cleaning",
       "h1Line2": "at your home",
-      "sub": "Deep cleaning for sofas, armchairs and mattresses with professional products, in Helsinki and the whole capital region. From {price} — blower drying always free, no prepayment.",
+      "sub": "Deep cleaning for sofas, armchairs and mattresses with professional products, in Helsinki and the whole capital region. From {price} — 30 minutes of blower drying always included, no prepayment.",
       "cta": "Book now",
       "ctaSecondary": "See prices",
       "mockTitle": "What needs cleaning?",
@@ -123,7 +123,7 @@
       "trust": [
         "Satisfaction guarantee",
         "No prepayment",
-        "Drying included"
+        "30 min of drying included"
       ],
       "trustLabel": "Our promise",
       "safe": "Safe for children and pets"
@@ -140,8 +140,8 @@
           "text": "We bring the equipment. The sofa stays where it is."
         },
         {
-          "title": "Drying is always free",
-          "text": "After cleaning we dry the furniture with blower fans. It is part of every job at no extra cost."
+          "title": "30 minutes of drying included",
+          "text": "After cleaning we run blower fans on the furniture for 30 minutes, at no extra cost. The surface will feel dry to the touch; a sofa dries completely in 2–3 hours, so keep off it until then and air the room."
         },
         {
           "title": "Satisfaction guarantee",
@@ -152,7 +152,7 @@
     "services": {
       "eyebrow": "Services",
       "title": "What we clean",
-      "lead": "All upholstered furniture at home and at the office. Prices are final and include stain pre-treatment, odor removal and blower drying.",
+      "lead": "All upholstered furniture at home and at the office. Prices are final and include stain pre-treatment, odor removal and 30 minutes of blower drying.",
       "all": "All services",
       "cards": {
         "sofas": {
@@ -202,8 +202,8 @@
           "text": "We pre-treat stains with professional products, wash the fabric with an extractor and pull the dirt and detergent back out."
         },
         {
-          "title": "Drying — free of charge",
-          "text": "We finish by drying the fabric with blower fans. Left alone it would take 4–8 hours; we speed that up at no extra cost."
+          "title": "30 minutes of drying — included",
+          "text": "We finish with 30 minutes of blower fans, at no extra cost. The surface will feel dry to the touch, and the sofa dries completely in 2–3 hours instead of the 4–8 it would take left alone. Keep off it until then and air the room."
         }
       ]
     },
@@ -213,8 +213,8 @@
       "lead": "A good result depends on what is left in the fabric after cleaning. That is why we rinse and extract every surface thoroughly.",
       "items": [
         {
-          "title": "Drying is always included",
-          "text": "We do not leave the sofa to dry on its own: after every cleaning we dry it with blower fans, free of charge."
+          "title": "30 minutes of drying always included",
+          "text": "We do not leave the sofa to dry on its own: after every cleaning we run blower fans on it for 30 minutes, free of charge. The surface will feel dry to the touch, and the sofa dries completely in 2–3 hours."
         },
         {
           "title": "Professional cleaning products",
@@ -273,7 +273,7 @@
       "items": [
         {
           "q": "How long does a sofa take to dry after cleaning?",
-          "a": "Left alone, fabric usually takes 4–8 hours to dry. We dry the furniture with blower fans after cleaning, which speeds this up considerably — and drying is always included in the price."
+          "a": "Left alone, fabric usually takes 4–8 hours to dry. After cleaning we run blower fans on the sofa for 30 minutes, always included in the price: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours. Until then, don't sit on it and air the room."
         },
         {
           "q": "Do all stains come out?",
@@ -284,7 +284,7 @@
     },
     "cta": {
       "title": "Book sofa cleaning — see free slots instantly",
-      "text": "Booking takes a couple of minutes. Drying is included, and you pay only after the cleaning."
+      "text": "Booking takes a couple of minutes. 30 minutes of drying is included, and you pay only after the cleaning."
     }
   },
   "prices": {
@@ -395,7 +395,7 @@
     "metaTitle": "Book online — see free slots instantly",
     "metaDescription": "Book sofa, armchair or mattress cleaning at your home in a couple of minutes. See the price and free slots instantly, every day {from}–{to}. No prepayment.",
     "title": "Book a time",
-    "lead": "Choose the furniture and see the price and free times right away. Drying is always included. Booking takes about two minutes.",
+    "lead": "Choose the furniture and see the price and free times right away. 30 minutes of drying is always included. Booking takes about two minutes.",
     "demo": "Demo mode: no database is connected, so bookings are stored only in server memory.",
     "steps": {
       "items": "Items",
@@ -534,7 +534,7 @@
     },
     "trust": [
       "Booked in about two minutes",
-      "Drying included",
+      "30 min of drying included",
       "Satisfaction guarantee",
       "Pay after the cleaning"
     ],
@@ -572,7 +572,7 @@
         },
         {
           "q": "How long does the furniture take to dry?",
-          "a": "We dry the furniture with blower fans after cleaning, and that is always included in the price. Left alone, fabric would typically take 4–8 hours and a mattress longer — with the blowers it is considerably faster."
+          "a": "After cleaning we run blower fans on the furniture for 30 minutes, and that is always included in the price. The surface will feel dry to the touch; a sofa dries completely in 2–3 hours and a mattress takes longer, so keep off it until then and air the room. Left alone, fabric would typically take 4–8 hours."
         },
         {
           "q": "Do I need to prepare anything?",
@@ -638,7 +638,7 @@
     "travel": "Travel fee",
     "giftCard": "Gift card",
     "total": "Total",
-    "payment": "Payment after the cleaning. Blower drying is included in the price. If your photos show unusually heavy soiling, we agree on the price with you before the visit.",
+    "payment": "Payment after the cleaning. 30 minutes of blower drying is included in the price. If your photos show unusually heavy soiling, we agree on the price with you before the visit.",
     "manage": "Reschedule or cancel booking",
     "questions": "Questions? Reply to this email or call {phone}.",
     "created": {
@@ -733,7 +733,7 @@
     "multi": "−{pct}% for {min} or more items",
     "noteBest": "A bundle and a percentage discount are not combined: you automatically get whichever is cheaper for you. Discounts do not apply to the travel fee, and the minimum order is counted before discounts.",
     "noteStack": "The percentage discount is taken from the bundle price. Discounts do not apply to the travel fee, and the minimum order is counted before discounts.",
-    "drying": "Blower drying is part of every cleaning — always free.",
+    "drying": "30 minutes of blower drying is part of every cleaning — always free. The surface will feel dry to the touch; a sofa dries completely in 2–3 hours.",
     "tableSofa": "Sofa",
     "tableSeparately": "Separately",
     "tableBundle": "As a bundle",

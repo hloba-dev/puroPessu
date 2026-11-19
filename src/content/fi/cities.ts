@@ -43,13 +43,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Helsingissä sohva on usein kannettu kerrostaloon kapeaa porraskäytävää pitkin, eikä sitä huvita viedä samaa reittiä takaisin pesulaan. Siksi tulemme kotiisi ja pesemme sohvan siinä, missä se on – Töölön ja Kallion kivitaloissa yhtä hyvin kuin Lauttasaaren tai Vuosaaren uudemmissa kodeissa.',
-        'Pesemme sohvat, nojatuolit, rahit ja sängynpäädyt painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Käytämme ammattikäyttöön tarkoitettuja pesuaineita, jotka ovat allergiaystävällisiä, biohajoavia ja turvallisia lapsille ja lemmikeille, ja hajunpoisto kuuluu aina hintaan. Pesun jälkeen kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
+        'Pesemme sohvat, nojatuolit, rahit ja sängynpäädyt painehuuhtelukoneella: pesuliuos suihkutetaan kankaaseen ja imetään saman tien pois lian mukana. Käytämme ammattikäyttöön tarkoitettuja pesuaineita, jotka ovat allergiaystävällisiä, biohajoavia ja turvallisia lapsille ja lemmikeille, ja hajunpoisto kuuluu aina hintaan. Pesun jälkeen kuivatamme sohvaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa. Älä istu sillä sitä ennen ja tuuleta huone.'
       ]
     },
     mattress: {
       intro: [
         'Helsinkiläisessä yksiössä tai kaksiossa samassa huoneessa usein nukutaan, tehdään etätöitä ja kuivataan pyykkiä. Patja kerää siksi pölyä, hikeä ja kosteutta tavallista nopeammin, eikä sen kantaminen hissittömän talon portaissa houkuttele ketään.',
-        'Patjan pesu Helsingissä tehdään kotonasi lapsille ja lemmikeille turvallisilla ammattipesuaineilla ja tehokkaalla imulla, joten patja pysyy sängyssä koko ajan. Patja kuivuu ilman apua sohvaa hitaammin, joten nopeutamme kuivumista puhaltimilla. Kuivatus sisältyy aina hintaan, ja aamupäivän pesu jättää patjalle koko päivän aikaa kuivua.'
+        'Patjan pesu Helsingissä tehdään kotonasi lapsille ja lemmikeille turvallisilla ammattipesuaineilla ja tehokkaalla imulla, joten patja pysyy sängyssä koko ajan. Patja kuivuu ilman apua sohvaa hitaammin, joten kuivatamme sitä pesun jälkeen puhaltimilla 30 minuuttia. Se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja aamupäivän pesu jättää patjalle koko päivän aikaa kuivua kokonaan.'
       ]
     },
     districts: [
@@ -71,7 +71,7 @@ export const cities: Record<CitySlug, CityContent> = {
     arrival:
       'Kantakaupungissa, kuten Kalliossa, Töölössä ja Punavuoressa, pysäköinti on vyöhykkeistä ja sisäpihat ovat usein lukittuja. Kerro varauksessa ovikoodi ja paikka, johon auton voi jättää työn ajaksi – esimerkiksi taloyhtiön piha tai vieraspaikka. Esikaupunkialueilla, kuten Malmilla ja Vuosaaressa, paikka löytyy yleensä helpommin.',
     homes:
-      'Suurin osa helsinkiläisistä asuu kerrostalossa, ja vanhoissa kivitaloissa hissi voi olla pieni tai puuttua kokonaan. Se ei haittaa, koska laitteemme kulkevat portaissakin ja huonekalu pestään paikallaan. Kuivatamme pestyt huonekalut puhaltimilla, ja kuivatus sisältyy aina hintaan. Kerrostaloasunnossa kuivumista auttaa lisäksi ristivetotuuletus, joten kerro etukäteen, jos ikkunoita ei voi pitää auki.',
+      'Suurin osa helsinkiläisistä asuu kerrostalossa, ja vanhoissa kivitaloissa hissi voi olla pieni tai puuttua kokonaan. Se ei haittaa, koska laitteemme kulkevat portaissakin ja huonekalu pestään paikallaan. Kuivatamme pestyjä huonekaluja puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa. Kerrostaloasunnossa kuivumista auttaa lisäksi ristivetotuuletus, joten kerro etukäteen, jos ikkunoita ei voi pitää auki.',
     faq: [
       {
         q: 'Pääsettekö Suomenlinnaan tai saarille?',
@@ -100,7 +100,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Lapsiperheessä patjoja on monta, ja jokaisella on oma tarinansa: vuotanut vaippa, vatsatauti tai iltasadun aikana kaatunut mehulasi. Patjan pesu Espoossa hoituu kotonasi, joten yhdellä käynnillä voi pestä koko perheen sängyt.',
-        'Painehuuhtelu ja imu poistavat likaa ja hajuja patjan pintakerroksista, ja hajunpoisto kuuluu hintaan. Käyttämämme ammattipesuaineet ovat turvallisia lapsille ja lemmikeille. Nopeutamme patjan kuivumista puhaltimilla veloituksetta, ja rivi- tai omakotitalossa kuivumista auttaa lisäksi lämmin huone, jossa ilma kiertää hyvin.'
+        'Painehuuhtelu ja imu poistavat likaa ja hajuja patjan pintakerroksista, ja hajunpoisto kuuluu hintaan. Käyttämämme ammattipesuaineet ovat turvallisia lapsille ja lemmikeille. Kuivatamme patjaa puhaltimilla 30 minuuttia veloituksetta: pinta tuntuu sen jälkeen kuivalta. Rivi- tai omakotitalossa loppukuivumista auttaa lämmin huone, jossa ilma kiertää hyvin.'
       ]
     },
     districts: [
@@ -122,7 +122,7 @@ export const cities: Record<CitySlug, CityContent> = {
     arrival:
       'Omakoti- ja rivitaloalueilla, kuten Haukilahdessa, Soukassa ja Kauklahdessa, pysäköimme yleensä pihaan tai kadun varteen lähelle ovea. Matinkylän, Leppävaaran ja Espoon keskuksen kerrostaloissa kerro varauksessa ovikoodi ja vieraspaikan sijainti. Arki-illat varataan usein ensimmäisinä, joten viikonloppu voi olla helpompi vaihtoehto.',
     homes:
-      'Espoossa on paljon rivi- ja omakotitaloja, joissa sohva on usein olohuoneessa ison ikkunan edessä. Kuivatamme sohvan pesun jälkeen puhaltimilla, ja kuivatus sisältyy aina hintaan. Talossa kuivumista auttaa myös toimiva ilmanvaihto ja lämmin huone. Jos sohva on takkahuoneessa, älä lämmitä takkaa heti pesun jälkeen – tasainen huonelämpö on kankaalle parempi.',
+      'Espoossa on paljon rivi- ja omakotitaloja, joissa sohva on usein olohuoneessa ison ikkunan edessä. Kuivatamme sohvaa pesun jälkeen puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen. Talossa kuivumista auttaa myös toimiva ilmanvaihto ja lämmin huone. Jos sohva on takkahuoneessa, älä lämmitä takkaa heti pesun jälkeen – tasainen huonelämpö on kankaalle parempi.',
     faq: [
       {
         q: 'Sohvalla nukkuu koira – lähtevätkö karvat ja haju?',
@@ -150,8 +150,8 @@ export const cities: Record<CitySlug, CityContent> = {
     },
     mattress: {
       intro: [
-        'Vuorotyössä nukutaan välillä päivällä ja välillä yöllä, joten patja on kovassa käytössä. Patjan pesu Vantaalla kannattaa ajoittaa niin, että patja ehtii kuivua ennen seuraavaa unijaksoa. Ilman apua patja kuivuu sohvaa hitaammin, mutta nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.',
-        'Varaa esimerkiksi aamuaika vapaapäivälle tai ilta-aika ennen vapaata yötä. Pesemme patjan kotonasi, poistamme hajut ja kuivatamme sen puhaltimilla, eikä sinun tarvitse siirtää sitä minnekään.'
+        'Vuorotyössä nukutaan välillä päivällä ja välillä yöllä, joten patja on kovassa käytössä. Patjan pesu Vantaalla kannattaa ajoittaa niin, että patja ehtii kuivua ennen seuraavaa unijaksoa. Ilman apua patja kuivuu sohvaa hitaammin, joten kuivatamme sitä puhaltimilla 30 minuuttia – se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta sisältä patja kuivuu vielä pidempään.',
+        'Varaa esimerkiksi aamuaika vapaapäivälle tai ilta-aika ennen vapaata yötä. Pesemme patjan kotonasi, poistamme hajut ja kuivatamme sitä puhaltimilla 30 minuuttia, eikä sinun tarvitse siirtää sitä minnekään.'
       ]
     },
     districts: [
@@ -171,7 +171,7 @@ export const cities: Record<CitySlug, CityContent> = {
     arrival:
       'Vantaalla pysäköinti on yleensä helppoa: Myyrmäen, Martinlaakson ja Hakunilan kerrostaloilla on vieraspaikkoja, ja Korson ja Rekolan pientaloalueilla voimme ajaa pihaan. Tikkurilan keskustassa kerro varauksessa ovikoodi ja minne auton voi jättää. Aikaiset aamut ja myöhäiset illat menevät usein nopeasti, joten varaa ne hyvissä ajoin.',
     homes:
-      'Vantaalla on vanhempia kerrostalolähiöitä, uusia alueita kuten Kivistö ja Aviapolis sekä runsaasti pientaloja. Uusissa kerrostaloissa hissi on yleensä tilava ja koneellinen ilmanvaihto kuivattaa kankaan tasaisesti. Pientalossa ikkunan raottaminen ja lämmin huone nopeuttavat kuivumista. Kuivatamme lisäksi puhaltimilla, ja kuivatus sisältyy aina hintaan.',
+      'Vantaalla on vanhempia kerrostalolähiöitä, uusia alueita kuten Kivistö ja Aviapolis sekä runsaasti pientaloja. Uusissa kerrostaloissa hissi on yleensä tilava ja koneellinen ilmanvaihto kuivattaa kankaan tasaisesti. Pientalossa ikkunan raottaminen ja lämmin huone nopeuttavat kuivumista. Kuivatamme lisäksi puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa.',
     faq: [
       {
         q: 'Onko iltaisin aikoja Vantaalla?',
@@ -194,7 +194,7 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kauniaisissa koti on usein väljä omakotitalo, ja olohuoneen sohva on valittu sisustuksen mukaan – monesti vaaleaa pellavaa, villaa tai muuta luonnonkuitua. Vaalea kangas on kaunis, mutta jokainen kahvitahra ja harmaantunut käsinoja näkyy siinä heti.',
-        'Sohvan pesu Kauniaisissa tehdään kotonasi: tarkistamme ensin kankaan, valitsemme sille sopivan ammattipesuaineen – turvallisen myös lapsille ja lemmikeille – ja pesemme koko pinnan tasaisesti, jotta siihen ei jää reunoja. Lopuksi kuivatamme sohvan puhaltimilla, ja kuivatus sisältyy aina hintaan.'
+        'Sohvan pesu Kauniaisissa tehdään kotonasi: tarkistamme ensin kankaan, valitsemme sille sopivan ammattipesuaineen – turvallisen myös lapsille ja lemmikeille – ja pesemme koko pinnan tasaisesti, jotta siihen ei jää reunoja. Lopuksi kuivatamme sohvaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan sohva kuivuu 2–3 tunnissa: älä istu sillä sitä ennen ja tuuleta huone.'
       ]
     },
     mattress: {
@@ -217,7 +217,7 @@ export const cities: Record<CitySlug, CityContent> = {
     arrival:
       'Kauniaisten omakotitaloalueilla pysäköimme yleensä talon pihaan tai viereiselle kadulle. Kerro varauksessa, jos tontilla on portti tai jos pihaan ei saa ajaa. Kauniainen on pieni ja ympäröity Espoolla, joten käynti sopii usein samaan päivään Espoon töiden kanssa.',
     homes:
-      'Kauniaisissa on paljon omakotitaloja, joista osa on vanhoja huviloita, sekä pienempiä kerrostaloja keskustan lähellä. Isoissa taloissa sohva on usein suuri kulmasohva tai useamman huonekalun kokonaisuus, joten varaa pesulle riittävästi aikaa. Kuivatamme pestyt huonekalut puhaltimilla veloituksetta, ja isossa huoneessa raollaan oleva ikkuna ja tasainen lämpö auttavat lisäksi.',
+      'Kauniaisissa on paljon omakotitaloja, joista osa on vanhoja huviloita, sekä pienempiä kerrostaloja keskustan lähellä. Isoissa taloissa sohva on usein suuri kulmasohva tai useamman huonekalun kokonaisuus, joten varaa pesulle riittävästi aikaa. Kuivatamme pestyjä huonekaluja puhaltimilla 30 minuuttia veloituksetta: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa. Isossa huoneessa raollaan oleva ikkuna ja tasainen lämpö auttavat lisäksi.',
     faq: [
       {
         q: 'Sopiiko pesu vaalealle pellavasohvalle?',
@@ -240,12 +240,12 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Kerava on pääradan varren kaupunki, josta moni käy töissä pääkaupunkiseudulla. Kun arki kuluu junassa, sohvan pesua ei halua jättää viikonlopun puuhaksi – siksi tulemme Keravalle joka päivä, myös iltaisin ja viikonloppuisin.',
-        'Pesemme sohvan kotonasi Kalevassa, Sompiossa, Kaskelassa tai missä päin Keravaa asutkin – ammattitason painehuuhtelukoneella ja pesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Kuivatamme sohvan lopuksi puhaltimilla, ja kuivatus sisältyy hintaan. Hinta on lopullinen: maksat vasta, kun työ on tehty.'
+        'Pesemme sohvan kotonasi Kalevassa, Sompiossa, Kaskelassa tai missä päin Keravaa asutkin – ammattitason painehuuhtelukoneella ja pesuaineilla, jotka ovat turvallisia lapsille ja lemmikeille. Kuivatamme sohvaa lopuksi puhaltimilla 30 minuuttia, ja se sisältyy hintaan: pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen. Hinta on lopullinen: maksat vasta, kun työ on tehty.'
       ]
     },
     mattress: {
       intro: [
-        'Patjan pesu Keravalla on helppo hoitaa vapaapäivänä: tulemme kotiisi, pesemme patjan sängyssä ja kuivatamme sen puhaltimilla veloituksetta. Patja kuivuu silti sohvaa hitaammin, joten aamupäivän aika on yleensä paras.',
+        'Patjan pesu Keravalla on helppo hoitaa vapaapäivänä: tulemme kotiisi, pesemme patjan sängyssä ja kuivatamme sitä puhaltimilla 30 minuuttia veloituksetta. Pinta tuntuu sen jälkeen kuivalta, mutta kokonaan patja kuivuu sohvaa hitaammin, joten aamupäivän aika on yleensä paras.',
         'Pesu poistaa patjan pinnasta pölyä, hikeä ja tahroja, ja hajunpoisto kuuluu hintaan. Allergiaystävälliset pesuaineet sopivat myös lasten ja allergisten patjoille.'
       ]
     },
@@ -294,8 +294,8 @@ export const cities: Record<CitySlug, CityContent> = {
     },
     mattress: {
       intro: [
-        'Patja on kodin ahkerimmin käytetty huonekalu, ja sen pesu jää helposti tekemättä, koska sitä on hankala kuljettaa. Patjan pesu Järvenpäässä hoituu kotonasi – tuomme laitteet, pesemme ja kuivatamme patjan puhaltimilla.',
-        'Ilman apua patja kuivuu sohvaa hitaammin. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Jos pesemme usean perheenjäsenen patjat samalla kertaa, sopikaa etukäteen, missä kukin nukkuu, jos kaikki patjat eivät ehdi kuivua iltaan mennessä.'
+        'Patja on kodin ahkerimmin käytetty huonekalu, ja sen pesu jää helposti tekemättä, koska sitä on hankala kuljettaa. Patjan pesu Järvenpäässä hoituu kotonasi – tuomme laitteet, pesemme patjan ja kuivatamme sitä puhaltimilla 30 minuuttia.',
+        'Ilman apua patja kuivuu sohvaa hitaammin. Kuivatamme sitä puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, mutta sisältä patja kuivuu vielä pidempään. Jos pesemme usean perheenjäsenen patjat samalla kertaa, sopikaa etukäteen, missä kukin nukkuu, jos kaikki patjat eivät ehdi kuivua iltaan mennessä.'
       ]
     },
     districts: [
@@ -344,7 +344,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Kesällä patjoille kulkeutuu rannalta hiekkaa ja kosteutta, talvella sisäilma on kuivaa ja pölyä on enemmän. Patjan pesu Tuusulassa poistaa pölyä, hikeä ja tahroja patjan pinnasta, ja hajunpoisto kuuluu hintaan.',
-        'Pesemme patjan siinä huoneessa, jossa se on, ja kuivatamme sen puhaltimilla. Kuivatus sisältyy aina hintaan. Omakotitalossa kuivumista auttaa lisäksi, kun huone on lämmin ja ikkuna raollaan.'
+        'Pesemme patjan siinä huoneessa, jossa se on, ja kuivatamme sitä puhaltimilla 30 minuuttia. Se sisältyy aina hintaan, ja pinta tuntuu sen jälkeen kuivalta. Omakotitalossa loppukuivumista auttaa lisäksi, kun huone on lämmin ja ikkuna raollaan.'
       ]
     },
     districts: [
@@ -392,7 +392,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Maalla patjat kokevat kaikenlaista: koiran, joka hyppää sänkyyn märkänä, ja talven kuivan, pölyisen sisäilman. Patjan pesu Sipoossa tehdään kotonasi, joten patjaa ei tarvitse kuljettaa pitkiä matkoja.',
-        'Pesemme patjan, poistamme hajut ja kuivatamme sen puhaltimilla paikan päällä, eikä kuivatuksesta veloiteta erikseen. Isossa talossa patja kuivuu yleensä hyvin, kun huone pysyy lämpimänä ja ilma pääsee vaihtumaan.'
+        'Pesemme patjan, poistamme hajut ja kuivatamme sitä puhaltimilla 30 minuuttia paikan päällä, eikä kuivatuksesta veloiteta erikseen. Pinta tuntuu sen jälkeen kuivalta, ja isossa talossa patja kuivuu loppuun yleensä hyvin, kun huone pysyy lämpimänä ja ilma pääsee vaihtumaan.'
       ]
     },
     districts: [
@@ -440,7 +440,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Kesämökin patjat ovat usein seisseet koko talven viileässä ja kosteassa, ja keväällä niistä nousee ummehtunut haju. Patjan pesu Kirkkonummella sopii hyvin mökkikauden alkuun tai loppuun – kunhan mökille pääsee autolla.',
-        'Pesemme patjat lapsille ja lemmikeille turvallisilla ammattipesuaineilla, ja tehokas imu vie pölyn ja hajut patjan pinnasta. Nopeutamme patjan kuivumista puhaltimilla veloituksetta. Jos patjassa on hometta, sanomme sen suoraan: sitä ei saa pesulla pois.'
+        'Pesemme patjat lapsille ja lemmikeille turvallisilla ammattipesuaineilla, ja tehokas imu vie pölyn ja hajut patjan pinnasta. Kuivatamme patjaa puhaltimilla 30 minuuttia veloituksetta, minkä jälkeen pinta tuntuu kuivalta. Jos patjassa on hometta, sanomme sen suoraan: sitä ei saa pesulla pois.'
       ]
     },
     districts: [
@@ -481,13 +481,13 @@ export const cities: Record<CitySlug, CityContent> = {
     sofa: {
       intro: [
         'Nurmijärvellä moni asuu isossa omakotitalossa Klaukkalassa, Rajamäellä tai kirkonkylässä, ja olohuoneessa on usein iso kulmasohva, jolle koko perhe mahtuu iltaisin. Sohvan pesu Nurmijärvellä hoituu kotonasi, joten raskasta sohvaa ei tarvitse liikuttaa.',
-        'Pesemme sohvan, nojatuolit ja rahin painehuuhtelukoneella ja ammattipesuaineilla, ja hajunpoisto kuuluu hintaan. Lopuksi kuivatamme sohvan puhaltimilla, eikä kuivatuksesta tule lisämaksua.'
+        'Pesemme sohvan, nojatuolit ja rahin painehuuhtelukoneella ja ammattipesuaineilla, ja hajunpoisto kuuluu hintaan. Lopuksi kuivatamme sohvaa puhaltimilla 30 minuuttia, eikä siitä tule lisämaksua. Pinta tuntuu sen jälkeen kuivalta, ja kokonaan sohva kuivuu 2–3 tunnissa – älä istu sillä sitä ennen ja tuuleta huone.'
       ]
     },
     mattress: {
       intro: [
         'Isossa perheessä patjoja on monta, ja lasten patjoissa on yleensä eniten tahroja ja hajuja. Patjan pesu Nurmijärvellä kannattaa tehdä kerralla kaikille sängyille, jolloin näet koko hinnan varauksessa yhtenä summana.',
-        'Pesu tehdään paikan päällä allergiaystävällisillä, biohajoavilla aineilla. Ilman apua patja kuivuu sohvaa hitaammin, joten nopeutamme kuivumista puhaltimilla. Kuivatus sisältyy aina hintaan.'
+        'Pesu tehdään paikan päällä allergiaystävällisillä, biohajoavilla aineilla. Ilman apua patja kuivuu sohvaa hitaammin, joten kuivatamme sitä puhaltimilla 30 minuuttia. Se sisältyy aina hintaan, ja pinta tuntuu sen jälkeen kuivalta.'
       ]
     },
     districts: [
@@ -534,7 +534,7 @@ export const cities: Record<CitySlug, CityContent> = {
     mattress: {
       intro: [
         'Vanhassa puutalossa ilma kulkee toisin kuin uudessa kerrostalossa, ja patjat voivat kerätä kosteutta ja hajuja. Patjan pesu Porvoossa tehdään sängyssä, joten patjaa ei tarvitse kantaa jyrkkiä portaita alas.',
-        'Pesu poistaa pölyä, hikeä ja tahroja patjan pinnasta, ja hajunpoisto kuuluu hintaan. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan. Puutalossa kuivumista auttavat lisäksi tasainen lämpö ja tuuletus.'
+        'Pesu poistaa pölyä, hikeä ja tahroja patjan pinnasta, ja hajunpoisto kuuluu hintaan. Kuivatamme patjaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta. Puutalossa loppukuivumista auttavat lisäksi tasainen lämpö ja tuuletus.'
       ]
     },
     districts: [
@@ -582,7 +582,7 @@ export const cities: Record<CitySlug, CityContent> = {
     },
     mattress: {
       intro: [
-        'Patjan pesu Hyvinkäällä on helppo ajoittaa vapaapäivälle: tulemme aamulla, pesemme patjan ja kuivatamme sen puhaltimilla, jolloin patjalla on koko päivä aikaa kuivua. Kuivatus sisältyy aina hintaan.',
+        'Patjan pesu Hyvinkäällä on helppo ajoittaa vapaapäivälle: tulemme aamulla, pesemme patjan ja kuivatamme sitä puhaltimilla 30 minuuttia. Pinta tuntuu sen jälkeen kuivalta, ja patjalla on koko päivä aikaa kuivua kokonaan. Kuivatus sisältyy aina hintaan.',
         'Pesemme vaahto-, joustin- ja runkopatjat sekä sijauspatjat, kunhan materiaali kestää märkäpesun. Allergiaystävälliset pesuaineet sopivat myös allergiselle nukkujalle.'
       ]
     },
@@ -611,7 +611,7 @@ export const cities: Record<CitySlug, CityContent> = {
       },
       {
         q: 'Voinko nukkua patjalla samana yönä?',
-        a: 'Usein voit, jos pesu tehdään aamulla tai aamupäivällä. Ilman apua patja kuivuu sohvaa hitaammin, ja aikaan vaikuttavat huoneen lämpö ja ilmanvaihto. Nopeutamme kuivumista puhaltimilla, ja kuivatus sisältyy aina hintaan.'
+        a: 'Usein voit, jos pesu tehdään aamulla tai aamupäivällä. Ilman apua patja kuivuu sohvaa hitaammin, ja aikaan vaikuttavat huoneen lämpö ja ilmanvaihto. Kuivatamme patjaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan: pinta tuntuu sen jälkeen kuivalta, mutta sisältä patja kuivuu vielä pidempään.'
       },
       {
         q: 'Entä jos tahra ei lähde?',
