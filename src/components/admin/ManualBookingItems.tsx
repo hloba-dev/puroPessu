@@ -8,6 +8,7 @@ import {describePromo, promoLabel} from '@/lib/booking/promo-details';
 import {formatDuration} from '@/lib/format';
 import {parseEuro} from '@/lib/money';
 import type {Catalog, Promotions} from '@/lib/types';
+import {ManualTimePicker} from './ManualTimePicker';
 
 interface Props {
   /** the whole catalog: the same pricing function as on the server runs here */
@@ -315,6 +316,11 @@ export function ManualBookingItems({catalog, minOrderCents, promotions}: Props) 
           </dl>
         )}
       </aside>
+
+      <section className="border-t border-hairline pt-5 lg:col-span-2" aria-label="Дата и время">
+        <h3 className="mb-3 text-base font-semibold">Дата и время *</h3>
+        <ManualTimePicker durationMin={quote.durationMin} />
+      </section>
     </div>
   );
 }

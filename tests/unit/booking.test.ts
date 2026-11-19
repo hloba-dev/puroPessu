@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 import {priceCart, type CartLine} from '@/lib/booking/cart';
-import {buildAvailability, buildSlots, validateStart, type Busy} from '@/lib/booking/slots';
+import {buildAvailability, buildSlots, buildSlotStates, dayBusyRanges, validateStart, type Busy} from '@/lib/booking/slots';
 import {manualDiscountCents} from '@/lib/booking/manual-discount';
 import {quoteTravel, zoneFee} from '@/lib/booking/travel';
 import {addDays, utcToZoned, zonedToUtc} from '@/lib/booking/tz';
@@ -228,5 +228,44 @@ describe('manualDiscountCents (the operator\'s own discount in the admin panel)'
     expect(manualDiscountCents(10000, '101', 'pct')).toBeNull();
     expect(manualDiscountCents(10000, '-5', 'eur')).toBeNull();
     expect(manualDiscountCents(10000, 'abc', 'pct')).toBeNull();
+  });
+});
+
+describe('slot states for the manual booking calendar', () => {
+  const settings = {...seedSettings, leadTimeHours: 0, bufferMin: 30};
+  const base = {date: '2026-07-01', durationMin: 60, settings, staffIds: [1], now: new Date('2026-01-01T00:00:00Z')};
+  // 10:00–11:30 local (UTC+3)
+  const taken: Busy = {staffId: 1, start: Date.parse('2026-07-01T07:00:00Z'), end: Date.parse('2026-07-01T08:30:00Z')};
+
+  it('lists every start time and marks the taken ones instead of dropping them', () => {
+    const states = buildSlotStates({...base, busy: [taken]});
+    expect(states).toHaveLength(29);
+    const free = (time: string) => states.find((s) => s.time === time)?.free;
+    expect(free('08:30')).toBe(true);
+    expect(free('09:00')).toBe(false);
+    expect(free('11:00')).toBe(false);
+    expect(free('11:30')).toBe(true);
+    expect(states.filter((s) => s.free).map((s) => s.time)).toEqual(buildSlots({...base, busy: [taken]}));
+  });
+
+  it('marks the part of today that has already passed as not free', () => {
+    // 12:10 Helsinki time, no lead time for the owner
+    const states = buildSlotStates({...base, busy: [], now: new Date('2026-07-01T09:10:00Z')});
+    expect(states.find((s) => s.time === '12:00')?.free).toBe(false);
+    expect(states.find((s) => s.time === '12:30')?.free).toBe(true);
+  });
+
+  it('describes the busy stretches of a day, merged and cut at midnight', () => {
+    const busy: Busy[] = [
+      taken,
+      {staffId: null, start: Date.parse('2026-07-01T08:00:00Z'), end: Date.parse('2026-07-01T10:00:00Z')},
+      {staffId: null, start: Date.parse('2026-07-01T18:00:00Z'), end: Date.parse('2026-07-03T00:00:00Z')}
+    ];
+    expect(dayBusyRanges('2026-07-01', busy, settings.timezone)).toEqual([
+      {from: 600, to: 780},
+      {from: 1260, to: 1440}
+    ]);
+    expect(dayBusyRanges('2026-07-02', busy, settings.timezone)).toEqual([{from: 0, to: 1440}]);
+    expect(dayBusyRanges('2026-07-04', busy, settings.timezone)).toEqual([]);
   });
 });

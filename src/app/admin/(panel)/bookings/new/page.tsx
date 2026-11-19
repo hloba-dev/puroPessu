@@ -48,7 +48,7 @@ export default async function AdminNewBookingPage({searchParams}: PageProps<'/ad
           </div>
         </Card>
 
-        <Card title="Адрес и время">
+        <Card title="Адрес">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="sm:col-span-2">
               <span className={label}>Адрес *</span>
@@ -63,14 +63,6 @@ export default async function AdminNewBookingPage({searchParams}: PageProps<'/ad
               <input name="city" required className={adminInput} />
             </label>
             <label>
-              <span className={label}>Дата *</span>
-              <input name="date" type="date" required className={adminInput} />
-            </label>
-            <label>
-              <span className={label}>Время начала *</span>
-              <input name="time" type="time" step={900} required className={adminInput} />
-            </label>
-            <label>
               <span className={label}>Транспорт, € (если индекс вне таблицы)</span>
               <input name="travel_eur" inputMode="decimal" className={adminInput} defaultValue="0" />
             </label>
@@ -81,11 +73,11 @@ export default async function AdminNewBookingPage({searchParams}: PageProps<'/ad
           </div>
         </Card>
 
-        <Card title="Позиции" className="xl:col-span-2">
+        <Card title="Позиции и время" className="xl:col-span-2">
           <ManualBookingItems catalog={catalog} minOrderCents={settings.minOrderCents} promotions={settings.promotions} />
           <p className="mt-4 text-sm text-muted">
-            Цена, длительность и доплата до минимального заказа считаются по каталогу и пересчитываются при сохранении. Занятость
-            времени проверяется так же, как при онлайн-записи.
+            Цена, длительность и доплата до минимального заказа считаются по каталогу и пересчитываются при сохранении. В
+            календаре видно свободное и занятое время; занятое выбрать нельзя, и при сохранении оно проверяется ещё раз.
           </p>
           <label className="mt-2 flex items-center gap-2 text-sm">
             <input type="checkbox" name="send_email" className="size-4 accent-teal-3" /> Отправить клиенту письмо с подтверждением

@@ -13,9 +13,9 @@ import {priceCart} from '@/lib/booking/cart';
 import {manualDiscountCents, PROMO_MODES, type DiscountUnit} from '@/lib/booking/manual-discount';
 import {describePromo} from '@/lib/booking/promo-details';
 import {normalizePhone} from '@/lib/booking/schema';
-import {busyEnd} from '@/lib/booking/slots';
+import {buildSlotStates, busyEnd, dayBusyRanges, type SlotState} from '@/lib/booking/slots';
 import {quoteTravel} from '@/lib/booking/travel';
-import {parseHm, zonedToUtc} from '@/lib/booking/tz';
+import {addDays, parseHm, toHm, utcToZoned, zonedToUtc} from '@/lib/booking/tz';
 import {settingKey} from '@/lib/data/mappers';
 import {CACHE_TAGS, getCatalog, getSettings} from '@/lib/data/public';
 import {getStore} from '@/lib/data/store';
@@ -96,6 +96,54 @@ export async function checkManualCustomer(email: string, phone: string): Promise
   const mail = String(email ?? '').trim().slice(0, 160);
   const tel = normalizePhone(String(phone ?? '')).slice(0, 20);
   return (await getStore().isReturningCustomer(mail, tel)) ? 'repeat' : 'first';
+}
+
+export interface ManualDay {
+  /** every start time within opening hours; `free: false` is taken, blocked or already past */
+  slots: SlotState[];
+  /** taken stretches of the day, "HH:mm–HH:mm" or "весь день" */
+  busy: string[];
+}
+
+/**
+ * The calendar of the manual booking form: for every day up to the booking horizon, which start times are free
+ * for a visit of this length. Same rules as the online booking, except that the owner needs no lead time.
+ */
+export async function getManualAvailability(durationMin: number): Promise<{days: Record<string, ManualDay>} | {error: true}> {
+  await requireAdmin();
+  const duration = Math.round(Number(durationMin));
+  if (!Number.isFinite(duration) || duration < 5 || duration > 16 * 60) return {error: true};
+
+  const settings = await getSettings();
+  const now = new Date();
+  const today = utcToZoned(now, settings.timezone).date;
+  const from = zonedToUtc(today, 0, settings.timezone).toISOString();
+  const to = zonedToUtc(addDays(today, settings.bookingHorizonDays + 1), 0, settings.timezone).toISOString();
+  try {
+    const schedule = await getStore().getSchedule(from, to);
+    const busy = schedule.busy.map((b) => ({staffId: b.staffId, start: Date.parse(b.start), end: Date.parse(b.end)}));
+    const days: Record<string, ManualDay> = {};
+    for (let i = 0; i <= settings.bookingHorizonDays; i++) {
+      const date = addDays(today, i);
+      days[date] = {
+        slots: buildSlotStates({
+          date,
+          durationMin: duration,
+          settings: {...settings, leadTimeHours: 0},
+          staffIds: schedule.staffIds,
+          busy,
+          now
+        }),
+        busy: dayBusyRanges(date, busy, settings.timezone).map((r) =>
+          r.from === 0 && r.to === 24 * 60 ? 'весь день' : `${toHm(r.from)}–${toHm(r.to)}`
+        )
+      };
+    }
+    return {days};
+  } catch (error) {
+    console.error('[admin] manual availability failed', error);
+    return {error: true};
+  }
 }
 
 export async function createManualBooking(form: FormData) {

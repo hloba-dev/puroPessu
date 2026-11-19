@@ -27,29 +27,67 @@ interface SlotInput {
 
 const MIN = 60_000;
 
+export interface SlotState {
+  /** local start time, "HH:mm" */
+  time: string;
+  free: boolean;
+}
+
 /**
- * Free start times ("HH:mm", local) for one day.
+ * Every start time of one day within opening hours, each marked free or not.
  * A visit occupies [start, start + duration + travel buffer); the work itself must end by closing time.
- * A slot is free when at least one staff member has no overlapping booking or blocked time.
+ * A slot is free when it is not too soon and at least one staff member has no overlapping booking or blocked time.
  */
-export function buildSlots({date, durationMin, settings, staffIds, busy, now}: SlotInput): string[] {
+export function buildSlotStates({date, durationMin, settings, staffIds, busy, now}: SlotInput): SlotState[] {
   const open = parseHm(settings.openFrom);
   const close = parseHm(settings.openTo);
   const earliest = now.getTime() + settings.leadTimeHours * 60 * MIN;
   const span = (durationMin + settings.bufferMin) * MIN;
-  const slots: string[] = [];
+  const slots: SlotState[] = [];
 
   for (let minutes = open; minutes + durationMin <= close; minutes += settings.slotStep) {
     const start = zonedToUtc(date, minutes, settings.timezone).getTime();
-    if (start < earliest) continue;
     const end = start + span;
-    const free = staffIds.some(
-      (staffId) =>
-        !busy.some((b) => (b.staffId === null || b.staffId === staffId) && b.start < end && start < b.end)
-    );
-    if (free) slots.push(toHm(minutes));
+    const free =
+      start >= earliest &&
+      staffIds.some(
+        (staffId) =>
+          !busy.some((b) => (b.staffId === null || b.staffId === staffId) && b.start < end && start < b.end)
+      );
+    slots.push({time: toHm(minutes), free});
   }
   return slots;
+}
+
+/** Free start times ("HH:mm", local) for one day. */
+export function buildSlots(input: SlotInput): string[] {
+  return buildSlotStates(input)
+    .filter((slot) => slot.free)
+    .map((slot) => slot.time);
+}
+
+/**
+ * The busy stretches of one local day as merged [from, to) minutes after midnight — what the owner sees as "taken".
+ * Intervals of every staff member are merged together.
+ */
+export function dayBusyRanges(date: string, busy: Busy[], timezone: string): {from: number; to: number}[] {
+  const dayStart = zonedToUtc(date, 0, timezone).getTime();
+  const dayEnd = zonedToUtc(addDays(date, 1), 0, timezone).getTime();
+  const ranges = busy
+    .filter((b) => b.start < dayEnd && dayStart < b.end)
+    .map((b) => ({
+      from: b.start <= dayStart ? 0 : utcToZoned(new Date(b.start), timezone).minutes,
+      to: b.end >= dayEnd ? 24 * 60 : utcToZoned(new Date(b.end), timezone).minutes
+    }))
+    .sort((a, b) => a.from - b.from);
+
+  const merged: {from: number; to: number}[] = [];
+  for (const range of ranges) {
+    const last = merged.at(-1);
+    if (last && range.from <= last.to) last.to = Math.max(last.to, range.to);
+    else merged.push({...range});
+  }
+  return merged;
 }
 
 /** Free slots for every day from today to the booking horizon: {"2026-07-01": ["13:30", …], …}. */
