@@ -80,6 +80,17 @@ export default async function AdminSettingsPage({searchParams}: PageProps<'/admi
           </p>
         </Card>
 
+        <Card title="Страница цен">
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" name="show_deduction" defaultChecked={s.showDeduction} className="size-4 accent-teal-3" />
+            Показывать раздел «Налоговый вычет (kotitalousvähennys)»
+          </label>
+          <p className="mt-3 text-sm text-muted">
+            Включайте, только если компания состоит в ennakkoperintärekisteri: без этого клиент вычет не получит. Строка с названием
+            компании и Y-tunnus появляется в разделе, когда выше указан настоящий Y-tunnus.
+          </p>
+        </Card>
+
         <Card title="Транспортный сбор">
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {field('base_lat', 'База: широта', s.baseLat, {inputMode: 'decimal'})}

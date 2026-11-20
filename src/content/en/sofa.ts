@@ -11,7 +11,7 @@ export const sofa: ServiceLanding = {
     'We clean fabric sofas and armchairs right where they stand, so nothing has to be carried out of your home. Prices start at {price}, and we work every day from {from} to {to}, evenings and weekends included. After cleaning we run blower fans on the sofa for 30 minutes, always included in the price: the surface will feel dry to the touch, and the sofa dries completely in 2–3 hours. You pay only once the job is done.',
   prices: {
     title: 'Sofa cleaning prices',
-    lead: 'The price depends on the size and shape of your sofa. Loose cushions are not included in the sofa price and are charged separately. You see the fixed price before you book. The first-order discount and bundle offers, such as a sofa with dining chairs or a mattress, are shown in the price list and in the booking.',
+    lead: 'The price depends on the size and shape of your sofa. The sofa’s own seat and back cushions are included in the price. Only decorative cushions are charged separately. You see the fixed price before you book. The first-order discount and bundle offers, such as a sofa with dining chairs or a mattress, are shown in the price list and in the booking.',
     note: 'The minimum order is {min}. The price shown in your booking is final. You can attach photos when booking: if they show heavy soiling, we contact you and agree on the price before the visit.',
   },
   gallery: {

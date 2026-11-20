@@ -11,7 +11,7 @@ export const sofa: ServiceLanding = {
     'Pesemme kangassohvat ja nojatuolit paikan päällä, joten sohvaa ei tarvitse kantaa mihinkään. Hinnat alkaen {price}, ja aikoja on joka päivä klo {from}–{to}, myös iltaisin ja viikonloppuisin. Pesun jälkeen kuivatamme sohvaa puhaltimilla 30 minuuttia, ja se sisältyy aina hintaan. Maksat vasta, kun työ on tehty.',
   prices: {
     title: 'Sohvan pesun hinnat',
-    lead: 'Hinta määräytyy sohvan koon ja mallin mukaan. Irtotyynyt eivät sisälly sohvan hintaan, ne hinnoitellaan erikseen. Näet kiinteän hinnan jo varausta tehdessäsi. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
+    lead: 'Hinta määräytyy sohvan koon ja mallin mukaan. Sohvaan kuuluvat istuin- ja selkätyynyt sisältyvät hintaan. Erikseen hinnoitellaan vain koristetyynyt. Näet kiinteän hinnan jo varausta tehdessäsi. Ensitilaajan alennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
     note: 'Vähimmäistilaus on {min}. Varauksessa näkyvä hinta on lopullinen. Voit liittää varaukseen kuvia. Jos niissä näkyy hyvin likainen huonekalu, otamme yhteyttä ja sovimme hinnan ennen käyntiä.',
   },
   gallery: {

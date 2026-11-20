@@ -6,7 +6,7 @@ export const pricing: PricingPage = {
     'Puro price list for on-site sofa, armchair and mattress cleaning in Helsinki. Bundle prices and discounts, 30 min of drying included, no prepayment — pay after the work.',
   h1: 'Prices',
   intro:
-    'Everything we do is on one price list. The price you see in the booking form is the price on your invoice — no hidden extras and no surprises on the day. The first-order discount, the returning-customer discount and our bundle offers are shown in the price list and in the booking.',
+    'Everything we do is on one price list. The price you see in the booking form is the price on your invoice — no hidden extras and no surprises on the day. The first-order discount, the returning-customer discount and our bundle offers are shown in the price list and in the booking. Prices for private customers include VAT (25.5 %); companies get a quote on request.',
   rules: {
     title: 'How our pricing works',
     items: [
@@ -36,6 +36,39 @@ export const pricing: PricingPage = {
       },
     ],
   },
+  deduction: {
+    title: 'Household deduction (kotitalousvähennys)',
+    lead: 'As a private customer you can claim 40 % of the labour cost of cleaning done in your home as the Finnish household deduction. The rate has been raised for 2026–2027 and applies retroactively from 1 January 2026.',
+    registered: '{company} (business ID {yTunnus}) is in the prepayment register (ennakkoperintärekisteri), which is a condition for the deduction.',
+    items: [
+      {
+        title: '40 % of the labour cost',
+        text: 'The deduction is calculated on the labour cost including VAT. Materials and travel fees do not count.',
+      },
+      {
+        title: 'Up to €2,100 per person per year',
+        text: 'A personal threshold of €150 per person is taken off the deduction for the year.',
+      },
+      {
+        title: 'Counted over the whole year',
+        text: 'It covers all household work bought during the year, not a single cleaning. The final amount is settled in your tax assessment, so we cannot promise a specific refund for one cleaning.',
+      },
+      {
+        title: 'Both spouses can claim',
+        text: 'The deduction is personal: each spouse has their own maximum and claims their own share.',
+      },
+      {
+        title: 'Labour cost shown on the invoice',
+        text: 'We itemise the labour cost on your invoice — the part the deduction is calculated on.',
+      },
+      {
+        title: 'Private customers and work at home only',
+        text: 'The deduction applies to cleaning done in your home or holiday home. Companies cannot claim it, and it does not cover car upholstery cleaning.',
+      },
+    ],
+    note: 'You claim the deduction yourself in your tax return. The current rules are on the Finnish Tax Administration’s site:',
+    linkLabel: 'vero.fi — household deduction',
+  },
   travel: {
     title: 'Travel fee',
     lead: 'The travel fee is calculated automatically from your postal code when you book. In the nearby area there is no travel fee at all.',
@@ -54,7 +87,7 @@ export const pricing: PricingPage = {
     },
     {
       q: 'Do the prices include VAT?',
-      a: 'Yes. All prices on the price list include VAT.',
+      a: 'Yes. All prices for private customers on the price list include VAT at 25.5 %. Companies get a quote on request.',
     },
     {
       q: 'Can the price change on site?',

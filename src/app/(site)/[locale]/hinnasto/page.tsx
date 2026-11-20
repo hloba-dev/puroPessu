@@ -22,6 +22,8 @@ import {GlowButton} from '@/components/ui/GlowButton';
 
 export const revalidate = 300;
 
+const VERO_URL = 'https://www.vero.fi/henkiloasiakkaat/vahennykset/kotitalousvahennys/';
+
 function vars(catalog: Catalog, settings: Settings, locale: Locale) {
   const prices = catalog.services.filter((s) => !s.isAddon && s.categorySlug === 'sofas' && !s.slug.startsWith('ottoman')).map((s) => s.priceCents);
   return {
@@ -107,7 +109,31 @@ export default async function PricingPageRoute({params}: PageProps<'/[locale]/hi
         </div>
       </section>
 
-      <section className="section bg-surface-2" aria-labelledby="pricing-travel">
+      {/* off by default: the owner switches it on in the admin settings */}
+      {settings.showDeduction && (
+      <section className="section bg-surface-2" aria-labelledby="kotitalousvahennys">
+        <div className="container-x">
+          <SectionHeader id="kotitalousvahennys" title={content.deduction.title} lead={content.deduction.lead} />
+          {/* the placeholder ID of a fresh install is not a claim we can make */}
+          {/^\d{7}-\d$/.test(settings.yTunnus) && settings.yTunnus !== '0000000-0' && (
+            <p className="mt-4 max-w-3xl text-base text-muted">
+              {fill(content.deduction.registered, {company: settings.legalName, yTunnus: settings.yTunnus})}
+            </p>
+          )}
+          <div className="mt-10">
+            <CardGrid items={content.deduction.items} />
+          </div>
+          <p className="mt-6 text-base text-muted">
+            {content.deduction.note}{' '}
+            <a href={VERO_URL} className="link" rel="noopener" target="_blank">
+              {content.deduction.linkLabel}
+            </a>
+          </p>
+        </div>
+      </section>
+      )}
+
+      <section className={`section ${settings.showDeduction ? '' : 'bg-surface-2'}`} aria-labelledby="pricing-travel">
         <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeader id="pricing-travel" title={content.travel.title} lead={content.travel.lead} />
@@ -119,7 +145,7 @@ export default async function PricingPageRoute({params}: PageProps<'/[locale]/hi
         </div>
       </section>
 
-      <section className="section" aria-labelledby="pricing-faq">
+      <section className={`section ${settings.showDeduction ? 'bg-surface-2' : ''}`} aria-labelledby="pricing-faq">
         <div className="container-x max-w-4xl">
           <SectionHeader id="pricing-faq" title={content.faqTitle} />
           <div className="mt-8">

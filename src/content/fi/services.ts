@@ -14,7 +14,7 @@ export const services: ServicesPage = {
       bullets: [
         "Kangas-, mikrokuitu- ja samettiverhoilut",
         "Kulmasohvat, divaanit ja rahit",
-        "Irtotyynyt hinnoitellaan erikseen",
+        "Istuin- ja selkätyynyt sisältyvät hintaan",
         "30 min kuivatus puhaltimilla sisältyy hintaan",
       ],
     },

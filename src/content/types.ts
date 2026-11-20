@@ -112,6 +112,8 @@ export interface PricingPage {
   h1: string;
   intro: string;
   rules: {title: string; items: TitleText[]};
+  /** household tax deduction; `registered` ({company}, {yTunnus}) is shown only once a real business ID is set */
+  deduction: {title: string; lead: string; registered: string; items: TitleText[]; note: string; linkLabel: string};
   travel: {title: string; lead: string};
   photoHint: string;
   faqTitle: string;

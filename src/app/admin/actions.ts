@@ -651,7 +651,8 @@ export async function saveSettings(form: FormData) {
       bundleMattressSingleExtraCents: money(form, 'bundle_single_extra', '/admin/settings'),
       bundleMattressDoubleExtraCents: money(form, 'bundle_double_extra', '/admin/settings'),
       stackBundlesWithPercent: bool(form, 'promo_stack')
-    }
+    },
+    showDeduction: bool(form, 'show_deduction')
   };
 
   const valid =

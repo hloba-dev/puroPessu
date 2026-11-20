@@ -92,6 +92,8 @@ export interface Settings {
   bookingHorizonDays: number;
   timezone: string;
   promotions: Promotions;
+  /** show the household tax deduction section on the price list (off until the owner confirms it applies) */
+  showDeduction: boolean;
 }
 
 export interface GalleryItem {

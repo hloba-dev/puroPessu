@@ -44,7 +44,8 @@ export const seedSettings: Settings = {
     bundleMattressDoubleExtraCents: 7500,
     // open question in the price sheet; until decided the customer gets the better of the two
     stackBundlesWithPercent: false
-  }
+  },
+  showDeduction: false
 };
 
 export const seedCategories: Category[] = [
@@ -62,11 +63,11 @@ export const seedCategories: Category[] = [
 
 const ODOR: L10n = {fi: 'Hajunpoisto (sisältyy hintaan)', ru: 'Удаление запаха (входит в цену)', en: 'Odor removal (included)'};
 
-/** appended to the description of every sofa: loose cushions are priced on top of the sofa */
+/** appended to the description of every sofa: its own seat and back cushions are in the price, decorative ones are not */
 const CUSHIONS_EXTRA: L10n = {
-  fi: 'Irtotyynyt eivät sisälly hintaan, ne hinnoitellaan erikseen.',
-  ru: 'Подушки в цену не входят и считаются отдельно.',
-  en: 'Loose cushions are not included in the price and are charged separately.'
+  fi: 'Sohvaan kuuluvat istuin- ja selkätyynyt sisältyvät hintaan, koristetyynyt hinnoitellaan erikseen.',
+  ru: 'Подушки сиденья и спинки входят в цену, декоративные подушки считаются отдельно.',
+  en: 'The sofa’s own seat and back cushions are included in the price; decorative cushions are charged separately.'
 };
 
 interface SeedService {
@@ -83,7 +84,7 @@ interface SeedService {
   addon?: boolean;
   /** offers the free "odor removal" note as a per-item option */
   odor?: boolean;
-  /** sofa: the description ends with the "cushions are charged separately" note */
+  /** sofa: the description ends with the note about which cushions are in the price */
   cushionsExtra?: boolean;
 }
 

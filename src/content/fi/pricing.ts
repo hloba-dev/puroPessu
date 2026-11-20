@@ -6,7 +6,7 @@ export const pricing: PricingPage = {
     'Puron hinnasto: sohvien, nojatuolien ja patjojen pesu paikan päällä pääkaupunkiseudulla. Pakettihinnat ja alennukset, 30 min kuivatus kaupan päälle, ei ennakkomaksua.',
   h1: 'Hinnasto',
   intro:
-    'Kaikki palvelumme löytyvät yhdestä hinnastosta. Sama hinta näkyy varauslomakkeessa ja myöhemmin laskulla. Ei piilokuluja eikä yllätyksiä paikan päällä. Ensitilaajan alennus, kanta-asiakasalennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa.',
+    'Kaikki palvelumme löytyvät yhdestä hinnastosta. Sama hinta näkyy varauslomakkeessa ja myöhemmin laskulla. Ei piilokuluja eikä yllätyksiä paikan päällä. Ensitilaajan alennus, kanta-asiakasalennus ja pakettitarjoukset näkyvät hinnastossa ja varauksessa. Yksityisasiakkaiden hinnat sisältävät arvonlisäveron (ALV 25,5 %); yrityksille teemme tarjouksen pyynnöstä.',
   rules: {
     title: 'Näin hinnoittelemme',
     items: [
@@ -35,6 +35,39 @@ export const pricing: PricingPage = {
         text: 'Jokaisen pesun jälkeen kuivatamme huonekaluja puhaltimilla 30 minuuttia, ja jokaiseen pesuun kuuluu hajunpoisto. Kumpikaan ei ole lisämaksullinen. Kuivatuksen jälkeen pinta tuntuu kuivalta; kokonaan sohva kuivuu 2–3 tunnissa.',
       },
     ],
+  },
+  deduction: {
+    title: 'Kotitalousvähennys',
+    lead: 'Yksityisasiakkaana voit vähentää verotuksessa 40 % kotonasi tehdyn pesun työn osuudesta. Vähennystä on korotettu vuosille 2026–2027, ja korotus on voimassa takautuvasti 1.1.2026 alkaen.',
+    registered: '{company} (Y-tunnus {yTunnus}) kuuluu ennakkoperintärekisteriin, mikä on kotitalousvähennyksen edellytys.',
+    items: [
+      {
+        title: '40 % työn osuudesta',
+        text: 'Vähennys lasketaan arvonlisäverollisesta työn osuudesta. Tarvikkeet ja matkakulut eivät kuulu siihen.',
+      },
+      {
+        title: 'Enintään 2 100 € henkilöä kohden vuodessa',
+        text: 'Vuoden vähennyksestä vähennetään 150 euron omavastuu henkilöä kohden.',
+      },
+      {
+        title: 'Lasketaan koko vuodelta',
+        text: 'Vähennys lasketaan kaikista vuoden aikana teetetyistä kotitaloustöistä, ei yhdestä pesusta. Lopullinen määrä selviää vasta verotuksessa, emmekä voi luvata tiettyä palautusta yhdestä pesusta.',
+      },
+      {
+        title: 'Molemmat puolisot voivat hakea',
+        text: 'Vähennys on henkilökohtainen: kummallakin on oma enimmäismääränsä, ja kumpikin hakee oman osuutensa.',
+      },
+      {
+        title: 'Työn osuus näkyy laskulla',
+        text: 'Erittelemme laskulle työn osuuden, josta vähennys lasketaan.',
+      },
+      {
+        title: 'Vain yksityishenkilöille ja kotona tehtyyn työhön',
+        text: 'Vähennys koskee kotona tai vapaa-ajan asunnolla tehtyä pesua. Yritykset eivät voi saada sitä, eikä se koske auton verhoilun pesua.',
+      },
+    ],
+    note: 'Haet vähennystä itse veroilmoituksellasi. Ajantasaiset ehdot löydät Verohallinnon sivuilta:',
+    linkLabel: 'vero.fi — kotitalousvähennys',
   },
   travel: {
     title: 'Matkakulut',

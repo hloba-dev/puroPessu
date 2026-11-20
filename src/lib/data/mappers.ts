@@ -24,7 +24,8 @@ const SETTING_KEYS: Record<keyof Settings, string> = {
   bufferMin: 'buffer_min',
   bookingHorizonDays: 'booking_horizon_days',
   timezone: 'timezone',
-  promotions: 'promotions'
+  promotions: 'promotions',
+  showDeduction: 'show_deduction'
 };
 
 export function settingsToRows(settings: Settings) {
