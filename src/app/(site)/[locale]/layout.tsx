@@ -62,6 +62,9 @@ export default async function LocaleLayout({children, params}: LayoutProps<'/[lo
     // transitions when the page opts in; without it a navigation from far down a page can stay scrolled
     <html lang={locale} className={fontVariables} style={fontFamilies} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        {/* Meta Business domain verification. Written here rather than through generateMetadata so it is
+            always in the initial <head>: metadata can be streamed into the body for non-bot user agents */}
+        <meta name="facebook-domain-verification" content="fi6qbcyx79ri7p9bet41idsrqdkfi9" />
         <script dangerouslySetInnerHTML={{__html: consentDefaultScript}} />
         <GoogleTagManager />
       </head>
