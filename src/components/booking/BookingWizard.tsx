@@ -14,7 +14,7 @@ import {formatDuration, formatEur, l10n} from '@/lib/format';
 import {createBrowserSupabase} from '@/lib/supabase/browser';
 import type {Catalog, Promotions} from '@/lib/types';
 import {GlowButton} from '@/components/ui/GlowButton';
-import {IconCheck} from '@/components/ui/icons';
+import {IconCheck, IconPhone, IconWhatsApp} from '@/components/ui/icons';
 import type {GiftCard} from './StepContact';
 import {StepItems} from './StepItems';
 import {Summary} from './Summary';
@@ -34,6 +34,8 @@ interface Props {
   promotions: Promotions;
   timezone: string;
   whatsappUrl: string;
+  /** tel: link for the call shortcut in the phone bottom bar */
+  telUrl: string;
   /** cart preset from deep links: ?item=sofa-3 or ?items=sofa-3:1,chair-full:4 (bundle offers) */
   initialCart?: {slug: string; qty: number}[];
 }
@@ -42,7 +44,7 @@ const STEPS = ['items', 'address', 'time', 'contact', 'confirm'] as const;
 const ADDRESS_FORM = 'booking-address';
 const CONTACT_FORM = 'booking-contact';
 
-export function BookingWizard({locale, catalog, minOrderCents, promotions, timezone, whatsappUrl, initialCart = []}: Props) {
+export function BookingWizard({locale, catalog, minOrderCents, promotions, timezone, whatsappUrl, telUrl, initialCart = []}: Props) {
   const t = useTranslations('booking');
 
   const [step, setStep] = useState(0);
@@ -384,8 +386,25 @@ export function BookingWizard({locale, catalog, minOrderCents, promotions, timez
       </div>
 
       {/* mobile / tablet navigation: fixed to the bottom edge together with the running total */}
-      <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-hairline bg-surface/95 px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
-        <div className="mx-auto flex max-w-xl items-center gap-3">
+      <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-hairline bg-surface/95 px-4 pb-[calc(12px+env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
+        {/* the global WhatsApp · call bar is hidden on this page, so the two shortcuts live here as a slim row */}
+        <nav aria-label={t('quick.label')} className="-mx-4 grid grid-cols-2 divide-x divide-hairline border-b border-hairline">
+          <a
+            href={whatsappUrl}
+            className="flex min-h-10 items-center justify-center gap-2 text-[13px] font-semibold"
+            rel="noopener"
+            target="_blank"
+            data-testid="booking-whatsapp-mobile"
+          >
+            <IconWhatsApp width={18} height={18} className="text-whatsapp" />
+            WhatsApp
+          </a>
+          <a href={telUrl} className="flex min-h-10 items-center justify-center gap-2 text-[13px] font-semibold" data-testid="booking-call-mobile">
+            <IconPhone width={17} height={17} className="text-teal-2" />
+            {t('quick.call')}
+          </a>
+        </nav>
+        <div className="mx-auto flex max-w-xl items-center gap-3 pt-3">
           <p className="min-w-0 flex-1 leading-tight">
             <span className="block text-xs text-muted">{t('summary.total')}</span>
             <span className="text-lg font-bold">

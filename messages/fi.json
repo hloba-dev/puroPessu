@@ -408,6 +408,10 @@
     "stepOf": "Vaihe {current}/{total}: {name}",
     "next": "Jatka",
     "back": "Takaisin",
+    "quick": {
+      "label": "Kysy tai varaa puhelimitse",
+      "call": "Soita"
+    },
     "items": {
       "title": "Mitä pestään?",
       "duration": "noin {duration}",

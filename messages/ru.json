@@ -408,6 +408,10 @@
     "stepOf": "Шаг {current} из {total}: {name}",
     "next": "Далее",
     "back": "Назад",
+    "quick": {
+      "label": "Спросить или записаться по телефону",
+      "call": "Позвонить"
+    },
     "items": {
       "title": "Что чистим?",
       "duration": "около {duration}",

@@ -7,7 +7,7 @@ import {getActiveCatalog, getSettings} from '@/lib/data/public';
 import {isDemoMode} from '@/lib/data/store';
 import {shortHour} from '@/lib/format';
 import {pageMetadata} from '@/lib/seo';
-import {waLink} from '@/lib/site';
+import {telLink, waLink} from '@/lib/site';
 import {BookingWizard} from '@/components/booking/BookingWizard';
 import {Breadcrumbs} from '@/components/sections/Breadcrumbs';
 import {Faq, type FaqItem} from '@/components/sections/Faq';
@@ -62,6 +62,7 @@ export default async function BookingPage({params, searchParams}: PageProps<'/[l
                 promotions={settings.promotions}
                 timezone={settings.timezone}
                 whatsappUrl={waLink(settings.whatsapp)}
+                telUrl={telLink(settings.phone)}
                 initialCart={initialCart}
               />
             </NextIntlClientProvider>

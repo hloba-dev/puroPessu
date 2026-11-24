@@ -408,6 +408,10 @@
     "stepOf": "Step {current}/{total}: {name}",
     "next": "Continue",
     "back": "Back",
+    "quick": {
+      "label": "Ask or book by phone",
+      "call": "Call"
+    },
     "items": {
       "title": "What needs cleaning?",
       "duration": "about {duration}",
