@@ -57,11 +57,15 @@ test.describe('home hero on a phone', () => {
       const h1 = hero(page).getByRole('heading', {level: 1});
       // the "before" image fills the slider frame, so its box is the frame's box
       const photo = hero(page).getByRole('img').first();
-      const cta = hero(page).getByRole('link').first();
+      // the first-order discount is the first link of the hero, the booking button comes right after it
+      const offer = hero(page).locator('[data-first-order-offer]');
+      const cta = hero(page).getByRole('link').nth(1);
+      await expect(offer).toContainText('10');
 
       for (const [name, el] of [
         ['h1', h1],
         ['photo', photo],
+        ['offer', offer],
         ['cta', cta]
       ] as const) {
         const box = await el.boundingBox();
@@ -69,10 +73,16 @@ test.describe('home hero on a phone', () => {
         expect(box!.y, `${name} top`).toBeGreaterThanOrEqual(0);
         expect(box!.y + box!.height, `${name} bottom`).toBeLessThanOrEqual(fold);
       }
-      // reading order on the screen: headline → photo → booking button
-      const [h1Box, photoBox, ctaBox] = await Promise.all([h1.boundingBox(), photo.boundingBox(), cta.boundingBox()]);
+      // reading order on the screen: headline → photo → discount → booking button
+      const [h1Box, photoBox, offerBox, ctaBox] = await Promise.all([
+        h1.boundingBox(),
+        photo.boundingBox(),
+        offer.boundingBox(),
+        cta.boundingBox()
+      ]);
       expect(h1Box!.y + h1Box!.height).toBeLessThanOrEqual(photoBox!.y);
-      expect(photoBox!.y + photoBox!.height).toBeLessThanOrEqual(ctaBox!.y);
+      expect(photoBox!.y + photoBox!.height).toBeLessThanOrEqual(offerBox!.y);
+      expect(offerBox!.y + offerBox!.height).toBeLessThanOrEqual(ctaBox!.y);
     });
   }
 

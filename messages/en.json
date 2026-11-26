@@ -126,7 +126,13 @@
         "30 min of drying included"
       ],
       "trustLabel": "Our promise",
-      "safe": "Safe for children and pets"
+      "safe": "Safe for children and pets",
+      "offer": {
+        "pct": "−{pct}%",
+        "title": "On your first order",
+        "note": "Applied automatically when you book — no code needed",
+        "noteShort": "Automatic, no code needed"
+      }
     },
     "benefits": {
       "title": "Why book with us",

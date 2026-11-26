@@ -7,7 +7,7 @@ import {formatEur, l10n, shortHour} from '@/lib/format';
 import type {Catalog, GalleryItem, Settings} from '@/lib/types';
 import {BeforeAfter} from '@/components/BeforeAfter';
 import {GlowButton} from '@/components/ui/GlowButton';
-import {IconCheck, IconClock, IconShield} from '@/components/ui/icons';
+import {IconArrow, IconCheck, IconClock, IconShield} from '@/components/ui/icons';
 import {SnapCarousel} from '@/components/ui/SnapCarousel';
 import {RingMotion} from './RingMotion';
 import styles from './Hero.module.css';
@@ -63,6 +63,8 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
   const hours = t('badge', {from: shortHour(settings.openFrom), to: shortHour(settings.openTo)});
   const safe = t('safe');
   const trust = t.raw('trust') as string[];
+  // the first-order discount is set in /admin; at 0 the offer simply is not shown
+  const firstOrderPct = settings.promotions.firstOrderPct;
 
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
@@ -98,6 +100,20 @@ export async function Hero({locale, catalog, settings, gallery, fromPriceCents}:
             {t('sub', {price: formatEur(fromPriceCents, locale)})}
           </p>
           <div className={`${styles.ctas} ${styles.rise}`} style={delay(0.4)}>
+            {/* the reason to book now sits right on top of the booking button, and is itself a way into the booking */}
+            {firstOrderPct > 0 && (
+              <div className={styles.offerRow}>
+                <Link href="/varaa-aika" className={styles.offer} data-first-order-offer>
+                  <strong className={styles.offerPct}>{t('offer.pct', {pct: firstOrderPct})}</strong>
+                  <span className={styles.offerText}>
+                    <span className={styles.offerTitle}>{t('offer.title')}</span>
+                    <span className={`${styles.offerNote} ${styles.offerNoteLong}`}>{t('offer.note')}</span>
+                    <span className={`${styles.offerNote} ${styles.offerNoteShort}`}>{t('offer.noteShort')}</span>
+                  </span>
+                  <IconArrow width={18} height={18} className={styles.offerArrow} />
+                </Link>
+              </div>
+            )}
             {/* phones only: the two badges shrink to chips right above the buttons */}
             <div className={styles.chips}>
               <p className={`${styles.chip} ${styles.chipSafe}`} data-safe>

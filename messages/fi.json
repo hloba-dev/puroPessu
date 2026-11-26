@@ -126,7 +126,13 @@
         "30 min kuivatus kaupan päälle"
       ],
       "trustLabel": "Lupauksemme",
-      "safe": "Turvallista lapsille ja lemmikeille"
+      "safe": "Turvallista lapsille ja lemmikeille",
+      "offer": {
+        "pct": "−{pct} %",
+        "title": "Ensimmäinen tilaus",
+        "note": "Lasketaan varauksessa automaattisesti — koodia ei tarvita",
+        "noteShort": "Automaattisesti, ilman koodia"
+      }
     },
     "benefits": {
       "title": "Miksi varata meiltä",
